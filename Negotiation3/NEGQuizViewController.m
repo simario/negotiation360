@@ -42,11 +42,11 @@
 - (IBAction)nextButtonPressed:(id)sender {
 
     
-    if (self.total == 40) {
+    if (self.total == 20) {
         [self performSegueWithIdentifier:@"toQuestion5" sender:self];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                        message:@"Please distribute numbers to equal 40."
+                                                        message:@"Please distribute numbers to equal 20."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -64,13 +64,13 @@
     
     self.total = val1 + val2 + val3 + val4;
     
-    if (self.total == 40) {
+    if (self.total == 20) {
         [self.nextButton setTitle:@"Next"];
-    } else if (self.total < 40) {
-        int diff = 40 - self.total;
+    } else if (self.total < 20) {
+        int diff = 20 - self.total;
         [self.nextButton setTitle:[NSString stringWithFormat:@"+ %d", diff]];
     } else {
-        int diff = self.total - 40;
+        int diff = self.total - 20;
         [self.nextButton setTitle:[NSString stringWithFormat:@"- %d", diff]];
     }
     

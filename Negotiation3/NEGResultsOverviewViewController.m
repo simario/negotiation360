@@ -23,26 +23,26 @@
         
         mailer.mailComposeDelegate = self;
         
-        [mailer setSubject:@"My Negotiation 3.0 results."];
+        [mailer setSubject:@"My Negotiation 360 results."];
         
         /*
-        NSArray *toRecipients = [NSArray arrayWithObjects:@"fisrtMail@example.com", @"secondMail@example.com", nil];
-        [mailer setToRecipients:toRecipients];
+         NSArray *toRecipients = [NSArray arrayWithObjects:@"fisrtMail@example.com", @"secondMail@example.com", nil];
+         [mailer setToRecipients:toRecipients];
+         
+         UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
+         NSData *imageData = UIImagePNGRepresentation(myImage);
+         [mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
+         */
         
-        UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
-        NSData *imageData = UIImagePNGRepresentation(myImage);
-        [mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
-        */
-        
-        NSString *create = [NSString stringWithFormat:@"Creating Value :%@\n", [self.detailItem valueForKey:@"question1"]];
-        NSString *assert = [NSString stringWithFormat:@"Empathy: %@\n", [self.detailItem valueForKey:@"question2"]];
-        NSString *empathy = [NSString stringWithFormat:@"Claiming Value: %@\n", [self.detailItem valueForKey:@"question3"]];
-        NSString *claim = [NSString stringWithFormat:@"Assertiveness: %@\n", [self.detailItem valueForKey:@"question4"]];
-        NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness%@\n", [self.detailItem valueForKey:@"question5"]];
+        NSString *create = [NSString stringWithFormat:@"Creating Value: %@\n", [self.detailItem valueForKey:@"question1"]];
+        NSString *assert = [NSString stringWithFormat:@"Assertiveness: %@\n", [self.detailItem valueForKey:@"question2"]];
+        NSString *empathy = [NSString stringWithFormat:@"Empathy: %@\n", [self.detailItem valueForKey:@"question3"]];
+        NSString *claim = [NSString stringWithFormat:@"Claiming Value: %@\n", [self.detailItem valueForKey:@"question4"]];
+        NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness: %@\n", [self.detailItem valueForKey:@"question5"]];
         
         NEGType *t = [[NEGType alloc] init];
-
-        NSString *resultType = [NSString stringWithFormat:@"My Type: %@\n", [t getType:self.detailItem]];
+        
+        NSString *resultType = [NSString stringWithFormat:@"My Type: Type %@\n", [t getType:self.detailItem]];
         
         
         
@@ -98,7 +98,7 @@
     NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"overview" ofType:@"html" ]];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
-    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", create, assert, empathy, claim];
+    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", create, empathy, claim, assert];
     
     
     
@@ -108,7 +108,7 @@
     UIWebView *webView = (UIWebView *)[cell viewWithTag:999];
     
     [webView loadHTMLString:htmlString
-                         baseURL:url];
+                    baseURL:url];
 }
 
 #pragma mark - Table view data source
@@ -149,7 +149,7 @@
             cell.textLabel.text = @"About Your Profile";
             break;
         case 2:
-            cell.textLabel.text = @"Negotiation Delima";
+            cell.textLabel.text = @"Negotiation Delimmas";
             break;
         case 3:
             cell.textLabel.text = @"Skill-Building Tips";
@@ -165,7 +165,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat h = 44;
     if (indexPath.item == 0) {
-        h = 204;
+        h = 244;
     }
     return h;
 }
@@ -218,16 +218,16 @@
 {
     // Update the user interface for the detail item.
     /*
-    if (self.detailItem) {
-
-        NEGType *t = [[NEGType alloc] init];
-        NSString *resultType = [t getType:self.detailItem];
-        
-        //[self.typeLabel setText:[NSString stringWithFormat:@"      Type %@", resultType]];
-        
-        
-        
-    }*/
+     if (self.detailItem) {
+     
+     NEGType *t = [[NEGType alloc] init];
+     NSString *resultType = [t getType:self.detailItem];
+     
+     //[self.typeLabel setText:[NSString stringWithFormat:@"      Type %@", resultType]];
+     
+     
+     
+     }*/
     
 }
 
@@ -254,14 +254,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

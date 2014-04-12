@@ -48,7 +48,7 @@
     
     
     // Create the data model
-    _pageTitles = @[@"Negotiate360°", @"Self Assessment", @"Personal Profile", @"Negotiation Dilemmas", @"Skill Building Tips", @""];
+    _pageTitles = @[@"Negotiation 360°", @"Self Assessment", @"Personal Profile", @"Negotiation Dilemmas", @"Skill Building Tips", @""];
     _pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png", @"page5.png", @""];
     
     _pageSubTexts = @[@"Swipe to continue >>", @"Answer questions to learn about your negotiation skills.", @"Compare your negotiation profile against others.", @"Learn about fundamental tensions in negotiation strategy.", @"Get tips for enhancing your strategic and interpersonal skills.", @""];

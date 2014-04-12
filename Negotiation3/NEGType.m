@@ -14,9 +14,7 @@
     NSString *result = @"unknown";
     NSString *typeY = @"Y";
     NSString *typeG = @"G";
-    NSString *typeGPlus = @"G+";
     NSString *typeW = @"W";
-    NSString *typeWPlus = @"W+";
     NSString *typeR = @"R";
     NSString *typeO = @"O";
     NSString *typeX = @"X";
@@ -30,19 +28,19 @@
     
     
     // Type X
-    if ((create > 12 || empathy > 12 || assert > 12 || claim > 12)) {
+    if ((create > 7 || empathy > 7 || assert > 7 || claim > 7)) {
         int count = 0;
         
-        if (create < 10) {
+        if (create < 7) {
             count = count + 1;
         }
-        if (empathy < 10) {
+        if (empathy < 7) {
             count = count + 1;
         }
-        if (assert < 10) {
+        if (assert < 7) {
             count = count + 1;
         }
-        if (claim < 10) {
+        if (claim < 7) {
             count = count + 1;
         }
         
@@ -52,65 +50,48 @@
         }
     }
     
-    // Type C
-    if (create > 10 && assert > 10) {
-        result = typeC;
-        return result;
-    }
-    
-    // Type E
-    if (empathy > 10 && claim > 10) {
-        result = typeE;
-        return result;
-    }
-    
-    
-    // Type G+
-    if (create > 11 && empathy > 11 &&
-        (assert > 12 || claim > 12)) {
-        result = typeGPlus;
-        return result;
-    }
-    
-    // Type W+
-    if (claim > 11 && assert > 11 &&
-        (create > 12 || empathy > 12)) {
-        result = typeWPlus;
-        return result;
-    }
-    
-    // Type Y
-    if (create > 8 && create < 12 &&
-        assert > 8 && assert < 12 &&
-        empathy > 8 && empathy < 12 &&
-        claim > 8 && claim < 12) {
-        result = typeY;
-        return result;
-    }
-    
-    // Type G
-    if (create > 10 && empathy > 10 &&
-        (assert > 11 || claim > 11)) {
-        result = typeG;
-        return result;
-    }
-    
-    // Type W
-    if (claim > 10 && assert > 10 &&
-        (create > 11 || empathy > 11)) {
-        result = typeW;
-        return result;
-    }
-    
     // Type R
-    if (empathy > 10 && assert > 10) {
+    if (empathy > 6 && assert > 6) {
         result = typeR;
         return result;
     }
     
     // Type O
-    if (create > 10 && claim > 10) {
+    if (create > 6 && claim > 6) {
         result = typeO;
+        return result;
+    }
+    
+    // Type Y
+    if (create > 3 && create < 7 &&
+        assert > 3 && assert < 7 &&
+        empathy > 3 && empathy < 7 &&
+        claim > 3 && claim < 7) {
+        result = typeY;
+        return result;
+    }
+    
+    // Type G
+    if (create > 6 && empathy > 6) {
+        result = typeG;
+        return result;
+    }
+    
+    // Type W
+    if (claim > 6 && assert > 6) {
+        result = typeW;
+        return result;
+    }
+    
+    // Type C
+    if (create > 6 && assert > 6) {
+        result = typeC;
+        return result;
+    }
+    
+    // Type E
+    if (empathy > 6 && claim > 6) {
+        result = typeE;
         return result;
     }
     

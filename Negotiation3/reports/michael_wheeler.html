@@ -1,17 +1,54 @@
 <!doctype html>
 <head>
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .photo {
+            margin: 10px;
+        }
+        body {
+            background-image:url("top-banner.png");
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div><img src="mw.jpg" width="150px" height="118px" class="img-thumbnail" style="margin: 10px; float:left;"><p style="margin: 10px;" class="lead"><strong>Michael Wheeler</strong> is an author, professor, and mediator whose work is at the forefront of negotiation scholarship and practice. He is a professor of Management Practice at the Harvard Business School where he teaches Negotiation as well as a variety of executive courses. He advises corporate clients, trade organizations, and government agencies on negotiation issues in the United States and abroad.</p></div>
+    <div style="height:50px;">
+	</div>
+	<div align="center">
+        <img src="mw.jpg" width="150px" height="150px" class="img-circle">
+	</div>
+	<div>
+        <p style="margin: 24px;">
+            <strong>Michael Wheeler</strong> is an author, professor, and mediator whose work is at the forefront of negotiation scholarship and practice. He is a professor of Management Practice at the <a href="http://www.hbs.edu/" style="color:red">Harvard Business School</a> where he teaches Negotiation as well as a variety of executive courses. He advises corporate clients, trade organizations, and government agencies on negotiation issues in the United States and abroad.
+        </p>
+    </div>
+
+<!--    
     <ul style="list-style-type: none;">
-        <li style="padding-top:5px;"> <a class="btn btn-primary" href="http://www.negotiation3-0.com/">Negotiaiton 3.0 Website</a> </li>
-        <li style="padding-top:5px;"> <a class="btn btn-success" href="https://www.linkedin.com/today/influencer/266437464-Michael-Wheeler">LinkedIn Influencer Blog</a></li>
-        <li style="padding-top:5px;"> <a class="btn btn-info" href="https://itunes.apple.com/us/book/the-art-of-negotiation/id576508269?mt=11">The Art of Negotiation</a></li>
-        <li style="padding-top:5px;"> <a class="btn btn-warning" href="http://www.negotiation3-0.com/contact/">Contact</a></li>
+        
+        <li style="padding-top:5px;"> <a class="btn btn-default" href="http://www.negotiation3-0.com/"><span class="icon-global"></span> Negotiation 3.0 Website</a> </li>
+        
+        <li style="padding-top:5px;"> <a class="btn btn-default" href="https://www.linkedin.com/today/influencer/266437464-Michael-Wheeler"><span class="icon-linkedin"></span> LinkedIn Influencer Blog</a></li>
+        
+        <li style="padding-top:5px;"> <a class="btn btn-default" href="https://itunes.apple.com/us/book/the-art-of-negotiation/id576508269?mt=11"><i><span class="icon-book-open"></span> The Art of Negotiation</i></a></li>
+        
+        <li style="padding-top:5px;"> <a class="btn btn-default" href="http://www.negotiation3-0.com/contact/"><span class="icon-envelope"></span><span class="ion-ios7-star"></span> Contact</a></li>
     </ul>
+-->
+
+    <div class="list-group">
+      <a href="http://www.negotiation3-0.com/" class="list-group-item">Negotiation 3.0 Website</a>
+      <a href="https://www.linkedin.com/today/influencer/266437464-Michael-Wheeler"  class="list-group-item">LinkedIn Influencer Blog</a>
+      <a href="https://itunes.apple.com/us/book/the-art-of-negotiation/id576508269?mt=11"  class="list-group-item"><i>The Art of Negotiation</i> Book</a>
+      <a href="http://www.negotiation3-0.com/contact/"  class="list-group-item">Contact Mike</a>
+    </div>    
+
     
     <script src="jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    
 </body>
 </html>
