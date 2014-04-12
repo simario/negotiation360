@@ -31,20 +31,20 @@
     if ((create > 7 || empathy > 7 || assert > 7 || claim > 7)) {
         int count = 0;
         
-        if (create < 7) {
+        if (create < 6) {
             count = count + 1;
         }
-        if (empathy < 7) {
+        if (empathy < 6) {
             count = count + 1;
         }
-        if (assert < 7) {
+        if (assert < 6) {
             count = count + 1;
         }
-        if (claim < 7) {
+        if (claim < 6) {
             count = count + 1;
         }
         
-        if (count > 2) {
+        if (count > 6) {
             result = typeX;
             return result;
         }
