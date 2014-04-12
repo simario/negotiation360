@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3A740D1E-D42A-4385-9CBC-DFB15F07268F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Negotiation3</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>249AFDA7-A701-4543-AB11-A83689E3F11E</key>
+		<string>https://github.com/simario/negotiation360.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Negotiation3.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>249AFDA7-A701-4543-AB11-A83689E3F11E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/simario/negotiation360.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>249AFDA7-A701-4543-AB11-A83689E3F11E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>249AFDA7-A701-4543-AB11-A83689E3F11E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>negotiation360</string>
+		</dict>
+	</array>
+</dict>
+</plist>
