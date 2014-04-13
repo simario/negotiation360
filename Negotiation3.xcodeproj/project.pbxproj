@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69409F7E18FB1EE80024E102 /* charts-examples.js in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7A18FB1EE80024E102 /* charts-examples.js */; };
+		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
+		69409F8018FB1EE80024E102 /* minimal.js in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7C18FB1EE80024E102 /* minimal.js */; };
+		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		91143D9E18DFAAB800FFE277 /* resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9D18DFAAB800FFE277 /* resources.html */; };
 		91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9F18DFAAC700FFE277 /* michael_wheeler.html */; };
 		9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9115A77C18DF338300FBDB5C /* NEGQuiz2ViewController.m */; };
@@ -130,6 +134,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69409F7A18FB1EE80024E102 /* charts-examples.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "charts-examples.js"; path = "Negotiation3/reports/charts-examples.js"; sourceTree = "<group>"; };
+		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = dilemmas.html; path = Negotiation3/reports/dilemmas.html; sourceTree = "<group>"; };
+		69409F7C18FB1EE80024E102 /* minimal.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = minimal.js; path = Negotiation3/reports/minimal.js; sourceTree = "<group>"; };
+		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-banner.png"; path = "Negotiation3/reports/top-banner.png"; sourceTree = "<group>"; };
 		91143D9D18DFAAB800FFE277 /* resources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = resources.html; sourceTree = "<group>"; };
 		91143D9F18DFAAC700FFE277 /* michael_wheeler.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = michael_wheeler.html; sourceTree = "<group>"; };
 		9115A77B18DF338300FBDB5C /* NEGQuiz2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGQuiz2ViewController.h; sourceTree = "<group>"; };
@@ -394,6 +402,10 @@
 		91D3E18218B91BD400FC14F7 = {
 			isa = PBXGroup;
 			children = (
+				69409F7A18FB1EE80024E102 /* charts-examples.js */,
+				69409F7B18FB1EE80024E102 /* dilemmas.html */,
+				69409F7C18FB1EE80024E102 /* minimal.js */,
+				69409F7D18FB1EE80024E102 /* top-banner.png */,
 				91B66A2A18DE358000DBA430 /* reports */,
 				91D3E19618B91BD400FC14F7 /* Negotiation3 */,
 				91D3E1BF18B91BD400FC14F7 /* Negotiation3Tests */,
@@ -578,6 +590,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69409F7E18FB1EE80024E102 /* charts-examples.js in Resources */,
+				69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */,
+				69409F8018FB1EE80024E102 /* minimal.js in Resources */,
+				69409F8118FB1EE80024E102 /* top-banner.png in Resources */,
 				91A2791618F02C32006B58A3 /* css in Resources */,
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
