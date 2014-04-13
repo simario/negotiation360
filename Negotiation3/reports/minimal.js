@@ -10,8 +10,8 @@ Highcharts.theme = {
 	},
 	title: {
 		style: {
-			color: '#34aadc',
-			fontSize: '20px',
+			color: '#fff',
+			fontSize: '16px',
 			fontFamily: ' "Helvetica Neue", Helvetica, Arial, sans-serif'
 		}
 	},
@@ -224,3 +224,5 @@ Highcharts.theme = {
 
 // Apply the theme
 var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+
+alert('this is funky')

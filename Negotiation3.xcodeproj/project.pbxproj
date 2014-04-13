@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69234B0E18FB2E5900E5B0AA /* minimal.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0D18FB2E5900E5B0AA /* minimal.js */; };
+		69234B1018FB2EB700E5B0AA /* charts-examples.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0F18FB2EB700E5B0AA /* charts-examples.js */; };
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
-		69409F8418FB21F50024E102 /* charts-examples.js in Sources */ = {isa = PBXBuildFile; fileRef = 69409F8318FB21F50024E102 /* charts-examples.js */; };
-		69409F8618FB22250024E102 /* minimal.js in Sources */ = {isa = PBXBuildFile; fileRef = 69409F8518FB22250024E102 /* minimal.js */; };
 		91143D9E18DFAAB800FFE277 /* resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9D18DFAAB800FFE277 /* resources.html */; };
 		91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9F18DFAAC700FFE277 /* michael_wheeler.html */; };
 		9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9115A77C18DF338300FBDB5C /* NEGQuiz2ViewController.m */; };
@@ -134,10 +134,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69234B0D18FB2E5900E5B0AA /* minimal.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = minimal.js; sourceTree = "<group>"; };
+		69234B0F18FB2EB700E5B0AA /* charts-examples.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "charts-examples.js"; sourceTree = "<group>"; };
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
-		69409F8318FB21F50024E102 /* charts-examples.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "charts-examples.js"; sourceTree = "<group>"; };
-		69409F8518FB22250024E102 /* minimal.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = minimal.js; sourceTree = "<group>"; };
 		91143D9D18DFAAB800FFE277 /* resources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = resources.html; sourceTree = "<group>"; };
 		91143D9F18DFAAC700FFE277 /* michael_wheeler.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = michael_wheeler.html; sourceTree = "<group>"; };
 		9115A77B18DF338300FBDB5C /* NEGQuiz2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGQuiz2ViewController.h; sourceTree = "<group>"; };
@@ -305,8 +305,8 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
-				69409F8518FB22250024E102 /* minimal.js */,
-				69409F8318FB21F50024E102 /* charts-examples.js */,
+				69234B0F18FB2EB700E5B0AA /* charts-examples.js */,
+				69234B0D18FB2E5900E5B0AA /* minimal.js */,
 				69409F7B18FB1EE80024E102 /* dilemmas.html */,
 				69409F7D18FB1EE80024E102 /* top-banner.png */,
 				91A2791918F02E82006B58A3 /* mw.jpg */,
@@ -663,8 +663,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69409F8618FB22250024E102 /* minimal.js in Sources */,
-				69409F8418FB21F50024E102 /* charts-examples.js in Sources */,
 				91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */,
 				91B66A0E18DE2BB500DBA430 /* jquery.js in Sources */,
 				91B66A1818DE2BB500DBA430 /* funnel.src.js in Sources */,
@@ -676,6 +674,7 @@
 				91B66A0B18DE2BB500DBA430 /* highcharts-more.src.js in Sources */,
 				91B66A0918DE2BB500DBA430 /* highcharts-all.js in Sources */,
 				91DDE24218DF9ECB0018CBC4 /* NEGAboutMWViewController.m in Sources */,
+				69234B0E18FB2E5900E5B0AA /* minimal.js in Sources */,
 				91B66A1E18DE2BB500DBA430 /* gray.js in Sources */,
 				9163D26918D4B4100032F104 /* NEGWalkthroughViewController.m in Sources */,
 				9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */,
@@ -708,6 +707,7 @@
 				91B66A0618DE2BB500DBA430 /* prototype-adapter.src.js in Sources */,
 				91B66A0518DE2BB500DBA430 /* prototype-adapter.js in Sources */,
 				91D3E1A118B91BD400FC14F7 /* NEGAppDelegate.m in Sources */,
+				69234B1018FB2EB700E5B0AA /* charts-examples.js in Sources */,
 				91B66A1218DE2BB500DBA430 /* data.src.js in Sources */,
 				91B66A1918DE2BB500DBA430 /* no-data-to-display.js in Sources */,
 				91B66A0C18DE2BB500DBA430 /* highcharts.js in Sources */,
