@@ -3,8 +3,9 @@
     
 </head>
 <body>
-    <div id="container" style="min-width: 320px; max-width: 460px; height: 200px; margin: 0px; padding: 0px;"></div>
+    <div id="container" style="min-width: 310px; max-width: 460px; height: 200px; margin: 0px; padding: 0px;"></div>
     <script src="jquery.js"></script>
+    <script src="minimal.js"></script>
     <script src="highcharts.js"></script>
     <script src="highcharts-more.js"></script>
     <script src="modules/exporting.js"></script>
@@ -16,9 +17,7 @@
                                      
                                      chart: {
                                      polar: true,
-                                     animation: {
-                                     duration: 2000
-                                     }
+						             type: 'line',
                                      },
                                      
                                      legend: {
@@ -31,32 +30,43 @@
                                      },
                                      
                                      pane: {
-                                     size: '80%%'
+                                     size: '80%%',
+							         startAngle: -45,
                                      },
                                      
                                      xAxis: {
                                      categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
                                      tickmarkPlacement: 'on',
-                                     lineWidth: 0
+						             lineWidth: 0,
+									 labels: {
+									 	 style: {
+											 whiteSpace: 'nowrap'
+										 }
+									 }
                                      },
                                      
                                      yAxis: {
-                                     lineWidth: 0,
-                                     min: 0
+							         lineWidth: 0,
+								 	 tickInterval: 4,
+							         max: 8,
+									 min: 0
                                      },
                                      
                                      tooltip: {
-                                     shared: true,
-                                     pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                                     enabled: true,
                                      },
-                                     credits: {
+                                     
+									 credits: {
                                         enabled: false
                                      },
                                      series: [{
-                                              name: 'Score',
+                                              name: 'Rating',
                                               type: 'area',
                                               data: [%@],
-                                              pointPlacement: 'on'
+											  color: '#34aadc',								           
+								              animation: {
+								                  duration: 4000
+								              }
                                               }]
                                      
                                      });

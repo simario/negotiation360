@@ -19,7 +19,7 @@ $(function () {
         },
 
         pane: {
-            size: '70%',
+            size: '65%',
         },
 
         xAxis: {
@@ -102,7 +102,7 @@ $(function () {
         },
 
         pane: {
-            size: '70%',
+            size: '65%',
 	        startAngle: -90,
         },
 
@@ -186,7 +186,7 @@ $(function () {
         },
 
         pane: {
-            size: '70%',
+            size: '65%',
 	        startAngle: -45,
         },
 
@@ -209,7 +209,7 @@ $(function () {
         },
 
         tooltip: {
-            enabled: false
+            enabled: true
         },
 
 		credits: {
