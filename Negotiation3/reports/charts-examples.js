@@ -209,7 +209,7 @@ $(function () {
         },
 
         tooltip: {
-            enabled: false
+            enabled: true
         },
 
 		credits: {
