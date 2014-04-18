@@ -15,7 +15,8 @@ $(function () {
 
 
         title: {
-            text: null
+            text: "Interpersonal Scale",
+	        margin: 10
         },
 
         pane: {
@@ -28,7 +29,7 @@ $(function () {
             lineWidth: 0,
 			labels: {
 				style: {
-					whiteSpace: 'nowrap'
+					whiteSpace: 'nowrap',
 				}
 			}
         },
@@ -61,7 +62,7 @@ $(function () {
             series: {
                 fillOpacity: 0.33,
                 marker: {
-                    fillColor: '#FFFFFF',
+                    fillColor: '#fff',
                     lineWidth: 2,
                     lineColor: null // inherit from series
                 }
@@ -72,6 +73,7 @@ $(function () {
             name: 'Rating',
             type: 'area',
             data: [8, 8],
+			lineWidth: 5,
             animation: {
                 duration: 4000
             }
@@ -98,7 +100,8 @@ $(function () {
 
 
         title: {
-            text: null
+            text: "Outcomes Scale",
+	        margin: 10
         },
 
         pane: {
@@ -156,6 +159,7 @@ $(function () {
             name: 'Rating',
             type: 'area',
             data: [8, 8],
+			lineWidth: 5,
             animation: {
                 duration: 4000
             }
@@ -182,7 +186,8 @@ $(function () {
 
 
         title: {
-            text: null
+            text: "Equal Ratings",
+	        margin: 10
         },
 
         pane: {
@@ -209,7 +214,7 @@ $(function () {
         },
 
         tooltip: {
-            enabled: true
+            enabled: false
         },
 
 		credits: {
@@ -237,6 +242,7 @@ $(function () {
             name: 'Rating',
             type: 'area',
             data: [5, 5, 5, 5],
+			lineWidth: 5,
             animation: {
                 duration: 4000
             }
@@ -264,11 +270,11 @@ $(function () {
 
         title: {
             text: "Empathetic Value-Creators",
-	        margin: 30
+	        margin: 10
         },
 
         pane: {
-            size: '80%',
+            size: '65%',
 	        startAngle: -45,
         },
 
@@ -319,6 +325,7 @@ $(function () {
             name: 'Rating',
             type: 'area',
             data: [7, 7, 3, 3],
+			lineWidth: 5,
             animation: {
                 duration: 4000
             }
@@ -348,11 +355,11 @@ $(function () {
 
         title: {
             text: "Assertive Value-Claimers",
-	        margin: 30
+	        margin: 10
         },
 
         pane: {
-            size: '80%',
+            size: '65%',
 	        startAngle: -45,
         },
 
@@ -403,6 +410,7 @@ $(function () {
             name: 'Rating',
             type: 'area',
             data: [3, 3, 7, 7],
+			lineWidth: 5,
             animation: {
                 duration: 4000
             }

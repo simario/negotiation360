@@ -1,17 +1,18 @@
 Highcharts.theme = {
-	colors: ["#34aadc", "#7798BF", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
+	colors: ["#ff9f33", "#7798BF", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
 		"#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
 	chart: {
 		borderWidth: 0,
-		borderRadius: 0,
+		borderRadius: 5,
+		backgroundColor: "#34aadc",
 		plotBackgroundColor: null,
 		plotShadow: false,
 		plotBorderWidth: 0
 	},
 	title: {
 		style: {
-			color: '#fff',
-			fontSize: '16px',
+			color: '#ffffff',
+			fontSize: '18px',
 			fontFamily: ' "Helvetica Neue", Helvetica, Arial, sans-serif'
 		}
 	},
@@ -23,17 +24,19 @@ Highcharts.theme = {
 	},
 	xAxis: {
 		gridLineWidth: 0.5,
-		lineColor: '#333',
-		tickColor: '#333',
+		gridLineColor: '#8acfee',
+		lineColor: '#8acfee',
+		tickColor: '#8acfee',
 		labels: {
 			style: {
-				fontSize: '14px',
+				fontSize: '12px',
+				color: '#fff',
 				fontFamily: ' "Helvetica Neue", Helvetica, Arial, sans-serif'
 			}
 		},
 		title: {
 			style: {
-				color: '#333',
+				color: '#fff',
 				font: 'bold 12px Helvetica Neue, Helvetica, Arial, sans-serif'
 			}
 		}
@@ -41,18 +44,18 @@ Highcharts.theme = {
 	yAxis: {
 		alternateGridColor: null,
 		minorTickInterval: null,
-		gridLineColor: 'rgba(153, 153, 153, 1)',
-		minorGridLineColor: 'rgba(153, 153, 153, 1)',
+		gridLineColor: '#8acfee',
+		minorGridLineColor: '#8acfee',
 		lineWidth: 0,
 		tickWidth: 0,
 		labels: {
 			style: {
-				color: '#333',
+				color: '#fff',
 			}
 		},
 		title: {
 			style: {
-				color: '#AAA',
+				color: '#fff',
 				font: '12px Helvetica Neue, Helvetica, Arial, sans-serif'
 			}
 		}
@@ -224,5 +227,3 @@ Highcharts.theme = {
 
 // Apply the theme
 var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
-
-alert('this is funky')
