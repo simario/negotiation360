@@ -510,7 +510,7 @@ h6,
 }
 
 p {
-  margin: 0 0 11px;
+  margin: 11px 0 11px 0;
 }
 
 .lead {
@@ -5719,13 +5719,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 5px 25px;
 }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #8ACFEE;
 }
 
 .nav > li.disabled > a {
@@ -5846,6 +5847,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-pills > li > a {
   border-radius: 4px;
+  border: 1px solid #8acfee;
+  color: #162792;
+  background-color: #fff;
+
 }
 
 .nav-pills > li + li {
@@ -5855,8 +5860,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #ffffff;
-  background-color: #007aff;
+  color: #fff;
+  background-color: #11698f;
 }
 
 .nav-stacked > li {
@@ -5939,7 +5944,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar {
   position: relative;
-  min-height: 50px;
   margin-bottom: 22px;
   border: 1px solid transparent;
 }
@@ -7147,6 +7151,7 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
+  font-size: 16px;
   text-align: center;
   padding: 10px 24px 15px 24px;
   margin-bottom: -1px;
@@ -8853,3 +8858,4 @@ td.visible-print {
     display: none !important;
   }
 }
+
