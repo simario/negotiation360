@@ -36,7 +36,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
+    _negType = [[NEGType alloc] init];
     
     
 
@@ -240,17 +240,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+
         self.detailViewController.detailItem = object;
         
         
     }
+    
+    NSString *t = [_negType getType:object];
+    
+    if ([t isEqualToString:@"unknown"]) {
+        [self performSegueWithIdentifier:@"showDetail" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"results_from_main" sender:self];
+    }
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showDetail"] || [[segue identifier] isEqualToString:@"results_from_main"]) {
         NSManagedObject *object;
         if (_fromNew) {
             object = [[self fetchedResultsController] objectAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
@@ -366,8 +376,15 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    NSString *t = [_negType getType: object];
+    //cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    
+    if ([t isEqualToString:@"unknown"]) {
+        t = @"in progress";
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
 }
 
 @end

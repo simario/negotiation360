@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NEGType.h"
 
 @class NEGDetailViewController;
 
@@ -28,6 +29,8 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (strong, nonatomic) NEGType *negType;
 
 @property bool fromNew;
 

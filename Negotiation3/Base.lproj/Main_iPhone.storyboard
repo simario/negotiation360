@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -45,9 +45,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="jUr-3t-vfg"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -67,6 +64,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="7DW-9h-cBO" kind="modal" identifier="showWalkthrough" id="ZhS-AJ-Ce8"/>
+                        <segue destination="cgD-05-4mV" kind="push" identifier="results_from_main" id="oA1-ch-634"/>
+                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="F3C-KP-fhE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -79,7 +78,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7DW-9h-cBO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bj-HW-inO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997" y="-575"/>
+            <point key="canvasLocation" x="281" y="-627"/>
         </scene>
         <!--Walkthrough View Controller-->
         <scene sceneID="6Sa-MZ-qAu">
@@ -140,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Oo-dr-uDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="-583"/>
+            <point key="canvasLocation" x="656" y="-619"/>
         </scene>
         <!--Quiz View Controller - Quiz-->
         <scene sceneID="KAe-er-OVd">
@@ -219,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZu-qg-j2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="98"/>
+            <point key="canvasLocation" x="1572" y="-538"/>
         </scene>
         <!--Links Table View Controller - Links-->
         <scene sceneID="vkt-xd-6qa">
@@ -372,7 +371,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Gvp-67-fOj"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="98"/>
+            <point key="canvasLocation" x="1149" y="-538"/>
         </scene>
         <!--Skills View Controller-->
         <scene sceneID="UUd-kF-8zp">
@@ -512,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgI-wu-mn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="98"/>
+            <point key="canvasLocation" x="1974" y="-538"/>
         </scene>
         <!--Results Overview View Controller - Results-->
         <scene sceneID="Q03-j7-Wqs">
@@ -635,4 +634,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="oA1-ch-634"/>
+    </inferredMetricsTieBreakers>
 </document>
