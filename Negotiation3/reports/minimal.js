@@ -12,7 +12,7 @@ Highcharts.theme = {
 	title: {
 		style: {
 			color: '#ffffff',
-			fontSize: '18px',
+			fontSize: '17px',
 			fontFamily: ' "Helvetica Neue", Helvetica, Arial, sans-serif'
 		}
 	},

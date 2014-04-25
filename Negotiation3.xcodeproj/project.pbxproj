@@ -14,6 +14,7 @@
 		69C585CA1901697A00EE6E27 /* dragend.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C71901697A00EE6E27 /* dragend.js */; };
 		69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C81901697A00EE6E27 /* hammer.min.js */; };
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
+		69EF5F5C1909EFC200A947AF /* page-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EF5F5B1909EFC200A947AF /* page-6.png */; };
 		91143D9E18DFAAB800FFE277 /* resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9D18DFAAB800FFE277 /* resources.html */; };
 		91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9F18DFAAC700FFE277 /* michael_wheeler.html */; };
 		9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9115A77C18DF338300FBDB5C /* NEGQuiz2ViewController.m */; };
@@ -146,6 +147,7 @@
 		69C585C71901697A00EE6E27 /* dragend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dragend.js; sourceTree = "<group>"; };
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
+		69EF5F5B1909EFC200A947AF /* page-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-6.png"; sourceTree = "<group>"; };
 		91143D9D18DFAAB800FFE277 /* resources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = resources.html; sourceTree = "<group>"; };
 		91143D9F18DFAAC700FFE277 /* michael_wheeler.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = michael_wheeler.html; sourceTree = "<group>"; };
 		9115A77B18DF338300FBDB5C /* NEGQuiz2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGQuiz2ViewController.h; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				9163D27318D4DE630032F104 /* page-5.png */,
+				69EF5F5B1909EFC200A947AF /* page-6.png */,
 				9163D26B18D4D4180032F104 /* page-1.png */,
 				9163D26C18D4D4180032F104 /* page-2.png */,
 				9163D26D18D4D4180032F104 /* page-3.png */,
@@ -601,6 +604,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69EF5F5C1909EFC200A947AF /* page-6.png in Resources */,
 				69C585CA1901697A00EE6E27 /* dragend.js in Resources */,
 				69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */,
 				69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */,

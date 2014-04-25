@@ -1,11 +1,11 @@
 <!doctype html>
 <head>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
     <style>
-        p {
-			margin:24px;
+        body {
+			margin:20px;
 		}
     </style>
 </head>
@@ -13,31 +13,83 @@
 	<p>You rated yourself <strong>%@</strong> compared to people you typically negotiate with. The reality is that it is hard to rate our overall effectiveness, for the same reasons that it's hard to judge our success in a particular transaction. After all, you usually know only your half of the story: did you leave some value on the table; did you stress an important relationship? The other side may not tell you, so there's plenty of room for self-doubt and worry.</p> 
 	<p>Good negotiators are often modest about their skills. That humility serves them well, as it prompts them to think through their strategy carefully. They also understand that even if they prepare carefully, they have to be agile, ready for surprises, pleasant and otherwise.</p>
     <p>Ideally, we'd all like to outstanding at each of the four skills: asserting our interests, understanding others, creating value, and claiming our share. As we've already seen, each presents a dilemma or tradeoff. Being more open, for example, may invite either a cooperative response or exploitation, depending on whom we're dealing with. Likewise, firmly asserting our interests may win us a larger share, but if the other party digs in, creativity may be hampered.</p>
-   
-<!-- 	<div align="center">
-		<img src="animation1.gif"/>
-	</div> -->
-	
-	<div>
-	<div class="btn-group">
-	  <button type="button" class="btn btn-default"><span data-icon="&#xe049;" style="font-size: 18px"></span></button>
-	  <button type="button" class="btn btn-default"><span data-icon="&#xe021;" style="font-size: 20px"></span></button>
-	  <button type="button" class="btn btn-default"><span data-icon="&#xe050;" style="font-size: 24px"></span></button>
-	  <button type="button" class="btn btn-default"><span data-icon="&#xe016;" style="font-size: 24px"></span></button>
+   	
+	<div class="panel-group" id="accordion">
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+	          <span data-icon="&#xe049;"></span>&nbsp;Understand the other side
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse in">
+			<ul class="list-group">
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Inquire. Without realizing it, many negotiators fail to test their assumptions about the other parties needs and perceptions.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Listen deeply. Don't prejudge. Be alert for ideas you can build on.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Consult your own feelings. If you are feeling anxious, maybe they are, too.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">"Go to the balcony." Follow Bill Ury's advice and try to view your interaction as if you were a member of the audience, sitting way back, taking everything in.</li>
+			</ul>
+	    </div>
+	  </div>
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+	          <span data-icon="&#xe021;"></span>&nbsp;Assert your interest
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse">
+			<ul class="list-group">
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Build up your BATNA (your walkaway option if there's no deal). The more confident you are about your alternatives, the more secure you'll be negotiating.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Focus on their BATNA (their no-deal alternative). Just because you need them doesn't mean that they don't need you.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Practice in low-stakes situations. Try to be more assertive in situations where it doesn't really matter if you come to agreement.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Don't oversell. Research shows that people in weaker positions tend to talk too much.</li>
+	    	</ul>
+	    </div>
+	  </div>
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+	          <span data-icon="&#xe050;"></span>&nbsp;Maximize your share
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseThree" class="panel-collapse collapse">
+			<ul class="list-group">
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Don't get "anchored." Work from your number. Not theirs.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Watch the clock. If the other party is under a deadline, use that to your advantage.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Try "post-settlement settlement." After reaching a firm agreement, suggest that you review the terms to see if adjusting the terms might help both parties.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Avoid the winner's curse. You may wonder if you could have gotten more. The only way to know for sure is to demand too much and blow up the deal.</li>
+			</ul>
+	    </div>
+	  </div>
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+	          <span data-icon="&#xe016;"></span>&nbsp;Create value
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseFour" class="panel-collapse collapse">
+			<ul class="list-group">
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Negotiate how you negotiate. </li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Use your interpersonal skills to build trust.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Make mutually beneficial trades by identifying differences in valuation, expectations, and attitudes toward risk.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px">Don't play the wrong game. It's hard to haggle and be creative at the same time.</li>
+		    </ul>
+	    </div>
+	  </div>
 	</div>
-	</div>
-		
-    <div class="list-group">
-		<li class="list-group-item" style="text-align: left"><strong>Expand your skill set</strong></li>
-      	<a href="understand.html" class="list-group-item">Understanding the other side</a>
-      	<a href="assert.html" class="list-group-item">Assert your interests</a>
-      	<a href="maximize.html" class="list-group-item">Maximize your share</a>
-      	<a href="create.html" class="list-group-item">Create value</a>
-    </div>    
 
     <script src="jquery.js"></script>
     <script src="highcharts.js"></script>
     <script src="highcharts-more.js"></script>
     <script src="modules/exporting.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/collapse.js"></script>
 </body>
 </html>

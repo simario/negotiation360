@@ -51,7 +51,7 @@
     _pageTitles = @[@"Negotiation 360°", @"Self Assessment", @"Personal Profile", @"Negotiation Dilemmas", @"Skill Building Tips", @""];
     _pageImages = @[@"page-1.png", @"page-2.png", @"page-3.png", @"page-4.png", @"page-5.png", @""];
     
-    _pageSubTexts = @[@"Swipe to continue >>", @"Answer questions to learn about your negotiation skills.", @"Compare your negotiation profile against others.", @"Learn about fundamental tensions in negotiation strategy.", @"Get tips for enhancing your strategic and interpersonal skills.", @""];
+    _pageSubTexts = @[@"Swipe left to learn more", @"Answer questions to learn about your negotiation skills.", @"Compare your negotiation profile against others.", @"Learn about fundamental tensions in negotiation strategy.", @"Get tips for enhancing your strategic and interpersonal skills.", @""];
     
     // Create page view controller
     self.wtPageController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

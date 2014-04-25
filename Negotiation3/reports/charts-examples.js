@@ -16,11 +16,11 @@ $(function () {
 
         title: {
             text: "Interpersonal Scale",
-	        margin: 10
+	        margin: 15
         },
 
         pane: {
-            size: '65%',
+            size: '80%',
         },
 
         xAxis: {
@@ -101,11 +101,11 @@ $(function () {
 
         title: {
             text: "Outcomes Scale",
-	        margin: 10
+	        margin: 15
         },
 
         pane: {
-            size: '65%',
+            size: '80%',
 	        startAngle: -90,
         },
 
@@ -187,11 +187,11 @@ $(function () {
 
         title: {
             text: "Equal Ratings",
-	        margin: 10
+	        margin: 15
         },
 
         pane: {
-            size: '65%',
+            size: '80%',
 	        startAngle: -45,
         },
 
@@ -270,11 +270,11 @@ $(function () {
 
         title: {
             text: "Empathetic Value-Creators",
-	        margin: 10
+	        margin: 15
         },
 
         pane: {
-            size: '65%',
+            size: '80%',
 	        startAngle: -45,
         },
 
@@ -355,11 +355,11 @@ $(function () {
 
         title: {
             text: "Assertive Value-Claimers",
-	        margin: 10
+	        margin: 15
         },
 
         pane: {
-            size: '65%',
+            size: '80%',
 	        startAngle: -45,
         },
 
