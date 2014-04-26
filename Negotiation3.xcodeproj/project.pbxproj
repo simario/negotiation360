@@ -56,7 +56,7 @@
 		9141F3B818E8463800D2A782 /* piechart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9141F3B418E8463800D2A782 /* piechart.png */; };
 		9141F3B918E8463800D2A782 /* megaphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9141F3B518E8463800D2A782 /* megaphone.png */; };
 		9141F3BA18E8463800D2A782 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 9141F3B618E8463800D2A782 /* chat.png */; };
-		9142027518DF7F6500C8E9C9 /* dilemaG.html in Resources */ = {isa = PBXBuildFile; fileRef = 9142027418DF7F6500C8E9C9 /* dilemaG.html */; };
+		9142027518DF7F6500C8E9C9 /* delimaG.html in Resources */ = {isa = PBXBuildFile; fileRef = 9142027418DF7F6500C8E9C9 /* delimaG.html */; };
 		9142027718DF807C00C8E9C9 /* delimaG+.html in Resources */ = {isa = PBXBuildFile; fileRef = 9142027618DF807C00C8E9C9 /* delimaG+.html */; };
 		9142027918DF809500C8E9C9 /* delimaY.html in Resources */ = {isa = PBXBuildFile; fileRef = 9142027818DF809500C8E9C9 /* delimaY.html */; };
 		9142027B18DF80AA00C8E9C9 /* delimaW.html in Resources */ = {isa = PBXBuildFile; fileRef = 9142027A18DF80AA00C8E9C9 /* delimaW.html */; };
@@ -210,7 +210,7 @@
 		9141F3B418E8463800D2A782 /* piechart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piechart.png; sourceTree = "<group>"; };
 		9141F3B518E8463800D2A782 /* megaphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = megaphone.png; sourceTree = "<group>"; };
 		9141F3B618E8463800D2A782 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
-		9142027418DF7F6500C8E9C9 /* dilemaG.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dilemaG.html; sourceTree = "<group>"; };
+		9142027418DF7F6500C8E9C9 /* delimaG.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = delimaG.html; sourceTree = "<group>"; };
 		9142027618DF807C00C8E9C9 /* delimaG+.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "delimaG+.html"; sourceTree = "<group>"; };
 		9142027818DF809500C8E9C9 /* delimaY.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = delimaY.html; sourceTree = "<group>"; };
 		9142027A18DF80AA00C8E9C9 /* delimaW.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = delimaW.html; sourceTree = "<group>"; };
@@ -390,7 +390,7 @@
 				9115A78F18DF78A700FBDB5C /* typeW+.html */,
 				9115A79118DF78C100FBDB5C /* typeR.html */,
 				9115A79318DF78CF00FBDB5C /* typeO.html */,
-				9142027418DF7F6500C8E9C9 /* dilemaG.html */,
+				9142027418DF7F6500C8E9C9 /* delimaG.html */,
 				9142027618DF807C00C8E9C9 /* delimaG+.html */,
 				9142027818DF809500C8E9C9 /* delimaY.html */,
 				9142027A18DF80AA00C8E9C9 /* delimaW.html */,
@@ -681,7 +681,7 @@
 				9142027B18DF80AA00C8E9C9 /* delimaW.html in Resources */,
 				9115A79018DF78A700FBDB5C /* typeW+.html in Resources */,
 				91B66A2918DE353800DBA430 /* jquery.js in Resources */,
-				9142027518DF7F6500C8E9C9 /* dilemaG.html in Resources */,
+				9142027518DF7F6500C8E9C9 /* delimaG.html in Resources */,
 				9142028118DF80DC00C8E9C9 /* delimaO.html in Resources */,
 				9121677E18E4DBC500DEEC00 /* delimaE.html in Resources */,
 				9121677C18E4DBB200DEEC00 /* delimaC.html in Resources */,

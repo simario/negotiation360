@@ -1,112 +1,51 @@
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
-
-  <title>Dragend JS mobile demo</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <style type="text/css">
-
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-    }
-
-    body {
-	  background: #34aadc;
-      padding: 15px;
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-
-    #demo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-      cursor: hand;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-      cursor: grab;
-    }
-
-    #demo p {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0 30px;
-      margin-bottom: 30px;
-	  color: #ffffff;
-    }
-
-    #demo p:first-child {
-      margin-top: 30px;
-    }
-
-    #demo p:last-child {
-      margin-bottom: 200px;
-    }
-
-  </style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/docs.css" />
+    <style>
+        .photo {
+            margin: 10px;
+        }
+        body {
+            background-image:url("top-banner-4.png");
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
 </head>
 <body>
+	<div align="center">
+        <img src="image-4.png" width="125px" height="125px" class="img-circle">
+	</div>
+    <div style="margin:20px">
+		<h4 style="font-weight:400">Type W+</h4>
+	</div>
 	
-	<div class="navbar navbar-default navbar-fixed-top" align="center" role="navigation" style="font-size: 12px; font-weight:100; color: #FF9F33">
-	  <span class="ion-ios7-arrow-thin-left"></span>&nbsp;SWIPE TO VIEW MORE&nbsp;<span class="ion-ios7-arrow-thin-right"></span>
-	</div>	
+	<div>
+		<p style="margin: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet nibh metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer vitae nulla purus. Duis venenatis, urna at suscipit bibendum, purus ligula blandit quam, in consequat nulla metus et dui.<br><br>Suspendisse laoreet commodo mollis. Quisque ultrices aliquam lacinia. Vestibulum faucibus, purus eget bibendum pellentesque, ante arcu aliquet risus, vel adipiscing metus mauris vel arcu. Morbi sed mollis nisi. Aenean sed eleifend justo. Praesent varius lorem lorem, vitae venenatis nibh commodo vitae.</p>
+	</div>
 
-  <div id="demo">
-    <ul>
-      <li class="first dragend-page">
-		    <div id="interpersonalDimension" ></div>
-			<p>Two questions you just answered deal with the interpersonal dimension of negotiation, specifically, asserting oneself and understanding others. Research show that most people feel that being relatively good at one of these skills comes at the cost of being less effective at the other. (Being firm about your demands could stress a relationship, for example. Or appearing cooperative might be misread as being weak.)</p>
-      </li>
-      <li class="dragend-page">
-		    <div id="outcomeDimension" ></div>
-			<p>Two other questions on the test address outcomes. Here again, a trade-off is involved. People who feel they are good at one skill tend to think they are relatively weaker with the other. SpecifIcally, good value-creators often are less sure about their ability to get their share of the resulting pie (and conversely).</p>
-      </li>
-      <li class="middle dragend-page">
-		    <div id="equalRatings" ></div>
-			<p>You can think of the interpersonal scale as representing the "means" of negotiation and the outcome scale as the "ends." Putting the two scales together reveals common bargaining styles. In the example above, the two scales intersect at the zero-zero. Here the user gave himself four 5s for the four skills, counting out from the center for each one.</p>
-			<p>That balance may look nice, but certain situations demand certain skills more than others.</p>
-      </li>
-      <li class="dragend-page">
-		    <div id="empatheticValueCreators" ></div>
-			<p>Depending on the kinds of negotiations you do, having a lopsided profile may be better. Most of the people who've taken this test fall into one of two categories. The first, Empathetic Value Creators, is depicted above.</p>
-      </li>
-      <li class="last dragend-page">
-		    <div id="assertiveValueClaimers" ></div>
-			<p>They make practical sense. A person who is strong relationally and understands the true needs of his or her counterpart is more likely to spot creative, problem-solving opportunities. And someone whose strength is self-advocacy is more likely to capture a larger slice of the pie (though less value may be available to grab).</p>
-      </li>
-    </ul>
-  </div>
+	<div class="alert alert-info" style="margin:20px">
+		<div class="row">
+			<div class="col-xs-1" style="margin-right:10px">
+				<span data-icon="&#xe030;" style="font-size: 24px"></span>
+			</div>
+			<div class="col-xs-10" style="font-weight:400; line-height:1.14285714285714">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet nibh metus.
+			</div>
+		</div>
+	</div>
 
-  <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="dragend.js"></script>
+	<div style="height:100px">
+	</div>
 
-  <script>
 
-    $(function() {
-      new Dragend($("#demo").get(0), {
-        afterInitialize: function() {
-          $("#demo").css("visibility", "visible");
-        }
-      });
-    });
-
-  </script>
-
-  <script src="highcharts.js"></script>
-  <script src="highcharts-more.js"></script>
-  <script src="charts-examples.js"></script>
-  <script src="minimal.js"></script>
-  <script src="modules/exporting.js"></script>
-
+    <script src="jquery.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="highcharts-more.js"></script>
+    <script src="modules/exporting.js"></script>
 </body>
 </html>
