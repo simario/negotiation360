@@ -7180,7 +7180,7 @@ a.thumbnail.active {
 }
 
 a.list-group-item {
-  color: #007aff;
+  color: #ff9f33;
 }
 
 a.list-group-item .list-group-item-heading {
@@ -7567,21 +7567,21 @@ a.list-group-item-info.active:focus {
 }
 
 .panel-warning {
-  border-color: #e69100;
+  border-color: #ff9f33;
 }
 
 .panel-warning > .panel-heading {
   color: #ffffff;
-  background-color: #ffcc00;
-  border-color: #e69100;
+  background-color: #ff9f33;
+  border-color: #ff9f33;
 }
 
 .panel-warning > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #e69100;
+  border-top-color: #ff9f33;
 }
 
 .panel-warning > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #e69100;
+  border-bottom-color: #ff9f33;
 }
 
 .panel-danger {
