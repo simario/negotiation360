@@ -373,7 +373,7 @@
             </objects>
             <point key="canvasLocation" x="1037" y="98"/>
         </scene>
-        <!--Skills View Controller - Tips-->
+        <!--Skills View Controller - Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -393,7 +393,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tips" id="inJ-Zp-EgG"/>
+                    <navigationItem key="navigationItem" title="Skill-Building Tips" id="inJ-Zp-EgG"/>
                     <connections>
                         <outlet property="webView" destination="JjV-yf-76a" id="iYn-Oh-JT1"/>
                     </connections>
@@ -402,7 +402,7 @@
             </objects>
             <point key="canvasLocation" x="2988" y="714"/>
         </scene>
-        <!--Dilema View Controller - Delimmas-->
+        <!--Dilema View Controller - Negotiation Delimmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -422,7 +422,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Delimmas" id="Inf-tc-dyf"/>
+                    <navigationItem key="navigationItem" title="Negotiation Delimmas" id="Inf-tc-dyf"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
                     </connections>
@@ -431,7 +431,7 @@
             </objects>
             <point key="canvasLocation" x="2980" y="98"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About View Controller - About Your Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -451,7 +451,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="Ive-Ll-XO2"/>
+                    <navigationItem key="navigationItem" title="About Your Profile" id="Ive-Ll-XO2"/>
                     <connections>
                         <outlet property="webView" destination="9Zp-gS-tQF" id="YWy-oE-213"/>
                     </connections>
@@ -513,7 +513,7 @@
             </objects>
             <point key="canvasLocation" x="1926" y="98"/>
         </scene>
-        <!--Results Overview View Controller - Profile-->
+        <!--Results Overview View Controller - Your Results-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -552,7 +552,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Profile" id="eEu-iS-KRe">
+                    <navigationItem key="navigationItem" title="Your Results" id="eEu-iS-KRe">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dFO-8e-ffV">
                             <connections>
                                 <action selector="compose:" destination="cgD-05-4mV" id="DH8-EA-ZB4"/>
