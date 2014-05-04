@@ -375,8 +375,8 @@
 }
 
 .panel-warning > .panel-heading {
-  background-image: -webkit-linear-gradient(top, #ffcc00 0%, #e6b800 100%);
-  background-image: linear-gradient(to bottom, #ffcc00 0%, #e6b800 100%);
+  background-image: -webkit-linear-gradient(top, #ff9f33 0%, #ff9f33 100%);
+  background-image: linear-gradient(to bottom, #ff9f33 0%, #ff9f33 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffcc00', endColorstr='#ffe6b800', GradientType=0);
 }
