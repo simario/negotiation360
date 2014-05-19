@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -162,7 +162,7 @@
                                             <rect key="frame" x="20" y="0.0" width="280" height="150"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <string key="text">Rate your relative strength in respect to four essential negotiating skills. You have 20 points to allocate overall. Remember, you're not judging how good you are at a particular skill. Instead, you're identifying what you are better at - and where else you're not as strong. Tap Next when ready.</string>
+                                            <string key="text">Rate your relative strength in respect to four essential negotiating skills. You have 16 points to allocate overall. Remember, you're not judging how good you are at a particular skill. Instead, you're identifying what you are better at - and where else you're not as strong. Tap Next when ready.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -183,7 +183,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <stepper opaque="NO" clipsSubviews="YES" tag="902" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-Fe-jC1">
+                                        <stepper opaque="NO" clipsSubviews="YES" tag="902" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-Fe-jC1">
                                             <rect key="frame" x="217" y="45" width="94" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </stepper>
@@ -350,10 +350,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-Xy-7G8">
-                                <rect key="frame" x="40" y="89" width="240" height="266"/>
+                                <rect key="frame" x="20" y="89" width="280" height="778"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">You are ready to start to take the Negotiation 3.0 quiz.  Tap the "Next" button to get started.  Helpful information about the content in this application are located in the links below for your reference.</string>
+                                <mutableString key="text">Everyone negotiates. At work. In their communities. And even at home with their families. Negotiating effectively means reaching agreements that would slip through other people’s fingers; creating value that others might overlook; and resolving small differences before they become costly disputes.Successful negotiators are well-rounded. They rely on a range of analytic, interpersonal, and problem-solving skills. They approach their approach to the situation at hand and have the agility to deal with different bargaining styles. To enhance your effectiveness as a negotiator, you need to recognize your strengths and weaknesses. Negotiation-360 provides a personalized profile of the skills that you can build on and other areas where you can improve. It also highlights key negotiation concepts about creating value and engaging other parties.Tap Next to take the test, analyze your feedback, and then review the tips for making better deals. </mutableString>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
