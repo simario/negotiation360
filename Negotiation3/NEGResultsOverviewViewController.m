@@ -149,7 +149,7 @@
             cell.textLabel.text = @"About Your Profile";
             break;
         case 2:
-            cell.textLabel.text = @"Negotiation Delimmas";
+            cell.textLabel.text = @"Dilemmas & Paradoxes";
             break;
         case 3:
             cell.textLabel.text = @"Skill-Building Tips";

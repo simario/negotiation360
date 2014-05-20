@@ -402,7 +402,7 @@
             </objects>
             <point key="canvasLocation" x="2988" y="714"/>
         </scene>
-        <!--Dilema View Controller - Negotiation Delimmas-->
+        <!--Dilema View Controller - Delimmas & Paradoxes-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -422,7 +422,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Negotiation Delimmas" id="Inf-tc-dyf"/>
+                    <navigationItem key="navigationItem" title="Delimmas &amp; Paradoxes" id="Inf-tc-dyf"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
                     </connections>
