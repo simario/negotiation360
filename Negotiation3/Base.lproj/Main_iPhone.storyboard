@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1412" y="-583"/>
         </scene>
-        <!--Quiz View Controller - Quiz-->
+        <!--Quiz View Controller - Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                             <outlet property="delegate" destination="DIv-hS-jEW" id="Pqi-Y8-fas"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quiz" id="RaY-pI-UCa">
+                    <navigationItem key="navigationItem" title="Negotiation Test" id="RaY-pI-UCa">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="ucp-Ue-kFu">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="DIv-hS-jEW" id="NgF-hd-nYS"/>
@@ -353,7 +353,14 @@
                                 <rect key="frame" x="20" y="89" width="280" height="778"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Everyone negotiates. At work. In their communities. And even at home with their families. Negotiating effectively means reaching agreements that would slip through other people’s fingers; creating value that others might overlook; and resolving small differences before they become costly disputes.Successful negotiators are well-rounded. They rely on a range of analytic, interpersonal, and problem-solving skills. They approach their approach to the situation at hand and have the agility to deal with different bargaining styles. To enhance your effectiveness as a negotiator, you need to recognize your strengths and weaknesses. Negotiation-360 provides a personalized profile of the skills that you can build on and other areas where you can improve. It also highlights key negotiation concepts about creating value and engaging other parties.Tap Next to take the test, analyze your feedback, and then review the tips for making better deals. </mutableString>
+                                <string key="text">Everyone negotiates. At work. In their communities. And even at home with their families. Negotiating effectively means reaching agreements that would slip through other people’s fingers; creating value that others might overlook; and resolving small differences before they become costly disputes.
+
+Successful negotiators are well-rounded. They rely on a range of analytic, interpersonal, and problem-solving skills. They approach their approach to the situation at hand and have the agility to deal with different bargaining styles. 
+
+To enhance your effectiveness as a negotiator, you need to recognize your strengths and weaknesses. Negotiation-360 provides a personalized profile of the skills that you can build on and other areas where you can improve. It also highlights key negotiation concepts about creating value and engaging other parties.
+
+Tap Next to take the test, analyze your feedback, and then review the tips for making better deals. 
+</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -373,7 +380,7 @@
             </objects>
             <point key="canvasLocation" x="1037" y="98"/>
         </scene>
-        <!--Skills View Controller - Skill-Building Tips-->
+        <!--Skills View Controller - Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -393,7 +400,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Skill-Building Tips" id="inJ-Zp-EgG"/>
+                    <navigationItem key="navigationItem" title="Tips" id="inJ-Zp-EgG"/>
                     <connections>
                         <outlet property="webView" destination="JjV-yf-76a" id="iYn-Oh-JT1"/>
                     </connections>
@@ -402,7 +409,7 @@
             </objects>
             <point key="canvasLocation" x="2988" y="714"/>
         </scene>
-        <!--Dilema View Controller - Delimmas & Paradoxes-->
+        <!--Dilema View Controller - Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -422,7 +429,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Delimmas &amp; Paradoxes" id="Inf-tc-dyf"/>
+                    <navigationItem key="navigationItem" title="Dilemmas" id="Inf-tc-dyf"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
                     </connections>
@@ -431,7 +438,7 @@
             </objects>
             <point key="canvasLocation" x="2980" y="98"/>
         </scene>
-        <!--About View Controller - About Your Profile-->
+        <!--About View Controller - Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -451,7 +458,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Your Profile" id="Ive-Ll-XO2"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Ive-Ll-XO2"/>
                     <connections>
                         <outlet property="webView" destination="9Zp-gS-tQF" id="YWy-oE-213"/>
                     </connections>
@@ -460,7 +467,7 @@
             </objects>
             <point key="canvasLocation" x="2988" y="-525"/>
         </scene>
-        <!--Quiz2 View Controller - Quiz-->
+        <!--Quiz2 View Controller - Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -497,7 +504,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quiz" id="yJe-Mh-vN5">
+                    <navigationItem key="navigationItem" title="Negotiation Test" id="yJe-Mh-vN5">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="sRa-xa-RoC">
                             <connections>
                                 <segue destination="cgD-05-4mV" kind="push" id="OCa-D8-3Iv"/>

@@ -1,0 +1,173 @@
+<!doctype html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+	  background: #fff;
+      padding: 20px;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #demo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      cursor: hand;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+
+    #demo p {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+
+  </style>
+
+</head>
+<body>
+	<div id="container" style="margin: 10px auto 10px; width: 280px; height: 280px"></div>
+	
+	<div>
+		<p>The scores that you gave yourself generated this personal profile. Consider the following questions:</p>
+		
+		<ol style="margin:20px">
+			<li>Is this profile a good fit for the kinds of negotiations that you typically do? If you had to choose, where should your biggest strength be?</li><br>
+			<li>Can you see a connection between your relational skills and your ability to create and claim value?</li><br>
+			<li>How flexible are you, that is, can you be more assertive when that's necessary, but more creative when that's appropriate?</li>
+		</ol>
+
+		<p>Your responses are closest to that of the <strong>%@</strong>. The group you are the most unlike is that of the <strong>%@</strong>.</p>
+		
+	</div>
+
+	<div class="alert alert-info">
+		<div class="row">
+			<div class="col-xs-1" style="margin-right:10px">
+				<span data-icon="&#xe030;" style="font-size: 24px"></span>
+			</div>
+			<div class="col-xs-10" style="font-weight:400; line-height:1.14285714285714">
+				Go read the section on the 5 Negotiation Profiles to learn more about each of these styles.
+			</div>
+		</div>
+	</div>
+	
+	<div style="height:100px">
+	</div>
+	
+    <script src="jquery.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="highcharts-more.js"></script>
+    <script src="modules/exporting.js"></script>
+    <script src="minimal.js"></script>
+    <script>
+	$(function () {
+
+	    $('#container').highcharts({
+
+	        chart: {
+	            polar: true,
+	            borderColor: '#34aadc',
+	            borderWidth: 2,
+	            type: 'line'
+	        },
+
+	        legend: {
+	            enabled: true,
+				margin: 20
+	        },
+
+
+	        title: {
+	            text: "Your Personal Profile",
+		        margin: 15
+	        },
+
+	        pane: {
+	            size: '80%',
+		        startAngle: -45,
+	        },
+
+	        xAxis: {
+	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+	            tickmarkPlacement: 'on',
+	            lineWidth: 0,
+				labels: {
+					style: {
+						whiteSpace: 'nowrap'
+					}
+				}
+	        },
+
+	        yAxis: {
+	            lineWidth: 0,
+				tickInterval: 4,
+	            max: 8,
+				min: 0
+	        },
+
+	        tooltip: {
+	            enabled: false
+	        },
+
+			credits: {
+	            enabled: false
+	         },
+
+	        navigation: {
+	            buttonOptions: {
+	                enabled: false
+	            }
+	        },
+
+	        plotOptions: {
+	            series: {
+	                fillOpacity: 0.33,
+	                marker: {
+	                    fillColor: '#FFFFFF',
+	                    lineWidth: 2,
+	                    lineColor: null // inherit from series
+	                }
+	            },
+	        },
+
+	        series: [{
+	            name: 'Your Profile',
+	            type: 'area',
+	            data: [6, 6, 2, 2],
+				lineWidth: 5,
+	            animation: {
+	                duration: 1000
+	            }, 
+	        },	{
+		            name: 'Your Negotiator Group',
+		            type: 'area',
+		            data: [2, 2, 6, 6],
+					lineWidth: 5,
+		            animation: {
+		                duration: 2000
+		            }, 
+		        }]
+
+	    });
+	});		
+    </script>
+
+
+</body>
+</html>

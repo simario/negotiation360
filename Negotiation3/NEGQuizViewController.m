@@ -243,7 +243,7 @@
     _questionLabels = [NSArray arrayWithObjects:@"Recognizing and capitalizing on opportunities to create value.",
                        @"Asserting your interests and point of view.",
                        @"Understanding the motivations and feelings of other parties.",
-                       @"Getting the maximum possible in the aggreement.",
+                       @"Getting the maximum possible in the agreement.",
                        nil];
     
     
