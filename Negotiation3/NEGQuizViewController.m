@@ -42,11 +42,11 @@
 - (IBAction)nextButtonPressed:(id)sender {
 
     
-    if (self.total == 20) {
+    if (self.total == 16) {
         [self performSegueWithIdentifier:@"toQuestion5" sender:self];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                        message:@"Please distribute numbers to equal 20."
+                                                        message:@"Please distribute numbers to equal 16."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -64,13 +64,13 @@
     
     self.total = val1 + val2 + val3 + val4;
     
-    if (self.total == 20) {
+    if (self.total == 16) {
         [self.nextButton setTitle:@"Next"];
-    } else if (self.total < 20) {
-        int diff = 20 - self.total;
+    } else if (self.total < 16) {
+        int diff = 16 - self.total;
         [self.nextButton setTitle:[NSString stringWithFormat:@"+ %d", diff]];
     } else {
-        int diff = self.total - 20;
+        int diff = self.total - 16;
         [self.nextButton setTitle:[NSString stringWithFormat:@"- %d", diff]];
     }
     
@@ -243,7 +243,7 @@
     _questionLabels = [NSArray arrayWithObjects:@"Recognizing and capitalizing on opportunities to create value.",
                        @"Asserting your interests and point of view.",
                        @"Understanding the motivations and feelings of other parties.",
-                       @"Getting the maximum possible in the aggreement.",
+                       @"Getting the maximum possible in the agreement.",
                        nil];
     
     

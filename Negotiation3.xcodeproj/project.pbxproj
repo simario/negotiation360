@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6902FCED193BB7DC00820A36 /* charts-profiles.js in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEC193BB7DC00820A36 /* charts-profiles.js */; };
+		6902FCF1193BB83500820A36 /* compare.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEE193BB83400820A36 /* compare.html */; };
+		6902FCF2193BB83500820A36 /* profiles.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEF193BB83500820A36 /* profiles.html */; };
+		6902FCF3193BB83500820A36 /* yourprofile.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCF0193BB83500820A36 /* yourprofile.html */; };
 		69234B0E18FB2E5900E5B0AA /* minimal.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0D18FB2E5900E5B0AA /* minimal.js */; };
 		69234B1018FB2EB700E5B0AA /* charts-examples.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0F18FB2EB700E5B0AA /* charts-examples.js */; };
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
@@ -156,6 +160,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6902FCEC193BB7DC00820A36 /* charts-profiles.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "charts-profiles.js"; sourceTree = "<group>"; };
+		6902FCEE193BB83400820A36 /* compare.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = compare.html; sourceTree = "<group>"; };
+		6902FCEF193BB83500820A36 /* profiles.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = profiles.html; sourceTree = "<group>"; };
+		6902FCF0193BB83500820A36 /* yourprofile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = yourprofile.html; sourceTree = "<group>"; };
 		69234B0D18FB2E5900E5B0AA /* minimal.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = minimal.js; sourceTree = "<group>"; };
 		69234B0F18FB2EB700E5B0AA /* charts-examples.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "charts-examples.js"; sourceTree = "<group>"; };
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
@@ -349,6 +357,10 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				6902FCEE193BB83400820A36 /* compare.html */,
+				6902FCEF193BB83500820A36 /* profiles.html */,
+				6902FCF0193BB83500820A36 /* yourprofile.html */,
+				6902FCEC193BB7DC00820A36 /* charts-profiles.js */,
 				69C585C71901697A00EE6E27 /* dragend.js */,
 				69C585C81901697A00EE6E27 /* hammer.min.js */,
 				69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */,
@@ -652,6 +664,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6902FCF1193BB83500820A36 /* compare.html in Resources */,
+				6902FCF2193BB83500820A36 /* profiles.html in Resources */,
+				6902FCF3193BB83500820A36 /* yourprofile.html in Resources */,
+				6902FCED193BB7DC00820A36 /* charts-profiles.js in Resources */,
 				69A46A08190D557900E2C242 /* image-8.png in Resources */,
 				69A46A09190D557900E2C242 /* top-banner-8.png in Resources */,
 				699A8400190AEB8A0041EEC2 /* image-7.png in Resources */,
