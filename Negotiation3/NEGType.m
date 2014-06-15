@@ -14,7 +14,7 @@
  var types = [
  {
  id: "type1",
- label: "Empathetic Value Creators",
+ label: "Relational Negotiators",
  create: 3.222857143,
  assert: 4.64,
  empathy: 5.382857143,
@@ -22,7 +22,7 @@
  },
  {
  id: "type2",
- label: "Assertive Value Claimers",
+ label: "Empathetic Value Creators",
  create: 4.861538462,
  assert: 2.77948718,
  empathy: 5.528205128,
@@ -30,7 +30,7 @@
  },
  {
  id: "type3",
- label: "Assertive Value Creators",
+ label: "Outcome-Focused Negotiators",
  create: 4.756363636,
  assert: 3.403636364,
  empathy: 3.636363636,
@@ -38,7 +38,7 @@
  },
  {
  id: "type4",
- label: "Relational Negotiators",
+ label: "Assertive Value Claimers",
  create: 2.542857143,
  assert: 5.257142857,
  empathy: 3.657142857,
@@ -46,7 +46,7 @@
  },
  {
  id: "type5",
- label: "Outcome-Focused Negotiators",
+ label: "Assertive Value Creators",
  create: 4.628571429,
  assert: 5.447619048,
  empathy: 3.085714286,
@@ -180,18 +180,18 @@
     int empathy = (int)[[detailItem valueForKey:@"question3"] doubleValue];
     int claim = (int)[[detailItem valueForKey:@"question4"] doubleValue];
     
-    NSMutableDictionary *type1 = [self createType:@"type1" label:@"Empathetic Value Creators" create:[NSNumber numberWithFloat:3.222857143] assert:[NSNumber numberWithFloat:4.64] empathy:[NSNumber numberWithFloat:5.382857143] claim:[NSNumber numberWithFloat:2.754285714]];
+    NSMutableDictionary *type1 = [self createType:@"type1" label:@"Relational Negotiators" create:[NSNumber numberWithFloat:3.222857143] assert:[NSNumber numberWithFloat:4.64] empathy:[NSNumber numberWithFloat:5.382857143] claim:[NSNumber numberWithFloat:2.754285714]];
 
-    NSMutableDictionary *type2 = [self createType:@"type2" label:@"Assertive Value Claimers" create:[NSNumber numberWithFloat:4.861538462] assert:[NSNumber numberWithFloat:2.77948718] empathy:[NSNumber numberWithFloat:5.528205128] claim:[NSNumber numberWithFloat:2.830769231]];
+    NSMutableDictionary *type2 = [self createType:@"type2" label:@"Empathetic Value Creators" create:[NSNumber numberWithFloat:4.861538462] assert:[NSNumber numberWithFloat:2.77948718] empathy:[NSNumber numberWithFloat:5.528205128] claim:[NSNumber numberWithFloat:2.830769231]];
 
 
-    NSMutableDictionary *type3 = [self createType:@"type3" label:@"Assertive Value Creators" create:[NSNumber numberWithFloat:4.756363636] assert:[NSNumber numberWithFloat:3.403636364] empathy:[NSNumber numberWithFloat:3.636363636] claim:[NSNumber numberWithFloat:4.203636364]];
+    NSMutableDictionary *type3 = [self createType:@"type3" label:@"Outcome-Focused Negotiators" create:[NSNumber numberWithFloat:4.756363636] assert:[NSNumber numberWithFloat:3.403636364] empathy:[NSNumber numberWithFloat:3.636363636] claim:[NSNumber numberWithFloat:4.203636364]];
     
 
-    NSMutableDictionary *type4 = [self createType:@"type4" label:@"Relational Negotiators" create:[NSNumber numberWithFloat:2.542857143] assert:[NSNumber numberWithFloat:5.257142857] empathy:[NSNumber numberWithFloat:3.657142857] claim:[NSNumber numberWithFloat:4.542857143]];
+    NSMutableDictionary *type4 = [self createType:@"type4" label:@"Assertive Value Claimers" create:[NSNumber numberWithFloat:2.542857143] assert:[NSNumber numberWithFloat:5.257142857] empathy:[NSNumber numberWithFloat:3.657142857] claim:[NSNumber numberWithFloat:4.542857143]];
     
     
-    NSMutableDictionary *type5 = [self createType:@"type5" label:@"Outcome-Focused Negotiators" create:[NSNumber numberWithFloat:4.628571429] assert:[NSNumber numberWithFloat:5.447619048] empathy:[NSNumber numberWithFloat:3.085714286] claim:[NSNumber numberWithFloat:2.838095238]];
+    NSMutableDictionary *type5 = [self createType:@"type5" label:@"Assertive Value Creators" create:[NSNumber numberWithFloat:4.628571429] assert:[NSNumber numberWithFloat:5.447619048] empathy:[NSNumber numberWithFloat:3.085714286] claim:[NSNumber numberWithFloat:2.838095238]];
     
     NSArray *types = [NSArray arrayWithObjects:type1, type2, type3, type4, type5, nil];
     
