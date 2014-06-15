@@ -48,14 +48,34 @@
     if (self.detailItem) {
         
         NEGType *t = [[NEGType alloc] init];
-        NSString *resultType = [NSString stringWithFormat:@"type%@", [t getType:self.detailItem]];
+        NSMutableDictionary *resultType = [t getType:self.detailItem];
         
-        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:resultType ofType:@"html" ]];
+        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"yourprofile" ofType:@"html" ]];
         NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+        
+        NSMutableDictionary *nearest = [resultType objectForKey:@"nearest"];
+        NSString *nearestLabel = [nearest objectForKey:@"label"];
+        NSMutableDictionary *furthest = [resultType objectForKey:@"furthest"];
+        NSString *furthestLabel = [furthest objectForKey:@"label"];
+        
+        
+        NSNumber *nCreate = [nearest objectForKey:@"create"];
+        NSNumber *nAssert = [nearest objectForKey:@"assert"];
+        NSNumber *nEmpathy = [nearest objectForKey:@"empathy"];
+        NSNumber *nClaim = [nearest objectForKey:@"claim"];
+        
+        
+        NSNumber *create = [resultType objectForKey:@"create"];
+        NSNumber *assert = [resultType objectForKey:@"assert"];
+        NSNumber *empathy = [resultType objectForKey:@"empathy"];
+        NSNumber *claim = [resultType objectForKey:@"claim"];
+        
         
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
         
-        [self.webView loadHTMLString:htmlString
+        NSString *str = [NSString stringWithFormat:htmlString, nearestLabel, furthestLabel, create, assert, empathy, claim, nearestLabel, nCreate, nAssert, nEmpathy, nClaim];
+        
+        [self.webView loadHTMLString:str
                              baseURL:url];
     }
     
