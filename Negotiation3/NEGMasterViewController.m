@@ -248,13 +248,11 @@
         
     }
     
-    NSString *t = [_negType getType:object];
     
-    if ([t isEqualToString:@"unknown"]) {
-        [self performSegueWithIdentifier:@"showDetail" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"results_from_main" sender:self];
-    }
+    
+
+    [self performSegueWithIdentifier:@"results_from_main" sender:self];
+
 
 }
 
@@ -378,12 +376,15 @@
 {
     
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *t = [_negType getType: object];
-    //cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
-    
-    if ([t isEqualToString:@"unknown"]) {
-        t = @"in progress";
+    NSString *t = @"in progress";
+    NSMutableDictionary *d = [_negType getType:object];
+    NSMutableDictionary *n = [d objectForKey:@"nearest"];
+    if (n) {
+        t = [NSString stringWithFormat:@"%@ - %@", [n objectForKey:@"typeId"], [n objectForKey:@"label"], nil];
     }
+
+    
+
     cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
 }
 

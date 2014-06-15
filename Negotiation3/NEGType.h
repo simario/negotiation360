@@ -10,7 +10,7 @@
 
 @interface NEGType : NSObject
 
--(NSString *)getType:(id)detailItem;
+-(NSMutableDictionary *)getType:(id)detailItem;
 
 -(NSMutableDictionary *)createType:(NSString *)typeId label:(NSString *)label create:(id)create assert:(id)assert empathy:(id)empathy claim:(id)claim;
 
