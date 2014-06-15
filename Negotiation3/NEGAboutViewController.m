@@ -73,7 +73,7 @@
         
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
         
-        NSString *str = [NSString stringWithFormat:htmlString, nearestLabel, furthestLabel, create, assert, empathy, claim, nearestLabel, nCreate, nAssert, nEmpathy, nClaim];
+        NSString *str = [NSString stringWithFormat:htmlString, nearestLabel, furthestLabel, create, empathy, claim, assert, nearestLabel, nCreate, nEmpathy, nClaim, nAssert];
         
         [self.webView loadHTMLString:str
                              baseURL:url];
