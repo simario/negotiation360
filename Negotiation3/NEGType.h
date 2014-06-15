@@ -12,4 +12,11 @@
 
 -(NSString *)getType:(id)detailItem;
 
+-(NSMutableDictionary *)createType:(NSString *)typeId label:(NSString *)label create:(id)create assert:(id)assert empathy:(id)empathy claim:(id)claim;
+
+-(void)printObject:(NSMutableDictionary *)dict;
+
+-(NSMutableDictionary *)nearest:(NSArray *)types create:(int)create assert:(int)assert empathy:(int)empathy claim:(int)claim;
+-(NSMutableDictionary *)furthest:(NSArray *)types create:(int)create assert:(int)assert empathy:(int)empathy claim:(int)claim;
+-(NSNumber *)distance:(NSMutableDictionary *)type create:(int)create assert:(int)assert empathy:(int)empathy claim:(int)claim;
 @end
