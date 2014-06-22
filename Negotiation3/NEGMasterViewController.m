@@ -380,7 +380,7 @@
     NSMutableDictionary *d = [_negType getType:object];
     NSMutableDictionary *n = [d objectForKey:@"nearest"];
     if (n) {
-        t = [NSString stringWithFormat:@"%@ - %@", [n objectForKey:@"typeId"], [n objectForKey:@"label"], nil];
+        t = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
     }
 
     

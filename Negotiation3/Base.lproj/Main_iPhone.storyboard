@@ -348,21 +348,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-Xy-7G8">
-                                <rect key="frame" x="20" y="89" width="280" height="778"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9J-Oa-8Pp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Everyone negotiates. At work. In their communities. And even at home with their families. Negotiating effectively means reaching agreements that would slip through other people’s fingers; creating value that others might overlook; and resolving small differences before they become costly disputes.
-
-Successful negotiators are well-rounded. They rely on a range of analytic, interpersonal, and problem-solving skills. They approach their approach to the situation at hand and have the agility to deal with different bargaining styles. 
-
-To enhance your effectiveness as a negotiator, you need to recognize your strengths and weaknesses. Negotiation-360 provides a personalized profile of the skills that you can build on and other areas where you can improve. It also highlights key negotiation concepts about creating value and engaging other parties.
-
-Tap Next to take the test, analyze your feedback, and then review the tips for making better deals. 
-</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -373,6 +363,9 @@ Tap Next to take the test, analyze your feedback, and then review the tips for m
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="p9J-Oa-8Pp" id="Hm2-wp-wzS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Gvp-67-fOj"/>

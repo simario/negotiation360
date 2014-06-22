@@ -41,8 +41,10 @@
         NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness: %@\n", [self.detailItem valueForKey:@"question5"]];
         
         NEGType *t = [[NEGType alloc] init];
+        NSMutableDictionary *type = [t getType:self.detailItem];
+        NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
         
-        NSString *resultType = [NSString stringWithFormat:@"My Type: Type %@\n", [t getType:self.detailItem]];
+        NSString *resultType = [NSString stringWithFormat:@"My Type: %@\n", [nearest objectForKey:@"label"]];
         
         
         

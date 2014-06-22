@@ -50,8 +50,21 @@
 {
     // Update the user interface for the detail item.
 
+    /*
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    }*/
+    
+    
+    if (self.detailItem) {
+        
+        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"about" ofType:@"html" ]];
+        NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+        
+        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
+        
+        [self.webView loadHTMLString:htmlString
+                             baseURL:url];
     }
 }
 

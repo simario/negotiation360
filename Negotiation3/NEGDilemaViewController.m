@@ -46,10 +46,7 @@
     
     if (self.detailItem) {
         
-        NEGType *t = [[NEGType alloc] init];
-        NSString *resultType = [NSString stringWithFormat:@"delima%@", [t getType:self.detailItem]];
-        
-        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:resultType ofType:@"html" ]];
+        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"dilemmas" ofType:@"html" ]];
         NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
         
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
