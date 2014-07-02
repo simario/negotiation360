@@ -126,7 +126,7 @@
 {
     
     // Return the number of rows in the section.
-    return 4;
+    return 6;
 }
 
 
@@ -148,12 +148,21 @@
             
             break;
         case 1:
-            cell.textLabel.text = @"About Your Profile";
+            cell.textLabel.text = @"Negotiation Dilemmas";
+            
             break;
         case 2:
-            cell.textLabel.text = @"Negotiation Dilemmas";
+            cell.textLabel.text = @"How You Compare";
             break;
         case 3:
+            cell.textLabel.text = @"Negotiation Styles";
+            break;
+        case 4:
+            cell.textLabel.text = @"Your Negotiation Profile";
+            break;
+            
+        case 5:
+            
             cell.textLabel.text = @"Skill-Building Tips";
             break;
             
@@ -175,13 +184,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.item) {
+        
         case 1:
-            [self performSegueWithIdentifier:@"your_profile" sender:self];
-            break;
-        case 2:
             [self performSegueWithIdentifier:@"delimas" sender:self];
             break;
+        case 2:
+            [self performSegueWithIdentifier:@"compare" sender:self];
+            break;
         case 3:
+            [self performSegueWithIdentifier:@"profiles" sender:self];
+            break;
+        case 4:
+            [self performSegueWithIdentifier:@"your_profile" sender:self];
+            break;
+        case 5:
             [self performSegueWithIdentifier:@"skills" sender:self];
             break;
             

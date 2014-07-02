@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -399,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smm-p3-sCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2988" y="714"/>
+            <point key="canvasLocation" x="2632" y="818"/>
         </scene>
         <!--Dilema View Controller - Dilemmas-->
         <scene sceneID="UUF-5B-23C">
@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbN-SQ-Pae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="98"/>
+            <point key="canvasLocation" x="3000" y="-574"/>
         </scene>
         <!--About View Controller - Profile-->
         <scene sceneID="fHi-Uz-6Zi">
@@ -457,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8F-D7-DfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2988" y="-525"/>
+            <point key="canvasLocation" x="2464" y="-619"/>
         </scene>
         <!--Quiz2 View Controller - Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
@@ -591,11 +591,13 @@
                         <segue destination="AUL-Xj-pHi" kind="push" identifier="your_profile" id="LWi-Ss-1kB"/>
                         <segue destination="ucN-YR-o2j" kind="push" identifier="delimas" id="la5-Ro-OJY"/>
                         <segue destination="taj-am-VY2" kind="push" identifier="skills" id="886-qh-1x9"/>
+                        <segue destination="LSl-pz-FDI" kind="push" identifier="profiles" id="UyS-LV-eFk"/>
+                        <segue destination="xl2-TN-KaX" kind="push" identifier="compare" id="2Za-JU-bcP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl1-iX-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2348" y="98"/>
+            <point key="canvasLocation" x="2298" y="104"/>
         </scene>
         <!--Resources View Controller - Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
@@ -654,6 +656,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vp-0Y-9GK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2226" y="2100"/>
+        </scene>
+        <!--Profiles View Controller - Negotiation Styles-->
+        <scene sceneID="j7e-ox-iKi">
+            <objects>
+                <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2yc-zO-oW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKV-wi-Cub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVR-bA-ZLt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cvf-dJ-Cm9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Negotiation Styles" id="1hk-cA-9bQ"/>
+                    <connections>
+                        <outlet property="webView" destination="Cvf-dJ-Cm9" id="px5-kY-VWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXN-FK-rYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="162"/>
+        </scene>
+        <!--Compare View Controller - How You Compare-->
+        <scene sceneID="F66-SV-mim">
+            <objects>
+                <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8zy-VJ-b7F"/>
+                        <viewControllerLayoutGuide type="bottom" id="2l8-Jr-PfH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cSE-F0-HI6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-yZ-gOO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="How You Compare" id="qhA-gy-mvk"/>
+                    <connections>
+                        <outlet property="webView" destination="z4B-yZ-gOO" id="TAl-qa-2OI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYO-3a-Fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3406" y="134"/>
         </scene>
     </scenes>
     <resources>

@@ -34,6 +34,8 @@
 		69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C81901697A00EE6E27 /* hammer.min.js */; };
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
 		69EF5F5C1909EFC200A947AF /* page-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EF5F5B1909EFC200A947AF /* page-6.png */; };
+		910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66F919641D7F00325586 /* NEGProfilesViewController.m */; };
+		910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66FC19641DA300325586 /* NEGCompareViewController.m */; };
 		91143D9E18DFAAB800FFE277 /* resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9D18DFAAB800FFE277 /* resources.html */; };
 		91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9F18DFAAC700FFE277 /* michael_wheeler.html */; };
 		9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9115A77C18DF338300FBDB5C /* NEGQuiz2ViewController.m */; };
@@ -187,6 +189,10 @@
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
 		69EF5F5B1909EFC200A947AF /* page-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-6.png"; sourceTree = "<group>"; };
+		910D66F819641D7F00325586 /* NEGProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGProfilesViewController.h; sourceTree = "<group>"; };
+		910D66F919641D7F00325586 /* NEGProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGProfilesViewController.m; sourceTree = "<group>"; };
+		910D66FB19641DA300325586 /* NEGCompareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NEGCompareViewController.h; path = Negotiation3/NEGCompareViewController.h; sourceTree = SOURCE_ROOT; };
+		910D66FC19641DA300325586 /* NEGCompareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NEGCompareViewController.m; path = Negotiation3/NEGCompareViewController.m; sourceTree = SOURCE_ROOT; };
 		91143D9D18DFAAB800FFE277 /* resources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = resources.html; sourceTree = "<group>"; };
 		91143D9F18DFAAC700FFE277 /* michael_wheeler.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = michael_wheeler.html; sourceTree = "<group>"; };
 		9115A77B18DF338300FBDB5C /* NEGQuiz2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGQuiz2ViewController.h; sourceTree = "<group>"; };
@@ -550,6 +556,10 @@
 				9121678618E50DED00DEEC00 /* NEGLinksTableViewController.m */,
 				9121678818E5176400DEEC00 /* NEGProfilesTableViewController.h */,
 				9121678918E5176400DEEC00 /* NEGProfilesTableViewController.m */,
+				910D66FB19641DA300325586 /* NEGCompareViewController.h */,
+				910D66FC19641DA300325586 /* NEGCompareViewController.m */,
+				910D66F819641D7F00325586 /* NEGProfilesViewController.h */,
+				910D66F919641D7F00325586 /* NEGProfilesViewController.m */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -764,6 +774,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */,
+				910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */,
 				91B66A0E18DE2BB500DBA430 /* jquery.js in Sources */,
 				91B66A1818DE2BB500DBA430 /* funnel.src.js in Sources */,
 				91DDE23F18DF9EB40018CBC4 /* NEGResourcesViewController.m in Sources */,
@@ -785,6 +796,7 @@
 				9121678718E50DED00DEEC00 /* NEGLinksTableViewController.m in Sources */,
 				91B66A1718DE2BB500DBA430 /* funnel.js in Sources */,
 				91B66A0D18DE2BB500DBA430 /* highcharts.src.js in Sources */,
+				910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */,
 				91B6691D18DE0CED00DBA430 /* NEGResultsOverviewViewController.m in Sources */,
 				91B66A0818DE2BB500DBA430 /* standalone-framework.src.js in Sources */,
 				91D3E1D118B9333600FC14F7 /* NEGQuizViewController.m in Sources */,
