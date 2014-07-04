@@ -28,14 +28,14 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setToolbarHidden:NO animated:NO];
+    [self.navigationController setToolbarHidden:YES animated:NO];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
     _negType = [[NEGType alloc] init];
     
     

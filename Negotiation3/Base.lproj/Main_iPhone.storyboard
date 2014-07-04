@@ -8,6 +8,7 @@
         <scene sceneID="cUi-kZ-frf">
             <objects>
                 <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -53,15 +54,15 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem systemItem="bookmarks" id="TwK-FZ-Piv">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Negotiation 360°" id="tQt-TN-PWz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="TwK-FZ-Piv">
                             <connections>
                                 <segue destination="Z6F-xb-iA7" kind="modal" id="GJh-vU-epI"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Negotiation 360°" id="tQt-TN-PWz"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="7DW-9h-cBO" kind="modal" identifier="showWalkthrough" id="ZhS-AJ-Ce8"/>
                         <segue destination="cgD-05-4mV" kind="push" identifier="results_from_main" id="oA1-ch-634"/>
@@ -75,7 +76,9 @@
         <!--Page View Controller-->
         <scene sceneID="C07-zP-9hx">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7DW-9h-cBO" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7DW-9h-cBO" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bj-HW-inO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="281" y="-627"/>
@@ -130,6 +133,7 @@
                         <color key="backgroundColor" red="0.20392156862745098" green="0.66666666666666663" blue="0.86274509803921573" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="VMb-gu-F3f" id="ih6-jb-xxG"/>
                         <outlet property="goButton" destination="MsA-EC-dur" id="3Eb-hG-OSZ"/>
@@ -249,6 +253,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="JEJ-MM-Sbq" kind="push" identifier="about_negotiation_resources" id="JhG-7d-thQ"/>
                         <segue destination="pDf-tE-goB" kind="push" identifier="about_mw" id="tP3-F4-eX5"/>
@@ -263,6 +268,7 @@
         <scene sceneID="TFA-4L-oa6">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Z6F-xb-iA7" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="27U-7P-r7F">
                         <autoresizingMask key="autoresizingMask"/>
@@ -296,6 +302,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Negotiation Profiles" id="4dZ-ya-KtS"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="Wv7-ph-jNC" id="4uC-ss-EOL"/>
                     </connections>
@@ -328,6 +335,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rl6-Ao-sKS"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="TfM-Ts-HaH" kind="push" identifier="showAboutTypes" id="aO0-cH-SxN"/>
                     </connections>
@@ -363,6 +371,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="p9J-Oa-8Pp" id="Hm2-wp-wzS"/>
                     </connections>
@@ -393,6 +402,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tips" id="inJ-Zp-EgG"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="JjV-yf-76a" id="iYn-Oh-JT1"/>
                     </connections>
@@ -422,6 +432,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dilemmas" id="Inf-tc-dyf"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
                     </connections>
@@ -451,6 +462,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Ive-Ll-XO2"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="9Zp-gS-tQF" id="YWy-oE-213"/>
                     </connections>
@@ -503,6 +515,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="questionValueLabel5" destination="aOz-q3-Gcr" id="glf-ui-Awh"/>
                         <outlet property="slider" destination="4h7-DP-v0Y" id="hIm-qC-VbL"/>
@@ -586,7 +599,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="AUL-Xj-pHi" kind="push" identifier="your_profile" id="LWi-Ss-1kB"/>
                         <segue destination="ucN-YR-o2j" kind="push" identifier="delimas" id="la5-Ro-OJY"/>
@@ -620,6 +633,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Negotiation Resources" id="SL9-Cp-Ye6"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="hZ4-cv-wAQ" id="ody-WS-5WF"/>
                     </connections>
@@ -649,6 +663,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About Michael Wheeler" id="3IW-cD-FPQ"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="M5R-rT-ALx" id="oC0-mN-jZp"/>
                     </connections>
@@ -678,6 +693,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Negotiation Styles" id="1hk-cA-9bQ"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="Cvf-dJ-Cm9" id="px5-kY-VWr"/>
                     </connections>
@@ -707,6 +723,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="How You Compare" id="qhA-gy-mvk"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="z4B-yZ-gOO" id="TAl-qa-2OI"/>
                     </connections>
@@ -726,6 +743,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
+        <segue reference="OCa-D8-3Iv"/>
     </inferredMetricsTieBreakers>
 </document>
