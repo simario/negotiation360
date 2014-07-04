@@ -113,6 +113,17 @@
                     baseURL:url];
 }
 
+- (void)configureType:(UITableViewCell *)cell {
+    NEGType *t = [[NEGType alloc] init];
+    NSMutableDictionary *type = [t getType:self.detailItem];
+
+    UILabel *typeLabel = (UILabel *)[cell viewWithTag:999];
+    NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
+    typeLabel.text = (NSString *)[nearest objectForKey:@"label"];
+    
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -126,7 +137,7 @@
 {
     
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 
@@ -135,6 +146,8 @@
     UITableViewCell *cell;
     
     if (indexPath.item == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"resultsTypeCell" forIndexPath:indexPath];
+    } else if (indexPath.item == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"resultsGraphCell" forIndexPath:indexPath];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"ResultsCell" forIndexPath:indexPath];
@@ -142,26 +155,30 @@
     
     switch (indexPath.item) {
         case 0:
+            //cell.textLabel.text = @"Type";
+            [self configureType:cell];
+            break;
+        case 1:
             
             
             [self configureGraph:cell];
             
             break;
-        case 1:
+        case 2:
             cell.textLabel.text = @"Negotiation Dilemmas";
             
             break;
-        case 2:
+        case 3:
             cell.textLabel.text = @"How You Compare";
             break;
-        case 3:
+        case 4:
             cell.textLabel.text = @"Negotiation Styles";
             break;
-        case 4:
+        case 5:
             cell.textLabel.text = @"Your Negotiation Profile";
             break;
             
-        case 5:
+        case 6:
             
             cell.textLabel.text = @"Skill-Building Tips";
             break;
@@ -176,7 +193,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat h = 44;
     if (indexPath.item == 0) {
-        h = 244;
+        h = 64;
+    }
+    if (indexPath.item == 1) {
+        h = 224;
     }
     return h;
 }
@@ -185,19 +205,19 @@
 {
     switch (indexPath.item) {
         
-        case 1:
+        case 2:
             [self performSegueWithIdentifier:@"delimas" sender:self];
             break;
-        case 2:
+        case 3:
             [self performSegueWithIdentifier:@"compare" sender:self];
             break;
-        case 3:
+        case 4:
             [self performSegueWithIdentifier:@"profiles" sender:self];
             break;
-        case 4:
+        case 5:
             [self performSegueWithIdentifier:@"your_profile" sender:self];
             break;
-        case 5:
+        case 6:
             [self performSegueWithIdentifier:@"skills" sender:self];
             break;
             
