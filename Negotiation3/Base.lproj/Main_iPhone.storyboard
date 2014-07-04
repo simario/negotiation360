@@ -165,7 +165,7 @@
                                             <rect key="frame" x="20" y="0.0" width="280" height="150"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <string key="text">Rate your relative strength in respect to four essential negotiating skills. You have 16 points to allocate overall. Remember, you're not judging how good you are at a particular skill. Instead, you're identifying what you are better at - and where else you're not as strong. Tap Next when ready.</string>
+                                            <string key="text">Part A: Rate your relative strength in respect to four essential negotiating skills. You have 16 points to allocate overall. Remember, you're not judging how good you are at a particular skill. Instead, you're identifying what you are better at - and where else you're not as strong. Tap Next when ready.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -381,7 +381,7 @@
             </objects>
             <point key="canvasLocation" x="1149" y="-538"/>
         </scene>
-        <!--Skills View Controller - Tips-->
+        <!--Skills View Controller - Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -401,7 +401,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tips" id="inJ-Zp-EgG"/>
+                    <navigationItem key="navigationItem" title="Skill-Building Tips" id="inJ-Zp-EgG"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="JjV-yf-76a" id="iYn-Oh-JT1"/>
@@ -411,7 +411,7 @@
             </objects>
             <point key="canvasLocation" x="2632" y="818"/>
         </scene>
-        <!--Dilema View Controller - Dilemmas-->
+        <!--Dilema View Controller - Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -431,7 +431,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dilemmas" id="Inf-tc-dyf"/>
+                    <navigationItem key="navigationItem" title="Negotiation Dilemmas" id="Inf-tc-dyf"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
@@ -441,7 +441,7 @@
             </objects>
             <point key="canvasLocation" x="3000" y="-574"/>
         </scene>
-        <!--About View Controller - Profile-->
+        <!--About View Controller - Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -461,7 +461,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Ive-Ll-XO2"/>
+                    <navigationItem key="navigationItem" title="Your Personal Profile" id="Ive-Ll-XO2"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="9Zp-gS-tQF" id="YWy-oE-213"/>
@@ -487,11 +487,11 @@
                                 <rect key="frame" x="20" y="64" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Now, compare your overall effectiveness relative to people you typically negotiate with. (If you are no better and no worse than most people you encounter, score yourself at the 50th percentile; if you are better (or worse), score yourself accordingly.)</string>
+                                <string key="text">Part B: Now, compare your overall effectiveness relative to people you typically negotiate with. (If you are no better and no worse than most people you encounter, score yourself at the 50th percentile; if you are better (or worse), score yourself accordingly.)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4h7-DP-v0Y">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="4h7-DP-v0Y">
                                 <rect key="frame" x="38" y="340" width="244" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -525,7 +525,7 @@
             </objects>
             <point key="canvasLocation" x="1974" y="-538"/>
         </scene>
-        <!--Results Overview View Controller - Your Results-->
+        <!--Results Overview View Controller - Results-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -545,8 +545,8 @@
                                             <rect key="frame" x="20" y="11" width="42" height="42"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="999" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-Pz-SrM">
-                                            <rect key="frame" x="77" y="22" width="237" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="999" text="Type" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="237" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-Pz-SrM">
+                                            <rect key="frame" x="77" y="12" width="237" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -562,7 +562,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <webView tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-RJ-Fzb">
+                                        <webView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-RJ-Fzb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -585,7 +585,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Your Results" id="eEu-iS-KRe">
+                    <navigationItem key="navigationItem" title="Results" id="eEu-iS-KRe">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dFO-8e-ffV">
                             <connections>
                                 <action selector="compose:" destination="cgD-05-4mV" id="DH8-EA-ZB4"/>
@@ -665,7 +665,7 @@
             </objects>
             <point key="canvasLocation" x="2226" y="2100"/>
         </scene>
-        <!--Profiles View Controller - 5 Profiles-->
+        <!--Profiles View Controller - Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -685,7 +685,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="5 Profiles" id="1hk-cA-9bQ"/>
+                    <navigationItem key="navigationItem" title="Bargaining Styles" id="1hk-cA-9bQ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="Cvf-dJ-Cm9" id="px5-kY-VWr"/>
@@ -695,7 +695,7 @@
             </objects>
             <point key="canvasLocation" x="3000" y="162"/>
         </scene>
-        <!--Compare View Controller - Compare-->
+        <!--Compare View Controller - How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -715,7 +715,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Compare" id="qhA-gy-mvk"/>
+                    <navigationItem key="navigationItem" title="How You Compare" id="qhA-gy-mvk"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="z4B-yZ-gOO" id="TAl-qa-2OI"/>
@@ -736,6 +736,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
+        <segue reference="OCa-D8-3Iv"/>
     </inferredMetricsTieBreakers>
 </document>

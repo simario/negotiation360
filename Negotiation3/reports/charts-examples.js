@@ -37,8 +37,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0,
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true,
 			labels: {
 				enabled: false
 			}
@@ -123,8 +126,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0,
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true,
 			labels: {
 				enabled: false
 			}
@@ -209,8 +215,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {

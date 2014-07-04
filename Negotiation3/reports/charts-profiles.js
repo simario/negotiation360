@@ -38,12 +38,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0,
-			labels:{
-				max: 8,
-				enabled: true
-			}
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {
@@ -140,8 +139,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {
@@ -225,8 +227,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {
@@ -310,8 +315,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {
@@ -396,8 +404,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {
@@ -458,7 +469,7 @@ $(function () {
 
 
         title: {
-            text: "Outcome-Focused Negotiatiors",
+            text: "Outcome-Focused Negotiators",
 	        margin: 15
         },
 
@@ -481,8 +492,11 @@ $(function () {
         yAxis: {
             lineWidth: 0,
 			tickInterval: 4,
-            max: 8,
-			min: 0
+			step: 2,
+            endOnTick: false,
+			endOnTick: true,
+            showLastLabel: true,
+            startOnTick: true
         },
 
         tooltip: {

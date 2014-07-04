@@ -165,22 +165,22 @@
             
             break;
         case 2:
-            cell.textLabel.text = @"Negotiation Dilemmas";
+            cell.textLabel.text = @" 1   How You Compare";
             
             break;
         case 3:
-            cell.textLabel.text = @"How You Compare";
+            cell.textLabel.text = @" 2   Negotiation Dilemmas";
             break;
         case 4:
-            cell.textLabel.text = @"Bargaining Styles";
+            cell.textLabel.text = @" 3   Bargaining Styles";
             break;
         case 5:
-            cell.textLabel.text = @"Your Personal Profile";
+            cell.textLabel.text = @" 4   Your Personal Profile";
             break;
             
         case 6:
             
-            cell.textLabel.text = @"Skill-Building Tips";
+            cell.textLabel.text = @" 5   Skill-Building Tips";
             break;
             
         default:
@@ -206,10 +206,10 @@
     switch (indexPath.item) {
         
         case 2:
-            [self performSegueWithIdentifier:@"delimas" sender:self];
+            [self performSegueWithIdentifier:@"compare" sender:self];
             break;
         case 3:
-            [self performSegueWithIdentifier:@"compare" sender:self];
+            [self performSegueWithIdentifier:@"delimas" sender:self];
             break;
         case 4:
             [self performSegueWithIdentifier:@"profiles" sender:self];
