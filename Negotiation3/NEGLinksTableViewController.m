@@ -58,7 +58,7 @@
 {
 
     // Return the number of rows in the section.
-    return 3;
+    return 2;
 }
 
 
@@ -67,13 +67,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LinkCell" forIndexPath:indexPath];
     
     switch (indexPath.item) {
+        //case 0:
+        //    cell.textLabel.text = @"Negotiation Profiles";
+        //    break;
         case 0:
-            cell.textLabel.text = @"Negotiation Profiles";
-            break;
-        case 1:
             cell.textLabel.text = @"Negotiation Resources";
             break;
-        case 2:
+        case 1:
             cell.textLabel.text = @"About Michael Wheeler";
             break;
             
