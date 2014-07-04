@@ -39,7 +39,11 @@ $(function () {
             lineWidth: 0,
 			tickInterval: 4,
             max: 8,
-			min: 0
+			min: 0,
+			labels:{
+				max: 8,
+				enabled: true
+			}
         },
 
         tooltip: {

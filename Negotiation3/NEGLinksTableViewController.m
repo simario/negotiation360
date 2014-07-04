@@ -87,13 +87,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.item) {
+        //case 0:
+        //    [self performSegueWithIdentifier:@"about_negotiation_profiles" sender:self];
+        //    break;
         case 0:
-            [self performSegueWithIdentifier:@"about_negotiation_profiles" sender:self];
-            break;
-        case 1:
             [self performSegueWithIdentifier:@"about_negotiation_resources" sender:self];
             break;
-        case 2:
+        case 1:
             [self performSegueWithIdentifier:@"about_mw" sender:self];
             break;
             

@@ -172,10 +172,10 @@
             cell.textLabel.text = @"How You Compare";
             break;
         case 4:
-            cell.textLabel.text = @"Negotiation Styles";
+            cell.textLabel.text = @"Bargaining Styles";
             break;
         case 5:
-            cell.textLabel.text = @"Your Negotiation Profile";
+            cell.textLabel.text = @"Your Personal Profile";
             break;
             
         case 6:
