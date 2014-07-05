@@ -307,10 +307,10 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.285714285;
   letter-spacing: 0.05em;
-  color: #333333;
+  color: #111;
 }
 
 input,

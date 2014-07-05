@@ -116,7 +116,7 @@ $(function () {
 
 
         title: {
-            text: "Empathetic Value Creators",
+            text: "Empathetic Value-Creators",
 	        margin: 15
         },
 
@@ -204,7 +204,7 @@ $(function () {
 
 
         title: {
-            text: "Assertive Value Claimers",
+            text: "Assertive Value-Claimers",
 	        margin: 15
         },
 
@@ -292,7 +292,7 @@ $(function () {
 
 
         title: {
-            text: "Assertive Value Creators",
+            text: "Assertive Value-Creators",
 	        margin: 15
         },
 
