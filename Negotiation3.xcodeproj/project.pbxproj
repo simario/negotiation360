@@ -16,6 +16,10 @@
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
+		6960396A1968729900E3C227 /* aboutapp.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039681968729900E3C227 /* aboutapp.html */; };
+		6960396B1968729900E3C227 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039691968729900E3C227 /* help.html */; };
+		6960396E1968756300E3C227 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396C1968756300E3C227 /* test1.html */; };
+		6960396F1968756300E3C227 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396D1968756300E3C227 /* test2.html */; };
 		699A83F3190AC1470041EEC2 /* image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83E8190AC1470041EEC2 /* image-2.png */; };
 		699A83F4190AC1470041EEC2 /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83E9190AC1470041EEC2 /* image-3.png */; };
 		699A83F5190AC1470041EEC2 /* image-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83EA190AC1470041EEC2 /* image-4.png */; };
@@ -175,6 +179,10 @@
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		696039681968729900E3C227 /* aboutapp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aboutapp.html; sourceTree = "<group>"; };
+		696039691968729900E3C227 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		6960396C1968756300E3C227 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
+		6960396D1968756300E3C227 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
 		699A83E8190AC1470041EEC2 /* image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-2.png"; sourceTree = "<group>"; };
 		699A83E9190AC1470041EEC2 /* image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-3.png"; sourceTree = "<group>"; };
 		699A83EA190AC1470041EEC2 /* image-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-4.png"; sourceTree = "<group>"; };
@@ -376,6 +384,10 @@
 			children = (
 				6902FCEE193BB83400820A36 /* compare.html */,
 				6902FCEF193BB83500820A36 /* profiles.html */,
+				696039681968729900E3C227 /* aboutapp.html */,
+				696039691968729900E3C227 /* help.html */,
+				6960396C1968756300E3C227 /* test1.html */,
+				6960396D1968756300E3C227 /* test2.html */,
 				6902FCF0193BB83500820A36 /* yourprofile.html */,
 				6902FCEC193BB7DC00820A36 /* charts-profiles.js */,
 				69C585C71901697A00EE6E27 /* dragend.js */,
@@ -699,6 +711,7 @@
 				699A83F3190AC1470041EEC2 /* image-2.png in Resources */,
 				699A83F4190AC1470041EEC2 /* image-3.png in Resources */,
 				699A83F5190AC1470041EEC2 /* image-4.png in Resources */,
+				6960396B1968729900E3C227 /* help.html in Resources */,
 				69A70DF419675A90008E4232 /* list-1.png in Resources */,
 				699A83F6190AC1470041EEC2 /* image-5.png in Resources */,
 				699A83F7190AC1470041EEC2 /* image-6.png in Resources */,
@@ -720,12 +733,14 @@
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
+				6960396F1968756300E3C227 /* test2.html in Resources */,
 				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
 				69A70DF919677158008E4232 /* list.png in Resources */,
 				9121677418E4DB3700DEEC00 /* typeX.html in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
 				91B66A2618DE353800DBA430 /* highcharts-more.src.js in Resources */,
+				6960396A1968729900E3C227 /* aboutapp.html in Resources */,
 				91B66A2718DE353800DBA430 /* highcharts.js in Resources */,
 				9121677618E4DB5F00DEEC00 /* typeC.html in Resources */,
 				91B66A2818DE353800DBA430 /* highcharts.src.js in Resources */,
@@ -738,6 +753,7 @@
 				9142028118DF80DC00C8E9C9 /* delimaO.html in Resources */,
 				9121677E18E4DBC500DEEC00 /* delimaE.html in Resources */,
 				9121677C18E4DBB200DEEC00 /* delimaC.html in Resources */,
+				6960396E1968756300E3C227 /* test1.html in Resources */,
 				91D3E1A718B91BD400FC14F7 /* Main_iPad.storyboard in Resources */,
 				9141F3B718E8463800D2A782 /* wallet.png in Resources */,
 				9163D26F18D4D4180032F104 /* page-1.png in Resources */,

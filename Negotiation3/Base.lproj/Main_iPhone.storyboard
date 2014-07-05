@@ -401,7 +401,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Skill-Building Tips" id="inJ-Zp-EgG"/>
+                    <navigationItem key="navigationItem" title="Skill-Building Tips" id="inJ-Zp-EgG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="szo-Ck-700"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="JjV-yf-76a" id="iYn-Oh-JT1"/>
@@ -431,7 +433,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Negotiation Dilemmas" id="Inf-tc-dyf"/>
+                    <navigationItem key="navigationItem" title="Negotiation Dilemmas" id="Inf-tc-dyf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Afu-4x-evU"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="kvw-bP-hY6" id="UJs-zf-yr0"/>
@@ -461,7 +465,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Personal Profile" id="Ive-Ll-XO2"/>
+                    <navigationItem key="navigationItem" title="Your Personal Profile" id="Ive-Ll-XO2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fNy-eG-nag"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="9Zp-gS-tQF" id="YWy-oE-213"/>
@@ -525,7 +531,7 @@
             </objects>
             <point key="canvasLocation" x="1974" y="-538"/>
         </scene>
-        <!--Results Overview View Controller - Results-->
+        <!--Results Overview View Controller - Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -585,7 +591,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Results" id="eEu-iS-KRe">
+                    <navigationItem key="navigationItem" title="Analysis &amp; Feedback" id="eEu-iS-KRe">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dFO-8e-ffV">
                             <connections>
                                 <action selector="compose:" destination="cgD-05-4mV" id="DH8-EA-ZB4"/>
@@ -685,7 +691,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bargaining Styles" id="1hk-cA-9bQ"/>
+                    <navigationItem key="navigationItem" title="Bargaining Styles" id="1hk-cA-9bQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Gr1-X4-zO5"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="Cvf-dJ-Cm9" id="px5-kY-VWr"/>
