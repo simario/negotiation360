@@ -15,7 +15,7 @@ $(function () {
 
 
         title: {
-            text: "Interpersonal Scale",
+            text: null,
 	        margin: 15
         },
 
@@ -103,7 +103,7 @@ $(function () {
 
 
         title: {
-            text: "Outcomes Scale",
+            text: null,
 	        margin: 15
         },
 
@@ -192,7 +192,7 @@ $(function () {
 
 
         title: {
-            text: "Equal Ratings",
+            text: null,
 	        margin: 15
         },
 
