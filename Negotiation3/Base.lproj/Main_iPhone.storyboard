@@ -517,7 +517,7 @@
                     <navigationItem key="navigationItem" title="Negotiation Test" id="yJe-Mh-vN5">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="sRa-xa-RoC">
                             <connections>
-                                <segue destination="cgD-05-4mV" kind="push" id="OCa-D8-3Iv"/>
+                                <segue destination="xl2-TN-KaX" kind="push" id="oyq-D5-aCP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -604,12 +604,11 @@
                         <segue destination="ucN-YR-o2j" kind="push" identifier="delimas" id="la5-Ro-OJY"/>
                         <segue destination="taj-am-VY2" kind="push" identifier="skills" id="886-qh-1x9"/>
                         <segue destination="LSl-pz-FDI" kind="push" identifier="profiles" id="UyS-LV-eFk"/>
-                        <segue destination="xl2-TN-KaX" kind="push" identifier="compare" id="2Za-JU-bcP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl1-iX-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298" y="104"/>
+            <point key="canvasLocation" x="2474" y="162"/>
         </scene>
         <!--Resources View Controller - Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
@@ -723,7 +722,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="How You Compare" id="qhA-gy-mvk"/>
+                    <navigationItem key="navigationItem" title="How You Compare" id="qhA-gy-mvk">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="LXO-LD-EIA">
+                            <connections>
+                                <segue destination="cgD-05-4mV" kind="push" id="0E3-bz-98Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="z4B-yZ-gOO" id="TAl-qa-2OI"/>
@@ -731,7 +736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYO-3a-Fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3406" y="134"/>
+            <point key="canvasLocation" x="2093" y="48"/>
         </scene>
     </scenes>
     <resources>
@@ -745,6 +750,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OCa-D8-3Iv"/>
+        <segue reference="0E3-bz-98Y"/>
     </inferredMetricsTieBreakers>
 </document>

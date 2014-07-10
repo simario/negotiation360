@@ -137,7 +137,7 @@
 {
     
     // Return the number of rows in the section.
-    return 7;
+    return 6;
 }
 
 
@@ -165,22 +165,18 @@
             
             break;
         case 2:
-            cell.textLabel.text = @" 1   How You Compare";
-            
+            cell.textLabel.text = @" 1   Negotiation Dilemmas";
             break;
         case 3:
-            cell.textLabel.text = @" 2   Negotiation Dilemmas";
+            cell.textLabel.text = @" 2   Bargaining Styles";
             break;
         case 4:
-            cell.textLabel.text = @" 3   Bargaining Styles";
+            cell.textLabel.text = @" 3   Your Personal Profile";
             break;
+            
         case 5:
-            cell.textLabel.text = @" 4   Your Personal Profile";
-            break;
             
-        case 6:
-            
-            cell.textLabel.text = @" 5   Skill-Building Tips";
+            cell.textLabel.text = @" 4   Skill-Building Tips";
             break;
             
         default:
@@ -206,18 +202,15 @@
     switch (indexPath.item) {
         
         case 2:
-            [self performSegueWithIdentifier:@"compare" sender:self];
-            break;
-        case 3:
             [self performSegueWithIdentifier:@"delimas" sender:self];
             break;
-        case 4:
+        case 3:
             [self performSegueWithIdentifier:@"profiles" sender:self];
             break;
-        case 5:
+        case 4:
             [self performSegueWithIdentifier:@"your_profile" sender:self];
             break;
-        case 6:
+        case 5:
             [self performSegueWithIdentifier:@"skills" sender:self];
             break;
             
