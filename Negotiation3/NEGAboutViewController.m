@@ -55,6 +55,8 @@
         
         NSMutableDictionary *nearest = [resultType objectForKey:@"nearest"];
         NSString *nearestLabel = [nearest objectForKey:@"label"];
+        NSString *string1 = [nearest objectForKey:@"string1"];
+        NSString *string2 = [nearest objectForKey:@"string2"];
         NSMutableDictionary *furthest = [resultType objectForKey:@"furthest"];
         NSString *furthestLabel = [furthest objectForKey:@"label"];
         
@@ -73,7 +75,7 @@
         
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
         
-        NSString *str = [NSString stringWithFormat:htmlString, nearestLabel, furthestLabel, create, empathy, claim, assert, nearestLabel, nCreate, nEmpathy, nClaim, nAssert];
+        NSString *str = [NSString stringWithFormat:htmlString, nearestLabel, string1, furthestLabel, string2, create, empathy, claim, assert, nearestLabel, nCreate, nEmpathy, nClaim, nAssert];
         
         [self.webView loadHTMLString:str
                              baseURL:url];

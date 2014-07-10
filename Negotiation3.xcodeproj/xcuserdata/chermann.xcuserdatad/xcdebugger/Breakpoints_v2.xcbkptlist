@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGType.m"
-            timestampString = "424538526.536875"
+            timestampString = "426650584.520154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-getType:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGType.m"
-            timestampString = "424536104.801693"
+            timestampString = "426650584.520154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "-furthest:create:assert:empathy:claim:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGType.m"
-            timestampString = "424535292.509682"
+            timestampString = "426650584.520154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-nearest:create:assert:empathy:claim:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGType.m"
-            timestampString = "424535380.019409"
+            timestampString = "426650584.520154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-nearest:create:assert:empathy:claim:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGType.m"
-            timestampString = "424536139.759418"
+            timestampString = "426650584.520154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "-getType:"
             landmarkType = "5">
          </BreakpointContent>
