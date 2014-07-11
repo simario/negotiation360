@@ -57,6 +57,7 @@
     int val5 = (int)[self.slider value];
    
     [self.detailItem setValue:[NSNumber numberWithInt:val5] forKey:@"question5"];
+    [self.detailItem setValue:@YES forKey:@"complete"];
 
     
     // Save the context.

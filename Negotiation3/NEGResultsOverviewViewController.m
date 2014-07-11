@@ -118,7 +118,7 @@
     NSMutableDictionary *type = [t getType:self.detailItem];
     NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/mm/yy"];
+    [format setDateFormat:@"dd/M/yy"];
     NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 

@@ -248,10 +248,16 @@
         
     }
     
+    bool isComplete = [[object valueForKey:@"complete"] boolValue];
     
+    if (isComplete) {
+        [self performSegueWithIdentifier:@"results_from_main" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"showDetail" sender:self];
+    }
     
 
-    [self performSegueWithIdentifier:@"results_from_main" sender:self];
+    
 
 
 }
@@ -378,17 +384,25 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/mm/yy"];
+    [format setDateFormat:@"dd/M/yy"];
     NSString *dateString = [format stringFromDate:ts];
 
 
     NSString *t = [NSString stringWithFormat:@"Self profile %@", dateString];
     NSString *s = @"";
-    NSMutableDictionary *d = [_negType getType:object];
-    NSMutableDictionary *n = [d objectForKey:@"nearest"];
-    if (n) {
-        s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+    
+    bool isComplete = [[object valueForKey:@"complete"] boolValue];
+    
+    if (isComplete) {
+        NSMutableDictionary *d = [_negType getType:object];
+        NSMutableDictionary *n = [d objectForKey:@"nearest"];
+        if (n) {
+            s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+        }
+    } else {
+        s = @"In Progress...";
     }
+
 
     
 
