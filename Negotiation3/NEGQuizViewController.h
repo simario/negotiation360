@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepper4;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
+
+
 @property (strong, nonatomic) NSArray *questionLabels;
 
 @property int total;

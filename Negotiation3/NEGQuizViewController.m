@@ -124,6 +124,16 @@
     
     if (indexPath.item == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"quizHeader" forIndexPath:indexPath];
+        UIWebView *webView = (UIWebView *)[cell viewWithTag:999];
+        NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"test1" ofType:@"html" ]];
+        NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+        
+        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
+        
+        [webView loadHTMLString:htmlString
+                             baseURL:url];
+        
+        
         return cell;
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"quizCell" forIndexPath:indexPath];
@@ -175,11 +185,9 @@
     
     CGFloat h = 85;
     if (indexPath.item == 0) {
-        h = 135;
+        h = 360;
     }
     return h;
-    
-    return 85;
 }
 
 

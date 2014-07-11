@@ -93,6 +93,14 @@
     // Update the user interface for the detail item.
     
    
+    NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"test2" ofType:@"html" ]];
+    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
+    
+    [self.webView loadHTMLString:htmlString
+                         baseURL:url];
+    
     
     [self.slider setValue:[[self.detailItem valueForKey:@"question5"] doubleValue]];
 

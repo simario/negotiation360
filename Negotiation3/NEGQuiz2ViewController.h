@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel *questionValueLabel5;
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end
