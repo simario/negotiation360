@@ -601,6 +601,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Analysis &amp; Feedback" id="eEu-iS-KRe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="d6w-ki-BDa">
+                            <connections>
+                                <segue destination="pGg-6v-bdr" kind="push" identifier="back_to_main" id="UvR-e4-cJ3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dFO-8e-ffV">
                             <connections>
                                 <action selector="compose:" destination="cgD-05-4mV" id="DH8-EA-ZB4"/>
@@ -617,7 +622,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl1-iX-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="162"/>
+            <point key="canvasLocation" x="1328" y="140"/>
         </scene>
         <!--Resources View Controller - Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
@@ -759,6 +764,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="UvR-e4-cJ3"/>
         <segue reference="0E3-bz-98Y"/>
     </inferredMetricsTieBreakers>
 </document>

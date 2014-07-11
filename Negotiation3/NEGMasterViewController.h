@@ -13,6 +13,7 @@
 
 #import <CoreData/CoreData.h>
 #import "NEGWalkthroughViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,UIPageViewControllerDataSource>
 
