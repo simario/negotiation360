@@ -390,7 +390,7 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd/M/yy"];
+    [format setDateFormat:@"M/dd/yy"];
     NSString *dateString = [format stringFromDate:ts];
 
 
