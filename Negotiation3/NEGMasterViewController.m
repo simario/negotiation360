@@ -376,16 +376,24 @@
 {
     
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *t = @"in progress";
+    NSDate *ts = [object valueForKey:@"timeStamp"];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"dd/mm/yy"];
+    NSString *dateString = [format stringFromDate:ts];
+
+
+    NSString *t = [NSString stringWithFormat:@"Self profile %@", dateString];
+    NSString *s = @"";
     NSMutableDictionary *d = [_negType getType:object];
     NSMutableDictionary *n = [d objectForKey:@"nearest"];
     if (n) {
-        t = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+        s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
     }
 
     
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
+    cell.detailTextLabel.text = s;
 }
 
 @end
