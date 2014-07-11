@@ -223,8 +223,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[segue destinationViewController] setDetailItem:_detailItem];
-    [[segue destinationViewController] setContext:_context];
+    NSLog([segue identifier]);
+    if (![[segue identifier] isEqualToString:@"back_to_main"]) {
+        [[segue destinationViewController] setDetailItem:_detailItem];
+        [[segue destinationViewController] setContext:_context];
+    }
+    
 }
 
 
