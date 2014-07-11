@@ -116,12 +116,14 @@
 - (void)configureType:(UITableViewCell *)cell {
     NEGType *t = [[NEGType alloc] init];
     NSMutableDictionary *type = [t getType:self.detailItem];
-
-    UILabel *typeLabel = (UILabel *)[cell viewWithTag:999];
+    NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"dd/mm/yy"];
+    NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
-    typeLabel.text = (NSString *)[nearest objectForKey:@"label"];
-    
 
+    cell.textLabel.text = [NSString stringWithFormat:@"Self profile %@", dateString];
+    cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
 }
 
 #pragma mark - Table view data source
