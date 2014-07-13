@@ -348,6 +348,7 @@
 				69E362A91972B97300C9F60C /* GAITracker.h */,
 			);
 			name = GoogleAnalytics;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9163D26A18D4D4180032F104 /* images */ = {
@@ -496,7 +497,6 @@
 				69E362AC1972BBEC00C9F60C /* libAdIdAccess.a */,
 				69E362AD1972BBEC00C9F60C /* libGoogleAnalyticsServices.a */,
 				69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */,
-				69E3629F1972B92900C9F60C /* GoogleAnalytics */,
 				91D3E18E18B91BD400FC14F7 /* Foundation.framework */,
 				91D3E19018B91BD400FC14F7 /* CoreGraphics.framework */,
 				91D3E19218B91BD400FC14F7 /* UIKit.framework */,
@@ -510,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				9163D26A18D4D4180032F104 /* images */,
+				69E3629F1972B92900C9F60C /* GoogleAnalytics */,
 				91D3E19F18B91BD400FC14F7 /* NEGAppDelegate.h */,
 				91D3E1A018B91BD400FC14F7 /* NEGAppDelegate.m */,
 				91D3E1A218B91BD400FC14F7 /* Main_iPhone.storyboard */,
