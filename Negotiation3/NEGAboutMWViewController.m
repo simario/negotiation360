@@ -6,14 +6,16 @@
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
+
 #import "NEGAboutMWViewController.h"
+#import "NEGAppDelegate.h"
+
 
 @interface NEGAboutMWViewController ()
 
 @end
 
 @implementation NEGAboutMWViewController
-
 
 
 - (void)configureView
@@ -43,9 +45,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
+    // Set screen name.
+    self.screenName = @"About Mike Wheeler";
+
     // Do any additional setup after loading the view.
     [self configureView];
+
 }
 
 - (void)didReceiveMemoryWarning
