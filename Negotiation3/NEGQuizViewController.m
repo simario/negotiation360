@@ -8,6 +8,11 @@
 
 #import "NEGQuizViewController.h"
 
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
+
 @interface NEGQuizViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -246,7 +251,16 @@
 {
     [super viewDidLoad];
     
+    // May return nil if a tracker has not already been initialized with a
+    // property ID.
+    id tracker = [[GAI sharedInstance] defaultTracker];
     
+    // This screen name value will remain set on the tracker and sent with
+    // hits until it is set to a new value or to nil.
+    [tracker set:kGAIScreenName value:@"Test Part A"];
+    
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+
     
     _questionLabels = [NSArray arrayWithObjects:@"Recognizing and capitalizing on opportunities to create value. (1 - 7 Points)",
                        @"Asserting your interests and point of view. (1 - 7 Points)",
