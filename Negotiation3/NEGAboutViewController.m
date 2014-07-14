@@ -7,6 +7,7 @@
 //
 
 #import "NEGAboutViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGAboutViewController ()
 
@@ -96,6 +97,9 @@
 {
     [super viewDidLoad];
     
+    // Set screen name.
+    self.screenName = @"Your Personal Profile";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

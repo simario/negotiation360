@@ -7,6 +7,7 @@
 //
 
 #import "NEGDetailViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -71,7 +72,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    // Set screen name.
+    self.screenName = @"Welcome Text";
+
+    // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
 

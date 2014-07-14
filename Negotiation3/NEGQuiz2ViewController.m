@@ -7,6 +7,7 @@
 //
 
 #import "NEGQuiz2ViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGQuiz2ViewController ()
 
@@ -114,8 +115,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    // Set screen name.
+    self.screenName = @"Test Part B";
+
+    // Do any additional setup after loading the view.
     [self configureView];
 }
 

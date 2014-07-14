@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "NEGType.h"
+#import "GAITrackedViewController.h"
 
-@interface NEGProfilesViewController : UIViewController
+@interface NEGProfilesViewController : GAITrackedViewController
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
 

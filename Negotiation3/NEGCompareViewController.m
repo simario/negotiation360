@@ -7,6 +7,7 @@
 //
 
 #import "NEGCompareViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGCompareViewController ()
 
@@ -99,6 +100,9 @@
 {
     [super viewDidLoad];
     
+    // Set screen name.
+    self.screenName = @"How You Compare";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

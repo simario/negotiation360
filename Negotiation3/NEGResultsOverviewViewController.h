@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "NEGType.h"
+#import "GAITrackedViewController.h"
 
-@interface NEGResultsOverviewViewController : UITableViewController <MFMailComposeViewControllerDelegate>
+@interface NEGResultsOverviewViewController : GAITrackedViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;

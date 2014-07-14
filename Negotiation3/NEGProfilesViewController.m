@@ -7,6 +7,7 @@
 //
 
 #import "NEGProfilesViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGProfilesViewController ()
 
@@ -70,6 +71,9 @@
 {
     [super viewDidLoad];
     
+    // Set screen name.
+    self.screenName = @"Bargaining Styles";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

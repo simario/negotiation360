@@ -7,6 +7,7 @@
 //
 
 #import "NEGSkillsViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGSkillsViewController ()
 
@@ -89,6 +90,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set screen name.
+    self.screenName = @"Skill-Building Tips";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

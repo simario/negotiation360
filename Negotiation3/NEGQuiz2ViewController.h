@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface NEGQuiz2ViewController : UIViewController
+@interface NEGQuiz2ViewController : GAITrackedViewController
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;

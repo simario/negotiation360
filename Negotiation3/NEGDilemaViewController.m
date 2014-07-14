@@ -7,6 +7,7 @@
 //
 
 #import "NEGDilemaViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGDilemaViewController ()
 
@@ -70,6 +71,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    // Set screen name.
+    self.screenName = @"Negotiation Dilemmas";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

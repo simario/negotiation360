@@ -7,6 +7,7 @@
 //
 
 #import "NEGResultsOverviewViewController.h"
+#import "NEGAppDelegate.h"
 
 @interface NEGResultsOverviewViewController ()
 
@@ -280,6 +281,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // Set screen name.
+    self.screenName = @"Feedback & Analysis";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }

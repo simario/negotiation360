@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface NEGDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface NEGDetailViewController : GAITrackedViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
