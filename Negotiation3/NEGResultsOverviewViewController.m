@@ -28,7 +28,7 @@
         
         mailer.mailComposeDelegate = self;
         
-        [mailer setSubject:@"My Negotiation 360° results"];
+        [mailer setSubject:@"My Negotiation 360° Results"];
         
         /*
          NSArray *toRecipients = [NSArray arrayWithObjects:@"fisrtMail@example.com", @"secondMail@example.com", nil];

@@ -20,6 +20,8 @@
 		6960396B1968729900E3C227 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039691968729900E3C227 /* help.html */; };
 		6960396E1968756300E3C227 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396C1968756300E3C227 /* test1.html */; };
 		6960396F1968756300E3C227 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396D1968756300E3C227 /* test2.html */; };
+		6982573E19757B00004E2A69 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6982573C19757B00004E2A69 /* libAdIdAccess.a */; };
+		6982573F19757B00004E2A69 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6982573D19757B00004E2A69 /* libGoogleAnalyticsServices.a */; };
 		698FCB741970A47A003111AF /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 698FCB721970A47A003111AF /* overlay.png */; };
 		698FCB751970A47A003111AF /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 698FCB731970A47A003111AF /* overlay2.png */; };
 		699A83F3190AC1470041EEC2 /* image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83E8190AC1470041EEC2 /* image-2.png */; };
@@ -43,8 +45,6 @@
 		69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C81901697A00EE6E27 /* hammer.min.js */; };
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
 		69E362AB1972B9DC00C9F60C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */; };
-		69E362AE1972BBEC00C9F60C /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362AC1972BBEC00C9F60C /* libAdIdAccess.a */; };
-		69E362AF1972BBEC00C9F60C /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362AD1972BBEC00C9F60C /* libGoogleAnalyticsServices.a */; };
 		69E362B21972BC1300C9F60C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B01972BC1300C9F60C /* AdSupport.framework */; };
 		69E362B31972BC1300C9F60C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B11972BC1300C9F60C /* libz.dylib */; };
 		69EF5F5C1909EFC200A947AF /* page-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EF5F5B1909EFC200A947AF /* page-6.png */; };
@@ -161,6 +161,10 @@
 		696039691968729900E3C227 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		6960396C1968756300E3C227 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
 		6960396D1968756300E3C227 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
+		6982573C19757B00004E2A69 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = Negotiation3/GoogleAnalytics/libAdIdAccess.a; sourceTree = "<group>"; };
+		6982573D19757B00004E2A69 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Negotiation3/GoogleAnalytics/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		6982574119757C1C004E2A69 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = Negotiation3/GoogleAnalytics/libAdIdAccess.a; sourceTree = "<group>"; };
+		6982574219757C1C004E2A69 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Negotiation3/GoogleAnalytics/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		698FCB721970A47A003111AF /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 		698FCB731970A47A003111AF /* overlay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay2.png; sourceTree = "<group>"; };
 		699A83E8190AC1470041EEC2 /* image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-2.png"; sourceTree = "<group>"; };
@@ -184,8 +188,6 @@
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
 		69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		69E362AC1972BBEC00C9F60C /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.08/libAdIdAccess.a; sourceTree = "<group>"; };
-		69E362AD1972BBEC00C9F60C /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.08/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		69E362B01972BC1300C9F60C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		69E362B11972BC1300C9F60C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		69E362B41972D94500C9F60C /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Negotiation3/GoogleAnalytics/GAI.h; sourceTree = "<group>"; };
@@ -307,10 +309,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6982573E19757B00004E2A69 /* libAdIdAccess.a in Frameworks */,
+				6982573F19757B00004E2A69 /* libGoogleAnalyticsServices.a in Frameworks */,
 				69E362B21972BC1300C9F60C /* AdSupport.framework in Frameworks */,
 				69E362B31972BC1300C9F60C /* libz.dylib in Frameworks */,
-				69E362AE1972BBEC00C9F60C /* libAdIdAccess.a in Frameworks */,
-				69E362AF1972BBEC00C9F60C /* libGoogleAnalyticsServices.a in Frameworks */,
 				69E362AB1972B9DC00C9F60C /* SystemConfiguration.framework in Frameworks */,
 				91D3E19118B91BD400FC14F7 /* CoreGraphics.framework in Frameworks */,
 				91D3E19518B91BD400FC14F7 /* CoreData.framework in Frameworks */,
@@ -337,6 +339,8 @@
 			isa = PBXGroup;
 			children = (
 				69E362B41972D94500C9F60C /* GAI.h */,
+				6982574119757C1C004E2A69 /* libAdIdAccess.a */,
+				6982574219757C1C004E2A69 /* libGoogleAnalyticsServices.a */,
 				69E362B51972D94500C9F60C /* GAIDictionaryBuilder.h */,
 				69E362B61972D94500C9F60C /* GAIEcommerceFields.h */,
 				69E362B71972D94500C9F60C /* GAIEcommerceProduct.h */,
@@ -492,10 +496,10 @@
 		91D3E18D18B91BD400FC14F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6982573C19757B00004E2A69 /* libAdIdAccess.a */,
+				6982573D19757B00004E2A69 /* libGoogleAnalyticsServices.a */,
 				69E362B01972BC1300C9F60C /* AdSupport.framework */,
 				69E362B11972BC1300C9F60C /* libz.dylib */,
-				69E362AC1972BBEC00C9F60C /* libAdIdAccess.a */,
-				69E362AD1972BBEC00C9F60C /* libGoogleAnalyticsServices.a */,
 				69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */,
 				91D3E18E18B91BD400FC14F7 /* Foundation.framework */,
 				91D3E19018B91BD400FC14F7 /* CoreGraphics.framework */,
@@ -939,6 +943,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/trenholm/Downloads/GoogleAnalyticsServicesiOS_3.08,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Negotiation3/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -960,6 +966,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/trenholm/Downloads/GoogleAnalyticsServicesiOS_3.08,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Negotiation3/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "F8588D58-2028-421A-96C7-9292E1CEFCF4";
