@@ -9,6 +9,10 @@
 #import "NEGResultsOverviewViewController.h"
 #import "NEGAppDelegate.h"
 
+#import "GAITracker.h"
+#import "GAI.h" 
+#import "GAIDictionaryBuilder.h"
+
 @interface NEGResultsOverviewViewController ()
 
 @end
@@ -34,6 +38,15 @@
          NSData *imageData = UIImagePNGRepresentation(myImage);
          [mailer addAttachmentData:imageData mimeType:@"image/png" fileName:@"mobiletutsImage"];
          */
+        
+        // May return nil if a tracker has not already been initialized with a property
+        // ID.
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                              action:@"button_press"  // Event action (required)
+                                                               label:@"Email Results" // Event label
+                                                               value:nil] build]];    // Event value
         
         NSString *create = [NSString stringWithFormat:@"Creating Value: %@\n", [self.detailItem valueForKey:@"question1"]];
         NSString *assert = [NSString stringWithFormat:@"Assertiveness: %@\n", [self.detailItem valueForKey:@"question2"]];
