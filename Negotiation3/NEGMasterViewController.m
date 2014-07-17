@@ -70,7 +70,7 @@
     [self.wtPageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     
-    
+
     
     //[self addChildViewController:_wtPageController];
     //[self.view addSubview:_wtPageController.view];
@@ -79,11 +79,23 @@
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         
         if ([sectionInfo numberOfObjects] == 0) {
-            [self presentViewController:self.wtPageController animated:YES completion:nil];
+
+            
+            
+            
+            [self presentViewController:self.wtPageController animated:YES completion:^(){
+                UIImage *overlay = [UIImage imageNamed:@"overlay.png"];
+                self.overlayView = [[UIImageView alloc] initWithImage:overlay];
+                self.overlayView.frame = CGRectMake(0, 0, 320, 600);
+                [self.navigationController.view addSubview:self.overlayView];
+                [self.navigationController.view bringSubviewToFront:self.overlayView];
+            }];
         }
         
         
     }
+    
+    
     
     // May return nil if a tracker has not already been initialized with a
     // property ID.
@@ -105,6 +117,9 @@
 
 - (void)insertNewObject:(id)sender
 {
+    if (self.overlayView) {
+        [self.overlayView removeFromSuperview];
+    }
     _fromNew = YES;
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];

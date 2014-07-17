@@ -17,6 +17,7 @@
 
 @interface NEGMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,UIPageViewControllerDataSource>
 
+@property (strong, nonatomic) UIImageView *overlayView;
 @property (strong, nonatomic) NEGDetailViewController *detailViewController;
 @property (strong, nonatomic) UIPageViewController *wtPageController;
 @property (weak, nonatomic) IBOutlet NEGWalkthroughViewController *wtViewController;
