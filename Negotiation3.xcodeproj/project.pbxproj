@@ -16,6 +16,7 @@
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
+		694CB0551978057400BBAD32 /* overlayText.png in Resources */ = {isa = PBXBuildFile; fileRef = 694CB0541978057400BBAD32 /* overlayText.png */; };
 		6960396A1968729900E3C227 /* aboutapp.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039681968729900E3C227 /* aboutapp.html */; };
 		6960396B1968729900E3C227 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039691968729900E3C227 /* help.html */; };
 		6960396E1968756300E3C227 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396C1968756300E3C227 /* test1.html */; };
@@ -157,6 +158,7 @@
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		694CB0541978057400BBAD32 /* overlayText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayText.png; sourceTree = "<group>"; };
 		696039681968729900E3C227 /* aboutapp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aboutapp.html; sourceTree = "<group>"; };
 		696039691968729900E3C227 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		6960396C1968756300E3C227 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				698FCB721970A47A003111AF /* overlay.png */,
 				698FCB731970A47A003111AF /* overlay2.png */,
+				694CB0541978057400BBAD32 /* overlayText.png */,
 				69A70DF719677158008E4232 /* list.png */,
 				69A70DF819677158008E4232 /* untitled.png */,
 				91BDB3CD1916FFBC00327DF9 /* profile-1.png */,
@@ -707,6 +710,7 @@
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
 				6960396F1968756300E3C227 /* test2.html in Resources */,
 				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
+				694CB0551978057400BBAD32 /* overlayText.png in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
 				69A70DF919677158008E4232 /* list.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
