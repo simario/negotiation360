@@ -50,7 +50,7 @@
     if (self.total == 16) {
         [self performSegueWithIdentifier:@"toQuestion5" sender:self];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
                                                         message:@"Please distribute numbers to equal 16."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"

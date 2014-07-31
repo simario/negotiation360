@@ -122,7 +122,7 @@
                                           empathy:[NSNumber numberWithFloat:3.657142857]
                                             claim:[NSNumber numberWithFloat:4.542857143]
                                           string1:@"You have above average confidence in asserting your interests and maximizing your slice of the pie."
-                                          string2:@"Self-advocacy is important to negotiation success, but so is understanding the interests and feelings of other parties. That knowledge is essential to making creative trades; expanding the pie can ultimately produce even more gain for you. When you review the skill-building tips in this app, start with the section on understanding other people’ interests."];
+                                          string2:@"Self-advocacy is important to negotiation success, but so is understanding the interests and feelings of other parties. That knowledge is essential to making creative trades; expanding the pie can ultimately produce even more gain for you. When you review the skill-building tips in this app, start with the section on understanding other peoples’ interests."];
     
     NSMutableDictionary *type5 = [self createType:@"type5"
                                             label:@"Assertive Value-Creator"
