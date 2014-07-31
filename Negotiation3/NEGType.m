@@ -89,7 +89,7 @@
     int claim = (int)[[detailItem valueForKey:@"question4"] doubleValue];
     
     NSMutableDictionary *type1 = [self createType:@"type1"
-                                            label:@"Relational Negotiators"
+                                            label:@"Relational Negotiator"
                                            create:[NSNumber numberWithFloat:3.222857143]
                                            assert:[NSNumber numberWithFloat:4.64]
                                           empathy:[NSNumber numberWithFloat:5.382857143]
@@ -98,7 +98,7 @@
                                           string2:@"In theory, your interpersonal skills should produce good negotiation success. You may not be giving yourself enough credit in that regard.  In any case, when you review the skill-building tips in this app, start with the sections on creating value and maximizing your share."];
 
     NSMutableDictionary *type2 = [self createType:@"type2"
-                                            label:@"Empathetic Value-Creators"
+                                            label:@"Empathetic Value-Creator"
                                            create:[NSNumber numberWithFloat:4.861538462]
                                            assert:[NSNumber numberWithFloat:2.77948718]
                                           empathy:[NSNumber numberWithFloat:5.528205128]
@@ -107,16 +107,16 @@
                                           string2:@"Understanding other people’s interests is important to negotiation success. So is self-advocacy. It’s great to expand the pie, but you need to get your fair share of it, as well. When you review the skill-building tips in this app, start with the section on asserting your own interests."];
 
     NSMutableDictionary *type3 = [self createType:@"type3"
-                                            label:@"Outcome-Focused Negotiators"
+                                            label:@"Outcome-Focused Negotiator"
                                            create:[NSNumber numberWithFloat:4.756363636]
                                            assert:[NSNumber numberWithFloat:3.403636364]
                                           empathy:[NSNumber numberWithFloat:3.636363636]
                                             claim:[NSNumber numberWithFloat:4.203636364]
-                                          string1:@"You have greater confidence than most people about your create value in negotiation and claiming your share of it. (Remember that these group comparisons are relative: on average respondents only give themselves a “3” on maximizing value.) Correspondingly, you are less sure than most people about how doing well in regard to self-advocacy and empathy."
-                                          string2:@"Even if most of your negotiations are done by phone, email, or Skype, good relational skills can make the difference between a satisfactory agreement and impasse. When you review the skill-building tips in this app, start with the interpersonal factors to further enhance your effectiveness."];
+                                          string1:@"You have greater confidence than most people about your create value in negotiation and claiming your share of it. (Remember that these group comparisons are relative: on average respondents only give themselves a “3” on maximizing value.)<br><br>Correspondingly, you are less sure than most people about how doing well in regard to self-advocacy and empathy."
+                                          string2:@"Even if most of your negotiations are done by phone, email, or Skype, good relational skills can make the difference between a satisfactory agreement and impasse. When you review the skill-building tips in this app, start with the interpersonal factors to further enhance your effectiveness on this important dimension."];
     
     NSMutableDictionary *type4 = [self createType:@"type4"
-                                            label:@"Assertive Value-Claimers"
+                                            label:@"Assertive Value-Claimer"
                                            create:[NSNumber numberWithFloat:2.542857143]
                                            assert:[NSNumber numberWithFloat:5.257142857]
                                           empathy:[NSNumber numberWithFloat:3.657142857]
@@ -125,7 +125,7 @@
                                           string2:@"Self-advocacy is important to negotiation success, but so is understanding the interests and feelings of other parties. That knowledge is essential to making creative trades; expanding the pie can ultimately produce even more gain for you. When you review the skill-building tips in this app, start with the section on understanding other people’ interests."];
     
     NSMutableDictionary *type5 = [self createType:@"type5"
-                                            label:@"Assertive Value-Creators"
+                                            label:@"Assertive Value-Creator"
                                            create:[NSNumber numberWithFloat:4.628571429]
                                            assert:[NSNumber numberWithFloat:5.447619048]
                                           empathy:[NSNumber numberWithFloat:3.085714286]

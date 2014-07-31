@@ -84,7 +84,7 @@
             
             
             [self presentViewController:self.wtPageController animated:YES completion:^(){
-                UIImage *overlay = [UIImage imageNamed:@"overlayText.png"];
+                UIImage *overlay = [UIImage imageNamed:@"overlayTextOnly.png"];
                 self.overlayView = [[UIImageView alloc] initWithImage:overlay];
                 self.overlayView.frame = CGRectMake(0, 0, 320, 568);
                 [self.navigationController.view addSubview:self.overlayView];

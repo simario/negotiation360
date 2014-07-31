@@ -15,7 +15,7 @@ $(function () {
 
 
         title: {
-            text: null,
+            text: "Relational Dimension",
 	        margin: 15
         },
 
@@ -103,7 +103,7 @@ $(function () {
 
 
         title: {
-            text: null,
+            text: "Outcome Dimension",
 	        margin: 15
         },
 
@@ -192,7 +192,7 @@ $(function () {
 
 
         title: {
-            text: null,
+            text: "Linking Means and Ends",
 	        margin: 15
         },
 
