@@ -190,7 +190,7 @@
     
     CGFloat h = 85;
     if (indexPath.item == 0) {
-        h = 360;
+        h = 390;
     }
     return h;
 }

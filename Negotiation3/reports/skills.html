@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/docs.css" />
+    <link rel="stylesheet" href="styles.css" />
     <style>
         .photo {
             margin: 10px;
@@ -13,6 +13,9 @@
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
+            position: relative; /* For scrollyspy */
+		    padding-top: 35px; /* Account for fixed navbar */
+
         }
 		.popover{
 		    width:200px;
@@ -34,7 +37,7 @@
 	    <div class="panel-heading" style="background-color: #ff9f33; border-color: #ff9f33;">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-	          <span data-icon="&#xe049;"></span>&nbsp;&nbsp;Understand the other side
+	          <strong><span data-icon="&#xe065;" style="font-size: 20px"></span>&nbsp;&nbsp;&nbsp;Understand the other side</strong>
 	        </a>
 	      </h4>
 	    </div>
@@ -43,7 +46,7 @@
 		        <li class="list-group-item" style="text-align: left; font-size:14px"><strong>Inquire.</strong> Without realizing it, many negotiators fail to test their assumptions about the other parties' needs and perceptions.</li>
 		        <li class="list-group-item" style="text-align: left; font-size:14px"><strong>Listen deeply.</strong> Don't prejudge. Be alert for ideas you can build on.</li>
 		        <li class="list-group-item" style="text-align: left; font-size:14px"><strong>Consult your own feelings.</strong> If you are anxious, maybe they are feeling that, too.</li>
-		        <li class="list-group-item" style="text-align: left; font-size:14px"><strong>"Go to the balcony."</strong> Follow <strong><a href="javascript://" id="example1" data-toggle="popover" data-placement="left" title="Bill Ury" data-content="Author of &ldquo;Getting to Yes&rdquo; and &ldquo;Getting Past No&rdquo;" style="color:#ff9f33">Bill Ury's</a></strong> advice and try to view your interaction as if you were a member of the audience, sitting way back, with a broad perspective on everything that is going on.</li>
+		        <li class="list-group-item" style="text-align: left; font-size:14px"><strong>"Go to the balcony."</strong> Follow <strong><a href="javascript://" id="example1" data-toggle="popover" data-placement="left" title="Bill Ury" data-content="Author of &ldquo;Getting to Yes with Yourself&rdquo; and &ldquo;Getting Past No&rdquo;" style="color:#ff9f33">Bill Ury's</a></strong> advice and try to view your interaction as if you were a member of the audience, sitting way back, with a broad perspective on everything that is going on.</li>
 			</ul>
 	    </div>
 	  </div>
@@ -51,7 +54,7 @@
 	    <div class="panel-heading" style="background-color: #ff9f33;border-color: #ff9f33;">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-	          <span data-icon="&#xe021;"></span>&nbsp;&nbsp;Assert your interest
+	          <strong><span data-icon="&#xe0b4;" style="font-size: 20px"></span>&nbsp;&nbsp;&nbsp;Assert your interest</strong>
 	        </a>
 	      </h4>
 	    </div>
@@ -68,7 +71,7 @@
 	    <div class="panel-heading" style="background-color: #ff9f33;border-color: #ff9f33;">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-	          <span data-icon="&#xe050;"></span>&nbsp;&nbsp;&nbsp;Maximize your share
+	          <strong><span data-icon="&#xe313;" style="font-size: 20px"></span>&nbsp;&nbsp;&nbsp;Maximize your share</strong>
 	        </a>
 	      </h4>
 	    </div>
@@ -82,10 +85,10 @@
 	    </div>
 	  </div>
 	  <div class="panel panel-warning">
-	    <div class="panel-heading" style="background-color: #ff9f33;border-color: #ff9f33;">
+	    <div class="panel-heading" style="background-color: #ff9f33; border-color: #ff9f33;">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-	          <span data-icon="&#xe016;"></span>&nbsp;&nbsp;Create value
+	          <strong><span data-icon="&#xe14e;" style="font-size: 20px"></span>&nbsp;&nbsp;&nbsp;Create value</strong>
 	        </a>
 	      </h4>
 	    </div>
@@ -98,11 +101,11 @@
 		    </ul>
 	    </div>
 	  </div>
-	<div class="panel panel-warning">
-	    <div class="panel-heading" style="background-color: #ff9f33;border-color: #ff9f33;">
+	<div class="panel panel-success">
+	    <div class="panel-heading" style="background-color: #2ee478;border-color: #2ee478;">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-	          <span data-icon="&#xe023;"></span>&nbsp;&nbsp;Bonus tip
+	          <strong><span data-icon="&#xe049;" style="font-size: 20px"></span>&nbsp;&nbsp;&nbsp;Bonus tip</strong>
 	        </a>
 	      </h4>
 	    </div>
