@@ -50,7 +50,7 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="profile-1.png" id="k1c-EQ-5Y0">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="profile-new.png" id="k1c-EQ-5Y0">
                                             <rect key="frame" x="15" y="9" width="36" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -552,7 +552,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="ERO-9w-u5B" detailTextLabel="07t-k4-H4y" imageView="axt-GZ-x1J" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="5Z7-QO-iZU">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="ERO-9w-u5B" detailTextLabel="07t-k4-H4y" imageView="sUI-4p-q2l" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="5Z7-QO-iZU">
                                 <rect key="frame" x="0.0" y="22" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Z7-QO-iZU" id="VPO-bZ-9D3">
@@ -573,7 +573,7 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="profile-1.png" id="axt-GZ-x1J">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="profile-new.png" id="sUI-4p-q2l">
                                             <rect key="frame" x="15" y="13" width="36" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -765,7 +765,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile-1.png" width="36" height="36"/>
+        <image name="profile-new.png" width="36" height="36"/>
         <image name="untitled.png" width="24" height="24"/>
     </resources>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>

@@ -28,6 +28,12 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

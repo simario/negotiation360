@@ -50,6 +50,12 @@
 		69E362B21972BC1300C9F60C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B01972BC1300C9F60C /* AdSupport.framework */; };
 		69E362B31972BC1300C9F60C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B11972BC1300C9F60C /* libz.dylib */; };
 		69EF5F5C1909EFC200A947AF /* page-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EF5F5B1909EFC200A947AF /* page-6.png */; };
+		69F3CBB2199264EB007561DB /* profile-new.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB1199264EB007561DB /* profile-new.png */; };
+		69F3CBB419928411007561DB /* profile-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB319928411007561DB /* profile-2.png */; };
+		69F3CBB91992BE65007561DB /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB51992BE65007561DB /* four.png */; };
+		69F3CBBA1992BE65007561DB /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB61992BE65007561DB /* one.png */; };
+		69F3CBBB1992BE65007561DB /* three.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB71992BE65007561DB /* three.png */; };
+		69F3CBBC1992BE65007561DB /* two.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3CBB81992BE65007561DB /* two.png */; };
 		910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66F919641D7F00325586 /* NEGProfilesViewController.m */; };
 		910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66FC19641DA300325586 /* NEGCompareViewController.m */; };
 		91143D9E18DFAAB800FFE277 /* resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 91143D9D18DFAAB800FFE277 /* resources.html */; };
@@ -205,6 +211,12 @@
 		69E362BC1972D94500C9F60C /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Negotiation3/GoogleAnalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
 		69E362BD1972D94500C9F60C /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Negotiation3/GoogleAnalytics/GAITracker.h; sourceTree = "<group>"; };
 		69EF5F5B1909EFC200A947AF /* page-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-6.png"; sourceTree = "<group>"; };
+		69F3CBB1199264EB007561DB /* profile-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-new.png"; sourceTree = "<group>"; };
+		69F3CBB319928411007561DB /* profile-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-2.png"; sourceTree = "<group>"; };
+		69F3CBB51992BE65007561DB /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
+		69F3CBB61992BE65007561DB /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = one.png; sourceTree = "<group>"; };
+		69F3CBB71992BE65007561DB /* three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = three.png; sourceTree = "<group>"; };
+		69F3CBB81992BE65007561DB /* two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two.png; sourceTree = "<group>"; };
 		910D66F819641D7F00325586 /* NEGProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGProfilesViewController.h; sourceTree = "<group>"; };
 		910D66F919641D7F00325586 /* NEGProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGProfilesViewController.m; sourceTree = "<group>"; };
 		910D66FB19641DA300325586 /* NEGCompareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NEGCompareViewController.h; path = Negotiation3/NEGCompareViewController.h; sourceTree = SOURCE_ROOT; };
@@ -363,6 +375,12 @@
 			isa = PBXGroup;
 			children = (
 				698FCB721970A47A003111AF /* overlay.png */,
+				69F3CBB319928411007561DB /* profile-2.png */,
+				69F3CBB51992BE65007561DB /* four.png */,
+				69F3CBB61992BE65007561DB /* one.png */,
+				69F3CBB71992BE65007561DB /* three.png */,
+				69F3CBB81992BE65007561DB /* two.png */,
+				69F3CBB1199264EB007561DB /* profile-new.png */,
 				698FCB731970A47A003111AF /* overlay2.png */,
 				694CB0541978057400BBAD32 /* overlayText.png */,
 				69D3E60819797899005F5C14 /* overlayTextOnly.png */,
@@ -704,17 +722,23 @@
 				69C585CA1901697A00EE6E27 /* dragend.js in Resources */,
 				69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */,
 				69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */,
+				69F3CBBC1992BE65007561DB /* two.png in Resources */,
 				91659A8F18FB37C1009F21F8 /* minimal.js in Resources */,
 				91659A8E18FB327B009F21F8 /* charts-examples.js in Resources */,
 				69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */,
 				69409F8118FB1EE80024E102 /* top-banner.png in Resources */,
+				69F3CBB2199264EB007561DB /* profile-new.png in Resources */,
 				91A2791618F02C32006B58A3 /* css in Resources */,
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
+				69F3CBBA1992BE65007561DB /* one.png in Resources */,
+				69F3CBB419928411007561DB /* profile-2.png in Resources */,
+				69F3CBBB1992BE65007561DB /* three.png in Resources */,
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
 				6960396F1968756300E3C227 /* test2.html in Resources */,
 				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
 				694CB0551978057400BBAD32 /* overlayText.png in Resources */,
+				69F3CBB91992BE65007561DB /* four.png in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
 				69A70DF919677158008E4232 /* list.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,

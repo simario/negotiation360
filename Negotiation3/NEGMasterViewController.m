@@ -34,6 +34,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setToolbarHidden:YES animated:NO];
+    NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
+
 }
 
 - (void)viewDidLoad
