@@ -262,10 +262,10 @@
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 
     
-    _questionLabels = [NSArray arrayWithObjects:@"Recognizing and capitalizing on opportunities to create value. (1 - 7 Points)",
-                       @"Asserting your interests and point of view. (1 - 7 Points)",
-                       @"Understanding the motivations and feelings of other parties. (1 - 7 Points)",
-                       @"Getting the maximum possible in the agreement.   (1 - 7 Points)",
+    _questionLabels = [NSArray arrayWithObjects:@"Recognizing and capitalizing on opportunities to create value. ( 1 - 7 Points )",
+                       @"Asserting your interests and point of view. ( 1 - 7 Points )",
+                       @"Understanding the motivations and feelings of other parties.  ( 1 - 7 Points )",
+                       @"Getting the maximum possible in the agreement.                   ( 1 - 7 Points )",
                        nil];
     
     
