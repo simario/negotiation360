@@ -180,19 +180,25 @@
             [self configureGraph:cell];
             
             break;
+        
         case 2:
-            cell.textLabel.text = @" 1   Negotiation Dilemmas";
+            cell.textLabel.text = @"Negotiation Dilemmas";
+            cell.imageView.image = [UIImage imageNamed:@"one-blue.png"];
             break;
+        
         case 3:
-            cell.textLabel.text = @" 2   Bargaining Styles";
+            cell.textLabel.text = @"Bargaining Styles";
+            cell.imageView.image = [UIImage imageNamed:@"two-blue.png"];
             break;
+        
         case 4:
-            cell.textLabel.text = @" 3   Your Personal Profile";
+            cell.textLabel.text = @"Your Personal Profile";
+            cell.imageView.image = [UIImage imageNamed:@"three-blue.png"];
             break;
             
         case 5:
-            
-            cell.textLabel.text = @" 4   Skill-Building Tips";
+            cell.textLabel.text = @"Skill-Building Tips";
+            cell.imageView.image = [UIImage imageNamed:@"four-blue.png"];
             break;
             
         default:

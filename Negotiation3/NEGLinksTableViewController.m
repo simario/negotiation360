@@ -38,6 +38,8 @@
 {
     [super viewDidLoad];
     
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -78,9 +80,11 @@
         //    break;
         case 0:
             cell.textLabel.text = @"Negotiation Resources";
+            cell.imageView.image = [UIImage imageNamed:@"briefcase.png"];
             break;
         case 1:
             cell.textLabel.text = @"About Michael Wheeler";
+            cell.imageView.image = [UIImage imageNamed:@"information.png"];
             break;
             
         default:
