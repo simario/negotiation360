@@ -80,11 +80,11 @@
         //    break;
         case 0:
             cell.textLabel.text = @"Negotiation Resources";
-            cell.imageView.image = [UIImage imageNamed:@"briefcase.png"];
+            cell.imageView.image = [UIImage imageNamed:@"briefcase-25.png"];
             break;
         case 1:
             cell.textLabel.text = @"About Michael Wheeler";
-            cell.imageView.image = [UIImage imageNamed:@"information.png"];
+            cell.imageView.image = [UIImage imageNamed:@"info-25.png"];
             break;
             
         default:
