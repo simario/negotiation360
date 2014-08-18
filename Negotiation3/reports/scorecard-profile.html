@@ -1,0 +1,173 @@
+<!doctype html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+	  background: #fff;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #demo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      cursor: hand;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+
+    #demo p {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+
+  </style>
+
+</head>
+<body>
+	<div id="container" style="margin: 10px auto 10px; width: 280px; height: 280px"></div>
+	
+	<div>
+		<p style="margin: 20px; font-size: 14px;">Sometimes your scorecard for a particular negotiation will closely match your self-assessment profile. That shouldn't be surprising, since your profile reflects your general tendencies. But other times it may look very different. Here's why:</p>
+
+		<ol style="margin: 20px 20px 20px 40px; font-size: 14px;">
+			<li>You may be more effective negotiating with certain types of people than with others.</li><br>
+			<li>Likewise, it may depend on the situation. You may be stronger negotiating on behalf of your organization than advocating for yourself.</li><br>
+			<li>Finally, these scorecard questions were somewhat different from those in the self-assessment. Here you were free to score yourself on each skill independently without making tradeoffs for the other items.</li>
+		</ol>
+		
+	</div>
+
+	<div class="alert alert-info" style="margin: 20px;">
+		<div class="row">
+			<div class="col-xs-1" style="margin-right:10px">
+				<span data-icon="&#xe030;" style="font-size: 24px"></span>
+			</div>
+			<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">
+				Take a moment to review your answers, plus your scorecard profile, and reflect more broadly about how this negotiation unfolded. When you're done, continue on to the next section.
+			</div>
+		</div>
+	</div>
+	
+	<div style="height:100px">
+	</div>
+	
+    <script src="jquery.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="highcharts-more.js"></script>
+    <script src="modules/exporting.js"></script>
+    <script src="minimal.js"></script>
+    <script>
+	$(function () {
+
+	    $('#container').highcharts({
+
+	        chart: {
+	            polar: true,
+	            borderColor: '#34aadc',
+	            borderWidth: 2,
+	            type: 'line'
+	        },
+
+	        legend: {
+	            enabled: true,
+				margin: 20
+	        },
+
+
+	        title: {
+	            text: null,
+		        margin: 15
+	        },
+
+	        pane: {
+	            size: '14%',
+		        startAngle: -45,
+	        },
+
+	        xAxis: {
+	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+	            tickmarkPlacement: 'on',
+	            lineWidth: 0,
+				labels: {
+					style: {
+						whiteSpace: 'nowrap'
+					}
+				}
+	        },
+
+	        yAxis: {
+	            lineWidth: 0,
+				tickInterval: 4,
+				step: 2,
+	            endOnTick: false,
+				endOnTick: true,
+	            showLastLabel: true,
+	            startOnTick: true
+	        },
+
+	        tooltip: {
+	            enabled: false
+	        },
+
+			credits: {
+	            enabled: false
+	         },
+
+	        navigation: {
+	            buttonOptions: {
+	                enabled: false
+	            }
+	        },
+
+	        plotOptions: {
+	            series: {
+	                fillOpacity: 0.33,
+	                marker: {
+	                    fillColor: '#FFFFFF',
+	                    lineWidth: 2,
+	                    lineColor: null // inherit from series
+	                }
+	            },
+	        },
+
+	        series: [{
+	            name: 'Your Responses',
+	            type: 'area',
+	            data: [%@, %@, %@, %@],
+				lineWidth: 5,
+	            animation: {
+	                duration: 1000
+	            }, 
+	        },	{
+		            name: '%@',
+		            type: 'area',
+		            data: [%@, %@, %@, %@],
+					lineWidth: 5,
+		            animation: {
+		                duration: 2000
+		            }, 
+		        }]
+
+	    });
+	});		
+    </script>
+
+
+</body>
+</html>
