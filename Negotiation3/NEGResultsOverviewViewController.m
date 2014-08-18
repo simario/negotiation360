@@ -132,11 +132,11 @@
     NSMutableDictionary *type = [t getType:self.detailItem];
     NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/dd/yy"];
+    [format setDateFormat:@"M/d/yy"];
     NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Self profile %@", dateString];
+    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile - %@", dateString];
     cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
 }
 
@@ -211,7 +211,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat h = 44;
     if (indexPath.item == 0) {
-        h = 64;
+        h = 56;
     }
     if (indexPath.item == 1) {
         h = 224;

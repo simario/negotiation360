@@ -423,11 +423,11 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/dd/yy"];
+    [format setDateFormat:@"M/d/yy"];
     NSString *dateString = [format stringFromDate:ts];
 
 
-    NSString *t = [NSString stringWithFormat:@"Self profile %@", dateString];
+    NSString *t = [NSString stringWithFormat:@"Self Profile - %@", dateString];
     NSString *s = @"";
     
     bool isComplete = [[object valueForKey:@"complete"] boolValue];
