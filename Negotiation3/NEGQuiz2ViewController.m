@@ -50,7 +50,7 @@
 
     
     
-    [self.questionValueLabel5 setText:[NSString stringWithFormat:@"%@ (%d)", label, val5]];
+    [self.questionValueLabel5 setText:[NSString stringWithFormat:@"%@: %d", label, val5]];
 }
 
 

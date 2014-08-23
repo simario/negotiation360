@@ -56,8 +56,6 @@
     self.detailViewController = (NEGDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     
-    
-    
     // Create the data model
     _pageTitles = @[@"Negotiation 360°", @"Self-Assessment", @"Personal Profile", @"Negotiation Dilemmas", @"Skill Building Tips", @""];
     _pageImages = @[@"page-1.png", @"page-2.png", @"page-3.png", @"page-4.png", @"page-5.png", @""];
@@ -427,7 +425,7 @@
     NSString *dateString = [format stringFromDate:ts];
 
 
-    NSString *t = [NSString stringWithFormat:@"Self Profile - %@", dateString];
+    NSString *t = [NSString stringWithFormat:@"Self Profile: %@", dateString];
     NSString *s = @"";
     
     bool isComplete = [[object valueForKey:@"complete"] boolValue];

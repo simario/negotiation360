@@ -136,7 +136,7 @@
     NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile - %@", dateString];
+    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile: %@", dateString];
     cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
 }
 
