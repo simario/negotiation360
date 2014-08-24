@@ -425,7 +425,7 @@
     NSString *dateString = [format stringFromDate:ts];
 
 
-    NSString *t = [NSString stringWithFormat:@"Self Profile: %@", dateString];
+    NSString *t = [NSString stringWithFormat:@"Self Profile, %@", dateString];
     NSString *s = @"";
     
     bool isComplete = [[object valueForKey:@"complete"] boolValue];
@@ -437,7 +437,7 @@
             s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
         }
     } else {
-        s = @"In Progress...";
+        s = @"In Progress. Tap to Complete.";
     }
 
 

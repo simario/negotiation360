@@ -13,6 +13,8 @@
 #import "GAI.h" 
 #import "GAIDictionaryBuilder.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface NEGResultsOverviewViewController ()
 
 @end
@@ -24,6 +26,9 @@
 - (IBAction)compose:(UIBarButtonItem *)sender {
     if ([MFMailComposeViewController canSendMail])
     {
+        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, nil]];
+
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         
         mailer.mailComposeDelegate = self;
@@ -64,7 +69,7 @@
         
         NSString *emailBody = [NSString stringWithFormat:@"%@%@%@%@%@%@", create, assert, empathy, claim, comparedEffect, resultType];
         [mailer setMessageBody:emailBody isHTML:NO];
-        
+
         [self presentViewController:mailer animated:YES completion:nil];
         
     }
@@ -102,6 +107,9 @@
     
     // Remove the mail view
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x34aadc)];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+
 }
 
 - (void)configureGraph:(UITableViewCell *)cell {
@@ -136,7 +144,7 @@
     NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile: %@", dateString];
+    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile, %@", dateString];
     cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
 }
 
