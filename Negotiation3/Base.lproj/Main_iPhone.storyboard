@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-621" y="98"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="NEGMasterViewController" sceneMemberID="viewController">
@@ -113,18 +114,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMb-gu-F3f">
                                 <rect key="frame" x="0.0" y="100" width="320" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odw-gP-Uor">
                                 <rect key="frame" x="20" y="60" width="280" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsA-EC-dur">
                                 <rect key="frame" x="16" y="20" width="288" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Tap to get started!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,7 +134,6 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-Uw-iOb">
                                 <rect key="frame" x="40" y="278" width="240" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -162,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="-1811"/>
         </scene>
-        <!--Quiz View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -180,7 +177,6 @@
                                     <subviews>
                                         <webView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zav-wC-Bb9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="392"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </webView>
                                     </subviews>
@@ -196,7 +192,6 @@
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="900" contentMode="center" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dk-F2-jho">
                                             <rect key="frame" x="15" y="5" width="290" height="55"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" staticText="YES"/>
@@ -206,19 +201,16 @@
                                         </textView>
                                         <stepper opaque="NO" clipsSubviews="YES" tag="902" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-Fe-jC1">
                                             <rect key="frame" x="175" y="41" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </stepper>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="901" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-84-fJq">
                                             <rect key="frame" x="271" y="31" width="44" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                             <color key="textColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 - 7 points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-VO-hsm">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 - 7 points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-VO-hsm">
                                             <rect key="frame" x="103" y="45" width="74" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -249,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-778"/>
         </scene>
-        <!--Links Table View Controller - Links-->
+        <!--Links-->
         <scene sceneID="vkt-xd-6qa">
             <objects>
                 <tableViewController id="Xei-tS-bpb" customClass="NEGLinksTableViewController" sceneMemberID="viewController">
@@ -309,7 +301,6 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="Z6F-xb-iA7" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="27U-7P-r7F">
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -324,7 +315,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="1126"/>
         </scene>
-        <!--About Types View Controller - Negotiation Profiles-->
+        <!--Negotiation Profiles-->
         <scene sceneID="LJS-X2-YKv">
             <objects>
                 <viewController id="TfM-Ts-HaH" customClass="NEGAboutTypesViewController" sceneMemberID="viewController">
@@ -338,7 +329,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-ph-jNC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -387,7 +377,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="1754"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="NEGDetailViewController" sceneMemberID="viewController">
@@ -401,7 +391,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9J-Oa-8Pp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -424,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-778"/>
         </scene>
-        <!--Skills View Controller - Skill-Building Tips-->
+        <!--Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -438,7 +427,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JjV-yf-76a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -456,7 +444,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="1418"/>
         </scene>
-        <!--Dilema View Controller - Negotiation Dilemmas-->
+        <!--Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -470,7 +458,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-bP-hY6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -488,7 +475,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-778"/>
         </scene>
-        <!--About View Controller - Your Personal Profile-->
+        <!--Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -502,7 +489,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zp-gS-tQF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -520,7 +506,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="673"/>
         </scene>
-        <!--Quiz2 View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -534,7 +520,6 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="4h7-DP-v0Y">
                                 <rect key="frame" x="38" y="421" width="244" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="iJA-sZ-MMX" eventType="valueChanged" id="hwx-6y-pvt"/>
@@ -542,14 +527,12 @@
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOz-q3-Gcr">
                                 <rect key="frame" x="20" y="386" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWu-sz-iIJ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="318"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -573,7 +556,7 @@
             </objects>
             <point key="canvasLocation" x="2015" y="-778"/>
         </scene>
-        <!--Results Overview View Controller - Analysis & Feedback-->
+        <!--Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -620,7 +603,6 @@
                                     <subviews>
                                         <webView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQH-RJ-Fzb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </webView>
                                     </subviews>
@@ -679,7 +661,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="242"/>
         </scene>
-        <!--Resources View Controller - Negotiation Resources-->
+        <!--Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
             <objects>
                 <viewController id="JEJ-MM-Sbq" customClass="NEGResourcesViewController" sceneMemberID="viewController">
@@ -693,7 +675,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZ4-cv-wAQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -709,7 +690,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="1126"/>
         </scene>
-        <!--AboutMW View Controller - About Michael Wheeler-->
+        <!--About Michael Wheeler-->
         <scene sceneID="AVu-J1-pfC">
             <objects>
                 <viewController id="pDf-tE-goB" customClass="NEGAboutMWViewController" sceneMemberID="viewController">
@@ -723,7 +704,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5R-rT-ALx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -739,7 +719,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="2388"/>
         </scene>
-        <!--Profiles View Controller - Bargaining Styles-->
+        <!--Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -753,7 +733,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cvf-dJ-Cm9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -771,7 +750,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-38"/>
         </scene>
-        <!--Compare View Controller - How You Compare-->
+        <!--How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -785,7 +764,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-yZ-gOO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -815,7 +793,6 @@
         <image name="paper44.png" width="20" height="20"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -825,4 +802,5 @@
         <segue reference="RxB-wf-QIq"/>
         <segue reference="oA1-ch-634"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

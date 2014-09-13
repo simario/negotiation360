@@ -10,29 +10,29 @@
 	<string>Negotiation3</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>249AFDA7-A701-4543-AB11-A83689E3F11E</key>
+		<key>B9ED0BB22136554C900DB65785F8ADC759701179</key>
 		<string>https://github.com/simario/negotiation360.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Negotiation3.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>249AFDA7-A701-4543-AB11-A83689E3F11E</key>
+		<key>B9ED0BB22136554C900DB65785F8ADC759701179</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/simario/negotiation360.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>249AFDA7-A701-4543-AB11-A83689E3F11E</string>
+	<string>B9ED0BB22136554C900DB65785F8ADC759701179</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>249AFDA7-A701-4543-AB11-A83689E3F11E</string>
+			<string>B9ED0BB22136554C900DB65785F8ADC759701179</string>
 			<key>IDESourceControlWCCName</key>
 			<string>negotiation360</string>
 		</dict>
