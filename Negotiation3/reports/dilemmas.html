@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.css" />
   <link rel="stylesheet" href="styles.css" />
 
   <style type="text/css">
@@ -51,50 +53,37 @@
 	  <span class="ion-ios7-arrow-thin-left"></span>&nbsp;SWIPE TO VIEW MORE&nbsp;<span class="ion-ios7-arrow-thin-right"></span>
 	</div>	
 
-  <div id="demo" >
-    <ul>
-      <li class="first dragend-page">
-		    <div id="interpersonalDimension" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
+	<div class="owl-carousel" style="margin: -15px 0px 0px 0px;">
+    	<div class="owl-item">
+			<div id="interpersonalDimension" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
 			<p>Two questions you answered deal with the <strong>interpersonal</strong> dimension of negotiation: asserting yourself and understanding others.</p> 
-      <p>Research shows that many people feel that being relatively good at one of these comes at the cost of being less effective at the other. (Being firm about your demands could stress a relationship, for example; or appearing cooperative might be misread as weakness.) Nevertheless, some people feel equally good at both skills.</p>
-      </li>
-      <li class="middle dragend-page">
-		    <div id="outcomeDimension" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
+      		<p>Research shows that many people feel that being relatively good at one of these comes at the cost of being less effective at the other. (Being firm about your demands could stress a relationship, for example; or appearing cooperative might be misread as weakness.) Nevertheless, some people feel equally good at both skills.</p>
+		</div>
+		<div class="owl-item">	
+			<div id="outcomeDimension" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
 			<p>Two other questions address <strong>outcomes</strong>, specifically the ability to create value and capture your share of it.</p>
-      <p>In practice there is often a tension between these two skills. Value-creating trades require understanding the parties' complementary interests.  But if you disclose your interests unilaterally, you might be exploited by others who bluff and conceal their true needs. Value will be created, but they may get most of it.</p>
-      </li>
-      <li class="dragend-page">
-		    <div id="equalRatings" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
+      		<p>In practice there is often a tension between these two skills. Value-creating trades require understanding the parties' complementary interests.  But if you disclose your interests unilaterally, you might be exploited by others who bluff and conceal their true needs. Value will be created, but they may get most of it.</p>
+		</div>
+      	<div class="owl-item">
+			<div id="equalRatings" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
 			<p>Your negotiation results are linked to how you relate to other parties. Think of the interpersonal scale as representing the <strong>means</strong> of negotiation and the outcome scale as the <strong>ends</strong>.</p>
-      <p>Putting the two scales together reveals common bargaining styles. The lines in the diagram intersect at the 0-0. The example here is for a user who has a rating of 4 for the four skills (counting out from the center for each one).</p>
-      <p>That balance may look nice, but some situations demand certain skills more than others.</p>
-      </li>
-      <li class="last dragend-page">
-				<div class="row" style="margin: 50px auto 10px">
-					<div class="col-xs-2" style="margin-right:15px">
-						<span data-icon="&#xe587;" style="font-size: 64px; color: #111"></span>
-					</div>
-					<div class="col-xs-9" style="font-size: 18px; color: #111; font-weight:300; line-height:1.14285714285714">
-						Tap <strong>Back</strong> to see how these skills reflect different bargaining styles.
-					</div>
-				</div>
-      </li>
-    </ul>
-  </div>
+      		<p>Putting the two scales together reveals common bargaining styles. The lines in the diagram intersect at the 0-0. The example here is for a user who has a rating of 4 for the four skills (counting out from the center for each one).</p>
+      		<p>That balance may look nice, but some situations demand certain skills more than others.</p>
+      	</div>
+	</div>
 
   <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="dragend.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
   <script>
 
-    $(function() {
-      new Dragend($("#demo").get(0), {
-        afterInitialize: function() {
-          $("#demo").css("visibility", "visible");
-        }
-      });
-    });
-
+	$(document).ready(function(){
+	  $(".owl-carousel").owlCarousel({
+		items:1,
+		margin:30
+		});
+	});
+	
   </script>
 
   <script src="highcharts.js"></script>
