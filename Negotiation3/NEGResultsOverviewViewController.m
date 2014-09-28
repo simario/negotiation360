@@ -295,6 +295,9 @@
      
      }*/
     
+
+    [self.detailItem setValue:[NSNumber numberWithBool:YES] forKey:@"complete"];
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

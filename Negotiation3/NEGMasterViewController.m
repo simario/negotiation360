@@ -142,51 +142,17 @@
 }
 - (void)insertNewObject:(id)sender
 {
-    if (self.overlayView) {
-        [self.overlayView removeFromSuperview];
-    }
-    _fromNew = YES;
+    NSIndexPath * ip = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:ip];
+    bool isComplete = [[object valueForKey:@"complete"] boolValue];
     
-    
-    
-    //id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
-    // create new profile
-    /*
-    if ([sectionInfo numberOfObjects] == 0) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-        
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
-        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
-        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
-        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
-        
-        // Save the context.
-        NSError *error = nil;
-        if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-        
-        [self performSegueWithIdentifier:@"showDetail" sender:self];
-    } else {*/
+    if (isComplete) {
         NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.scFetchedResultsController fetchRequest] entity];
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
         
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
-        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
-        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
-        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
         
         // Save the context.
         NSError *error = nil;
@@ -196,12 +162,18 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-        
-    //}
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must finish your profile before creating a Scorecard"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+
+    }
     
     
     
-    _fromNew = NO;
 }
 
 #pragma mark - Page Controller
