@@ -83,11 +83,41 @@
                         <segue destination="7DW-9h-cBO" kind="modal" identifier="showWalkthrough" id="ZhS-AJ-Ce8"/>
                         <segue destination="cgD-05-4mV" kind="push" identifier="results_from_main" id="oA1-ch-634"/>
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="F3C-KP-fhE"/>
+                        <segue destination="0QK-Xa-X2S" kind="push" identifier="scorecardIntro" id="Wvz-Qw-GIm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1001" y="106"/>
+        </scene>
+        <!--Scorecard Intro View Controller - Scorecard-->
+        <scene sceneID="SIF-8X-QiC">
+            <objects>
+                <viewController title="Scorecard" id="0QK-Xa-X2S" customClass="NEGScorecardIntroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UC4-wB-8gX"/>
+                        <viewControllerLayoutGuide type="bottom" id="qjX-IP-zYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5bu-8a-Dyk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTD-Jd-qbU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yMg-d9-NfF"/>
+                    <connections>
+                        <outlet property="webView" destination="MTD-Jd-qbU" id="42F-bi-eMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyJ-az-JeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1252" y="1192"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="C07-zP-9hx">

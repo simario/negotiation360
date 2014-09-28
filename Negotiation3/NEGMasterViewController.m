@@ -350,10 +350,7 @@
     if (indexPath.section == 0) {
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            
             self.detailViewController.detailItem = object;
-            
-            
         }
         
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
@@ -362,6 +359,16 @@
             [self performSegueWithIdentifier:@"results_from_main" sender:self];
         } else {
             [self performSegueWithIdentifier:@"showDetail" sender:self];
+        }
+    } else if (indexPath.section == 1) {
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+        NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];
+        bool isComplete = [[object valueForKey:@"complete"] boolValue];
+        
+        if (isComplete) {
+            //[self performSegueWithIdentifier:@"results_from_main" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
         }
     }
 }
@@ -378,6 +385,16 @@
         }
         
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setContext:context];
+    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"]) {
+        NSManagedObject *object;
+
+        NSIndexPath *indexPath =  [NSIndexPath indexPathForRow:[[self.tableView indexPathForSelectedRow] row] inSection:0];
+        object = [[self scFetchedResultsController] objectAtIndexPath:indexPath];
+
+        
+        NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setContext:context];
     }
