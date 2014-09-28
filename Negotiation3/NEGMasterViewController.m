@@ -80,10 +80,6 @@
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         
         if ([sectionInfo numberOfObjects] == 0) {
-
-            
-            
-            
             [self presentViewController:self.wtPageController animated:YES completion:^(){
                 UIImage *overlay = [UIImage imageNamed:@"overlayTextOnly.png"];
                 self.overlayView = [[UIImageView alloc] initWithImage:overlay];
@@ -108,6 +104,7 @@
     
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,30 +119,60 @@
         [self.overlayView removeFromSuperview];
     }
     _fromNew = YES;
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
     
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    // create new profile
+    if ([sectionInfo numberOfObjects] == 0) {
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
+        
+        // Save the context.
+        NSError *error = nil;
+        if (![context save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
+        [self performSegueWithIdentifier:@"showDetail" sender:self];
+    } else {
+        NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
+        NSEntityDescription *entity = [[self.scFetchedResultsController fetchRequest] entity];
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
+        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
+        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
+        //[newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
+        
+        // Save the context.
+        NSError *error = nil;
+        if (![context save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
     }
     
     
     
-    [self performSegueWithIdentifier:@"showDetail" sender:self];
     _fromNew = NO;
 }
 
@@ -227,43 +254,89 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
-    return [[self.fetchedResultsController sections] count];
+    
+    return [[self.fetchedResultsController sections] count] + [[self.scFetchedResultsController sections] count];
+    //return 2;
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Your Profile";
+    } else if (section == 1) {
+        return @"Your Negotiations";
+    }
+    return @"";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+    if (section == 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+        return [sectionInfo numberOfObjects];
+    } else {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+        return [sectionInfo numberOfObjects];
+        
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        [self configureCell:cell atIndexPath:indexPath];
+    } else if (indexPath.section == 1) {
+        [self configureCell:cell atIndexPath:indexPath];
+    }
+    
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    
+    if (indexPath.section > 0) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-        
-        NSError *error = nil;
-        if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+    if (indexPath.section == 0) {
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+            [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+            
+            NSError *error = nil;
+            if (![context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
         }
-    }   
+    } else if (indexPath.section == 1) {
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            
+            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+            NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
+            [context deleteObject:[self.scFetchedResultsController objectAtIndexPath:newIndexPath]];
+            
+            NSError *error = nil;
+            if (![context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
+        }
+    }
+    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -274,26 +347,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-
-        self.detailViewController.detailItem = object;
+    if (indexPath.section == 0) {
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            
+            self.detailViewController.detailItem = object;
+            
+            
+        }
         
+        bool isComplete = [[object valueForKey:@"complete"] boolValue];
         
+        if (isComplete) {
+            [self performSegueWithIdentifier:@"results_from_main" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"showDetail" sender:self];
+        }
     }
-    
-    bool isComplete = [[object valueForKey:@"complete"] boolValue];
-    
-    if (isComplete) {
-        [self performSegueWithIdentifier:@"results_from_main" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"showDetail" sender:self];
-    }
-    
-
-    
-
-
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -313,6 +383,52 @@
     }
 }
 
+
+
+#pragma mark - Scorecard Fetched results controller
+
+
+
+
+
+- (NSFetchedResultsController *)scFetchedResultsController
+{
+    if (_scFetchedResultsController != nil) {
+        return _scFetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Scorecard" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    aFetchedResultsController.delegate = self;
+    self.scFetchedResultsController = aFetchedResultsController;
+    
+	NSError *error = nil;
+	if (![self.scFetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
+    
+    return _scFetchedResultsController;
+}
+
+
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -320,9 +436,6 @@
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    
-
-    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -363,6 +476,7 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
+    
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
@@ -379,14 +493,15 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     UITableView *tableView = self.tableView;
-    
+    NSIndexPath *t = [NSIndexPath indexPathForRow:indexPath.row inSection:1];
     switch(type) {
         case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            [tableView insertRowsAtIndexPaths:@[t] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView deleteRowsAtIndexPaths:@[t] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeUpdate:
@@ -417,34 +532,61 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSDate *ts = [object valueForKey:@"timeStamp"];
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d/yy"];
-    NSString *dateString = [format stringFromDate:ts];
-
-
-    NSString *t = [NSString stringWithFormat:@"Self Profile, %@", dateString];
-    NSString *s = @"";
-    
-    bool isComplete = [[object valueForKey:@"complete"] boolValue];
-    
-    if (isComplete) {
-        NSMutableDictionary *d = [_negType getType:object];
-        NSMutableDictionary *n = [d objectForKey:@"nearest"];
-        if (n) {
-            s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+    if (indexPath.section == 0) {
+        NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        NSDate *ts = [object valueForKey:@"timeStamp"];
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"M/d/yy"];
+        NSString *dateString = [format stringFromDate:ts];
+        
+        
+        NSString *t = [NSString stringWithFormat:@"Self Profile, %@", dateString];
+        NSString *s = @"";
+        
+        bool isComplete = [[object valueForKey:@"complete"] boolValue];
+        
+        if (isComplete) {
+            NSMutableDictionary *d = [_negType getType:object];
+            NSMutableDictionary *n = [d objectForKey:@"nearest"];
+            if (n) {
+                s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+            }
+        } else {
+            s = @"In Progress. Tap to Complete.";
         }
-    } else {
-        s = @"In Progress. Tap to Complete.";
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
+        cell.detailTextLabel.text = s;
+    } else if(indexPath.section == 1) {
+        NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+        NSManagedObject *object = [self.scFetchedResultsController objectAtIndexPath:ip];
+        NSDate *ts = [object valueForKey:@"timeStamp"];
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"M/d/yy"];
+        NSString *dateString = [format stringFromDate:ts];
+        
+        UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
+        
+        [imv setImage:[UIImage imageNamed:@"Compass-32.png"]];
+        NSString *t = [NSString stringWithFormat:@"My Negotiation, %@", dateString];
+        NSString *s = @"";
+        
+        bool isComplete = [[object valueForKey:@"complete"] boolValue];
+        
+        if (isComplete) {
+            NSMutableDictionary *d = [_negType getType:object];
+            NSMutableDictionary *n = [d objectForKey:@"nearest"];
+            if (n) {
+                s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+            }
+        } else {
+            s = @"In Progress. Tap to Complete.";
+        }
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
+        cell.detailTextLabel.text = s;
     }
 
-
-    
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
-    cell.detailTextLabel.text = s;
 }
 
 @end
