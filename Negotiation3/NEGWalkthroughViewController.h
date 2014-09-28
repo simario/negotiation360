@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface NEGWalkthroughViewController : UIViewController
 
 @property NSUInteger pageIndex;
@@ -15,6 +16,8 @@
 @property NSString *imageFile;
 @property NSString *subText;
 @property BOOL goButtonHidden;
+@property id masterViewController;
+
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
 - (IBAction)goButtonPressed:(id)sender;

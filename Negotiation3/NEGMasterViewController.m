@@ -66,7 +66,9 @@
     self.wtPageController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.wtPageController.dataSource = self;
     
+    
     NEGWalkthroughViewController *startingViewController = [self viewControllerAtIndex:0];
+    startingViewController.masterViewController = self;
     NSArray *viewControllers = @[startingViewController];
     [self.wtPageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
@@ -113,6 +115,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)createProfileObject {
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    
+    // If appropriate, configure the new managed object.
+    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
+    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
+    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
+    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    //[self performSegueWithIdentifier:@"showDetail" sender:self];
+    
+}
 - (void)insertNewObject:(id)sender
 {
     if (self.overlayView) {
@@ -122,8 +149,9 @@
     
     
     
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    //id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
     // create new profile
+    /*
     if ([sectionInfo numberOfObjects] == 0) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
@@ -147,7 +175,7 @@
         }
         
         [self performSegueWithIdentifier:@"showDetail" sender:self];
-    } else {
+    } else {*/
         NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.scFetchedResultsController fetchRequest] entity];
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -169,7 +197,7 @@
             abort();
         }
         
-    }
+    //}
     
     
     
@@ -192,7 +220,7 @@
     
     // Create a new view controller and pass suitable data.
     NEGWalkthroughViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
-    
+    pageContentViewController.masterViewController = self;
     
     pageContentViewController.goButtonHidden = YES;
     NSString *imagePath = [NSString stringWithString:self.pageImages[index]];
@@ -225,7 +253,10 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
+
     NSUInteger index = ((NEGWalkthroughViewController*) viewController).pageIndex;
+    
+    
     
     if (index == NSNotFound) {
         return nil;
@@ -233,8 +264,11 @@
     
     index++;
     if (index == [self.pageTitles count]) {
+        [self createProfileObject];
         return nil;
     }
+    
+    
     return [self viewControllerAtIndex:index];
 }
 
@@ -347,6 +381,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.overlayView) {
+        [self.overlayView removeFromSuperview];
+    }
     if (indexPath.section == 0) {
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -510,7 +547,14 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     UITableView *tableView = self.tableView;
+
     NSIndexPath *t = [NSIndexPath indexPathForRow:indexPath.row inSection:1];
+    
+    NSInteger rows = [self.tableView numberOfRowsInSection:0];
+    if (rows == 0) {
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+    }
+    
     switch(type) {
         case NSFetchedResultsChangeInsert:
             

@@ -7,13 +7,14 @@
 //
 
 #import "NEGWalkthroughViewController.h"
-
+#import "NEGMasterViewController.h"
 @interface NEGWalkthroughViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *subTextView;
 
+//@property NEGMasterViewController *masterViewController;
 
 @end
 
@@ -47,6 +48,8 @@
 
 
 - (IBAction)goButtonPressed:(id)sender {
+    
+    //[self.masterViewController createProfileObject];
     [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 

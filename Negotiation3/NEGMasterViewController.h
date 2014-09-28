@@ -11,6 +11,7 @@
 
 @class NEGDetailViewController;
 
+
 #import <CoreData/CoreData.h>
 #import "NEGWalkthroughViewController.h"
 #import "NEGAppDelegate.h"
@@ -38,5 +39,6 @@
 @property bool fromNew;
 
 - (IBAction)startWalkthrough:(id)sender;
+- (void)createProfileObject;
 
 @end
