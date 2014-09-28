@@ -57,10 +57,10 @@
     
     
     // Create the data model
-    _pageTitles = @[@"Negotiation 360°", @"Self-Assessment", @"Personal Profile", @"Negotiation Dilemmas", @"Skill Building Tips", @"Negotiation Scorecard", @""];
-    _pageImages = @[@"page-1.png", @"page-2.png", @"page-3.png", @"page-4.png", @"page-5.png", @"page-7.png", @""];
+    _pageTitles = @[@"Negotiation 360°", @"Self-Assessment", @"Negotiation Dilemmas", @"Negotiation Scorecard", @"Negotiation Review", @"Best Practices", @"Skill Building Tips", @""];
+    _pageImages = @[@"page-1.png", @"page-2.png", @"page-3.png", @"page-4.png", @"page-5.png", @"page-6.png", @"page-7.png", @""];
     
-    _pageSubTexts = @[@"Swipe left to learn more", @"Answer questions to learn about your negotiation skills.", @"Compare your negotiation profile against others.", @"Learn about fundamental tensions in negotiation strategy.", @"Get tips for enhancing your strategic and interpersonal skills.", @"Keep track of your own negotiaitons over time by creating scorecards.", @""];
+    _pageSubTexts = @[@"Swipe left to learn more", @"Assess your general negotiation skills", @"Learn about fundamental tensions in negotiation strategy", @"Review your performance after each negotiation", @"Identify what worked well and what you would do differently", @"Prepare for negotiations by deploying you personal best practices", @"Review tips for enhancing your strategic and interpersonal skills", @""];
     
     // Create page view controller
     self.wtPageController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
