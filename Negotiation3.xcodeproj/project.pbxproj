@@ -87,6 +87,7 @@
 		9156624219D881C700745751 /* NEGScorecardIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156624119D881C700745751 /* NEGScorecardIntroViewController.m */; };
 		9156624519D89E1600745751 /* profileOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156624319D89E1600745751 /* profileOverlay.png */; };
 		9156624619D89E1600745751 /* scorecardOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156624419D89E1600745751 /* scorecardOverlay.png */; };
+		9156624919D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156624819D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m */; };
 		9163D26918D4B4100032F104 /* NEGWalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9163D26818D4B4100032F104 /* NEGWalkthroughViewController.m */; };
 		9163D26F18D4D4180032F104 /* page-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9163D26B18D4D4180032F104 /* page-1.png */; };
 		9163D27018D4D4180032F104 /* page-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9163D26C18D4D4180032F104 /* page-2.png */; };
@@ -277,6 +278,8 @@
 		9156624119D881C700745751 /* NEGScorecardIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScorecardIntroViewController.m; sourceTree = "<group>"; };
 		9156624319D89E1600745751 /* profileOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileOverlay.png; sourceTree = "<group>"; };
 		9156624419D89E1600745751 /* scorecardOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scorecardOverlay.png; sourceTree = "<group>"; };
+		9156624719D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardQuiz1TableViewController.h; sourceTree = "<group>"; };
+		9156624819D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardQuiz1TableViewController.m; sourceTree = "<group>"; };
 		9163D26718D4B4100032F104 /* NEGWalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGWalkthroughViewController.h; sourceTree = "<group>"; };
 		9163D26818D4B4100032F104 /* NEGWalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGWalkthroughViewController.m; sourceTree = "<group>"; };
 		9163D26B18D4D4180032F104 /* page-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-1.png"; sourceTree = "<group>"; };
@@ -636,6 +639,8 @@
 				910D66F919641D7F00325586 /* NEGProfilesViewController.m */,
 				9156624019D881C700745751 /* NEGScorecardIntroViewController.h */,
 				9156624119D881C700745751 /* NEGScorecardIntroViewController.m */,
+				9156624719D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.h */,
+				9156624819D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				91B66A1118DE2BB500DBA430 /* data.js in Sources */,
 				9115A79A18DF7D5300FBDB5C /* NEGSkillsViewController.m in Sources */,
 				91B66A1318DE2BB500DBA430 /* drilldown.js in Sources */,
+				9156624919D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m in Sources */,
 				91D3E1B018B91BD400FC14F7 /* NEGDetailViewController.m in Sources */,
 				91D3E1AA18B91BD400FC14F7 /* Negotiation3.xcdatamodeld in Sources */,
 				91B66A2018DE2BB500DBA430 /* skies.js in Sources */,
