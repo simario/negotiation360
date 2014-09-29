@@ -104,18 +104,14 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
             break;
         case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"importanceInput" forIndexPath:indexPath];
             break;
         case 3:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
             break;
         case 4:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
-            break;
-        case 5:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
-            break;
-            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"satisfiedInput" forIndexPath:indexPath];
+            break;            
         default:
             break;
     }
