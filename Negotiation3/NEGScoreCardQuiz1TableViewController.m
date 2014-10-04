@@ -134,6 +134,8 @@
 {
     switch (indexPath.item) {
         case 1:
+            // type_of_negotiation
+            [self performSegueWithIdentifier:@"type_of_negotiation" sender:self];
             //cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
             break;
         default:
