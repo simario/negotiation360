@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1597" y="106"/>
         </scene>
-        <!--Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="NEGMasterViewController" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="-1001" y="106"/>
         </scene>
-        <!--Scorecard-->
+        <!--Scorecard Intro View Controller - Scorecard-->
         <scene sceneID="SIF-8X-QiC">
             <objects>
                 <viewController title="Scorecard" id="0QK-Xa-X2S" customClass="NEGScorecardIntroViewController" sceneMemberID="viewController">
@@ -148,10 +148,13 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-SH-ptP">
+                                        <textField opaque="NO" clipsSubviews="YES" tag="567" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-SH-ptP">
                                             <rect key="frame" x="20" y="44" width="280" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textFieldFinished:" destination="YGm-X1-Jse" eventType="editingDidEndOnExit" id="sct-ZQ-CSS"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -277,20 +280,20 @@
             </objects>
             <point key="canvasLocation" x="-732" y="1200"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Score Card Neg Types Table View Controller-->
         <scene sceneID="K99-pJ-4Mf">
             <objects>
-                <tableViewController id="FHN-uI-2Ey" sceneMemberID="viewController">
+                <tableViewController id="FHN-uI-2Ey" customClass="NEGScoreCardNegTypesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GV7-Ra-bbD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lNh-Vd-8aL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scorecardNegTypeCell" id="lNh-Vd-8aL">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lNh-Vd-8aL" id="uuv-vx-C5d">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -376,7 +379,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="-1811"/>
         </scene>
-        <!--Negotiation Test-->
+        <!--Quiz View Controller - Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -458,7 +461,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-778"/>
         </scene>
-        <!--Links-->
+        <!--Links Table View Controller - Links-->
         <scene sceneID="vkt-xd-6qa">
             <objects>
                 <tableViewController id="Xei-tS-bpb" customClass="NEGLinksTableViewController" sceneMemberID="viewController">
@@ -532,7 +535,7 @@
             </objects>
             <point key="canvasLocation" x="450" y="622"/>
         </scene>
-        <!--Negotiation Profiles-->
+        <!--About Types View Controller - Negotiation Profiles-->
         <scene sceneID="LJS-X2-YKv">
             <objects>
                 <viewController id="TfM-Ts-HaH" customClass="NEGAboutTypesViewController" sceneMemberID="viewController">
@@ -594,7 +597,7 @@
             </objects>
             <point key="canvasLocation" x="1732" y="1346"/>
         </scene>
-        <!--Detail-->
+        <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="NEGDetailViewController" sceneMemberID="viewController">
@@ -630,7 +633,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-778"/>
         </scene>
-        <!--Skill-Building Tips-->
+        <!--Skills View Controller - Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -661,7 +664,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="1418"/>
         </scene>
-        <!--Negotiation Dilemmas-->
+        <!--Dilema View Controller - Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -692,7 +695,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-778"/>
         </scene>
-        <!--Your Personal Profile-->
+        <!--About View Controller - Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -723,7 +726,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="673"/>
         </scene>
-        <!--Negotiation Test-->
+        <!--Quiz2 View Controller - Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -773,7 +776,7 @@
             </objects>
             <point key="canvasLocation" x="2015" y="-778"/>
         </scene>
-        <!--Analysis & Feedback-->
+        <!--Results Overview View Controller - Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -878,7 +881,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="242"/>
         </scene>
-        <!--Negotiation Resources-->
+        <!--Resources View Controller - Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
             <objects>
                 <viewController id="JEJ-MM-Sbq" customClass="NEGResourcesViewController" sceneMemberID="viewController">
@@ -907,7 +910,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="630"/>
         </scene>
-        <!--About Michael Wheeler-->
+        <!--AboutMW View Controller - About Michael Wheeler-->
         <scene sceneID="AVu-J1-pfC">
             <objects>
                 <viewController id="pDf-tE-goB" customClass="NEGAboutMWViewController" sceneMemberID="viewController">
@@ -936,7 +939,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="2068"/>
         </scene>
-        <!--Bargaining Styles-->
+        <!--Profiles View Controller - Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -967,7 +970,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-38"/>
         </scene>
-        <!--How You Compare-->
+        <!--Compare View Controller - How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -1010,6 +1013,7 @@
         <image name="paper44.png" width="20" height="20"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1019,5 +1023,4 @@
         <segue reference="RxB-wf-QIq"/>
         <segue reference="oA1-ch-634"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

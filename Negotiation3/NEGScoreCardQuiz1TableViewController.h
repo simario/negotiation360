@@ -13,5 +13,7 @@
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
 
+- (IBAction)textFieldFinished:(id)sender;
+
 
 @end

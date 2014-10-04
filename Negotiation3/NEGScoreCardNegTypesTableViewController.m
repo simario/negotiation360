@@ -1,18 +1,18 @@
 //
-//  NEGScoreCardQuiz1TableViewController.m
+//  NEGScoreCardNegTypesTableViewController.m
 //  Negotiation3
 //
-//  Created by chermann on 9/28/14.
+//  Created by chermann on 10/4/14.
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
-#import "NEGScoreCardQuiz1TableViewController.h"
+#import "NEGScoreCardNegTypesTableViewController.h"
 
-@interface NEGScoreCardQuiz1TableViewController ()
+@interface NEGScoreCardNegTypesTableViewController ()
 
 @end
 
-@implementation NEGScoreCardQuiz1TableViewController
+@implementation NEGScoreCardNegTypesTableViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -42,9 +42,6 @@
 {
     
     
-
-    
-    
 }
 
 
@@ -61,7 +58,20 @@
 {
     [super viewDidLoad];
     
-
+    /*
+     .	Professional, with outside parties (vendors, customers, stakeholders, etc.)
+     b.	Professional, with colleagues within your organization.
+     c.	Personal (such as buying a car or renting an apartment).
+     d.	Community (with neighborhood groups, not-for-profits, etc.)
+     e.	Family (with children, parents, partners, spouses, etc.)
+     */
+    
+    _typeLabels = [NSArray arrayWithObjects:@"Professional, with outside parties (vendors, customers, stakeholders, etc.)",
+                   @"Professional, with colleagues within your organization.",
+                   @"Personal (such as buying a car or renting an apartment).",
+                   @"Community (with neighborhood groups, not-for-profits, etc.)",
+                   @"Family (with children, parents, partners, spouses, etc.)",
+                       nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -76,26 +86,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)textFieldFinished:(id)sender
-{
-
-    UITextField *tf = (UITextField *)sender;
-    [self.detailItem setValue:[tf text] forKey:@"name"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![_context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    [self.tableView reloadData];
-    
-    [sender resignFirstResponder];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,64 +98,36 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    // Return the number of rows in the section.
-    return 5;
+    // Retu[]n the number of rows in the section.
+    return [_typeLabels count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
-    UITextField *tf;
-    switch (indexPath.item) {
-            
-        case 0:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
-            tf = (UITextField *)[cell viewWithTag:567];
-            tf.text = [self.detailItem valueForKey:@"name"];
-            //tf.text = @"test";
-            break;
-        case 1:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
-            break;
-        case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"importanceInput" forIndexPath:indexPath];
-            break;
-        case 3:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
-            break;
-        case 4:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"satisfiedInput" forIndexPath:indexPath];
-            break;            
-        default:
-            break;
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scorecardNegTypeCell" forIndexPath:indexPath];
+
+    cell.textLabel.numberOfLines = 3;
+    [cell textLabel].text = _typeLabels[indexPath.row];
+    
+    // Configure the cell...
     
     return cell;
 }
 
-
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+ 
+    return 85;
+}
+/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return NO;
+    return YES;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    switch (indexPath.item) {
-        case 1:
-            // type_of_negotiation
-            //[self performSegueWithIdentifier:@"type_of_negotiation" sender:self];
-            //cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
-            break;
-        default:
-            break;
-    }
-
-}
+*/
 
 /*
 // Override to support editing the table view.
@@ -206,6 +168,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 
 @end
