@@ -61,6 +61,8 @@
 {
     [super viewDidLoad];
     
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -128,6 +130,17 @@
     return NO;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.item) {
+        case 1:
+            //cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
+            break;
+        default:
+            break;
+    }
+
+}
 
 /*
 // Override to support editing the table view.
@@ -168,5 +181,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

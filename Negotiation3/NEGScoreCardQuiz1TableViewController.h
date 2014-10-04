@@ -13,4 +13,5 @@
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
 
+
 @end
