@@ -58,7 +58,17 @@
 {
     [super viewDidLoad];
     
+    _typeLabels = [NSArray arrayWithObjects:@"Professional, with outside parties (vendors, customers, stakeholders, etc.)",
+                   @"Professional, with colleagues within your organization.",
+                   @"Personal (such as buying a car or renting an apartment).",
+                   @"Community (with neighborhood groups, not-for-profits, etc.)",
+                   @"Family (with children, parents, partners, spouses, etc.)",
+                   nil];
     
+    _agreementLabels = [NSArray arrayWithObjects:@"Yes",
+                        @"No",
+                        @"Not Yet",
+                        nil];
 
 }
 
@@ -70,10 +80,10 @@
 
 
 - (void)configureGraph:(UITableViewCell *)cell {
-    NSString *typeOfNeg = (NSString *)[self.detailItem valueForKey:@"question2"];
-    NSString *reachAgreement = (NSString *)[self.detailItem valueForKey:@"question4"];
-    NSString *importance = (NSString *)[self.detailItem valueForKey:@"question3"];
-    NSString *satisfaction = (NSString *)[self.detailItem valueForKey:@"question5"];
+    NSString *typeOfNeg = (NSString *)[_typeLabels objectAtIndex:[[self.detailItem valueForKey:@"question1"]intValue]];
+    NSString *reachAgreement = (NSString *)[_agreementLabels objectAtIndex:[[self.detailItem valueForKey:@"question3"]intValue]];
+    NSString *importance = (NSString *)[self.detailItem valueForKey:@"question2"];
+    NSString *satisfaction = (NSString *)[self.detailItem valueForKey:@"question4"];
     
     
     NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scorecard-results" ofType:@"html" ]];

@@ -55,6 +55,8 @@
         NSString * val7 = (NSString *)[self.detailItem valueForKey:@"question7"];
         NSString * val8 = (NSString *)[self.detailItem valueForKey:@"question8"];
         
+        NSString *typeOfNeg = (NSString *)[_typeLabels objectAtIndex:[[self.detailItem valueForKey:@"question1"]intValue]];
+        NSString *reachAgreement = (NSString *)[_agreementLabels objectAtIndex:[[self.detailItem valueForKey:@"question3"]intValue]];
 
         
         
@@ -91,7 +93,17 @@
 {
     [super viewDidLoad];
     
+    _typeLabels = [NSArray arrayWithObjects:@"Professional, with outside parties (vendors, customers, stakeholders, etc.)",
+                   @"Professional, with colleagues within your organization.",
+                   @"Personal (such as buying a car or renting an apartment).",
+                   @"Community (with neighborhood groups, not-for-profits, etc.)",
+                   @"Family (with children, parents, partners, spouses, etc.)",
+                   nil];
     
+    _agreementLabels = [NSArray arrayWithObjects:@"Yes",
+                        @"No",
+                        @"Not Yet",
+                        nil];
     
     // Do any additional setup after loading the view.
     [self configureView];
