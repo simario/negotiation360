@@ -375,7 +375,7 @@
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
         
         if (isComplete) {
-            //[self performSegueWithIdentifier:@"results_from_main" sender:self];
+            [self performSegueWithIdentifier:@"scorecard_results_from_main" sender:self];
         } else {
             [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
         }
@@ -396,7 +396,7 @@
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setContext:context];
-    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"]) {
+    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"] || [[segue identifier] isEqualToString:@"scorecard_results_from_main"]) {
         NSManagedObject *object;
 
         NSIndexPath *indexPath =  [NSIndexPath indexPathForRow:[[self.tableView indexPathForSelectedRow] row] inSection:0];
@@ -612,11 +612,7 @@
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
         
         if (isComplete) {
-            NSMutableDictionary *d = [_negType getType:object];
-            NSMutableDictionary *n = [d objectForKey:@"nearest"];
-            if (n) {
-                s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
-            }
+            s = @"Completed.";
         } else {
             s = @"In Progress. Tap to Complete.";
         }
