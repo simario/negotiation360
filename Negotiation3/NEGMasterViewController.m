@@ -601,7 +601,12 @@
         UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
         
         [imv setImage:[UIImage imageNamed:@"Compass-32.png"]];
-        NSString *t = [NSString stringWithFormat:@"My Negotiation, %@", dateString];
+        NSString *title = @"My Negotiation";
+        NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
+        if (storedTitle && ![storedTitle isEqualToString:@""]) {
+            title = storedTitle;
+        }
+        NSString *t = [NSString stringWithFormat:@"%@, %@", title, dateString];
         NSString *s = @"";
         
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
