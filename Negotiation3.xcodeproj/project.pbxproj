@@ -42,6 +42,8 @@
 		6960396F1968756300E3C227 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396D1968756300E3C227 /* test2.html */; };
 		6982573E19757B00004E2A69 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6982573C19757B00004E2A69 /* libAdIdAccess.a */; };
 		6982573F19757B00004E2A69 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6982573D19757B00004E2A69 /* libGoogleAnalyticsServices.a */; };
+		6983454B19E189290010AA67 /* scorecard-lessons2.html in Resources */ = {isa = PBXBuildFile; fileRef = 6983454919E189290010AA67 /* scorecard-lessons2.html */; };
+		6983454C19E189290010AA67 /* scorecard-results.html in Resources */ = {isa = PBXBuildFile; fileRef = 6983454A19E189290010AA67 /* scorecard-results.html */; };
 		699A83F3190AC1470041EEC2 /* image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83E8190AC1470041EEC2 /* image-2.png */; };
 		699A83F4190AC1470041EEC2 /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83E9190AC1470041EEC2 /* image-3.png */; };
 		699A83F5190AC1470041EEC2 /* image-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83EA190AC1470041EEC2 /* image-4.png */; };
@@ -224,6 +226,8 @@
 		6982573D19757B00004E2A69 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Negotiation3/GoogleAnalytics/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		6982574119757C1C004E2A69 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = Negotiation3/GoogleAnalytics/libAdIdAccess.a; sourceTree = "<group>"; };
 		6982574219757C1C004E2A69 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Negotiation3/GoogleAnalytics/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		6983454919E189290010AA67 /* scorecard-lessons2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scorecard-lessons2.html"; sourceTree = "<group>"; };
+		6983454A19E189290010AA67 /* scorecard-results.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scorecard-results.html"; sourceTree = "<group>"; };
 		699A83E8190AC1470041EEC2 /* image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-2.png"; sourceTree = "<group>"; };
 		699A83E9190AC1470041EEC2 /* image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-3.png"; sourceTree = "<group>"; };
 		699A83EA190AC1470041EEC2 /* image-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-4.png"; sourceTree = "<group>"; };
@@ -479,6 +483,8 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				6983454919E189290010AA67 /* scorecard-lessons2.html */,
+				6983454A19E189290010AA67 /* scorecard-results.html */,
 				6930F14919E0A2D200473A06 /* image-10.png */,
 				6930F14A19E0A2D200473A06 /* image-11.png */,
 				6930F14B19E0A2D200473A06 /* image-12.png */,
@@ -851,6 +857,7 @@
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
 				6960396F1968756300E3C227 /* test2.html in Resources */,
+				6983454C19E189290010AA67 /* scorecard-results.html in Resources */,
 				6930F15B19E0A2D200473A06 /* top-banner-12.png in Resources */,
 				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
@@ -868,6 +875,7 @@
 				69C217D3199DBBA3000CD5F4 /* user_male4-32.png in Resources */,
 				6960396E1968756300E3C227 /* test1.html in Resources */,
 				69C217DF199E4786000CD5F4 /* info-25.png in Resources */,
+				6983454B19E189290010AA67 /* scorecard-lessons2.html in Resources */,
 				69E1102D19A80E3A00F0B6DC /* paper44.png in Resources */,
 				69C217D2199DBBA3000CD5F4 /* lifecycle-32.png in Resources */,
 				91D3E1A718B91BD400FC14F7 /* Main_iPad.storyboard in Resources */,
