@@ -71,7 +71,7 @@
     }
 }
 
-
+// score_card_quiz_2
 - (void)viewDidLoad
 {
     [super viewDidLoad];
