@@ -42,9 +42,6 @@
 {
     
     
-    
-    
-    
 }
 
 
@@ -61,49 +58,12 @@
 {
     [super viewDidLoad];
     
-    /*
-     This top part is scorecard-lessons.html
-     
-     Bottom part might should be on another screen for entry:
-     
-     
-     
-     
-     
-     
-     
-     PART ONE: What worked well?
-     
-     1. 	What specific decision or action worked reasonably well for you in this negotiation?
-     [TEXT ANSWER]
-     
-     2. 	Now, name another specific decision or action—a different one—that also worked reasonably well for you.
-     [TEXT ANSWER]
-     
-     PART TWO: If you are in a similar situation in the future, what would you do differently?
-     
-     3. 	Name a specific decision or action that you would do differently.
-     [TEXT ANSWER]
-     
-     4. 	Now, name another specific decision or action—a different one—that you would do differently
-     [TEXT ANSWER]
-     
 
-     */
-    
     _questionTitles = [NSArray arrayWithObjects:@"What specific decision or action worked reasonably well for you in this negotiation?",
                        @"Now, name another specific decision or action—a different one—that also worked reasonably well for you.",
                        @"Name a specific decision or action that you would do differently.",
                        @"Now, name another specific decision or action—a different one—that you would do differently",
                        nil];
-    
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
