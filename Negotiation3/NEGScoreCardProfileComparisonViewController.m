@@ -112,13 +112,13 @@
         NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
         NSString *finalString = [NSString stringWithFormat:htmlString,
                                  val1,
-                                 val2,
                                  val3,
                                  val4,
+                                 val2,
                                  val5,
-                                 val6,
                                  val7,
-                                 val8];
+                                 val8,
+                                 val6];
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
         
         [self.webView loadHTMLString:finalString
