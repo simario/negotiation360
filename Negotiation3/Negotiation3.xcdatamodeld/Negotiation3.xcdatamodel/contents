@@ -27,6 +27,6 @@
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="150"/>
-        <element name="Scorecard" positionX="261" positionY="243" width="128" height="210"/>
+        <element name="Scorecard" positionX="414" positionY="117" width="128" height="210"/>
     </elements>
 </model>

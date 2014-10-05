@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
+@property (strong, nonatomic) NSArray *typeLabels;
 
 - (IBAction)textFieldFinished:(id)sender;
 

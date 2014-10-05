@@ -109,8 +109,10 @@
 
     cell.textLabel.numberOfLines = 3;
     [cell textLabel].text = _typeLabels[indexPath.row];
-    
-    // Configure the cell...
+    int index = [[self.detailItem valueForKey:@"question1"] intValue];
+    if (indexPath.row == index) {
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    }
     
     return cell;
 }
@@ -120,7 +122,24 @@
  
     return 85;
 }
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.detailItem setValue:[NSNumber numberWithInt:(int)indexPath.row] forKey:@"question1"];
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 /*
+ 
+ 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -61,6 +61,13 @@
 {
     [super viewDidLoad];
     
+    _typeLabels = [NSArray arrayWithObjects:@"Professional, with outside parties (vendors, customers, stakeholders, etc.)",
+                   @"Professional, with colleagues within your organization.",
+                   @"Personal (such as buying a car or renting an apartment).",
+                   @"Community (with neighborhood groups, not-for-profits, etc.)",
+                   @"Family (with children, parents, partners, spouses, etc.)",
+                   nil];
+    
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -96,6 +103,89 @@
     [sender resignFirstResponder];
 }
 
+- (IBAction)question2ValueChanged:(UISlider *)sender {
+
+    [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.value] forKey:@"question2"];
+    [self updateQuestion2Label:sender];
+    // Save the context.
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+- (IBAction)question3ValueChanged:(UISegmentedControl *)sender {
+    
+    [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.selectedSegmentIndex] forKey:@"question3"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+- (IBAction)question4ValueChanged:(UISlider *)sender {
+    
+    [self.detailItem setValue:[NSNumber numberWithInt:sender.value] forKey:@"question4"];
+    [self updateQuestion4Label:sender];
+    // Save the context.
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+
+- (void)updateQuestion2Label:(UISlider *)slider {
+    int val = (int)[slider value];
+    
+    NSString *label = @"";
+    
+    if (val > 0 && val <33) {
+        label = [NSString stringWithFormat:@"%@", @"Not very"];
+    } else if (val > 32 && val < 66) {
+        label = [NSString stringWithFormat:@"%@", @"Somewhat"];
+    } else if (val > 65 && val < 101) {
+        label = [NSString stringWithFormat:@"%@", @"Very"];
+    }
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+    if (cell) {
+        UILabel *lbl = (UILabel *)[cell viewWithTag:558];
+        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
+    }
+
+}
+
+- (void)updateQuestion4Label:(UISlider *)slider {
+    int val = (int)[slider value];
+    
+    NSString *label = @"";
+    
+    if (val > 0 && val <33) {
+        label = [NSString stringWithFormat:@"%@", @"Not very"];
+    } else if (val > 32 && val < 66) {
+        label = [NSString stringWithFormat:@"%@", @"Somewhat"];
+    } else if (val > 65 && val < 101) {
+        label = [NSString stringWithFormat:@"%@", @"Very"];
+    }
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
+    if (cell) {
+        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
+        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
+    }
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -109,33 +199,90 @@
 {
 
     // Return the number of rows in the section.
-    return 5;
+    return 6;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat h = 85;
+    switch (indexPath.item) {
+            
+        case 0:
+            h = 85;
+            break;
+        case 1:
+            h = 45;
+            break;
+        case 2:
+            h = 20;
+            break;
+        case 3:
+            h = 110;
+            break;
+        case 4:
+            h = 85;
+            break;
+        case 5:
+            h = 85;
+            break;
+        default:
+            break;
+    }
+    return h;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell *cell;
     UITextField *tf;
+    UISlider *slider;
+    UISegmentedControl *segCtrl;
+    NSString *str;
+    int index = 0;
+    id val;
+    
     switch (indexPath.item) {
             
         case 0:
             cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
             tf = (UITextField *)[cell viewWithTag:567];
             tf.text = [self.detailItem valueForKey:@"name"];
-            //tf.text = @"test";
+
             break;
         case 1:
             cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
             break;
         case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"importanceInput" forIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"typeValue" forIndexPath:indexPath];
+            index = [[self.detailItem valueForKey:@"question1"] intValue];
+            //NSLog(index);
+            str = (NSString *)[_typeLabels objectAtIndex:index];
+            //cell.textLabel.text = val;
+            cell.textLabel.text = str;
             break;
         case 3:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"importanceInput" forIndexPath:indexPath];
+            slider = (UISlider *)[cell viewWithTag:568];
+            val = [self.detailItem valueForKey:@"question2"];
+            //NSLog([NSString stringWithFormat:@"%@", val]);
+            [slider setValue:[[self.detailItem valueForKey:@"question2"] doubleValue]];
+            [self updateQuestion2Label:slider];
+            [slider addTarget:self action:@selector(question2ValueChanged:) forControlEvents:UIControlEventValueChanged];
             break;
         case 4:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
+            segCtrl = (UISegmentedControl *)[cell viewWithTag:569];
+            [segCtrl setSelectedSegmentIndex:[[self.detailItem valueForKey:@"question3"] integerValue]];
+            [segCtrl addTarget:self action:@selector(question3ValueChanged:) forControlEvents:UIControlEventValueChanged];
+            break;
+        case 5:
             cell = [tableView dequeueReusableCellWithIdentifier:@"satisfiedInput" forIndexPath:indexPath];
+            slider = (UISlider *)[cell viewWithTag:570];
+            [slider setValue:[[self.detailItem valueForKey:@"question4"] doubleValue]];
+            [self updateQuestion4Label:slider];
+            [slider addTarget:self action:@selector(question4ValueChanged:) forControlEvents:UIControlEventValueChanged];
             break;            
         default:
             break;
