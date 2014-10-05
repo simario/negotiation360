@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NEGAppDelegate.h"
+
 @interface NEGScoreCardProfileComparisonViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
@@ -17,5 +19,8 @@
 @property (strong, nonatomic) NSArray *agreementLabels;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
