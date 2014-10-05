@@ -81,6 +81,27 @@
         NSString * val8 = [NSString stringWithFormat:@"%i", (profileQuestion4 + (scoreCardQuestion8 / 7))];
 
         
+        
+        NSLog([NSString stringWithFormat:@"Profile Question 1: %i", profileQuestion1]);
+        NSLog([NSString stringWithFormat:@"Profile Question 2: %i", profileQuestion2]);
+        NSLog([NSString stringWithFormat:@"Profile Question 3: %i", profileQuestion3]);
+        NSLog([NSString stringWithFormat:@"Profile Question 4: %i", profileQuestion4]);
+        
+        NSLog([NSString stringWithFormat:@"Scorecard Question 5: %i", scoreCardQuestion5]);
+        NSLog([NSString stringWithFormat:@"Scorecard Question 6: %i", scoreCardQuestion6]);
+        NSLog([NSString stringWithFormat:@"Scorecard Question 7: %i", scoreCardQuestion7]);
+        NSLog([NSString stringWithFormat:@"Scorecard Question 8: %i", scoreCardQuestion8]);
+        
+        NSLog([NSString stringWithFormat:@"Value 1: %@", val1]);
+        NSLog([NSString stringWithFormat:@"Value 2: %@", val2]);
+        NSLog([NSString stringWithFormat:@"Value 3: %@", val3]);
+        NSLog([NSString stringWithFormat:@"Value 4: %@", val4]);
+        NSLog([NSString stringWithFormat:@"Value 5: %@", val5]);
+        NSLog([NSString stringWithFormat:@"Value 6: %@", val6]);
+        NSLog([NSString stringWithFormat:@"Value 7: %@", val7]);
+        NSLog([NSString stringWithFormat:@"Value 8: %@", val8]);
+        
+        
 /*
         NSString *typeOfNeg = (NSString *)[_typeLabels objectAtIndex:[[self.detailItem valueForKey:@"question1"]intValue]];
         NSString *reachAgreement = (NSString *)[_agreementLabels objectAtIndex:[[self.detailItem valueForKey:@"question3"]intValue]];
