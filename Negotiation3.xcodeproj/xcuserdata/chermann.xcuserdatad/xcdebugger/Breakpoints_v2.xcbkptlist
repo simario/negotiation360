@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGScoreCardResultsTableViewController.m"
-            timestampString = "434211696.16245"
+            timestampString = "434213960.271567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-configureGraph:"
             landmarkType = "5">
          </BreakpointContent>

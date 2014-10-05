@@ -409,6 +409,93 @@
             </objects>
             <point key="canvasLocation" x="-248" y="1636"/>
         </scene>
+        <!--Score Card Profile Comparison View Controller-->
+        <scene sceneID="xEG-Ra-E9J">
+            <objects>
+                <viewController id="h1x-Km-8n1" customClass="NEGScoreCardProfileComparisonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fPN-L9-KK7"/>
+                        <viewControllerLayoutGuide type="bottom" id="oLM-JY-ptE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nh5-n9-lCH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5I4-Jd-vAi">
+                                <rect key="frame" x="0.0" y="-11" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mSN-FK-Nh7"/>
+                    <connections>
+                        <outlet property="webView" destination="5I4-Jd-vAi" id="BOr-EE-fHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAo-Ar-UeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="2944"/>
+        </scene>
+        <!--Score Card Lessons Learned View Controller-->
+        <scene sceneID="Oq7-2d-xLB">
+            <objects>
+                <viewController id="PQ4-K1-go6" customClass="NEGScoreCardLessonsLearnedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zlz-0T-fuU"/>
+                        <viewControllerLayoutGuide type="bottom" id="N64-Aa-uDC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7x-E0-ajI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-0C-TFR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gVm-XW-PhB"/>
+                    <connections>
+                        <outlet property="webView" destination="Py0-0C-TFR" id="VcI-yN-Gf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og4-AU-oCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="2936"/>
+        </scene>
+        <!--Score Card Summary View Controller-->
+        <scene sceneID="5g3-z8-hhD">
+            <objects>
+                <viewController id="fzX-tZ-Zhe" customClass="NEGScoreCardSummaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nok-vt-tHG"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0X-HY-vXg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jSa-Xb-sYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTT-CO-can">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aXR-fC-eZY"/>
+                    <connections>
+                        <outlet property="webView" destination="UTT-CO-can" id="1KT-IO-wns"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ph5-LB-Nw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="2944"/>
+        </scene>
         <!--Quiz3 Intro View Controller-->
         <scene sceneID="4Nd-tm-DAX">
             <objects>
@@ -579,6 +666,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dEj-3d-TMs"/>
+                    <connections>
+                        <segue destination="h1x-Km-8n1" kind="push" identifier="scorecard_profile_comparison" id="QeZ-ef-Q0B"/>
+                        <segue destination="PQ4-K1-go6" kind="push" identifier="scorecard_lessons_learned" id="y17-a4-zRv"/>
+                        <segue destination="fzX-tZ-Zhe" kind="push" identifier="scorecard_summary" id="9bQ-Qc-b8u"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1h-cl-8ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
