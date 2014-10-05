@@ -103,6 +103,9 @@
 		9147FC2319E193470040CC97 /* NEGScoreCardProfileComparisonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2219E193470040CC97 /* NEGScoreCardProfileComparisonViewController.m */; };
 		9147FC2619E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2519E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m */; };
 		9147FC2919E193840040CC97 /* NEGScoreCardSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2819E193840040CC97 /* NEGScoreCardSummaryViewController.m */; };
+		9147FC2C19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2B19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m */; };
+		9147FC2F19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2E19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m */; };
+		9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC3119E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m */; };
 		9156623E19D873BC00745751 /* compass-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156623C19D873BC00745751 /* compass-32.png */; };
 		9156623F19D873BC00745751 /* compass-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156623D19D873BC00745751 /* compass-75.png */; };
 		9156624219D881C700745751 /* NEGScorecardIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156624119D881C700745751 /* NEGScorecardIntroViewController.m */; };
@@ -322,6 +325,12 @@
 		9147FC2519E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardLessonsLearnedViewController.m; sourceTree = "<group>"; };
 		9147FC2719E193840040CC97 /* NEGScoreCardSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardSummaryViewController.h; sourceTree = "<group>"; };
 		9147FC2819E193840040CC97 /* NEGScoreCardSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardSummaryViewController.m; sourceTree = "<group>"; };
+		9147FC2A19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardQuiz4TableViewController.h; sourceTree = "<group>"; };
+		9147FC2B19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardQuiz4TableViewController.m; sourceTree = "<group>"; };
+		9147FC2D19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardQuiz5TableViewController.h; sourceTree = "<group>"; };
+		9147FC2E19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardQuiz5TableViewController.m; sourceTree = "<group>"; };
+		9147FC3019E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardQuiz6TableViewController.h; sourceTree = "<group>"; };
+		9147FC3119E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardQuiz6TableViewController.m; sourceTree = "<group>"; };
 		9156623C19D873BC00745751 /* compass-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass-32.png"; sourceTree = "<group>"; };
 		9156623D19D873BC00745751 /* compass-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass-75.png"; sourceTree = "<group>"; };
 		9156624019D881C700745751 /* NEGScorecardIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScorecardIntroViewController.h; sourceTree = "<group>"; };
@@ -720,6 +729,12 @@
 				9147FC2519E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m */,
 				9147FC2719E193840040CC97 /* NEGScoreCardSummaryViewController.h */,
 				9147FC2819E193840040CC97 /* NEGScoreCardSummaryViewController.m */,
+				9147FC2A19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.h */,
+				9147FC2B19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m */,
+				9147FC2D19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.h */,
+				9147FC2E19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m */,
+				9147FC3019E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.h */,
+				9147FC3119E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -975,6 +990,7 @@
 				91B66A1C18DE2BB500DBA430 /* dark-blue.js in Sources */,
 				91B66A1F18DE2BB500DBA430 /* grid.js in Sources */,
 				9147FC2619E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m in Sources */,
+				9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */,
 				91B66A1018DE2BB500DBA430 /* canvas-tools.src.js in Sources */,
 				91D3E1AD18B91BD400FC14F7 /* NEGMasterViewController.m in Sources */,
 				9121678718E50DED00DEEC00 /* NEGLinksTableViewController.m in Sources */,
@@ -987,6 +1003,7 @@
 				91B66A1A18DE2BB500DBA430 /* no-data-to-display.src.js in Sources */,
 				91B66A0F18DE2BB500DBA430 /* canvas-tools.js in Sources */,
 				91B66A0318DE2BB500DBA430 /* mootools-adapter.js in Sources */,
+				9147FC2C19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m in Sources */,
 				91B66A1118DE2BB500DBA430 /* data.js in Sources */,
 				9115A79A18DF7D5300FBDB5C /* NEGSkillsViewController.m in Sources */,
 				91B66A1318DE2BB500DBA430 /* drilldown.js in Sources */,
@@ -1000,6 +1017,7 @@
 				9115A79718DF7D4500FBDB5C /* NEGDilemaViewController.m in Sources */,
 				91B66A1618DE2BB500DBA430 /* exporting.src.js in Sources */,
 				9115A78618DF762400FBDB5C /* NEGAboutViewController.m in Sources */,
+				9147FC2F19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m in Sources */,
 				91B66A1D18DE2BB500DBA430 /* dark-green.js in Sources */,
 				9156624219D881C700745751 /* NEGScorecardIntroViewController.m in Sources */,
 				9147FC2919E193840040CC97 /* NEGScoreCardSummaryViewController.m in Sources */,
