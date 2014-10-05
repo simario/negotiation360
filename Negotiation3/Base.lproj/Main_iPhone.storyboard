@@ -109,7 +109,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5F7-GQ-Sbp">
+                    <navigationItem key="navigationItem" title="Negotiation Scorecard" id="5F7-GQ-Sbp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="om2-Kx-jni">
                             <connections>
                                 <segue destination="YGm-X1-Jse" kind="push" id="Jgv-33-AF9"/>
@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="-1252" y="1192"/>
         </scene>
-        <!--Score Card Quiz1 Table View Controller-->
+        <!--Negotiation Details-->
         <scene sceneID="Feu-Eb-7yB">
             <objects>
                 <tableViewController id="YGm-X1-Jse" customClass="NEGScoreCardQuiz1TableViewController" sceneMemberID="viewController">
@@ -291,7 +291,7 @@
                             <outlet property="delegate" destination="YGm-X1-Jse" id="imm-uB-kKL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="onR-vj-VmJ">
+                    <navigationItem key="navigationItem" title="Negotiation Details" id="onR-vj-VmJ">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OvE-6m-iPc">
                             <connections>
                                 <action selector="submit:" destination="YGm-X1-Jse" id="di1-0d-Gia"/>
@@ -306,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="-732" y="1200"/>
         </scene>
-        <!--Score Card Neg Types Table View Controller-->
+        <!--Negotiation Type-->
         <scene sceneID="K99-pJ-4Mf">
             <objects>
                 <tableViewController id="FHN-uI-2Ey" customClass="NEGScoreCardNegTypesTableViewController" sceneMemberID="viewController">
@@ -329,13 +329,13 @@
                             <outlet property="delegate" destination="FHN-uI-2Ey" id="iSC-s8-ioq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iyi-LK-3B1"/>
+                    <navigationItem key="navigationItem" title="Negotiation Type" id="iyi-LK-3B1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pja-BL-Me2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-262" y="964"/>
         </scene>
-        <!--Score Card Quiz2 Table View Controller-->
+        <!--Comparison-->
         <scene sceneID="g3T-3x-8Aw">
             <objects>
                 <tableViewController id="Ajj-6q-wQZ" customClass="NEGScoreCardQuiz2TableViewController" sceneMemberID="viewController">
@@ -393,7 +393,7 @@
                             <outlet property="delegate" destination="Ajj-6q-wQZ" id="3mn-Ns-LcH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WaL-R8-tcb">
+                    <navigationItem key="navigationItem" title="Comparison" id="WaL-R8-tcb">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="QE4-UE-yQH">
                             <connections>
                                 <action selector="submit:" destination="Ajj-6q-wQZ" id="m8s-TZ-b31"/>
@@ -492,7 +492,7 @@
             </objects>
             <point key="canvasLocation" x="1416" y="2944"/>
         </scene>
-        <!--Quiz3 Intro View Controller-->
+        <!--Lessons Learnesd-->
         <scene sceneID="4Nd-tm-DAX">
             <objects>
                 <viewController id="PdC-Zi-iab" customClass="NEGQuiz3IntroViewController" sceneMemberID="viewController">
@@ -511,7 +511,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VWj-Tz-Zqx">
+                    <navigationItem key="navigationItem" title="Lessons Learnesd" id="VWj-Tz-Zqx">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="pac-ZL-9FB">
                             <connections>
                                 <segue destination="f3C-Nl-nKK" kind="push" identifier="score_card_quiz_3" id="ElF-Q1-Cas"/>
@@ -1382,7 +1382,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="0E3-bz-98Y"/>
-        <segue reference="UvR-e4-cJ3"/>
+        <segue reference="RxB-wf-QIq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
