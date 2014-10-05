@@ -69,6 +69,25 @@
                         @"No",
                         @"Not Yet",
                         nil];
+    
+    
+    if (self.detailItem) {
+        
+        bool isComplete = [[self.detailItem valueForKey:@"complete"] boolValue];
+        if (!isComplete) {
+            [self.detailItem setValue:[NSNumber numberWithBool:YES] forKey:@"complete"];
+            NSError *error = nil;
+            if (_context) {
+                if (![_context save:&error]) {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                    abort();
+                }
+            }
+        }
+    }
+    
 
 }
 
