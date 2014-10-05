@@ -1,21 +1,20 @@
 //
-//  NEGScoreCardQuiz1TableViewController.h
+//  NEGScoreCardQuiz3TableViewController.h
 //  Negotiation3
 //
-//  Created by chermann on 9/28/14.
+//  Created by chermann on 10/5/14.
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface NEGScoreCardQuiz1TableViewController : UITableViewController
+@interface NEGScoreCardQuiz3TableViewController : UITableViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
-@property (strong, nonatomic) NSArray *typeLabels;
+@property (strong, nonatomic) NSArray *questionTitles;
 
 - (IBAction)textFieldFinished:(id)sender;
 - (IBAction)submit:(id)sender;
-
 
 @end

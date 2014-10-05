@@ -186,6 +186,11 @@
 
 }
 
+- (IBAction)submit:(id)sender {
+    [self performSegueWithIdentifier:@"score_card_quiz_2" sender:self];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

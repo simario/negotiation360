@@ -23,10 +23,14 @@
         <attribute name="question6" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="question7" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="question8" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="question9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question11" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question12" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="150"/>
-        <element name="Scorecard" positionX="414" positionY="117" width="128" height="210"/>
+        <element name="Scorecard" positionX="414" positionY="117" width="128" height="268"/>
     </elements>
 </model>
