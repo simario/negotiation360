@@ -93,7 +93,7 @@
     
     
     
-    NSString *finalString = [NSString stringWithFormat:htmlString, typeOfNeg, reachAgreement, importance, satisfaction];
+    NSString *finalString = [NSString stringWithFormat:htmlString, reachAgreement, typeOfNeg, importance, satisfaction];
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
     
     UIWebView *webView = (UIWebView *)[cell viewWithTag:999];
