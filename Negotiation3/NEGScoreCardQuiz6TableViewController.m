@@ -1,18 +1,18 @@
 //
-//  NEGScoreCardQuiz3TableViewController.m
+//  NEGScoreCardQuiz6TableViewController.m
 //  Negotiation3
 //
 //  Created by chermann on 10/5/14.
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
-#import "NEGScoreCardQuiz3TableViewController.h"
+#import "NEGScoreCardQuiz6TableViewController.h"
 
-@interface NEGScoreCardQuiz3TableViewController ()
+@interface NEGScoreCardQuiz6TableViewController ()
 
 @end
 
-@implementation NEGScoreCardQuiz3TableViewController
+@implementation NEGScoreCardQuiz6TableViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -71,7 +71,7 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    [self.detailItem setValue:[textView text] forKey:@"question9"];
+    [self.detailItem setValue:[textView text] forKey:@"question12"];
     // Save the context.
     NSError *error = nil;
     if (![_context save:&error]) {
@@ -96,24 +96,23 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 233;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     UITableViewCell *cell;
     UILabel *titleLabel;
     UITextView *textView;
     NSString *val;
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"questionTextInput" forIndexPath:indexPath];
-    val = (NSString *)[self.detailItem valueForKey:@"question9"];
+    val = (NSString *)[self.detailItem valueForKey:@"question12"];
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
     titleLabel.numberOfLines = 4;
-    titleLabel.text = @"What specific decision or action worked reasonably well for you in this negotiation?";
+    titleLabel.text = @"Now, name another specific decision or action—a different one—that you would do differently";
     textView.text = val;
     textView.delegate = self;
     

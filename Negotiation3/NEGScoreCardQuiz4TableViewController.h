@@ -1,5 +1,5 @@
 //
-//  NEGScoreCardQuiz3TableViewController.h
+//  NEGScoreCardQuiz4TableViewController.h
 //  Negotiation3
 //
 //  Created by chermann on 10/5/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NEGScoreCardQuiz3TableViewController : UITableViewController <UITextViewDelegate>
+@interface NEGScoreCardQuiz4TableViewController : UITableViewController <UITextViewDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;

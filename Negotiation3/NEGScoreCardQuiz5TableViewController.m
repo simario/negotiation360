@@ -1,18 +1,18 @@
 //
-//  NEGScoreCardQuiz3TableViewController.m
+//  NEGScoreCardQuiz5TableViewController.m
 //  Negotiation3
 //
 //  Created by chermann on 10/5/14.
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
-#import "NEGScoreCardQuiz3TableViewController.h"
+#import "NEGScoreCardQuiz5TableViewController.h"
 
-@interface NEGScoreCardQuiz3TableViewController ()
+@interface NEGScoreCardQuiz5TableViewController ()
 
 @end
 
-@implementation NEGScoreCardQuiz3TableViewController
+@implementation NEGScoreCardQuiz5TableViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -71,7 +71,7 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    [self.detailItem setValue:[textView text] forKey:@"question9"];
+    [self.detailItem setValue:[textView text] forKey:@"question11"];
     // Save the context.
     NSError *error = nil;
     if (![_context save:&error]) {
@@ -81,6 +81,7 @@
         abort();
     }
 }
+
 
 #pragma mark - Table view data source
 
@@ -96,7 +97,7 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 233;
 }
 
@@ -109,11 +110,11 @@
     NSString *val;
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"questionTextInput" forIndexPath:indexPath];
-    val = (NSString *)[self.detailItem valueForKey:@"question9"];
+    val = (NSString *)[self.detailItem valueForKey:@"question11"];
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
     titleLabel.numberOfLines = 4;
-    titleLabel.text = @"What specific decision or action worked reasonably well for you in this negotiation?";
+    titleLabel.text = @"Name a specific decision or action that you would do differently.";
     textView.text = val;
     textView.delegate = self;
     
