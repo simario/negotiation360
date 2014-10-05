@@ -1,5 +1,5 @@
 //
-//  NEGScoreCardResultsTableViewController.h
+//  NEGScoreCardProfileComparisonViewController.h
 //  Negotiation3
 //
 //  Created by chermann on 10/5/14.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NEGScoreCardResultsTableViewController : UITableViewController
+@interface NEGScoreCardProfileComparisonViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

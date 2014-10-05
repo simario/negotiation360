@@ -59,11 +59,7 @@
     [super viewDidLoad];
     
     
-    _linkTitles = [NSArray arrayWithObjects:@"What specific decision or action worked reasonably well for you in this negotiation?",
-                       @"Now, name another specific decision or action—a different one—that also worked reasonably well for you.",
-                       @"Name a specific decision or action that you would do differently.",
-                       @"Now, name another specific decision or action—a different one—that you would do differently",
-                       nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +91,8 @@
     [webView loadHTMLString:finalString
                     baseURL:url];
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -193,15 +191,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.item) {
+        case 0:
+            break;
         case 1:
-            // type_of_negotiation
-            //[self performSegueWithIdentifier:@"type_of_negotiation" sender:self];
-            //cell = [tableView dequeueReusableCellWithIdentifier:@"typeInput" forIndexPath:indexPath];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"scorecard_profile_comparison" sender:self];
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"scorecard_lessons_learned" sender:self];
+            break;
+        case 4:
+            [self performSegueWithIdentifier:@"scorecard_summary" sender:self];
             break;
         default:
             break;
     }
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
