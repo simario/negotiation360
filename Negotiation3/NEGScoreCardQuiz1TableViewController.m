@@ -244,6 +244,7 @@
     UISlider *slider;
     UISegmentedControl *segCtrl;
     NSString *str;
+    
     int index = 0;
     id val;
     

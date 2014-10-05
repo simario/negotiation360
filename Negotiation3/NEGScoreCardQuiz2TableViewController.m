@@ -68,11 +68,11 @@
                        @"Getting the maximum possible in the agreement.",
                      nil];
     
-    _sliderTitles = [NSArray arrayWithObjects:@"Much better than usual",
-                   @"Somewhat better than usual",
-                   @"Same as usual",
+    _sliderTitles = [NSArray arrayWithObjects:@"Much worse than usual",
                    @"Somewhat worse than usual",
-                   @"Much worse than usual",
+                   @"Same as usual",
+                   @"Somewhat better than usual",
+                   @"Much better than usual",
                    nil];
     
     
@@ -127,15 +127,15 @@
     
     NSString *label = @"";
     
-    if (val > 0 && val <20) {
+    if (val > -8 && val <-4) {
         label = [_sliderTitles objectAtIndex:0];
-    } else if (val > 19 && val < 40) {
+    } else if (val > -5 && val < -1) {
         label = [_sliderTitles objectAtIndex:1];
-    } else if (val > 39 && val < 60) {
+    } else if (val > -2 && val < 2) {
         label = [_sliderTitles objectAtIndex:2];
-    } else if (val > 59 && val < 80) {
+    } else if (val > 1 && val < 5) {
         label = [_sliderTitles objectAtIndex:3];
-    } else if (val > 79) {
+    } else if (val > 4) {
         label = [_sliderTitles objectAtIndex:4];
     }
 
