@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NEGScoreCardQuiz5TableViewController : UITableViewController
+@interface NEGScoreCardQuiz5TableViewController : UITableViewController <UITextViewDelegate>
+
+@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) id context;
 
 @end

@@ -57,11 +57,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _questionTitles = [NSArray arrayWithObjects:@"What specific decision or action worked reasonably well for you in this negotiation?",
-                       @"Now, name another specific decision or action—a different one—that also worked reasonably well for you.",
-                       @"Name a specific decision or action that you would do differently.",
-                       @"Now, name another specific decision or action—a different one—that you would do differently",
-                       nil];
 }
 
 - (void)didReceiveMemoryWarning

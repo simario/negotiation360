@@ -12,9 +12,5 @@
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
-@property (strong, nonatomic) NSArray *questionTitles;
-
-- (IBAction)textFieldFinished:(id)sender;
-- (IBAction)submit:(id)sender;
 
 @end
