@@ -13,6 +13,9 @@
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;
 
+@property (strong, nonatomic) NSArray *typeLabels;
+@property (strong, nonatomic) NSArray *agreementLabels;
+
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
