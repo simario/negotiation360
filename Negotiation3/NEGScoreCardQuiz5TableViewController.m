@@ -82,15 +82,6 @@
     }
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
-}
 
 #pragma mark - Table view data source
 
@@ -122,7 +113,7 @@
     val = (NSString *)[self.detailItem valueForKey:@"question11"];
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
-    titleLabel.numberOfLines = 3;
+    titleLabel.numberOfLines = 4;
     titleLabel.text = @"Name a specific decision or action that you would do differently.";
     textView.text = val;
     textView.delegate = self;

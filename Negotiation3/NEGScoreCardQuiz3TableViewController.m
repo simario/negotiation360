@@ -82,16 +82,6 @@
     }
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -122,7 +112,7 @@
     val = (NSString *)[self.detailItem valueForKey:@"question9"];
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
-    titleLabel.numberOfLines = 3;
+    titleLabel.numberOfLines = 4;
     titleLabel.text = @"What specific decision or action worked reasonably well for you in this negotiation?";
     textView.text = val;
     textView.delegate = self;
