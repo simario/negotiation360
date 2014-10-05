@@ -352,7 +352,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
                                             <rect key="frame" x="15" y="0.0" width="297" height="116"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <string key="text">Now, put the result aside for the moment. Focus solely on how you managed the negotiation process, compared to usual. It’s possible that you did better on most of the dimensions below. If so, congratulations! If not, we’ll show you how to do better next time.</string>
@@ -543,7 +543,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxe-9U-khr">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxe-9U-khr">
                                             <rect key="frame" x="20" y="9" width="280" height="85"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="highlightedColor"/>
@@ -579,7 +579,7 @@
             </objects>
             <point key="canvasLocation" x="136" y="1716"/>
         </scene>
-        <!--Score Card Results Table View Controller-->
+        <!--Scorecard Results-->
         <scene sceneID="r9z-sk-k9n">
             <objects>
                 <tableViewController id="vay-z4-l6d" customClass="NEGScoreCardResultsTableViewController" sceneMemberID="viewController">
@@ -659,7 +659,7 @@
                             <outlet property="delegate" destination="vay-z4-l6d" id="Mth-u5-eXr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dEj-3d-TMs"/>
+                    <navigationItem key="navigationItem" title="Scorecard Results" id="dEj-3d-TMs"/>
                     <connections>
                         <segue destination="h1x-Km-8n1" kind="push" identifier="scorecard_profile_comparison" id="QeZ-ef-Q0B"/>
                         <segue destination="PQ4-K1-go6" kind="push" identifier="scorecard_lessons_learned" id="y17-a4-zRv"/>
@@ -1384,7 +1384,7 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMq-Z2-1XO">
                                             <rect key="frame" x="20" y="9" width="280" height="85"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-bH-6r3">

@@ -76,6 +76,10 @@
 		69C585CA1901697A00EE6E27 /* dragend.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C71901697A00EE6E27 /* dragend.js */; };
 		69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C81901697A00EE6E27 /* hammer.min.js */; };
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
+		69D1C22319E1BEB900B28FD4 /* jquery.circliful.js in Resources */ = {isa = PBXBuildFile; fileRef = 69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */; };
+		69D1C22419E1BEB900B28FD4 /* jquery.circliful.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */; };
+		69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */ = {isa = PBXBuildFile; fileRef = 69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */; };
+		69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */; };
 		69D3E60919797899005F5C14 /* overlayTextOnly.png in Resources */ = {isa = PBXBuildFile; fileRef = 69D3E60819797899005F5C14 /* overlayTextOnly.png */; };
 		69E1102B19A80B9F00F0B6DC /* menu-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E1102A19A80B9F00F0B6DC /* menu-25.png */; };
 		69E1102D19A80E3A00F0B6DC /* paper44.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E1102C19A80E3A00F0B6DC /* paper44.png */; };
@@ -270,6 +274,8 @@
 		69C585C71901697A00EE6E27 /* dragend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dragend.js; sourceTree = "<group>"; };
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
+		69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.js; sourceTree = "<group>"; };
+		69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.min.js; sourceTree = "<group>"; };
 		69D3E60819797899005F5C14 /* overlayTextOnly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlayTextOnly.png; sourceTree = "<group>"; };
 		69E1102A19A80B9F00F0B6DC /* menu-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-25.png"; sourceTree = "<group>"; };
 		69E1102C19A80E3A00F0B6DC /* paper44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper44.png; sourceTree = "<group>"; };
@@ -513,6 +519,8 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */,
+				69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */,
 				6983454919E189290010AA67 /* scorecard-lessons2.html */,
 				6983454A19E189290010AA67 /* scorecard-results.html */,
 				6930F14919E0A2D200473A06 /* image-10.png */,
@@ -878,6 +886,7 @@
 				69BE8A27199D8E6400AC5F7A /* three-blue.png in Resources */,
 				693A91F219A288EB00A05DFD /* page-7.png in Resources */,
 				6930F15419E0A2D200473A06 /* image-10.png in Resources */,
+				69D1C22319E1BEB900B28FD4 /* jquery.circliful.js in Resources */,
 				69D3E60919797899005F5C14 /* overlayTextOnly.png in Resources */,
 				693A91F319A288EB00A05DFD /* user_male4-75.png in Resources */,
 				699A83F6190AC1470041EEC2 /* image-5.png in Resources */,
@@ -907,6 +916,7 @@
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
 				6960396F1968756300E3C227 /* test2.html in Resources */,
+				69D1C22419E1BEB900B28FD4 /* jquery.circliful.min.js in Resources */,
 				6983454C19E189290010AA67 /* scorecard-results.html in Resources */,
 				6930F15B19E0A2D200473A06 /* top-banner-12.png in Resources */,
 				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
@@ -967,6 +977,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */,
+				69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */,
 				91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */,
 				9147FC2319E193470040CC97 /* NEGScoreCardProfileComparisonViewController.m in Sources */,
 				910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */,
