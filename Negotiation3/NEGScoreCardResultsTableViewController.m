@@ -74,25 +74,25 @@
 
 
 - (void)configureGraph:(UITableViewCell *)cell {
-    id create = [self.detailItem valueForKey:@"question1"];
-    id assert = [self.detailItem valueForKey:@"question2"];
-    id empathy = [self.detailItem valueForKey:@"question3"];
-    id claim = [self.detailItem valueForKey:@"question4"];
+    NSString *typeOfNeg = (NSString *)[self.detailItem valueForKey:@"question2"];
+    NSString *reachAgreement = (NSString *)[self.detailItem valueForKey:@"question4"];
+    NSString *importance = (NSString *)[self.detailItem valueForKey:@"question3"];
+    NSString *satisfaction = (NSString *)[self.detailItem valueForKey:@"question5"];
     
     
-    NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"overview" ofType:@"html" ]];
+    NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scorecard-results" ofType:@"html" ]];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
-    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", create, empathy, claim, assert];
+
     
     
     
-    htmlString = [NSString stringWithFormat:htmlString, js];
+    NSString *finalString = [NSString stringWithFormat:htmlString, typeOfNeg, reachAgreement, importance, satisfaction];
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
     
     UIWebView *webView = (UIWebView *)[cell viewWithTag:999];
     
-    [webView loadHTMLString:htmlString
+    [webView loadHTMLString:finalString
                     baseURL:url];
 }
 
