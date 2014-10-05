@@ -394,11 +394,51 @@
                             <outlet property="delegate" destination="Ajj-6q-wQZ" id="3mn-Ns-LcH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WaL-R8-tcb"/>
+                    <navigationItem key="navigationItem" id="WaL-R8-tcb">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="QE4-UE-yQH">
+                            <connections>
+                                <action selector="submit:" destination="Ajj-6q-wQZ" id="m8s-TZ-b31"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="PdC-Zi-iab" kind="push" identifier="score_card_quiz_3_intro" id="IoC-ix-jaP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0G-EF-gob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-248" y="1636"/>
+        </scene>
+        <!--Quiz3 Intro View Controller-->
+        <scene sceneID="4Nd-tm-DAX">
+            <objects>
+                <viewController id="PdC-Zi-iab" customClass="NEGQuiz3IntroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZBm-2r-4cn"/>
+                        <viewControllerLayoutGuide type="bottom" id="2hj-pz-taP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OzX-U3-xkI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIZ-XJ-3uU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VWj-Tz-Zqx">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="pac-ZL-9FB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="hIZ-XJ-3uU" id="Obd-aQ-k4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhM-gJ-fb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="1636"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="C07-zP-9hx">

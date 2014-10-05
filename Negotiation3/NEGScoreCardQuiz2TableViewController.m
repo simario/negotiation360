@@ -90,6 +90,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)submit:(id)sender {
+    [self performSegueWithIdentifier:@"score_card_quiz_3_intro" sender:self];
+}
+
 - (IBAction)questionValueChanged:(UISlider *)sender {
     
     UITableViewCell *cell = (UITableViewCell *)sender.superview;

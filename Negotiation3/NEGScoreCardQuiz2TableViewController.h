@@ -16,6 +16,6 @@
 @property (strong, nonatomic) NSArray *questionTitles;
 
 - (IBAction)textFieldFinished:(id)sender;
-
+- (IBAction)submit:(id)sender;
 
 @end
