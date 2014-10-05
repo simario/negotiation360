@@ -270,7 +270,7 @@
     if (section == 0) {
         return @"Your Profile";
     } else if (section == 1) {
-        return @"Your Negotiations";
+        return @"Your Scorecards";
     }
     return @"";
 }
