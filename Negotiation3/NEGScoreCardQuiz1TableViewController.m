@@ -133,7 +133,7 @@
 
 - (IBAction)question4ValueChanged:(UISlider *)sender {
     
-    [self.detailItem setValue:[NSNumber numberWithInt:sender.value] forKey:@"question4"];
+    [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.value] forKey:@"question4"];
     [self updateQuestion4Label:sender];
     // Save the context.
     NSError *error = nil;
