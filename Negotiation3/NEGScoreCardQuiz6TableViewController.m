@@ -7,6 +7,7 @@
 //
 
 #import "NEGScoreCardQuiz6TableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface NEGScoreCardQuiz6TableViewController ()
 
@@ -116,6 +117,12 @@
     textView.text = val;
     textView.delegate = self;
     
+    [textView.layer setBackgroundColor: [[UIColor whiteColor] CGColor]];
+    [textView.layer setBorderColor: [[UIColor grayColor] CGColor]];
+    [textView.layer setBorderWidth: 0.5];
+    [textView.layer setCornerRadius: 8.0];
+    [textView.layer setMasksToBounds:YES];
+
     return cell;
 }
 

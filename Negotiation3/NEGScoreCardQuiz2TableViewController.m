@@ -127,21 +127,21 @@
     
     NSString *label = @"";
     
-    if (val > -8 && val <-4) {
+    if (val > -3 && val <-1) {
         label = [_sliderTitles objectAtIndex:0];
-    } else if (val > -5 && val < -1) {
+    } else if (val > -2 && val < 0) {
         label = [_sliderTitles objectAtIndex:1];
-    } else if (val > -2 && val < 2) {
+    } else if (val > -1 && val < 1) {
         label = [_sliderTitles objectAtIndex:2];
-    } else if (val > 1 && val < 5) {
+    } else if (val > 0 && val < 2) {
         label = [_sliderTitles objectAtIndex:3];
-    } else if (val > 4) {
+    } else if (val > 1) {
         label = [_sliderTitles objectAtIndex:4];
     }
 
     if (cell) {
         UILabel *lbl = (UILabel *)[cell viewWithTag:3];
-        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
+        [lbl setText:[NSString stringWithFormat:@"%@", label]];
     }
     
 }

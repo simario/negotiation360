@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -24,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-1597" y="106"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="NEGMasterViewController" sceneMemberID="viewController">
@@ -91,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="-1001" y="106"/>
         </scene>
-        <!--Scorecard Intro View Controller - Scorecard-->
+        <!--Scorecard-->
         <scene sceneID="SIF-8X-QiC">
             <objects>
                 <viewController title="Scorecard" id="0QK-Xa-X2S" customClass="NEGScorecardIntroViewController" sceneMemberID="viewController">
@@ -125,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="-1772" y="1464"/>
         </scene>
-        <!--Score Card Quiz1 Table View Controller - Negotiation Details-->
+        <!--Negotiation Details-->
         <scene sceneID="Feu-Eb-7yB">
             <objects>
                 <tableViewController id="YGm-X1-Jse" customClass="NEGScoreCardQuiz1TableViewController" sceneMemberID="viewController">
@@ -134,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell tag="555" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameInput" rowHeight="80" id="f6T-1D-10b">
+                            <tableViewCell tag="555" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameInput" rowHeight="85" id="f6T-1D-10b">
                                 <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f6T-1D-10b" id="7oj-gP-Dgp">
@@ -142,7 +141,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHH-t5-s4S">
-                                            <rect key="frame" x="15" y="7" width="139" height="21"/>
+                                            <rect key="frame" x="15" y="13" width="139" height="21"/>
                                             <string key="text">Negotiation Name
 </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -160,7 +159,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="typeInput" textLabel="Hqy-d7-OgD" detailTextLabel="ugD-zQ-sNh" rowHeight="48" style="IBUITableViewCellStyleValue1" id="MqT-qk-x73">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="typeInput" textLabel="Hqy-d7-OgD" detailTextLabel="ugD-zQ-sNh" rowHeight="45" style="IBUITableViewCellStyleValue1" id="MqT-qk-x73">
                                 <rect key="frame" x="0.0" y="102" width="320" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MqT-qk-x73" id="HPZ-aP-RYE">
@@ -189,7 +188,7 @@
                                     <segue destination="FHN-uI-2Ey" kind="push" identifier="type_of_negotiation" id="IZW-tL-ekr"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="typeValue" textLabel="fTy-mQ-tjK" rowHeight="32" style="IBUITableViewCellStyleDefault" id="xDJ-tZ-1jE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="typeValue" textLabel="fTy-mQ-tjK" rowHeight="20" style="IBUITableViewCellStyleDefault" id="xDJ-tZ-1jE">
                                 <rect key="frame" x="0.0" y="150" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xDJ-tZ-1jE" id="1It-Y6-tix">
@@ -206,7 +205,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="importanceInput" rowHeight="115" id="Ehd-wm-SC5">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="importanceInput" rowHeight="110" id="Ehd-wm-SC5">
                                 <rect key="frame" x="0.0" y="182" width="320" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ehd-wm-SC5" id="yII-7I-FCE">
@@ -214,17 +213,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How important was this negotiation?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-qu-7pY">
-                                            <rect key="frame" x="15" y="17" width="291" height="21"/>
+                                            <rect key="frame" x="15" y="14" width="291" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" tag="568" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="GuA-d9-sog">
-                                            <rect key="frame" x="15" y="43" width="293" height="31"/>
+                                            <rect key="frame" x="15" y="40" width="293" height="31"/>
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </slider>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="558" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Very" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFy-c4-zMc">
-                                            <rect key="frame" x="21" y="78" width="280" height="21"/>
+                                            <rect key="frame" x="21" y="75" width="280" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -232,14 +231,14 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agreementInput" rowHeight="90" id="zod-TD-PfW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agreementInput" rowHeight="85" id="zod-TD-PfW">
                                 <rect key="frame" x="0.0" y="297" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zod-TD-PfW" id="j1h-Vb-Uk7">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" tag="569" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-mC-4Qi">
+                                        <segmentedControl opaque="NO" tag="569" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-mC-4Qi">
                                             <rect key="frame" x="15" y="41" width="293" height="29"/>
                                             <segments>
                                                 <segment title="Yes"/>
@@ -258,7 +257,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="satisfiedInput" rowHeight="120" id="7eX-DY-fh5">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="satisfiedInput" rowHeight="110" id="7eX-DY-fh5">
                                 <rect key="frame" x="0.0" y="387" width="320" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eX-DY-fh5" id="bZn-bM-jzm">
@@ -266,7 +265,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-fo-da3">
-                                            <rect key="frame" x="15" y="16" width="287" height="21"/>
+                                            <rect key="frame" x="15" y="10" width="287" height="21"/>
                                             <string key="text">How satisfied with the result are you?
 </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -274,13 +273,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="559" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Very" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-EI-MGK">
-                                            <rect key="frame" x="21" y="85" width="280" height="21"/>
+                                            <rect key="frame" x="21" y="79" width="280" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" tag="570" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="Q2l-rG-2Vt">
-                                            <rect key="frame" x="15" y="46" width="293" height="31"/>
+                                            <rect key="frame" x="15" y="40" width="293" height="31"/>
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </slider>
                                     </subviews>
@@ -307,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="-1276" y="1472"/>
         </scene>
-        <!--Score Card Neg Types Table View Controller - Select Type-->
+        <!--Select Type-->
         <scene sceneID="K99-pJ-4Mf">
             <objects>
                 <tableViewController id="FHN-uI-2Ey" customClass="NEGScoreCardNegTypesTableViewController" sceneMemberID="viewController">
@@ -336,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="-262" y="964"/>
         </scene>
-        <!--Score Card Quiz2 Table View Controller - Comparison-->
+        <!--Comparison-->
         <scene sceneID="g3T-3x-8Aw">
             <objects>
                 <tableViewController id="Ajj-6q-wQZ" customClass="NEGScoreCardQuiz2TableViewController" sceneMemberID="viewController">
@@ -352,8 +351,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
-                                            <rect key="frame" x="15" y="0.0" width="297" height="116"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
+                                            <rect key="frame" x="15" y="0.0" width="297" height="123"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <string key="text">Now, put the result aside for the moment. Focus solely on how you managed the negotiation process, compared to usual. It’s possible that you did better on most of the dimensions below. If so, congratulations! If not, we’ll show you how to do better next time.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
@@ -375,7 +374,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-7" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-7g-Pz4">
+                                        <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-2" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-7g-Pz4">
                                             <rect key="frame" x="20" y="57" width="282" height="31"/>
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </slider>
@@ -409,7 +408,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="1716"/>
         </scene>
-        <!--Score Card Profile Comparison View Controller - Profile Comparison-->
+        <!--Profile Comparison-->
         <scene sceneID="xEG-Ra-E9J">
             <objects>
                 <viewController id="h1x-Km-8n1" customClass="NEGScoreCardProfileComparisonViewController" sceneMemberID="viewController">
@@ -428,7 +427,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile Comparison" id="mSN-FK-Nh7"/>
+                    <navigationItem key="navigationItem" title="Profile Comparison" id="mSN-FK-Nh7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="t1d-zn-YUZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="5I4-Jd-vAi" id="BOr-EE-fHy"/>
                     </connections>
@@ -437,7 +438,7 @@
             </objects>
             <point key="canvasLocation" x="1253" y="3600"/>
         </scene>
-        <!--Score Card Lessons Learned View Controller - Lessons Learned-->
+        <!--Lessons Learned-->
         <scene sceneID="Oq7-2d-xLB">
             <objects>
                 <viewController id="PQ4-K1-go6" customClass="NEGScoreCardLessonsLearnedViewController" sceneMemberID="viewController">
@@ -456,7 +457,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lessons Learned" id="gVm-XW-PhB"/>
+                    <navigationItem key="navigationItem" title="Lessons Learned" id="gVm-XW-PhB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="i6y-gC-l24"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="Py0-0C-TFR" id="VcI-yN-Gf6"/>
                     </connections>
@@ -465,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="1196" y="2692"/>
         </scene>
-        <!--Score Card Summary View Controller - Scorecard Summary-->
+        <!--Scorecard Summary-->
         <scene sceneID="5g3-z8-hhD">
             <objects>
                 <viewController id="fzX-tZ-Zhe" customClass="NEGScoreCardSummaryViewController" sceneMemberID="viewController">
@@ -484,7 +487,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scorecard Summary" id="aXR-fC-eZY"/>
+                    <navigationItem key="navigationItem" title="Scorecard Summary" id="aXR-fC-eZY">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="zWg-n6-VFN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="UTT-CO-can" id="1KT-IO-wns"/>
                     </connections>
@@ -493,7 +498,7 @@
             </objects>
             <point key="canvasLocation" x="1676" y="3220"/>
         </scene>
-        <!--Quiz3 Intro View Controller - Lessons Learned-->
+        <!--Lessons Learned-->
         <scene sceneID="4Nd-tm-DAX">
             <objects>
                 <viewController id="PdC-Zi-iab" customClass="NEGQuiz3IntroViewController" sceneMemberID="viewController">
@@ -527,7 +532,7 @@
             </objects>
             <point key="canvasLocation" x="-276" y="1716"/>
         </scene>
-        <!--Score Card Quiz3 Table View Controller - What Worked Well-->
+        <!--What Worked Well-->
         <scene sceneID="kQu-pU-jxS">
             <objects>
                 <tableViewController id="f3C-Nl-nKK" customClass="NEGScoreCardQuiz3TableViewController" sceneMemberID="viewController">
@@ -551,7 +556,7 @@
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-7Q-ewf">
                                             <rect key="frame" x="20" y="103" width="280" height="128"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <connections>
@@ -579,7 +584,7 @@
             </objects>
             <point key="canvasLocation" x="136" y="1716"/>
         </scene>
-        <!--Score Card Results Table View Controller - Scorecard Results-->
+        <!--Scorecard Results-->
         <scene sceneID="r9z-sk-k9n">
             <objects>
                 <tableViewController id="vay-z4-l6d" customClass="NEGScoreCardResultsTableViewController" sceneMemberID="viewController">
@@ -746,7 +751,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="-1811"/>
         </scene>
-        <!--Quiz View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -828,7 +833,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-778"/>
         </scene>
-        <!--Links Table View Controller - Links-->
+        <!--Links-->
         <scene sceneID="vkt-xd-6qa">
             <objects>
                 <tableViewController id="Xei-tS-bpb" customClass="NEGLinksTableViewController" sceneMemberID="viewController">
@@ -902,7 +907,7 @@
             </objects>
             <point key="canvasLocation" x="450" y="622"/>
         </scene>
-        <!--About Types View Controller - Negotiation Profiles-->
+        <!--Negotiation Profiles-->
         <scene sceneID="LJS-X2-YKv">
             <objects>
                 <viewController id="TfM-Ts-HaH" customClass="NEGAboutTypesViewController" sceneMemberID="viewController">
@@ -964,7 +969,7 @@
             </objects>
             <point key="canvasLocation" x="1732" y="1346"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="NEGDetailViewController" sceneMemberID="viewController">
@@ -1000,7 +1005,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-778"/>
         </scene>
-        <!--Skills View Controller - Skill-Building Tips-->
+        <!--Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -1031,7 +1036,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="1418"/>
         </scene>
-        <!--Dilema View Controller - Negotiation Dilemmas-->
+        <!--Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -1062,7 +1067,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-778"/>
         </scene>
-        <!--About View Controller - Your Personal Profile-->
+        <!--Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -1093,7 +1098,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="673"/>
         </scene>
-        <!--Quiz2 View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -1143,7 +1148,7 @@
             </objects>
             <point key="canvasLocation" x="2015" y="-778"/>
         </scene>
-        <!--Results Overview View Controller - Analysis & Feedback-->
+        <!--Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -1248,7 +1253,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="242"/>
         </scene>
-        <!--Resources View Controller - Negotiation Resources-->
+        <!--Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
             <objects>
                 <viewController id="JEJ-MM-Sbq" customClass="NEGResourcesViewController" sceneMemberID="viewController">
@@ -1277,7 +1282,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="630"/>
         </scene>
-        <!--AboutMW View Controller - About Michael Wheeler-->
+        <!--About Michael Wheeler-->
         <scene sceneID="AVu-J1-pfC">
             <objects>
                 <viewController id="pDf-tE-goB" customClass="NEGAboutMWViewController" sceneMemberID="viewController">
@@ -1306,7 +1311,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="2068"/>
         </scene>
-        <!--Profiles View Controller - Bargaining Styles-->
+        <!--Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -1337,7 +1342,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-38"/>
         </scene>
-        <!--Compare View Controller - How You Compare-->
+        <!--How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -1372,7 +1377,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-778"/>
         </scene>
-        <!--Score Card Quiz4 Table View Controller - What Worked Well-->
+        <!--What Worked Well-->
         <scene sceneID="I66-vO-f43">
             <objects>
                 <tableViewController id="e7y-NS-vXX" customClass="NEGScoreCardQuiz4TableViewController" sceneMemberID="viewController">
@@ -1424,7 +1429,7 @@
             </objects>
             <point key="canvasLocation" x="528" y="1716"/>
         </scene>
-        <!--Score Card Quiz6 Table View Controller - What Do Different-->
+        <!--What Do Different-->
         <scene sceneID="uw4-yb-mhi">
             <objects>
                 <tableViewController id="1OY-5x-WjL" customClass="NEGScoreCardQuiz6TableViewController" sceneMemberID="viewController">
@@ -1476,7 +1481,7 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1716"/>
         </scene>
-        <!--Score Card Quiz5 Table View Controller - What Do Different-->
+        <!--What Do Different-->
         <scene sceneID="5Ot-CR-M99">
             <objects>
                 <tableViewController id="kxc-Vk-ShX" customClass="NEGScoreCardQuiz5TableViewController" sceneMemberID="viewController">
@@ -1538,15 +1543,15 @@
         <image name="paper44.png" width="20" height="20"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UvR-e4-cJ3"/>
         <segue reference="oA1-ch-634"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="Q57-xl-Lgr"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

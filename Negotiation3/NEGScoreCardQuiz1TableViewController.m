@@ -151,11 +151,11 @@
     
     NSString *label = @"";
     
-    if (val > 0 && val <33) {
+    if (val > 0 && val <34) {
         label = [NSString stringWithFormat:@"%@", @"Not very"];
-    } else if (val > 32 && val < 66) {
+    } else if (val > 33 && val < 67) {
         label = [NSString stringWithFormat:@"%@", @"Somewhat"];
-    } else if (val > 65 && val < 101) {
+    } else if (val > 66 && val < 100) {
         label = [NSString stringWithFormat:@"%@", @"Very"];
     }
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
@@ -171,11 +171,11 @@
     
     NSString *label = @"";
     
-    if (val > 0 && val <33) {
+    if (val > 0 && val <34) {
         label = [NSString stringWithFormat:@"%@", @"Not very"];
-    } else if (val > 32 && val < 66) {
+    } else if (val > 33 && val < 67) {
         label = [NSString stringWithFormat:@"%@", @"Somewhat"];
-    } else if (val > 65 && val < 101) {
+    } else if (val > 66 && val < 100) {
         label = [NSString stringWithFormat:@"%@", @"Very"];
     }
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
@@ -228,7 +228,7 @@
             h = 85;
             break;
         case 5:
-            h = 85;
+            h = 110;
             break;
         default:
             break;
