@@ -59,6 +59,11 @@
 		699A8401190AEB8A0041EEC2 /* top-banner-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 699A83FF190AEB8A0041EEC2 /* top-banner-7.png */; };
 		69A46A08190D557900E2C242 /* image-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A46A06190D557900E2C242 /* image-8.png */; };
 		69A46A09190D557900E2C242 /* top-banner-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A46A07190D557900E2C242 /* top-banner-8.png */; };
+		69A5AE2019E6123B004D68FD /* much-better.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1B19E6123B004D68FD /* much-better.png */; };
+		69A5AE2119E6123B004D68FD /* much-worse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1C19E6123B004D68FD /* much-worse.png */; };
+		69A5AE2219E6123B004D68FD /* same-usual.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1D19E6123B004D68FD /* same-usual.png */; };
+		69A5AE2319E6123B004D68FD /* somewhat-better.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1E19E6123B004D68FD /* somewhat-better.png */; };
+		69A5AE2419E6123B004D68FD /* somewhat-worse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1F19E6123B004D68FD /* somewhat-worse.png */; };
 		69A70DF919677158008E4232 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF719677158008E4232 /* list.png */; };
 		69A70DFA19677158008E4232 /* untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF819677158008E4232 /* untitled.png */; };
 		69AAEAC019A2D1C300A30164 /* four-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABC19A2D1C300A30164 /* four-green.png */; };
@@ -257,6 +262,11 @@
 		699A83FF190AEB8A0041EEC2 /* top-banner-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner-7.png"; sourceTree = "<group>"; };
 		69A46A06190D557900E2C242 /* image-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-8.png"; sourceTree = "<group>"; };
 		69A46A07190D557900E2C242 /* top-banner-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner-8.png"; sourceTree = "<group>"; };
+		69A5AE1B19E6123B004D68FD /* much-better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "much-better.png"; sourceTree = "<group>"; };
+		69A5AE1C19E6123B004D68FD /* much-worse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "much-worse.png"; sourceTree = "<group>"; };
+		69A5AE1D19E6123B004D68FD /* same-usual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "same-usual.png"; sourceTree = "<group>"; };
+		69A5AE1E19E6123B004D68FD /* somewhat-better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "somewhat-better.png"; sourceTree = "<group>"; };
+		69A5AE1F19E6123B004D68FD /* somewhat-worse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "somewhat-worse.png"; sourceTree = "<group>"; };
 		69A70DF719677158008E4232 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		69A70DF819677158008E4232 /* untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = untitled.png; sourceTree = "<group>"; };
 		69AAEABC19A2D1C300A30164 /* four-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "four-green.png"; sourceTree = "<group>"; };
@@ -479,6 +489,11 @@
 		9163D26A18D4D4180032F104 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				69A5AE1B19E6123B004D68FD /* much-better.png */,
+				69A5AE1C19E6123B004D68FD /* much-worse.png */,
+				69A5AE1D19E6123B004D68FD /* same-usual.png */,
+				69A5AE1E19E6123B004D68FD /* somewhat-better.png */,
+				69A5AE1F19E6123B004D68FD /* somewhat-worse.png */,
 				9156624319D89E1600745751 /* profileOverlay.png */,
 				9156624419D89E1600745751 /* scorecardOverlay.png */,
 				69E1102C19A80E3A00F0B6DC /* paper44.png */,
@@ -884,6 +899,7 @@
 				699A83F5190AC1470041EEC2 /* image-4.png in Resources */,
 				6960396B1968729900E3C227 /* help.html in Resources */,
 				69BE8A27199D8E6400AC5F7A /* three-blue.png in Resources */,
+				69A5AE2319E6123B004D68FD /* somewhat-better.png in Resources */,
 				693A91F219A288EB00A05DFD /* page-7.png in Resources */,
 				6930F15419E0A2D200473A06 /* image-10.png in Resources */,
 				69D1C22319E1BEB900B28FD4 /* jquery.circliful.js in Resources */,
@@ -900,6 +916,7 @@
 				699A83FB190AC1470041EEC2 /* top-banner-4.png in Resources */,
 				699A83FC190AC1470041EEC2 /* top-banner-5.png in Resources */,
 				699A83FD190AC1470041EEC2 /* top-banner-6.png in Resources */,
+				69A5AE2119E6123B004D68FD /* much-worse.png in Resources */,
 				6930F15D19E0A2D200473A06 /* top-banner-14.png in Resources */,
 				693A91E919A2776900A05DFD /* 259-list.png in Resources */,
 				69EF5F5C1909EFC200A947AF /* page-6.png in Resources */,
@@ -911,7 +928,9 @@
 				9156623E19D873BC00745751 /* compass-32.png in Resources */,
 				69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */,
 				69409F8118FB1EE80024E102 /* top-banner.png in Resources */,
+				69A5AE2019E6123B004D68FD /* much-better.png in Resources */,
 				91A2791618F02C32006B58A3 /* css in Resources */,
+				69A5AE2419E6123B004D68FD /* somewhat-worse.png in Resources */,
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
 				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
@@ -924,6 +943,7 @@
 				69BE8A26199D8E6400AC5F7A /* one-blue.png in Resources */,
 				69BE8A28199D8E6400AC5F7A /* two-blue.png in Resources */,
 				69A70DF919677158008E4232 /* list.png in Resources */,
+				69A5AE2219E6123B004D68FD /* same-usual.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
 				91B66A2618DE353800DBA430 /* highcharts-more.src.js in Resources */,
 				6960396A1968729900E3C227 /* aboutapp.html in Resources */,
