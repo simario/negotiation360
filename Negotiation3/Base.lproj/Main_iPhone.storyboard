@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1597" y="106"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="NEGMasterViewController" sceneMemberID="viewController">
@@ -91,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="-1001" y="106"/>
         </scene>
-        <!--Scorecard Intro View Controller - Scorecard-->
+        <!--Scorecard-->
         <scene sceneID="SIF-8X-QiC">
             <objects>
                 <viewController title="Scorecard" id="0QK-Xa-X2S" customClass="NEGScorecardIntroViewController" sceneMemberID="viewController">
@@ -125,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="-1772" y="1464"/>
         </scene>
-        <!--Score Card Quiz1 Table View Controller - Negotiation Details-->
+        <!--Negotiation Details-->
         <scene sceneID="Feu-Eb-7yB">
             <objects>
                 <tableViewController id="YGm-X1-Jse" customClass="NEGScoreCardQuiz1TableViewController" sceneMemberID="viewController">
@@ -309,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="-1276" y="1472"/>
         </scene>
-        <!--Score Card Neg Types Table View Controller - Select Type-->
+        <!--Select Type-->
         <scene sceneID="K99-pJ-4Mf">
             <objects>
                 <tableViewController id="FHN-uI-2Ey" customClass="NEGScoreCardNegTypesTableViewController" sceneMemberID="viewController">
@@ -338,7 +339,7 @@
             </objects>
             <point key="canvasLocation" x="-262" y="964"/>
         </scene>
-        <!--Score Card Quiz2 Table View Controller - Comparison-->
+        <!--Comparison-->
         <scene sceneID="g3T-3x-8Aw">
             <objects>
                 <tableViewController id="Ajj-6q-wQZ" customClass="NEGScoreCardQuiz2TableViewController" sceneMemberID="viewController">
@@ -379,15 +380,14 @@
                                         </label>
                                         <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-bD-FeX">
                                             <rect key="frame" x="20" y="67" width="280" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="Much Worse"/>
-                                                <segment title="Worse"/>
-                                                <segment title="Same"/>
-                                                <segment title="Better"/>
-                                                <segment title="Much Better"/>
+                                                <segment title="" image="much-worse.png"/>
+                                                <segment title="" image="somewhat-worse.png"/>
+                                                <segment title="" image="same-usual.png"/>
+                                                <segment title="" image="somewhat-better.png"/>
+                                                <segment title="" image="much-better.png"/>
                                             </segments>
-                                            <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </segmentedControl>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -413,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="1716"/>
         </scene>
-        <!--Score Card Profile Comparison View Controller - Profile Comparison-->
+        <!--Profile Comparison-->
         <scene sceneID="xEG-Ra-E9J">
             <objects>
                 <viewController id="h1x-Km-8n1" customClass="NEGScoreCardProfileComparisonViewController" sceneMemberID="viewController">
@@ -443,7 +443,7 @@
             </objects>
             <point key="canvasLocation" x="1253" y="3600"/>
         </scene>
-        <!--Score Card Lessons Learned View Controller - Lessons Learned-->
+        <!--Lessons Learned-->
         <scene sceneID="Oq7-2d-xLB">
             <objects>
                 <viewController id="PQ4-K1-go6" customClass="NEGScoreCardLessonsLearnedViewController" sceneMemberID="viewController">
@@ -473,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="1196" y="2692"/>
         </scene>
-        <!--Score Card Summary View Controller - Scorecard Summary-->
+        <!--Scorecard Summary-->
         <scene sceneID="5g3-z8-hhD">
             <objects>
                 <viewController id="fzX-tZ-Zhe" customClass="NEGScoreCardSummaryViewController" sceneMemberID="viewController">
@@ -503,7 +503,7 @@
             </objects>
             <point key="canvasLocation" x="1676" y="3220"/>
         </scene>
-        <!--Quiz3 Intro View Controller - Lessons Learned-->
+        <!--Lessons Learned-->
         <scene sceneID="4Nd-tm-DAX">
             <objects>
                 <viewController id="PdC-Zi-iab" customClass="NEGQuiz3IntroViewController" sceneMemberID="viewController">
@@ -537,7 +537,7 @@
             </objects>
             <point key="canvasLocation" x="-276" y="1716"/>
         </scene>
-        <!--Score Card Quiz3 Table View Controller - What Worked Well-->
+        <!--What Worked Well-->
         <scene sceneID="kQu-pU-jxS">
             <objects>
                 <tableViewController id="f3C-Nl-nKK" customClass="NEGScoreCardQuiz3TableViewController" sceneMemberID="viewController">
@@ -592,7 +592,7 @@
             </objects>
             <point key="canvasLocation" x="136" y="1716"/>
         </scene>
-        <!--Score Card Results Table View Controller - Scorecard Results-->
+        <!--Scorecard Results-->
         <scene sceneID="r9z-sk-k9n">
             <objects>
                 <tableViewController id="vay-z4-l6d" customClass="NEGScoreCardResultsTableViewController" sceneMemberID="viewController">
@@ -769,7 +769,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="-1811"/>
         </scene>
-        <!--Quiz View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -851,7 +851,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-778"/>
         </scene>
-        <!--Links Table View Controller - Links-->
+        <!--Links-->
         <scene sceneID="vkt-xd-6qa">
             <objects>
                 <tableViewController id="Xei-tS-bpb" customClass="NEGLinksTableViewController" sceneMemberID="viewController">
@@ -925,7 +925,7 @@
             </objects>
             <point key="canvasLocation" x="450" y="622"/>
         </scene>
-        <!--About Types View Controller - Negotiation Profiles-->
+        <!--Negotiation Profiles-->
         <scene sceneID="LJS-X2-YKv">
             <objects>
                 <viewController id="TfM-Ts-HaH" customClass="NEGAboutTypesViewController" sceneMemberID="viewController">
@@ -987,7 +987,7 @@
             </objects>
             <point key="canvasLocation" x="1732" y="1346"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="NEGDetailViewController" sceneMemberID="viewController">
@@ -1023,7 +1023,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-778"/>
         </scene>
-        <!--Skills View Controller - Skill-Building Tips-->
+        <!--Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -1054,7 +1054,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="1418"/>
         </scene>
-        <!--Dilema View Controller - Negotiation Dilemmas-->
+        <!--Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -1085,7 +1085,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-778"/>
         </scene>
-        <!--About View Controller - Your Personal Profile-->
+        <!--Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -1116,7 +1116,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="673"/>
         </scene>
-        <!--Quiz2 View Controller - Negotiation Test-->
+        <!--Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -1166,7 +1166,7 @@
             </objects>
             <point key="canvasLocation" x="2015" y="-778"/>
         </scene>
-        <!--Results Overview View Controller - Analysis & Feedback-->
+        <!--Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -1271,7 +1271,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="242"/>
         </scene>
-        <!--Resources View Controller - Negotiation Resources-->
+        <!--Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
             <objects>
                 <viewController id="JEJ-MM-Sbq" customClass="NEGResourcesViewController" sceneMemberID="viewController">
@@ -1300,7 +1300,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="630"/>
         </scene>
-        <!--AboutMW View Controller - About Michael Wheeler-->
+        <!--About Michael Wheeler-->
         <scene sceneID="AVu-J1-pfC">
             <objects>
                 <viewController id="pDf-tE-goB" customClass="NEGAboutMWViewController" sceneMemberID="viewController">
@@ -1329,7 +1329,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="2068"/>
         </scene>
-        <!--Profiles View Controller - Bargaining Styles-->
+        <!--Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -1360,7 +1360,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-38"/>
         </scene>
-        <!--Compare View Controller - How You Compare-->
+        <!--How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -1395,7 +1395,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-778"/>
         </scene>
-        <!--Score Card Quiz4 Table View Controller - What Worked Well-->
+        <!--What Worked Well-->
         <scene sceneID="I66-vO-f43">
             <objects>
                 <tableViewController id="e7y-NS-vXX" customClass="NEGScoreCardQuiz4TableViewController" sceneMemberID="viewController">
@@ -1450,7 +1450,7 @@
             </objects>
             <point key="canvasLocation" x="528" y="1716"/>
         </scene>
-        <!--Score Card Quiz6 Table View Controller - What Do Different-->
+        <!--What Do Different-->
         <scene sceneID="uw4-yb-mhi">
             <objects>
                 <tableViewController id="1OY-5x-WjL" customClass="NEGScoreCardQuiz6TableViewController" sceneMemberID="viewController">
@@ -1505,7 +1505,7 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1716"/>
         </scene>
-        <!--Score Card Quiz5 Table View Controller - What Do Different-->
+        <!--What Do Different-->
         <scene sceneID="5Ot-CR-M99">
             <objects>
                 <tableViewController id="kxc-Vk-ShX" customClass="NEGScoreCardQuiz5TableViewController" sceneMemberID="viewController">
@@ -1565,12 +1565,16 @@
         <image name="briefcase-25.png" width="22" height="22"/>
         <image name="compass-32.png" width="32" height="32"/>
         <image name="menu-25.png" width="20" height="20"/>
+        <image name="much-better.png" width="56" height="32"/>
+        <image name="much-worse.png" width="56" height="32"/>
         <image name="one-blue.png" width="25" height="25"/>
         <image name="one-green.png" width="25" height="25"/>
         <image name="paper44.png" width="20" height="20"/>
+        <image name="same-usual.png" width="56" height="32"/>
+        <image name="somewhat-better.png" width="56" height="32"/>
+        <image name="somewhat-worse.png" width="56" height="32"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1582,4 +1586,5 @@
         <segue reference="Q57-xl-Lgr"/>
         <segue reference="oA1-ch-634"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
