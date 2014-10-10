@@ -103,6 +103,20 @@
     [sender resignFirstResponder];
 }
 
+- (IBAction)nameChanged:(id)sender {
+    UITextField *tf = (UITextField *)sender;
+    [self.detailItem setValue:[tf text] forKey:@"name"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 - (IBAction)question2ValueChanged:(UISlider *)sender {
 
     [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.value] forKey:@"question2"];
@@ -148,27 +162,24 @@
 
 - (void)updateQuestion2Label:(UISlider *)slider {
     int val = (int)[slider value];
-    
-    NSString *label = @"";
-    
-    if (val > 0 && val <34) {
-        label = [NSString stringWithFormat:@"%@", @"Not very"];
-    } else if (val > 33 && val < 67) {
-        label = [NSString stringWithFormat:@"%@", @"Somewhat"];
-    } else if (val > 66 && val < 100) {
-        label = [NSString stringWithFormat:@"%@", @"Very"];
-    }
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
     if (cell) {
-        UILabel *lbl = (UILabel *)[cell viewWithTag:558];
-        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
+        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
+        [self updateLabel:lbl value:val];
     }
-
 }
 
 - (void)updateQuestion4Label:(UISlider *)slider {
+
     int val = (int)[slider value];
-    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
+    if (cell) {
+        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
+        [self updateLabel:lbl value:val];
+    }
+}
+
+- (void)updateLabel:(UILabel *)lbl value:(int)val {
     NSString *label = @"";
     
     if (val > 0 && val <34) {
@@ -178,15 +189,52 @@
     } else if (val > 66 && val < 100) {
         label = [NSString stringWithFormat:@"%@", @"Very"];
     }
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
-    if (cell) {
-        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
-        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
-    }
-
+    
+    [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
 }
 
 - (IBAction)submit:(id)sender {
+    
+    NSString *name = (NSString *)[self.detailItem valueForKey:@"name"];
+    name = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([name isEqualToString:@""] || name == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must enter a name for your negotiaion scorecard."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+
+    }
+    
+    
+    int typeNeg = [[self.detailItem valueForKey:@"question1"] intValue];
+    if (typeNeg == -1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must pick a negotiation type for your scorecard."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
+    
+    int agreement = [[self.detailItem valueForKey:@"question3"] intValue];
+    if (agreement == -1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must select a reponse for whether or not you reached an agreement."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
+    
+    
+    
     [self performSegueWithIdentifier:@"score_card_quiz_2" sender:self];
 }
 
@@ -244,7 +292,7 @@
     UISlider *slider;
     UISegmentedControl *segCtrl;
     NSString *str;
-    
+    UILabel *lbl;
     int index = 0;
     id val;
     
@@ -254,6 +302,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
             tf = (UITextField *)[cell viewWithTag:567];
             tf.text = [self.detailItem valueForKey:@"name"];
+            [tf addTarget:self action:@selector(nameChanged:) forControlEvents:UIControlEventValueChanged];
 
             break;
         case 1:
@@ -262,10 +311,10 @@
         case 2:
             cell = [tableView dequeueReusableCellWithIdentifier:@"typeValue" forIndexPath:indexPath];
             index = [[self.detailItem valueForKey:@"question1"] intValue];
-            //NSLog(index);
-            str = (NSString *)[_typeLabels objectAtIndex:index];
-            //cell.textLabel.text = val;
-            cell.textLabel.text = str;
+            if (index != -1) {
+                str = (NSString *)[_typeLabels objectAtIndex:index];
+                cell.textLabel.text = str;
+            }
             break;
         case 3:
             
@@ -274,8 +323,10 @@
             val = [self.detailItem valueForKey:@"question2"];
             //NSLog([NSString stringWithFormat:@"%@", val]);
             [slider setValue:[[self.detailItem valueForKey:@"question2"] doubleValue]];
-            [self updateQuestion2Label:slider];
             [slider addTarget:self action:@selector(question2ValueChanged:) forControlEvents:UIControlEventValueChanged];
+            lbl = (UILabel *)[cell viewWithTag:559];
+            [self updateLabel:lbl value:[[self.detailItem valueForKey:@"question2"] intValue]];
+            
             break;
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
@@ -287,8 +338,11 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"satisfiedInput" forIndexPath:indexPath];
             slider = (UISlider *)[cell viewWithTag:570];
             [slider setValue:[[self.detailItem valueForKey:@"question4"] doubleValue]];
-            [self updateQuestion4Label:slider];
+            
             [slider addTarget:self action:@selector(question4ValueChanged:) forControlEvents:UIControlEventValueChanged];
+            //[self updateQuestion4Label:slider];
+            lbl = (UILabel *)[cell viewWithTag:559];
+            [self updateLabel:lbl value:[[self.detailItem valueForKey:@"question4"] intValue]];
             break;            
         default:
             break;

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSArray *typeLabels;
 
 - (IBAction)textFieldFinished:(id)sender;
+- (IBAction)nameChanged:(id)sender;
 - (IBAction)submit:(id)sender;
 
 

@@ -68,7 +68,21 @@
 
 
 - (IBAction)submit:(id)sender {
-    [self performSegueWithIdentifier:@"score_card_quiz_3_intro" sender:self];
+    NSString *str = (NSString *)[self.detailItem valueForKey:@"question9"];
+    str = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([str isEqualToString:@""] || str == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"Please enter a response to the question before continuing."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
+
+    
+    [self performSegueWithIdentifier:@"to_question_10" sender:self];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {

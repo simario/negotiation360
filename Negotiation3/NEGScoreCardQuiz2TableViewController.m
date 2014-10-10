@@ -92,10 +92,27 @@
 
 
 - (IBAction)submit:(id)sender {
+    
+    for (int i = 0; i < [_questionTitles count]; i++) {
+        NSString *key = [NSString stringWithFormat:@"question%ld", (4 + i), nil];
+        int val = [[self.detailItem valueForKey:key] intValue];
+        if (val == -1) {
+            NSString *message = [NSString stringWithFormat:@"You must select a reponse for the question '%@'", (NSString *)[_questionTitles objectAtIndex:i]];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+
+            return;
+        }
+    }
+    
     [self performSegueWithIdentifier:@"score_card_quiz_3_intro" sender:self];
 }
 
-- (IBAction)questionValueChanged:(UISlider *)sender {
+- (IBAction)questionValueChanged:(UISegmentedControl *)sender {
     
     UITableViewCell *cell = (UITableViewCell *)sender.superview;
     UILabel *lbl = (UILabel *)[cell viewWithTag:1];
@@ -108,8 +125,7 @@
     }
     
     NSString *key = [NSString stringWithFormat:@"question%ld", (4 + ip.row), nil];
-    [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.value] forKey:key];
-    [self updateQuestionLabel:sender cell:cell];
+    [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.selectedSegmentIndex] forKey:key];
     // Save the context.
     NSError *error = nil;
     if (![_context save:&error]) {
@@ -122,29 +138,6 @@
 
 
 
-- (void)updateQuestionLabel:(UISlider *)slider cell:(UITableViewCell *)cell {
-    int val = (int)[slider value];
-    
-    NSString *label = @"";
-    
-    if (val > -3 && val <-1) {
-        label = [_sliderTitles objectAtIndex:0];
-    } else if (val > -2 && val < 0) {
-        label = [_sliderTitles objectAtIndex:1];
-    } else if (val > -1 && val < 1) {
-        label = [_sliderTitles objectAtIndex:2];
-    } else if (val > 0 && val < 2) {
-        label = [_sliderTitles objectAtIndex:3];
-    } else if (val > 1) {
-        label = [_sliderTitles objectAtIndex:4];
-    }
-
-    if (cell) {
-        UILabel *lbl = (UILabel *)[cell viewWithTag:3];
-        [lbl setText:[NSString stringWithFormat:@"%@", label]];
-    }
-    
-}
 
 
 #pragma mark - Table view data source
@@ -183,8 +176,7 @@
     
     UITableViewCell *cell;
     UILabel *titleLabel;
-    UILabel *sliderLabel;
-    UISlider *slider;
+    UISegmentedControl *seg;
 
     NSString *str;
     NSString *key = [NSString stringWithFormat:@"question%ld", (4 + indexPath.row), nil];
@@ -199,13 +191,11 @@
             val = [[self.detailItem valueForKey:key] intValue];
             str = (NSString *)[_questionTitles objectAtIndex:indexPath.row];
             titleLabel = (UILabel *)[cell viewWithTag:1];
-            slider = (UISlider *)[cell viewWithTag:2];
-            sliderLabel = (UILabel *)[cell viewWithTag:3];
+            seg = (UISegmentedControl *)[cell viewWithTag:2];
             titleLabel.numberOfLines = 3;
             titleLabel.text = str;
-            [slider setValue:val];
-            [self updateQuestionLabel:slider cell:cell];
-            [slider addTarget:self action:@selector(questionValueChanged:) forControlEvents:UIControlEventValueChanged];
+            [seg setSelectedSegmentIndex:val];
+            [seg addTarget:self action:@selector(questionValueChanged:) forControlEvents:UIControlEventValueChanged];
             
             break;
     }

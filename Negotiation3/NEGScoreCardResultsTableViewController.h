@@ -16,4 +16,5 @@
 @property (strong, nonatomic) NSArray *agreementLabels;
 
 
+- (IBAction)homeButton:(id)sender;
 @end

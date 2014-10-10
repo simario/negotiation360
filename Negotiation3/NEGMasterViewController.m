@@ -72,12 +72,6 @@
     NSArray *viewControllers = @[startingViewController];
     [self.wtPageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-    
-
-    
-    //[self addChildViewController:_wtPageController];
-    //[self.view addSubview:_wtPageController.view];
-    
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]){
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         
@@ -89,9 +83,17 @@
                 [self.navigationController.view addSubview:self.overlayView];
                 [self.navigationController.view bringSubviewToFront:self.overlayView];
             }];
+        } else {
+            id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+            if ([sectionInfo numberOfObjects] == 0) {
+                UIImage *overlay = [UIImage imageNamed:@"scorecardOverlay.png"];
+                self.overlayView = [[UIImageView alloc] initWithImage:overlay];
+                self.overlayView.frame = CGRectMake(0, 0, 320, 568);
+                [self.navigationController.view addSubview:self.overlayView];
+                [self.navigationController.view bringSubviewToFront:self.overlayView];
+            }
+            
         }
-        
-        
     }
     
     
@@ -116,26 +118,31 @@
 }
 
 - (void)createProfileObject {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
-    [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    if ([sectionInfo numberOfObjects] == 0) {
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+        NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
+        [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
+        
+        // Save the context.
+        NSError *error = nil;
+        if (![context save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
     }
+    
     
     //[self performSegueWithIdentifier:@"showDetail" sender:self];
     
@@ -153,6 +160,15 @@
         
 
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question1"];
+        [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question2"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question3"];
+        [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question4"];
+        
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question5"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question6"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question7"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question8"];
         
         // Save the context.
         NSError *error = nil;
@@ -162,6 +178,19 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+        
+        if (self.overlayView) {
+            [self.overlayView removeFromSuperview];
+        }
+        
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+        if ([sectionInfo numberOfObjects] == 1) {
+            [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
+        }
+        
+        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
                                                         message:@"You must finish your profile before creating a Scorecard"
@@ -377,7 +406,13 @@
         if (isComplete) {
             [self performSegueWithIdentifier:@"scorecard_results_from_main" sender:self];
         } else {
-            [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+            id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+            if ([sectionInfo numberOfObjects] == 1) {
+                [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+            } else {
+                [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
+            }
+            
         }
     }
 }
@@ -396,7 +431,8 @@
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setContext:context];
-    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"] || [[segue identifier] isEqualToString:@"scorecard_results_from_main"]) {
+    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"] || [[segue identifier] isEqualToString:@"scorecard_results_from_main"] || [[segue identifier] isEqualToString:@"scorecard_quiz_1"]) {
+        
         NSManagedObject *object;
 
         NSIndexPath *indexPath =  [NSIndexPath indexPathForRow:[[self.tableView indexPathForSelectedRow] row] inSection:0];
