@@ -116,7 +116,9 @@
 }
 
 - (void)createProfileObject {
-    if ([[self.fetchedResultsController sections] count] == 0) {
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    if ([sectionInfo numberOfObjects] == 0) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
         NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
@@ -160,6 +162,11 @@
         [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question3"];
         [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question4"];
         
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question5"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question6"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question7"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question8"];
+        
         // Save the context.
         NSError *error = nil;
         if (![context save:&error]) {
@@ -169,7 +176,14 @@
             abort();
         }
         
-        [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+        if ([sectionInfo numberOfObjects] == 1) {
+            [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
+        }
+        
+        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
                                                         message:@"You must finish your profile before creating a Scorecard"
@@ -385,7 +399,13 @@
         if (isComplete) {
             [self performSegueWithIdentifier:@"scorecard_results_from_main" sender:self];
         } else {
-            [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+            id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+            if ([sectionInfo numberOfObjects] == 1) {
+                [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+            } else {
+                [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
+            }
+            
         }
     }
 }

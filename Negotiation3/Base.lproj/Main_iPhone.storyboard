@@ -84,6 +84,7 @@
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="F3C-KP-fhE"/>
                         <segue destination="0QK-Xa-X2S" kind="push" identifier="scorecardIntro" id="Wvz-Qw-GIm"/>
                         <segue destination="vay-z4-l6d" kind="push" identifier="scorecard_results_from_main" id="Q57-xl-Lgr"/>
+                        <segue destination="YGm-X1-Jse" kind="push" identifier="scorecard_quiz_1" id="XrA-bw-hNd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -1552,8 +1553,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
+        <segue reference="XrA-bw-hNd"/>
         <segue reference="RxB-wf-QIq"/>
+        <segue reference="oA1-ch-634"/>
         <segue reference="Q57-xl-Lgr"/>
     </inferredMetricsTieBreakers>
 </document>
