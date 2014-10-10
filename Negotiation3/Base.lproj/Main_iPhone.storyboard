@@ -672,13 +672,23 @@
                             <outlet property="delegate" destination="vay-z4-l6d" id="Mth-u5-eXr"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Scorecard Results" id="dEj-3d-TMs">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="QsZ-0A-l0c">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QsZ-0A-l0c">
                             <connections>
-                                <segue destination="pGg-6v-bdr" kind="push" id="72D-xW-IWS"/>
+                                <segue destination="pGg-6v-bdr" kind="push" identifier="to_main" id="72D-xW-IWS"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Home" style="plain" id="YJG-KQ-tEb">
+                            <connections>
+                                <action selector="homeButton:" destination="vay-z4-l6d" id="cXT-S2-a6D"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="YJG-KQ-tEb" id="MS7-b5-pES"/>
+                        </connections>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="h1x-Km-8n1" kind="push" identifier="scorecard_profile_comparison" id="QeZ-ef-Q0B"/>
                         <segue destination="PQ4-K1-go6" kind="push" identifier="scorecard_lessons_learned" id="y17-a4-zRv"/>
@@ -1568,8 +1578,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="XrA-bw-hNd"/>
-        <segue reference="RxB-wf-QIq"/>
+        <segue reference="72D-xW-IWS"/>
+        <segue reference="Q57-xl-Lgr"/>
         <segue reference="oA1-ch-634"/>
-        <segue reference="TxM-el-1ZU"/>
     </inferredMetricsTieBreakers>
 </document>

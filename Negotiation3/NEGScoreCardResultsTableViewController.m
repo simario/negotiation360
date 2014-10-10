@@ -16,8 +16,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[segue destinationViewController] setDetailItem:_detailItem];
-    [[segue destinationViewController] setContext:_context];
+    if (![[segue identifier] isEqualToString:@"to_main"]) {
+        [[segue destinationViewController] setDetailItem:_detailItem];
+        [[segue destinationViewController] setContext:_context];
+    }
 }
 
 
@@ -121,6 +123,10 @@
                     baseURL:url];
 }
 
+
+- (IBAction)homeButton:(id)sender {
+ [self performSegueWithIdentifier:@"to_main" sender:self];   
+}
 
 
 #pragma mark - Table view data source
