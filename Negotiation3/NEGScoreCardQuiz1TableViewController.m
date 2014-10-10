@@ -148,27 +148,24 @@
 
 - (void)updateQuestion2Label:(UISlider *)slider {
     int val = (int)[slider value];
-    
-    NSString *label = @"";
-    
-    if (val > 0 && val <34) {
-        label = [NSString stringWithFormat:@"%@", @"Not very"];
-    } else if (val > 33 && val < 67) {
-        label = [NSString stringWithFormat:@"%@", @"Somewhat"];
-    } else if (val > 66 && val < 100) {
-        label = [NSString stringWithFormat:@"%@", @"Very"];
-    }
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
     if (cell) {
-        UILabel *lbl = (UILabel *)[cell viewWithTag:558];
-        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
+        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
+        [self updateLabel:lbl value:val];
     }
-
 }
 
 - (void)updateQuestion4Label:(UISlider *)slider {
+
     int val = (int)[slider value];
-    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
+    if (cell) {
+        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
+        [self updateLabel:lbl value:val];
+    }
+}
+
+- (void)updateLabel:(UILabel *)lbl value:(int)val {
     NSString *label = @"";
     
     if (val > 0 && val <34) {
@@ -178,12 +175,8 @@
     } else if (val > 66 && val < 100) {
         label = [NSString stringWithFormat:@"%@", @"Very"];
     }
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
-    if (cell) {
-        UILabel *lbl = (UILabel *)[cell viewWithTag:559];
-        [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
-    }
-
+    
+    [lbl setText:[NSString stringWithFormat:@"%@: %d", label, val]];
 }
 
 - (IBAction)submit:(id)sender {
@@ -244,7 +237,7 @@
     UISlider *slider;
     UISegmentedControl *segCtrl;
     NSString *str;
-    
+    UILabel *lbl;
     int index = 0;
     id val;
     
@@ -274,8 +267,10 @@
             val = [self.detailItem valueForKey:@"question2"];
             //NSLog([NSString stringWithFormat:@"%@", val]);
             [slider setValue:[[self.detailItem valueForKey:@"question2"] doubleValue]];
-            [self updateQuestion2Label:slider];
             [slider addTarget:self action:@selector(question2ValueChanged:) forControlEvents:UIControlEventValueChanged];
+            lbl = (UILabel *)[cell viewWithTag:559];
+            [self updateLabel:lbl value:[[self.detailItem valueForKey:@"question2"] intValue]];
+            
             break;
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:@"agreementInput" forIndexPath:indexPath];
@@ -287,8 +282,11 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"satisfiedInput" forIndexPath:indexPath];
             slider = (UISlider *)[cell viewWithTag:570];
             [slider setValue:[[self.detailItem valueForKey:@"question4"] doubleValue]];
-            [self updateQuestion4Label:slider];
+            
             [slider addTarget:self action:@selector(question4ValueChanged:) forControlEvents:UIControlEventValueChanged];
+            //[self updateQuestion4Label:slider];
+            lbl = (UILabel *)[cell viewWithTag:559];
+            [self updateLabel:lbl value:[[self.detailItem valueForKey:@"question4"] intValue]];
             break;            
         default:
             break;
