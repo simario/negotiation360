@@ -72,12 +72,6 @@
     NSArray *viewControllers = @[startingViewController];
     [self.wtPageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-    
-
-    
-    //[self addChildViewController:_wtPageController];
-    //[self.view addSubview:_wtPageController.view];
-    
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]){
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         
@@ -89,9 +83,17 @@
                 [self.navigationController.view addSubview:self.overlayView];
                 [self.navigationController.view bringSubviewToFront:self.overlayView];
             }];
+        } else {
+            id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+            if ([sectionInfo numberOfObjects] == 0) {
+                UIImage *overlay = [UIImage imageNamed:@"scorecardOverlay.png"];
+                self.overlayView = [[UIImageView alloc] initWithImage:overlay];
+                self.overlayView.frame = CGRectMake(0, 0, 320, 568);
+                [self.navigationController.view addSubview:self.overlayView];
+                [self.navigationController.view bringSubviewToFront:self.overlayView];
+            }
+            
         }
-        
-        
     }
     
     
@@ -175,6 +177,10 @@
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
+        }
+        
+        if (self.overlayView) {
+            [self.overlayView removeFromSuperview];
         }
         
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
