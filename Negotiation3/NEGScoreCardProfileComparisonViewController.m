@@ -40,6 +40,25 @@
     }
 }
 
+- (int)calc:(int)val question:(int)q {
+    if (val == 0) {
+        return q * 0.5;
+    }
+    if (val == 1) {
+        return q * (1 - 0.25);
+    }
+    if (val == 2) {
+        return q;
+    }
+    if (val == 3) {
+        return (q+((8-q)*0.25));
+    }
+    if (val == 4) {
+        return (q + ((8-q) *0.5));
+    }
+    return -1;
+}
+
 - (void)configureView
 {
     NEGAppDelegate *appDelegate = (NEGAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -75,10 +94,18 @@
         NSString * val3 = [NSString stringWithFormat:@"%i", profileQuestion3];
         NSString * val4 = [NSString stringWithFormat:@"%i", profileQuestion4];
         
+        /*
         NSString * val5 = [NSString stringWithFormat:@"%i", (profileQuestion1 + (scoreCardQuestion5 / 7))];
         NSString * val6 = [NSString stringWithFormat:@"%i", (profileQuestion2 + (scoreCardQuestion6 / 7))];
         NSString * val7 = [NSString stringWithFormat:@"%i", (profileQuestion3 + (scoreCardQuestion7 / 7))];
         NSString * val8 = [NSString stringWithFormat:@"%i", (profileQuestion4 + (scoreCardQuestion8 / 7))];
+         */
+        
+        
+        NSString * val5 = [NSString stringWithFormat:@"%i", [self calc:scoreCardQuestion5 question:profileQuestion1]];
+        NSString * val6 = [NSString stringWithFormat:@"%i", [self calc:scoreCardQuestion6 question:profileQuestion2]];
+        NSString * val7 = [NSString stringWithFormat:@"%i", [self calc:scoreCardQuestion7 question:profileQuestion3]];
+        NSString * val8 = [NSString stringWithFormat:@"%i", [self calc:scoreCardQuestion8 question:profileQuestion4]];
 
         
         

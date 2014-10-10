@@ -602,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGScoreCardProfileComparisonViewController.m"
-            timestampString = "434223467.881267"
+            timestampString = "434601475.221451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-configureView"
             landmarkType = "5">
          </BreakpointContent>
@@ -618,11 +618,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGScoreCardProfileComparisonViewController.m"
-            timestampString = "434223010.614775"
+            timestampString = "434601475.221451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-configureView"
             landmarkType = "5">
          </BreakpointContent>
@@ -634,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Negotiation3/NEGScoreCardProfileComparisonViewController.m"
-            timestampString = "434223010.614775"
+            timestampString = "434601475.221451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-configureView"
             landmarkType = "5">
          </BreakpointContent>
