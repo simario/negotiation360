@@ -103,6 +103,20 @@
     [sender resignFirstResponder];
 }
 
+- (IBAction)nameChanged:(id)sender {
+    UITextField *tf = (UITextField *)sender;
+    [self.detailItem setValue:[tf text] forKey:@"name"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![_context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 - (IBAction)question2ValueChanged:(UISlider *)sender {
 
     [self.detailItem setValue:[NSNumber numberWithInt:(int)sender.value] forKey:@"question2"];
@@ -180,6 +194,47 @@
 }
 
 - (IBAction)submit:(id)sender {
+    
+    NSString *name = (NSString *)[self.detailItem valueForKey:@"name"];
+    name = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([name isEqualToString:@""] || name == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must enter a name for your negotiaion scorecard."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+
+    }
+    
+    
+    int typeNeg = [[self.detailItem valueForKey:@"question1"] intValue];
+    if (typeNeg == -1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must pick a negotiation type for your scorecard."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
+    
+    int agreement = [[self.detailItem valueForKey:@"question3"] intValue];
+    if (agreement == -1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                        message:@"You must select a reponse for whether or not you reached an agreement."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
+    
+    
+    
     [self performSegueWithIdentifier:@"score_card_quiz_2" sender:self];
 }
 
@@ -247,6 +302,7 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"nameInput" forIndexPath:indexPath];
             tf = (UITextField *)[cell viewWithTag:567];
             tf.text = [self.detailItem valueForKey:@"name"];
+            [tf addTarget:self action:@selector(nameChanged:) forControlEvents:UIControlEventValueChanged];
 
             break;
         case 1:
@@ -255,10 +311,10 @@
         case 2:
             cell = [tableView dequeueReusableCellWithIdentifier:@"typeValue" forIndexPath:indexPath];
             index = [[self.detailItem valueForKey:@"question1"] intValue];
-            //NSLog(index);
-            str = (NSString *)[_typeLabels objectAtIndex:index];
-            //cell.textLabel.text = val;
-            cell.textLabel.text = str;
+            if (index != -1) {
+                str = (NSString *)[_typeLabels objectAtIndex:index];
+                cell.textLabel.text = str;
+            }
             break;
         case 3:
             

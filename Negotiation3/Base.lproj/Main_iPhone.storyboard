@@ -154,6 +154,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             <connections>
+                                                <action selector="nameChanged:" destination="YGm-X1-Jse" eventType="valueChanged" id="0KU-7i-MET"/>
+                                                <action selector="nameChanged:" destination="YGm-X1-Jse" eventType="editingChanged" id="xHr-Du-32Y"/>
                                                 <action selector="textFieldFinished:" destination="YGm-X1-Jse" eventType="editingDidEndOnExit" id="sct-ZQ-CSS"/>
                                             </connections>
                                         </textField>
@@ -578,10 +580,13 @@
                     <navigationItem key="navigationItem" title="What Worked Well" id="KkB-WM-4um">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="dwW-Xl-Vcr">
                             <connections>
-                                <segue destination="e7y-NS-vXX" kind="push" id="ehP-fW-1fT"/>
+                                <action selector="submit:" destination="f3C-Nl-nKK" id="Udt-Qc-kbR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="e7y-NS-vXX" kind="push" identifier="to_question_10" id="e4d-Rm-Fy6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2A-a4-zHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1423,10 +1428,13 @@
                     <navigationItem key="navigationItem" title="What Worked Well" id="0GJ-Rs-Yqo">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Efs-EN-aVW">
                             <connections>
-                                <segue destination="kxc-Vk-ShX" kind="push" id="PKR-cn-BDI"/>
+                                <action selector="submit:" destination="e7y-NS-vXX" id="UHN-Yp-9K2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kxc-Vk-ShX" kind="push" identifier="to_question_11" id="1sH-ZG-Zop"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9L-98-JpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1475,10 +1483,13 @@
                     <navigationItem key="navigationItem" title="What Do Different" id="6kc-By-bfe">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="g6l-Ma-8bY">
                             <connections>
-                                <segue destination="vay-z4-l6d" kind="push" id="Raz-Bg-LBi"/>
+                                <action selector="submit:" destination="1OY-5x-WjL" id="XQy-1H-6TJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vay-z4-l6d" kind="push" identifier="scorecard_results" id="TxM-el-1ZU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otK-Fq-Wgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1527,10 +1538,13 @@
                     <navigationItem key="navigationItem" title="What Do Different" id="ExI-24-zHR">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="ZNu-pA-Iyx">
                             <connections>
-                                <segue destination="1OY-5x-WjL" kind="push" id="VaO-yi-aaX"/>
+                                <action selector="submit:" destination="kxc-Vk-ShX" id="nw1-Oa-eYh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="1OY-5x-WjL" kind="push" identifier="to_question_12" id="XD3-wb-Pi1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acj-9l-Z3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1556,6 +1570,6 @@
         <segue reference="XrA-bw-hNd"/>
         <segue reference="RxB-wf-QIq"/>
         <segue reference="oA1-ch-634"/>
-        <segue reference="Q57-xl-Lgr"/>
+        <segue reference="TxM-el-1ZU"/>
     </inferredMetricsTieBreakers>
 </document>

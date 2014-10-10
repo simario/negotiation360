@@ -92,6 +92,23 @@
 
 
 - (IBAction)submit:(id)sender {
+    
+    for (int i = 0; i < [_questionTitles count]; i++) {
+        NSString *key = [NSString stringWithFormat:@"question%ld", (4 + i), nil];
+        int val = [[self.detailItem valueForKey:key] intValue];
+        if (val == -1) {
+            NSString *message = [NSString stringWithFormat:@"You must select a reponse for the question '%@'", (NSString *)[_questionTitles objectAtIndex:i]];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+
+            return;
+        }
+    }
+    
     [self performSegueWithIdentifier:@"score_card_quiz_3_intro" sender:self];
 }
 

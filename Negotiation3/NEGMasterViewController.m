@@ -158,6 +158,7 @@
         
 
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question1"];
         [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question2"];
         [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question3"];
         [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question4"];
@@ -424,7 +425,8 @@
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setContext:context];
-    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"] || [[segue identifier] isEqualToString:@"scorecard_results_from_main"]) {
+    } else if ([[segue identifier] isEqualToString:@"scorecardIntro"] || [[segue identifier] isEqualToString:@"scorecard_results_from_main"] || [[segue identifier] isEqualToString:@"scorecard_quiz_1"]) {
+        
         NSManagedObject *object;
 
         NSIndexPath *indexPath =  [NSIndexPath indexPathForRow:[[self.tableView indexPathForSelectedRow] row] inSection:0];
