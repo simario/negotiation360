@@ -46,11 +46,16 @@
     
     if (self.detailItem) {
         
-        NSString * val1 = (NSString *)[self.detailItem valueForKey:@"question9"];
-        NSString * val2 = (NSString *)[self.detailItem valueForKey:@"question10"];
-        NSString * val3 = (NSString *)[self.detailItem valueForKey:@"question11"];
-        NSString * val4 = (NSString *)[self.detailItem valueForKey:@"question12"];
+        NSString * val1 = (NSString *)[self.detailItem valueForKey:@"name"];
+        NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
+        NSString * val3 = (NSString *)[self.detailItem valueForKey:@"question9"];
+        NSString * val4 = (NSString *)[self.detailItem valueForKey:@"question10"];
+        NSString * val5 = (NSString *)[self.detailItem valueForKey:@"question11"];
+        NSString * val6 = (NSString *)[self.detailItem valueForKey:@"question12"];
 
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"M/d/yy"];
+        NSString *val2 = [format stringFromDate:ts];
         
         NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scorecard-lessons2" ofType:@"html" ]];
         NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
@@ -58,7 +63,9 @@
                                  val1,
                                  val2,
                                  val3,
-                                 val4];
+                                 val4,
+                                 val5,
+                                 val6];
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
         
         [self.webView loadHTMLString:finalString

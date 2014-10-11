@@ -609,7 +609,7 @@
         NSString *dateString = [format stringFromDate:ts];
         
         
-        NSString *t = [NSString stringWithFormat:@"Self Profile, %@", dateString];
+        NSString *t = [NSString stringWithFormat:@"My Self Profile, %@", dateString];
         NSString *s = @"";
         
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
@@ -636,19 +636,19 @@
         
         UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
         
-        [imv setImage:[UIImage imageNamed:@"Compass-32.png"]];
+        [imv setImage:[UIImage imageNamed:@"compass-32.png"]];
         NSString *title = @"My Negotiation";
         NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
         if (storedTitle && ![storedTitle isEqualToString:@""]) {
             title = storedTitle;
         }
-        NSString *t = [NSString stringWithFormat:@"%@, %@", title, dateString];
+        NSString *t = [NSString stringWithFormat:@"%@", title];
         NSString *s = @"";
         
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
         
         if (isComplete) {
-            s = @"Completed.";
+            s = [NSString stringWithFormat:@"Scorecard created %@", dateString];
         } else {
             s = @"In Progress. Tap to Complete.";
         }

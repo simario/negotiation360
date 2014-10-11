@@ -158,14 +158,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CGFloat h = 125;
+    CGFloat h = 105;
     switch (indexPath.item) {
             
         case 0:
-            h = 115;
+            h = 130;
             break;
         default:
-            h = 125;
+            h = 105;
             break;
     }
     return h;
@@ -181,6 +181,8 @@
     NSString *str;
     NSString *key = [NSString stringWithFormat:@"question%ld", (4 + indexPath.row), nil];
     int val = 0;
+    
+    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     switch (indexPath.item) {
         case 0:

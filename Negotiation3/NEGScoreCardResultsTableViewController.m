@@ -181,9 +181,9 @@
             if (storedTitle && ![storedTitle isEqualToString:@""]) {
                 title = storedTitle;
             }
-            title = [NSString stringWithFormat:@"%@, %@", title, dateString];
+            title = [NSString stringWithFormat:@"%@", title];
             cell.textLabel.text = title;
-            cell.detailTextLabel.text = @"placeholder";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Scorecard created %@", dateString];
             break;
         case 1:
             
