@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+            <link rel="stylesheet" href="css/style.css" type="text/css">
+			<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+
+<title></title>
+</head>
+	<body>
+		<div class="alert alert-info" style="margin: 10px auto 10px; width: 280px; height: 200px; max-height: 200px;">
+			<div class="row" style="margin-top:-10px">
+				<div class="col-xs-7" style="margin-right:10px">
+					<span style="font-weight:400; font-size: 14px">Agreement Reached:</span>
+				</div>
+				<div class="col-xs-4" style="font-weight:800; font-size: 14px; line-height:1.14285714285714">
+					%@
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-1" style="margin-right:10px">
+					<span style="font-weight:400; font-size: 14px">Type:</span>
+				</div>
+				<div class="col-xs-10" style="font-size: 14px; line-height:1.14285714285714">
+					%@
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-xs-6" style="margin-left:15px">
+					<div id="importance" data-dimension="80" data-text="%@" data-width="10" data-fontsize="20" data-percent="%@" data-fgcolor="#ff9f33" data-bgcolor="#eee"></div>
+					<span style="font-weight:400; font-size: 14px; margin-left:5px">Importance</span>
+				</div>
+				<div class="col-xs-5" style="font-size: 14px; line-height:1.14285714285714">
+					<div id="satisfaction" data-dimension="80" data-text="%@" data-width="10" data-fontsize="20" data-percent="%@" data-fgcolor="#ff9f33" data-bgcolor="#eee"></div>
+					<span style="font-weight:400; font-size: 14px; margin-left:5px">Satisfaction</span>
+				</div>
+			</div><br>
+		</div>
+				
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="jquery.circliful.min.js"></script>
+		<script>
+		$( document ).ready(function() {
+				$('#importance').circliful();
+				$('#satisfaction').circliful();
+		    });
+		</script>
+		
+	</body>
+</html>

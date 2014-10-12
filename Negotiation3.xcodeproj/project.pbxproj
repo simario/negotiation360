@@ -36,6 +36,9 @@
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
+		6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01319EAEA9300232AF4 /* practices-intro.html */; };
+		6957C01719EAEA9300232AF4 /* practices-performance.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01419EAEA9300232AF4 /* practices-performance.html */; };
+		6957C01819EAEA9300232AF4 /* practices-summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01519EAEA9300232AF4 /* practices-summary.html */; };
 		6960396A1968729900E3C227 /* aboutapp.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039681968729900E3C227 /* aboutapp.html */; };
 		6960396B1968729900E3C227 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039691968729900E3C227 /* help.html */; };
 		6960396E1968756300E3C227 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396C1968756300E3C227 /* test1.html */; };
@@ -237,6 +240,9 @@
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		6957C01319EAEA9300232AF4 /* practices-intro.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-intro.html"; sourceTree = "<group>"; };
+		6957C01419EAEA9300232AF4 /* practices-performance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-performance.html"; sourceTree = "<group>"; };
+		6957C01519EAEA9300232AF4 /* practices-summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-summary.html"; sourceTree = "<group>"; };
 		696039681968729900E3C227 /* aboutapp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aboutapp.html; sourceTree = "<group>"; };
 		696039691968729900E3C227 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		6960396C1968756300E3C227 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
@@ -534,6 +540,9 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				6957C01319EAEA9300232AF4 /* practices-intro.html */,
+				6957C01419EAEA9300232AF4 /* practices-performance.html */,
+				6957C01519EAEA9300232AF4 /* practices-summary.html */,
 				69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */,
 				69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */,
 				6983454919E189290010AA67 /* scorecard-lessons2.html */,
@@ -872,6 +881,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */,
+				6957C01719EAEA9300232AF4 /* practices-performance.html in Resources */,
+				6957C01819EAEA9300232AF4 /* practices-summary.html in Resources */,
 				9156624619D89E1600745751 /* scorecardOverlay.png in Resources */,
 				6944982F1967951B00E6D966 /* styles.css in Resources */,
 				693A91FF19A2AF0600A05DFD /* scorecard-intro.html in Resources */,
