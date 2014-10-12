@@ -94,6 +94,8 @@
 		69E362AB1972B9DC00C9F60C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */; };
 		69E362B21972BC1300C9F60C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B01972BC1300C9F60C /* AdSupport.framework */; };
 		69E362B31972BC1300C9F60C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B11972BC1300C9F60C /* libz.dylib */; };
+		69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */ = {isa = PBXBuildFile; fileRef = 69ED154219EB49AF00BC301A /* practices-wwidd.html */; };
+		69ED154519EB49AF00BC301A /* practices-www.html in Resources */ = {isa = PBXBuildFile; fileRef = 69ED154319EB49AF00BC301A /* practices-www.html */; };
 		69EF5F5C1909EFC200A947AF /* page-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EF5F5B1909EFC200A947AF /* page-6.png */; };
 		910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66F919641D7F00325586 /* NEGProfilesViewController.m */; };
 		910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910D66FC19641DA300325586 /* NEGCompareViewController.m */; };
@@ -308,6 +310,8 @@
 		69E362BB1972D94500C9F60C /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Negotiation3/GoogleAnalytics/GAILogger.h; sourceTree = "<group>"; };
 		69E362BC1972D94500C9F60C /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Negotiation3/GoogleAnalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
 		69E362BD1972D94500C9F60C /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Negotiation3/GoogleAnalytics/GAITracker.h; sourceTree = "<group>"; };
+		69ED154219EB49AF00BC301A /* practices-wwidd.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-wwidd.html"; sourceTree = "<group>"; };
+		69ED154319EB49AF00BC301A /* practices-www.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-www.html"; sourceTree = "<group>"; };
 		69EF5F5B1909EFC200A947AF /* page-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-6.png"; sourceTree = "<group>"; };
 		910D66F819641D7F00325586 /* NEGProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGProfilesViewController.h; sourceTree = "<group>"; };
 		910D66F919641D7F00325586 /* NEGProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGProfilesViewController.m; sourceTree = "<group>"; };
@@ -540,6 +544,8 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				69ED154219EB49AF00BC301A /* practices-wwidd.html */,
+				69ED154319EB49AF00BC301A /* practices-www.html */,
 				6957C01319EAEA9300232AF4 /* practices-intro.html */,
 				6957C01419EAEA9300232AF4 /* practices-performance.html */,
 				6957C01519EAEA9300232AF4 /* practices-summary.html */,
@@ -881,6 +887,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,
+				69ED154519EB49AF00BC301A /* practices-www.html in Resources */,
 				6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */,
 				6957C01719EAEA9300232AF4 /* practices-performance.html in Resources */,
 				6957C01819EAEA9300232AF4 /* practices-summary.html in Resources */,
