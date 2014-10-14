@@ -267,7 +267,7 @@
             h = 45;
             break;
         case 2:
-            h = 20;
+            h = 40;
             break;
         case 3:
             h = 110;
@@ -311,7 +311,7 @@
         case 2:
             cell = [tableView dequeueReusableCellWithIdentifier:@"typeValue" forIndexPath:indexPath];
             index = [[self.detailItem valueForKey:@"question1"] intValue];
-            if (index != -1) {
+            if (index != -1) {;
                 str = (NSString *)[_typeLabels objectAtIndex:index];
                 cell.textLabel.text = str;
             }
