@@ -39,9 +39,7 @@
   </style>
 
 </head>
-<body>
-	<div id="container" style="margin: 10px auto 10px; width: 280px; height: 280px"></div>
-	
+<body>	
 	<div>
 		<p style="margin: 20px; font-size: 14px;">Sometimes your scorecard for a particular negotiation will closely match your self-assessment profile. That shouldn't be surprising, since your profile reflects your general tendencies. But other times it may look very different. Here's why:</p>
 
@@ -52,6 +50,11 @@
 		</ol>
 		
 	</div>
+
+    <div id="agreement" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
+    <div id="type" style="margin: 25px auto 5px; width: 280px; height: 240px"></div>
+    <div id="importance" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
+    <div id="metrics" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
 
 	<div class="alert alert-info" style="margin: 20px;">
 		<div class="row">
@@ -67,107 +70,170 @@
 	<div style="height:100px">
 	</div>
 	
-    <script src="jquery.js"></script>
-    <script src="highcharts.js"></script>
-    <script src="highcharts-more.js"></script>
-    <script src="modules/exporting.js"></script>
-    <script src="minimal.js"></script>
-    <script>
+  <script src="jquery.js"></script>
+  <script src="highcharts.js"></script>
+  <script src="highcharts-more.js"></script>
+  <script src="minimal.js"></script>
+  <script src="modules/exporting.js"></script>
+  <script>
+
 	$(function () {
 
-	    $('#container').highcharts({
+	    $(document).ready(function () {
 
-	        chart: {
-	            polar: true,
-	            borderColor: '#34aadc',
-	            borderWidth: 2,
-	            type: 'line'
-	        },
-
-	        legend: {
-	            enabled: true,
-				margin: 20
-	        },
-
-
-	        title: {
-	            text: null,
-		        margin: 15
-	        },
-
-	        pane: {
-	            size: '14%',
-		        startAngle: -45,
-	        },
-
-	        xAxis: {
-	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
-	            tickmarkPlacement: 'on',
-	            lineWidth: 0,
-				labels: {
-					style: {
-						whiteSpace: 'nowrap'
-					}
-				}
-	        },
-
-	        yAxis: {
-	            lineWidth: 0,
-				tickInterval: 4,
-				step: 2,
-	            endOnTick: false,
-				endOnTick: true,
-	            showLastLabel: true,
-	            startOnTick: true
-	        },
-
-	        tooltip: {
-	            enabled: false
-	        },
-
-			credits: {
-	            enabled: false
-	         },
-
-	        navigation: {
-	            buttonOptions: {
-	                enabled: false
-	            }
-	        },
-
-	        plotOptions: {
-	            series: {
-	                fillOpacity: 0.33,
-	                marker: {
-	                    fillColor: '#FFFFFF',
-	                    lineWidth: 2,
-	                    lineColor: null // inherit from series
+	        // Build the chart
+	        $('#agreement').highcharts({
+	            title: {
+	                text: 'Agreement Rate'
+	            },
+	            tooltip: {
+	                pointFormat: '<b>{point.percentage:.1f}%</b>'
+	            },
+	            plotOptions: {
+	                pie: {
+	                    allowPointSelect: true,
+	                    cursor: 'pointer',
+	                    dataLabels: {
+	                        enabled: false
+	                    },
+	                    showInLegend: true
 	                }
 	            },
-	        },
-
-	        series: [{
-	            name: 'Your Profile',
-	            type: 'area',
-	            data: [%@, %@, %@, %@],
-				lineWidth: 5,
-	            animation: {
-	                duration: 1000
-	            }, 
-	        },	{
-		            name: 'Your Scorecard Performance',
-		            type: 'area',
-		            data: [%@, %@, %@, %@],
-					lineWidth: 5,
-		            animation: {
-		                duration: 2000
-		            }, 
-		        }]
-
+	            series: [{
+	                type: 'pie',
+	                data: [
+	                    ['Yes', 4],
+	                    ['No', 2],
+	                    ['Not yet', 1]
+	                ]
+	            }]
+	        });
 	    });
-	});		
-    </script>
 
+	});
 
+	$(function () {
+
+	    $(document).ready(function () {
+
+	        // Build the chart
+	        $('#type').highcharts({
+	            title: {
+	                text: 'Negotiation Types'
+	            },
+	            tooltip: {
+	                pointFormat: '<b>{point.percentage:.1f}%</b>'
+	            },
+	            plotOptions: {
+	                pie: {
+	                    allowPointSelect: true,
+	                    cursor: 'pointer',
+	                    dataLabels: {
+	                        enabled: false
+	                    },
+	                    showInLegend: true
+	                }
+	            },
+	            series: [{
+	                type: 'pie',
+	                data: [
+	                    ['Prof (Outside)', 2],
+	                    ['Prof (Inside)', 2],
+	                    ['Personal', 1],
+	                    ['Community', 2],
+	                    ['Family', 0]
+	                ]
+	            }]
+	        });
+	    });
+
+	});
+	
+	$(function () {
+	    $('#importance').highcharts({
+	        chart: {
+	            type: 'column'
+	        },
+	        title: {
+	            text: 'Last 5 Scorecards'
+	        },
+	        yAxis: {
+	            title: null
+	        },
+	        xAxis: {
+	            categories: [
+	                '10/10',
+	                '10/12',
+	                '10/14',
+	                '10/16',
+	                '10/19',
+	            ]
+	        },
+	        tooltip: {
+	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+	            footerFormat: '</table>',
+	            shared: true,
+	            useHTML: true
+	        },
+	        plotOptions: {
+	            column: {
+	                pointPadding: 0,
+	                borderWidth: 0
+	            }
+	        },
+	        series: [{
+	            name: 'Importance',
+	            data: [49.9, 71.5, 16.4, 29.2, 44.0]
+
+	        }, {
+	            name: 'Satisfaction',
+	            data: [83.6, 78.8, 93.5, 93.4, 16.0]
+
+	        }]
+	    });
+	});
+	
+	$(function () {
+	    $('#metrics').highcharts({
+	        chart: {
+	            type: 'bar'
+	        },
+	        title: {
+	            text: 'Last 5 Scorecards'
+	        },
+	        yAxis: {
+	            title: null
+	        },
+	        xAxis: {
+	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        tooltip: {
+	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+	            footerFormat: '</table>',
+	            shared: true,
+	            useHTML: true
+	        },
+	        plotOptions: {
+	            column: {
+	                pointPadding: 0,
+	                borderWidth: 0
+	            }
+	        },
+	        series: [{
+	            name: 'Average',
+	            data: [2.1, 3.2, 1.8, 2.7]
+
+	        }]
+	    });
+	});
+
+  </script>
 </body>
 </html>
