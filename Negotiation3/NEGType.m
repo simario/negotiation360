@@ -32,7 +32,7 @@
     
     for (NSMutableDictionary *type in types) {
         NSNumber *distance = [self distance:type create:create assert:assert empathy:empathy claim:claim];
-        NSLog(@"%@", distance);
+        
         if ([distance doubleValue] < [minDist doubleValue]) {
             minDist = distance;
             minType = type;
@@ -51,7 +51,7 @@
     
     for (NSMutableDictionary *type in types) {
         NSNumber *distance = [self distance:type create:create assert:assert empathy:empathy claim:claim];
-        NSLog(@"%@", distance);
+        
         if ([distance doubleValue] > [maxDist doubleValue]) {
             maxDist = distance;
             maxType = type;

@@ -22,7 +22,7 @@
         
         // Update the view.
         [self configureView];
-        NSLog(@"setting detail item");
+        
     }
 }
 

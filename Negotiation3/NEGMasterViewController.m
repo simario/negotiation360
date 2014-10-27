@@ -33,6 +33,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    _lastNumberOfRowsInSection = 0;
     [self.navigationController setToolbarHidden:YES animated:NO];
     NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
@@ -108,6 +109,8 @@
     
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
+    [[GAI sharedInstance].logger setLogLevel:kGAILogLevelNone];
+    
     
 }
 
@@ -116,6 +119,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (int)scorecardCount
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+    return (int)[sectionInfo numberOfObjects];
+}
+
+- (BOOL)hasBestPractices
+{
+    int sc = [self scorecardCount];
+    BOOL result = (sc > 2);
+    return result;
+}
+
 
 - (void)createProfileObject {
     
@@ -288,9 +305,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+
+
+    return 3;
+   
+    if (_processingChange) {
+        return [tableView numberOfSections];
+    }
     
-    
-    return [[self.fetchedResultsController sections] count] + [[self.scFetchedResultsController sections] count];
+    int bestPractices = 0;
+    if ([self hasBestPractices]) {
+        bestPractices = 1;
+    }
+    return [[self.fetchedResultsController sections] count] + [[self.scFetchedResultsController sections] count] + bestPractices;
     //return 2;
 
 }
@@ -299,6 +326,13 @@
     if (section == 0) {
         return @"Your Profile";
     } else if (section == 1) {
+        if ([self hasBestPractices]) {
+            return @"My Best Practices";
+        } else {
+            return @"";
+        }
+        
+    } else if (section == 2) {
         return @"Your Scorecards";
     }
     return @"";
@@ -306,37 +340,68 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    //NSLog([NSString stringWithFormat:@"%li", (long)[tableView numberOfRowsInSection:1], nil]);
+
     if (section == 0) {
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
+    } else if (section == 1) {
+        return 1;
     } else {
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
-        
     }
+}
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    
+    if (indexPath.section == 1) {
+        if(![self hasBestPractices]) {
+            return 0;
+        }
+    }
+    
+    return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    /*
     if (indexPath.section == 0) {
         [self configureCell:cell atIndexPath:indexPath];
     } else if (indexPath.section == 1) {
+        if ([self hasBestPractices]) {
+            [self configureCell:cell atIndexPath:indexPath];
+        } else {
+            [self configureCell:cell atIndexPath:indexPath];
+        }
+        
+    } else {
         [self configureCell:cell atIndexPath:indexPath];
-    }
-    
+    }*/
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    
-    if (indexPath.section > 0) {
-        return YES;
+    if ([self hasBestPractices]) {
+        if (indexPath.section > 1) {
+            return YES;
+        }
+    } else {
+        if (indexPath.section > 0) {
+            return YES;
+        }
     }
+    
     return NO;
 }
 
@@ -356,6 +421,23 @@
             }
         }
     } else if (indexPath.section == 1) {
+        if (![self hasBestPractices]) {
+            if (editingStyle == UITableViewCellEditingStyleDelete) {
+                
+                NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+                NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
+                [context deleteObject:[self.scFetchedResultsController objectAtIndexPath:newIndexPath]];
+                
+                NSError *error = nil;
+                if (![context save:&error]) {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                    abort();
+                }
+            }
+        }
+    } else {
         if (editingStyle == UITableViewCellEditingStyleDelete) {
             
             NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
@@ -399,6 +481,24 @@
             [self performSegueWithIdentifier:@"showDetail" sender:self];
         }
     } else if (indexPath.section == 1) {
+        if (![self hasBestPractices]) {
+            NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+            NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];
+            bool isComplete = [[object valueForKey:@"complete"] boolValue];
+            
+            if (isComplete) {
+                [self performSegueWithIdentifier:@"scorecard_results_from_main" sender:self];
+            } else {
+                id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
+                if ([sectionInfo numberOfObjects] == 1) {
+                    [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
+                } else {
+                    [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
+                }
+                
+            }
+        }
+    } else {
         NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
         NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
@@ -414,6 +514,7 @@
             }
             
         }
+        
     }
 }
 
@@ -532,6 +633,8 @@
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
+     NSLog(@"controllerWillChangeContent");
+    _processingChange = YES;
     [self.tableView beginUpdates];
 }
 
@@ -563,10 +666,19 @@
         t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
     }
     
+    if ([tableView numberOfSections] == 3) {
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
+    }
+    
+    t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
+    
+    
     switch(type) {
         case NSFetchedResultsChangeInsert:
             
+
             [tableView insertRowsAtIndexPaths:@[t] withRowAnimation:UITableViewRowAnimationFade];
+            
             break;
             
         case NSFetchedResultsChangeDelete:
@@ -574,7 +686,8 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:[tableView cellForRowAtIndexPath:t] atIndexPath:t];
+
             break;
             
         case NSFetchedResultsChangeMove:
@@ -582,11 +695,15 @@
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
+    
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
+    _processingChange = NO;
+    [self.tableView reloadData];
+    
 }
 
 /*
@@ -627,36 +744,50 @@
         cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
         cell.detailTextLabel.text = s;
     } else if(indexPath.section == 1) {
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
-        NSManagedObject *object = [self.scFetchedResultsController objectAtIndexPath:ip];
-        NSDate *ts = [object valueForKey:@"timeStamp"];
-        NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d/yy"];
-        NSString *dateString = [format stringFromDate:ts];
-        
-        UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
-        
-        [imv setImage:[UIImage imageNamed:@"compass-32.png"]];
-        NSString *title = @"My Negotiation";
-        NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
-        if (storedTitle && ![storedTitle isEqualToString:@""]) {
-            title = storedTitle;
-        }
-        NSString *t = [NSString stringWithFormat:@"%@", title];
-        NSString *s = @"";
-        
-        bool isComplete = [[object valueForKey:@"complete"] boolValue];
-        
-        if (isComplete) {
-            s = [NSString stringWithFormat:@"Scorecard created %@", dateString];
+        if ([self hasBestPractices]) {
+            cell.textLabel.text = @"My Best Practices";
+            cell.detailTextLabel.text = @"";
+            cell.hidden = NO;
         } else {
-            s = @"In Progress. Tap to Complete.";
+            //[self configureScorecardCell:cell atIndexPath:indexPath];
+            cell.hidden = YES;
         }
-        
-        cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
-        cell.detailTextLabel.text = s;
+    } else {
+        [self configureScorecardCell:cell atIndexPath:indexPath];
     }
 
+}
+
+- (void)configureScorecardCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+    NSManagedObject *object = [self.scFetchedResultsController objectAtIndexPath:ip];
+    NSDate *ts = [object valueForKey:@"timeStamp"];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"M/d/yy"];
+    NSString *dateString = [format stringFromDate:ts];
+    
+    UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
+    
+    [imv setImage:[UIImage imageNamed:@"compass-32.png"]];
+    NSString *title = @"My Negotiation";
+    NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
+    if (storedTitle && ![storedTitle isEqualToString:@""]) {
+        title = storedTitle;
+    }
+    NSString *t = [NSString stringWithFormat:@"%@", title];
+    NSString *s = @"";
+    
+    bool isComplete = [[object valueForKey:@"complete"] boolValue];
+    
+    if (isComplete) {
+        s = [NSString stringWithFormat:@"Scorecard created %@", dateString];
+    } else {
+        s = @"In Progress. Tap to Complete.";
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
+    cell.detailTextLabel.text = s;
 }
 
 @end

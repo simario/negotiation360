@@ -36,6 +36,9 @@
 
 @property (strong, nonatomic) NEGType *negType;
 
+@property bool processingChange;
+@property int lastNumberOfRowsInSection;
+
 @property bool fromNew;
 
 - (IBAction)startWalkthrough:(id)sender;
