@@ -357,15 +357,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    
     if (indexPath.section == 1) {
         if(![self hasBestPractices]) {
             return 0;
         }
     }
     
-    return 40;
+    return 45;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
