@@ -40,7 +40,7 @@
 
 </head>
 <body>	
-	<div>
+	<!--<div>
 		<p style="margin: 20px; font-size: 14px;">Sometimes your scorecard for a particular negotiation will closely match your self-assessment profile. That shouldn't be surprising, since your profile reflects your general tendencies. But other times it may look very different. Here's why:</p>
 
 		<ol style="margin: 20px 20px 20px 40px; font-size: 14px;">
@@ -49,14 +49,14 @@
 			<li>Finally, these scorecard questions were somewhat different from those in the self-assessment. Here you were free to score yourself on each skill independently without making tradeoffs for the other items.</li>
 		</ol>
 		
-	</div>
+	</div> -->
 
     <div id="agreement" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
     <div id="type" style="margin: 25px auto 5px; width: 280px; height: 240px"></div>
     <div id="importance" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
     <div id="metrics" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
 
-	<div class="alert alert-info" style="margin: 20px;">
+<!--	<div class="alert alert-info" style="margin: 20px;">
 		<div class="row">
 			<div class="col-xs-1" style="margin-right:10px">
 				<span data-icon="&#xe030;" style="font-size: 24px"></span>
@@ -65,7 +65,7 @@
 				Take a moment to review your answers, plus your scorecard profile, and reflect more broadly about how this negotiation unfolded. When you’re done, continue on to the next section.
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<div style="height:100px">
 	</div>
@@ -99,6 +99,12 @@
 	                    showInLegend: true
 	                }
 	            },
+				credits: {
+				      enabled: false
+				},
+				exporting: { 
+						enabled: false 
+				},
 	            series: [{
 	                type: 'pie',
 	                data: [
@@ -134,6 +140,12 @@
 	                    showInLegend: true
 	                }
 	            },
+				credits: {
+				      enabled: false
+				},
+				exporting: { 
+						enabled: false 
+				},
 	            series: [{
 	                type: 'pie',
 	                data: [
@@ -155,19 +167,15 @@
 	            type: 'column'
 	        },
 	        title: {
-	            text: 'Last 5 Scorecards'
+	            text: 'Recent Scorecards'
 	        },
 	        yAxis: {
-	            title: null
+	            title: null,
+				max: 100,
+				tickInterval: 25
 	        },
 	        xAxis: {
-	            categories: [
-	                '10/10',
-	                '10/12',
-	                '10/14',
-	                '10/16',
-	                '10/19',
-	            ]
+	            categories: ['10/10','10/12','10/14','10/16','10/19']
 	        },
 	        tooltip: {
 	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
@@ -183,13 +191,18 @@
 	                borderWidth: 0
 	            }
 	        },
+			credits: {
+			      enabled: false
+			},
+			exporting: { 
+					enabled: false 
+			},
 	        series: [{
 	            name: 'Importance',
-	            data: [49.9, 71.5, 16.4, 29.2, 44.0]
-
+	            data: [49.9, 11.5, 16.4, 29.2, 44.0]
 	        }, {
 	            name: 'Satisfaction',
-	            data: [83.6, 78.8, 93.5, 93.4, 16.0]
+	            data: [43.6, 38.8, 23.5, 23.4, 16.0]
 
 	        }]
 	    });
@@ -201,10 +214,12 @@
 	            type: 'bar'
 	        },
 	        title: {
-	            text: 'Last 5 Scorecards'
+	            text: 'Recent Scorecards'
 	        },
 	        yAxis: {
-	            title: null
+	            title: null,
+				max: 5,
+				tickInterval: 1
 	        },
 	        xAxis: {
 	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
@@ -226,6 +241,12 @@
 	                borderWidth: 0
 	            }
 	        },
+			credits: {
+			      enabled: false
+			},
+			exporting: { 
+					enabled: false 
+			},
 	        series: [{
 	            name: 'Average',
 	            data: [2.1, 3.2, 1.8, 2.7]
