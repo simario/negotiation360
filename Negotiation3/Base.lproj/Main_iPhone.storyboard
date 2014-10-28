@@ -5,6 +5,35 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Notes Table View Controller-->
+        <scene sceneID="Nhi-GG-r4Y">
+            <objects>
+                <tableViewController id="HCL-za-HeV" customClass="NEGNotesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZAc-fA-7iI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GSm-5g-gtM">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSm-5g-gtM" id="4py-1Y-fmJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HCL-za-HeV" id="nsJ-Tf-Ogp"/>
+                            <outlet property="delegate" destination="HCL-za-HeV" id="SlZ-UO-bz3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XI6-V0-wQ6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-Ok-GzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1782" y="-2058"/>
+        </scene>
         <!--Best Practices Summary Table View Controller-->
         <scene sceneID="xOT-rE-YBg">
             <objects>
@@ -90,6 +119,8 @@
                         <segue destination="CIG-ox-MP6" kind="push" identifier="best_practices_www" id="2I6-NU-qqr"/>
                         <segue destination="bT9-IB-NZy" kind="push" identifier="best_practices_wwid" id="XiK-Ex-mwY"/>
                         <segue destination="gOq-bW-MTt" kind="push" identifier="best_practices_performance" id="Wyy-VB-qia"/>
+                        <segue destination="rpL-Wq-mLA" kind="push" identifier="best_practices_skills" id="lQh-b3-pxJ"/>
+                        <segue destination="HCL-za-HeV" kind="push" identifier="best_practices_notes" id="GHC-Fh-jPE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoQ-xa-NuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1773,6 +1804,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ice-OJ-qSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-875" y="-1151"/>
+        </scene>
+        <!--Skills View Controller-->
+        <scene sceneID="u8g-8Y-aH2">
+            <objects>
+                <viewController id="rpL-Wq-mLA" customClass="NEGSkillsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgY-4l-Rec"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLb-H9-uy5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqA-Ed-hQn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-5t-kFg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ceM-TG-K7A"/>
+                    <connections>
+                        <outlet property="webView" destination="PV8-5t-kFg" id="MAt-rW-mk7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b71-gi-Ipg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1307" y="-2635"/>
         </scene>
     </scenes>
     <resources>

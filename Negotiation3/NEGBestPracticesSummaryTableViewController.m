@@ -225,10 +225,10 @@
             [self performSegueWithIdentifier:@"best_practices_performance" sender:self];
             break;
         case 5:
-            //[self performSegueWithIdentifier:@"skills" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_notes" sender:self];
             break;
         case 6:
-            //[self performSegueWithIdentifier:@"skills" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_skills" sender:self];
             break;
             
         default:
