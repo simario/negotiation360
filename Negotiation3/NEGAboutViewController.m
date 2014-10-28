@@ -30,7 +30,7 @@
         
         // Update the view.
         [self configureView];
-        NSLog(@"setting detail item");
+        
     }
 }
 
@@ -38,7 +38,7 @@
 {
     if (_context != newContext) {
         _context = newContext;
-        NSLog(@"setting context");
+        
     }
 }
 

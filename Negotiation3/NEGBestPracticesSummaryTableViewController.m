@@ -1,34 +1,33 @@
 //
-//  NEGResultsOverviewViewController.m
+//  NEGBestPracticesSummaryTableViewController.m
 //  Negotiation3
 //
-//  Created by chermann on 3/22/14.
+//  Created by chermann on 10/27/14.
 //  Copyright (c) 2014 Negotiation 3.0. All rights reserved.
 //
 
-#import "NEGResultsOverviewViewController.h"
+#import "NEGBestPracticesSummaryTableViewController.h"
+
 #import "NEGAppDelegate.h"
 
 #import "GAITracker.h"
-#import "GAI.h" 
+#import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@interface NEGResultsOverviewViewController ()
+@interface NEGBestPracticesSummaryTableViewController ()
 
 @end
 
-@implementation NEGResultsOverviewViewController
-
-#pragma mark - Managing the detail item
+@implementation NEGBestPracticesSummaryTableViewController
 
 - (IBAction)compose:(UIBarButtonItem *)sender {
     if ([MFMailComposeViewController canSendMail])
     {
         [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
         [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, nil]];
-
+        
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         
         mailer.mailComposeDelegate = self;
@@ -53,23 +52,12 @@
                                                                label:@"Email Results" // Event label
                                                                value:nil] build]];    // Event value
         
-        NSString *create = [NSString stringWithFormat:@"Creating Value: %@\n", [self.detailItem valueForKey:@"question1"]];
-        NSString *assert = [NSString stringWithFormat:@"Assertiveness: %@\n", [self.detailItem valueForKey:@"question2"]];
-        NSString *empathy = [NSString stringWithFormat:@"Empathy: %@\n", [self.detailItem valueForKey:@"question3"]];
-        NSString *claim = [NSString stringWithFormat:@"Claiming Value: %@\n", [self.detailItem valueForKey:@"question4"]];
-        NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness: %@\n", [self.detailItem valueForKey:@"question5"]];
-        
-        NEGType *t = [[NEGType alloc] init];
-        NSMutableDictionary *type = [t getType:self.detailItem];
-        NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
-        
-        NSString *resultType = [NSString stringWithFormat:@"My Type: %@\n", [nearest objectForKey:@"label"]];
-        
-        
-        
-        NSString *emailBody = [NSString stringWithFormat:@"%@%@%@%@%@%@", create, assert, empathy, claim, comparedEffect, resultType];
-        [mailer setMessageBody:emailBody isHTML:NO];
 
+        
+        
+        NSString *emailBody = [NSString stringWithFormat:@"%@%@%@%@%@%@", @"", @"", @"", @"", @"", @""];
+        [mailer setMessageBody:emailBody isHTML:NO];
+        
         [self presentViewController:mailer animated:YES completion:nil];
         
     }
@@ -109,20 +97,21 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x34aadc)];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
-
+    
 }
 
 - (void)configureGraph:(UITableViewCell *)cell {
+    /*
     id create = [self.detailItem valueForKey:@"question1"];
     id assert = [self.detailItem valueForKey:@"question2"];
     id empathy = [self.detailItem valueForKey:@"question3"];
     id claim = [self.detailItem valueForKey:@"question4"];
+    */
     
-    
-    NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"overview" ofType:@"html" ]];
+    NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"practices-summary" ofType:@"html" ]];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
-    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", create, empathy, claim, assert];
+    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", @"", @"", @"", @""];
     
     
     
@@ -135,18 +124,7 @@
                     baseURL:url];
 }
 
-- (void)configureType:(UITableViewCell *)cell {
-    NEGType *t = [[NEGType alloc] init];
-    NSMutableDictionary *type = [t getType:self.detailItem];
-    NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d/yy"];
-    NSString *dateString = [format stringFromDate:ts];
-    NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Self Profile, %@", dateString];
-    cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
-}
 
 #pragma mark - Table view data source
 
@@ -161,7 +139,7 @@
 {
     
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 
@@ -180,7 +158,8 @@
     switch (indexPath.item) {
         case 0:
             //cell.textLabel.text = @"Type";
-            [self configureType:cell];
+            cell.textLabel.text = @"My Best Practices";
+            cell.detailTextLabel.text = @"asdf asf asdf";
             break;
         case 1:
             
@@ -188,23 +167,27 @@
             [self configureGraph:cell];
             
             break;
-        
+            
         case 2:
-            cell.textLabel.text = @"Negotiation Dilemmas";
+            cell.textLabel.text = @"What Worked Well";
             cell.imageView.image = [UIImage imageNamed:@"one-blue.png"];
             break;
-        
+            
         case 3:
-            cell.textLabel.text = @"Bargaining Styles";
+            cell.textLabel.text = @"What Would I Do Different";
             cell.imageView.image = [UIImage imageNamed:@"two-blue.png"];
             break;
-        
+            
         case 4:
-            cell.textLabel.text = @"Your Personal Profile";
+            cell.textLabel.text = @"Negotiation Performance";
             cell.imageView.image = [UIImage imageNamed:@"three-blue.png"];
             break;
             
         case 5:
+            cell.textLabel.text = @"Negotiation Notes";
+            cell.imageView.image = [UIImage imageNamed:@"four-blue.png"];
+            break;
+        case 6:
             cell.textLabel.text = @"Skill-Building Tips";
             cell.imageView.image = [UIImage imageNamed:@"four-blue.png"];
             break;
@@ -231,18 +214,21 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.item) {
-        
+            
         case 2:
-            [self performSegueWithIdentifier:@"delimas" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_www" sender:self];
             break;
         case 3:
-            [self performSegueWithIdentifier:@"profiles" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_wwid" sender:self];
             break;
         case 4:
-            [self performSegueWithIdentifier:@"your_profile" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_performance" sender:self];
             break;
         case 5:
-            [self performSegueWithIdentifier:@"skills" sender:self];
+            //[self performSegueWithIdentifier:@"skills" sender:self];
+            break;
+        case 6:
+            //[self performSegueWithIdentifier:@"skills" sender:self];
             break;
             
         default:
@@ -250,35 +236,6 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-   // NSLog([segue identifier]);
-    if (![[segue identifier] isEqualToString:@"back_to_main"]) {
-        [[segue destinationViewController] setDetailItem:_detailItem];
-        [[segue destinationViewController] setContext:_context];
-    }
-    
-}
-
-
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-        
-    }
-}
-
-- (void)setContext:(id)newContext
-{
-    if (_context != newContext) {
-        _context = newContext;
-        NSLog(@"setting context");
-    }
-}
 
 - (void)configureView
 {
@@ -295,22 +252,7 @@
      
      }*/
     
-    if (self.detailItem) {
-        
-        bool isComplete = [[self.detailItem valueForKey:@"complete"] boolValue];
-        if (!isComplete) {
-            [self.detailItem setValue:[NSNumber numberWithBool:YES] forKey:@"complete"];
-            NSError *error = nil;
-            if (_context) {
-                if (![_context save:&error]) {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-                    abort();
-                }
-            }
-        }
-    }
+
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -325,10 +267,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Set screen name.
     self.screenName = @"Feedback & Analysis";
-
+    
     // Do any additional setup after loading the view.
     [self configureView];
     
@@ -340,15 +282,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
