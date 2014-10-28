@@ -479,23 +479,7 @@
             [self performSegueWithIdentifier:@"showDetail" sender:self];
         }
     } else if (indexPath.section == 1) {
-        if (![self hasBestPractices]) {
-            NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
-            NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];
-            bool isComplete = [[object valueForKey:@"complete"] boolValue];
-            
-            if (isComplete) {
-                [self performSegueWithIdentifier:@"scorecard_results_from_main" sender:self];
-            } else {
-                id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
-                if ([sectionInfo numberOfObjects] == 1) {
-                    [self performSegueWithIdentifier:@"scorecardIntro" sender:self];
-                } else {
-                    [self performSegueWithIdentifier:@"scorecard_quiz_1" sender:self];
-                }
-                
-            }
-        }
+        [self performSegueWithIdentifier:@"best_practices_intro" sender:self];
     } else {
         NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
         NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];

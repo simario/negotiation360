@@ -108,6 +108,12 @@
 		9115A79A18DF7D5300FBDB5C /* NEGSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9115A79918DF7D5300FBDB5C /* NEGSkillsViewController.m */; };
 		9121678718E50DED00DEEC00 /* NEGLinksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9121678618E50DED00DEEC00 /* NEGLinksTableViewController.m */; };
 		9121678A18E5176400DEEC00 /* NEGProfilesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9121678918E5176400DEEC00 /* NEGProfilesTableViewController.m */; };
+		9130E82319FF37370025F645 /* NEGBestPracticesIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E82219FF37370025F645 /* NEGBestPracticesIntroViewController.m */; };
+		9130E82619FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E82519FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m */; };
+		9130E82919FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E82819FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m */; };
+		9130E82F19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E82E19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m */; };
+		9130E83219FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E83119FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m */; };
+		9130E83519FF3D9B0025F645 /* NEGNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9130E83419FF3D9B0025F645 /* NEGNotesTableViewController.m */; };
 		9141F3B018E8423400D2A782 /* skills.html in Resources */ = {isa = PBXBuildFile; fileRef = 9141F3AF18E8423400D2A782 /* skills.html */; };
 		9147FC1019E0A36E0040CC97 /* NEGScoreCardNegTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC0F19E0A36E0040CC97 /* NEGScoreCardNegTypesTableViewController.m */; };
 		9147FC1319E0F3C90040CC97 /* NEGScoreCardQuiz2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC1219E0F3C90040CC97 /* NEGScoreCardQuiz2TableViewController.m */; };
@@ -334,6 +340,18 @@
 		9121678618E50DED00DEEC00 /* NEGLinksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGLinksTableViewController.m; sourceTree = "<group>"; };
 		9121678818E5176400DEEC00 /* NEGProfilesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGProfilesTableViewController.h; sourceTree = "<group>"; };
 		9121678918E5176400DEEC00 /* NEGProfilesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGProfilesTableViewController.m; sourceTree = "<group>"; };
+		9130E82119FF37370025F645 /* NEGBestPracticesIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGBestPracticesIntroViewController.h; sourceTree = "<group>"; };
+		9130E82219FF37370025F645 /* NEGBestPracticesIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGBestPracticesIntroViewController.m; sourceTree = "<group>"; };
+		9130E82419FF38090025F645 /* NEGBestPracticesSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGBestPracticesSummaryTableViewController.h; sourceTree = "<group>"; };
+		9130E82519FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGBestPracticesSummaryTableViewController.m; sourceTree = "<group>"; };
+		9130E82719FF3CEF0025F645 /* NEGBestPracticesWWWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGBestPracticesWWWViewController.h; sourceTree = "<group>"; };
+		9130E82819FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGBestPracticesWWWViewController.m; sourceTree = "<group>"; };
+		9130E82D19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGBestPracticesWWIDViewController.h; sourceTree = "<group>"; };
+		9130E82E19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGBestPracticesWWIDViewController.m; sourceTree = "<group>"; };
+		9130E83019FF3D640025F645 /* NEGBestPracticesPerformanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGBestPracticesPerformanceViewController.h; sourceTree = "<group>"; };
+		9130E83119FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGBestPracticesPerformanceViewController.m; sourceTree = "<group>"; };
+		9130E83319FF3D9B0025F645 /* NEGNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGNotesTableViewController.h; sourceTree = "<group>"; };
+		9130E83419FF3D9B0025F645 /* NEGNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGNotesTableViewController.m; sourceTree = "<group>"; };
 		9141F3AF18E8423400D2A782 /* skills.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = skills.html; path = Negotiation3/reports/skills.html; sourceTree = SOURCE_ROOT; };
 		9147FC0E19E0A36E0040CC97 /* NEGScoreCardNegTypesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGScoreCardNegTypesTableViewController.h; sourceTree = "<group>"; };
 		9147FC0F19E0A36E0040CC97 /* NEGScoreCardNegTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGScoreCardNegTypesTableViewController.m; sourceTree = "<group>"; };
@@ -773,6 +791,18 @@
 				9147FC2E19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m */,
 				9147FC3019E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.h */,
 				9147FC3119E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m */,
+				9130E82119FF37370025F645 /* NEGBestPracticesIntroViewController.h */,
+				9130E82219FF37370025F645 /* NEGBestPracticesIntroViewController.m */,
+				9130E82419FF38090025F645 /* NEGBestPracticesSummaryTableViewController.h */,
+				9130E82519FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m */,
+				9130E82719FF3CEF0025F645 /* NEGBestPracticesWWWViewController.h */,
+				9130E82819FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m */,
+				9130E82D19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.h */,
+				9130E82E19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m */,
+				9130E83019FF3D640025F645 /* NEGBestPracticesPerformanceViewController.h */,
+				9130E83119FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m */,
+				9130E83319FF3D9B0025F645 /* NEGNotesTableViewController.h */,
+				9130E83419FF3D9B0025F645 /* NEGNotesTableViewController.m */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -1017,6 +1047,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9130E82919FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m in Sources */,
 				69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */,
 				69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */,
 				91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */,
@@ -1041,11 +1072,15 @@
 				9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */,
 				91B66A1C18DE2BB500DBA430 /* dark-blue.js in Sources */,
 				91B66A1F18DE2BB500DBA430 /* grid.js in Sources */,
+				9130E83219FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m in Sources */,
+				9130E83519FF3D9B0025F645 /* NEGNotesTableViewController.m in Sources */,
 				9147FC2619E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m in Sources */,
 				9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */,
 				91B66A1018DE2BB500DBA430 /* canvas-tools.src.js in Sources */,
 				91D3E1AD18B91BD400FC14F7 /* NEGMasterViewController.m in Sources */,
 				9121678718E50DED00DEEC00 /* NEGLinksTableViewController.m in Sources */,
+				9130E82319FF37370025F645 /* NEGBestPracticesIntroViewController.m in Sources */,
+				9130E82619FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m in Sources */,
 				91B66A1718DE2BB500DBA430 /* funnel.js in Sources */,
 				91B66A0D18DE2BB500DBA430 /* highcharts.src.js in Sources */,
 				910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */,
@@ -1055,6 +1090,7 @@
 				91B66A1A18DE2BB500DBA430 /* no-data-to-display.src.js in Sources */,
 				91B66A0F18DE2BB500DBA430 /* canvas-tools.js in Sources */,
 				91B66A0318DE2BB500DBA430 /* mootools-adapter.js in Sources */,
+				9130E82F19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m in Sources */,
 				9147FC2C19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m in Sources */,
 				91B66A1118DE2BB500DBA430 /* data.js in Sources */,
 				9115A79A18DF7D5300FBDB5C /* NEGSkillsViewController.m in Sources */,
