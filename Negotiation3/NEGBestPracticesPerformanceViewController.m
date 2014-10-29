@@ -42,7 +42,16 @@
     double averageEmpathy = 0.0;
     double averageClaimingValue = 0.0;
     double averageAssert = 0.0;
+    
+    
+    int creatingValueTotal = 0;
+    int empathyTotal = 0;
+    int claimingValueTotal = 0;
+    int assertTotal = 0;
 
+    if (len > 5) {
+        len = 5;
+    }
     
     for (int i = 0; i < len; i++) {
         
@@ -51,6 +60,11 @@
         if (i < len - 1) {
             comma = @",";
         }
+        
+        creatingValueTotal += [[detailItem valueForKey:@"question5"] intValue];
+        empathyTotal += [[detailItem valueForKey:@"question6"] intValue];
+        claimingValueTotal += [[detailItem valueForKey:@"question7"] intValue];
+        assertTotal += [[detailItem valueForKey:@"question8"] intValue];
         
         NSDate *ts = [detailItem valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -104,11 +118,17 @@
         }
     }
     
+    averageCreatingValue = creatingValueTotal / len;
+    averageEmpathy = empathyTotal / len;
+    averageClaimingValue = claimingValueTotal / len;
+    averageAssert = assertTotal / len;
+    
     dates = [NSString stringWithFormat:@"%@]", dates, nil];
     importance = [NSString stringWithFormat:@"%@]", importance, nil];
     satisfaction = [NSString stringWithFormat:@"%@]", satisfaction, nil];
     names = [NSString stringWithFormat:@"%@]", names, nil];
     
+    NSString *numScorecardsStr = [NSString stringWithFormat:@"var numScorecards = %li;", (long)len,nil];
     NSString *yesCountStr = [NSString stringWithFormat:@"var yesCount = %li;", (long)yesCount,nil];
     NSString *noCountStr = [NSString stringWithFormat:@"var noCount = %li;", (long)noCount,nil];
     NSString *notYetCountStr = [NSString stringWithFormat:@"var notYetCount = %li;", (long)notYetCount,nil];
@@ -122,16 +142,14 @@
     NSString *satisfactionStr = [NSString stringWithFormat:@"var satisfaction = %@;", satisfaction, nil];
     NSString *namesStr = [NSString stringWithFormat:@"var names = %@;", names, nil];
     
-    
     NSString *scorecardsUsedStr = [NSString stringWithFormat:@"var scorecardsUsed = %li;", (long)scorecardsUsed, nil];
     NSString *averageCreatingValueStr = [NSString stringWithFormat:@"var averageCreatingValue = %f;", averageCreatingValue, nil];
     NSString *averageEmpathyStr = [NSString stringWithFormat:@"var averageEmpathy = %f;", averageEmpathy, nil];
     NSString *averageClaimingValueStr = [NSString stringWithFormat:@"var averageClaimingValue = %f;", averageClaimingValue, nil];
     NSString *averageAssertStr = [NSString stringWithFormat:@"var averageAssert = %f;", averageAssert, nil];
     
-    
-    
-    NSString *output = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n",
+    NSString *output = [NSString stringWithFormat:@"\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n",
+                        numScorecardsStr,
                         yesCountStr,
                         noCountStr,
                         notYetCountStr,
