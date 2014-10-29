@@ -14,6 +14,7 @@
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 
+
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface NEGBestPracticesSummaryTableViewController ()
@@ -101,21 +102,45 @@
 }
 
 - (void)configureGraph:(UITableViewCell *)cell {
-    /*
-    id create = [self.detailItem valueForKey:@"question1"];
-    id assert = [self.detailItem valueForKey:@"question2"];
-    id empathy = [self.detailItem valueForKey:@"question3"];
-    id claim = [self.detailItem valueForKey:@"question4"];
-    */
+    
+    NEGAppDelegate *appDelegate = (NEGAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = appDelegate.managedObjectContext;
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
+    int len = (int)[sectionInfo numberOfObjects];
+    int yesCount = 0;
+    int noCount = 0;
+    int notYetCount = 0;
+    for (int i = 0; i < len; i++) {
+        
+        id detailItem = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        
+        int val = [[detailItem valueForKey:@"question3"] intValue];
+        
+        switch (val) {
+            case 0:
+                yesCount++;
+                break;
+            case 1:
+                noCount++;
+                break;
+            case 2:
+                notYetCount++;
+                break;
+                
+            default:
+                break;
+        }
+    }
     
     NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"practices-summary" ofType:@"html" ]];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     
-    NSString *js = [NSString stringWithFormat:@"%@, %@, %@, %@", @"", @"", @"", @""];
     
     
     
-    htmlString = [NSString stringWithFormat:htmlString, js];
+    
+    htmlString = [NSString stringWithFormat:htmlString, (long)yesCount, (long)noCount, (long)notYetCount];
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/", [[NSBundle mainBundle] bundlePath]]];
     
     UIWebView *webView = (UIWebView *)[cell viewWithTag:999];
@@ -225,10 +250,10 @@
             [self performSegueWithIdentifier:@"best_practices_performance" sender:self];
             break;
         case 5:
-            //[self performSegueWithIdentifier:@"skills" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_notes" sender:self];
             break;
         case 6:
-            //[self performSegueWithIdentifier:@"skills" sender:self];
+            [self performSegueWithIdentifier:@"best_practices_skills" sender:self];
             break;
             
         default:
@@ -254,6 +279,44 @@
     
 
 }
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Scorecard" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    //aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+	NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
+    
+    return _fetchedResultsController;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

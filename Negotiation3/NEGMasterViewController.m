@@ -615,7 +615,7 @@
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-     NSLog(@"controllerWillChangeContent");
+
     _processingChange = YES;
     [self.tableView beginUpdates];
 }
