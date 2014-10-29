@@ -38,6 +38,7 @@
 
   </style>
 
+
 </head>
 <body>	
 	<!--<div>
@@ -69,6 +70,8 @@
 	
 	<div style="height:100px">
 	</div>
+    <div id="debug" style="color:#000;"></div>
+        
 	
   <script src="jquery.js"></script>
   <script src="highcharts.js"></script>
@@ -80,6 +83,31 @@
 	$(function () {
 
 	    $(document).ready(function () {
+          %@
+          
+                          
+                          
+          var debug = 'noCount = ' + noCount + '<br/>' +
+          'notYetCount = ' + notYetCount + '<br/>' +
+          'proOutsidePartiesCount = ' + proOutsidePartiesCount + '<br/>' +
+          'proColleaguesCount = ' + proColleaguesCount + '<br/>' +
+          'personalCount = ' + personalCount + '<br/>' +
+          'communityCount = ' + communityCount + '<br/>' +
+          'familyCount = ' + familyCount + '<br/>' +
+          'dates = ' + dates + '<br/>' +
+          'importance = ' + importance + '<br/>' +
+          'satisfaction = ' +  satisfaction + '<br/>' +
+          'names = ' + names + '<br/>' +
+          'scorecardsUsed = ' + scorecardsUsed + '<br/>' +
+          'averageCreatingValue = ' + averageCreatingValue + '<br/>' +
+          'averageEmpathy = ' + averageEmpathy + '<br/>' +
+          'averageClaimingValue = ' + averageClaimingValue + '<br/>' +
+          'averageAssert = ' + averageAssert;
+
+                          $('#debug').html(debug);
+                          
+                          
+                          
 
 	        // Build the chart
 	        $('#agreement').highcharts({
