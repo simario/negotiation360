@@ -34,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-1782" y="-2058"/>
         </scene>
-        <!--Best Practices Summary Table View Controller-->
+        <!--My Best Practices-->
         <scene sceneID="xOT-rE-YBg">
             <objects>
                 <tableViewController id="xik-SU-g5Q" customClass="NEGBestPracticesSummaryTableViewController" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="user_male4-32.png" id="JX5-wr-TZA">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="best-practices.png" id="JX5-wr-TZA">
                                             <rect key="frame" x="15" y="11" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -79,7 +79,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <webView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpF-d6-Ksa">
+                                        <webView tag="999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpF-d6-Ksa">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </webView>
@@ -100,7 +100,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="one-blue.png" id="2QA-ay-X0G">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="purple-one.png" id="2QA-ay-X0G">
                                             <rect key="frame" x="15" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -114,7 +114,7 @@
                             <outlet property="delegate" destination="xik-SU-g5Q" id="867-ho-eos"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="CGA-Db-MMq"/>
+                    <navigationItem key="navigationItem" title="My Best Practices" id="CGA-Db-MMq"/>
                     <connections>
                         <segue destination="CIG-ox-MP6" kind="push" identifier="best_practices_www" id="2I6-NU-qqr"/>
                         <segue destination="bT9-IB-NZy" kind="push" identifier="best_practices_wwid" id="XiK-Ex-mwY"/>
@@ -127,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="-1318" y="-1696"/>
         </scene>
-        <!--Best PracticesWWW View Controller-->
+        <!--WWW-->
         <scene sceneID="gXS-0a-svG">
             <objects>
                 <viewController id="CIG-ox-MP6" customClass="NEGBestPracticesWWWViewController" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Am1-bG-CUV"/>
+                    <navigationItem key="navigationItem" title="WWW" id="Am1-bG-CUV"/>
                     <connections>
                         <outlet property="webView" destination="eqS-lt-FMl" id="BUa-vp-5a7"/>
                     </connections>
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="-779" y="-2223"/>
         </scene>
-        <!--Best Practices Intro View Controller-->
+        <!--My Best Practices-->
         <scene sceneID="Mp8-PO-AJg">
             <objects>
                 <viewController id="frs-fP-9VL" customClass="NEGBestPracticesIntroViewController" sceneMemberID="viewController">
@@ -174,7 +174,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aEk-hp-wcO">
+                    <navigationItem key="navigationItem" title="My Best Practices" id="aEk-hp-wcO">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="tKk-88-Bhw">
                             <connections>
                                 <segue destination="xik-SU-g5Q" kind="push" id="clc-Mc-shJ"/>
@@ -533,7 +533,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructions" rowHeight="130" id="GUm-G4-bTa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructions" rowHeight="115" id="GUm-G4-bTa">
                                 <rect key="frame" x="0.0" y="22" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GUm-G4-bTa" id="kbZ-O4-X3X">
@@ -541,7 +541,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="123"/>
+                                            <rect key="frame" x="15" y="3" width="290" height="123"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <string key="text">Now, put the result aside for the moment. Focus solely on how you managed the negotiation process, compared to usual. It’s possible that you did better on most of the dimensions below. If so, congratulations! If not, we’ll show you how to do better next time.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
@@ -550,7 +550,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sliderInput" rowHeight="104" id="bgE-zK-IIM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sliderInput" rowHeight="95" id="bgE-zK-IIM">
                                 <rect key="frame" x="0.0" y="152" width="320" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bgE-zK-IIM" id="J6F-vw-ELZ">
@@ -558,7 +558,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-bD-FeX">
-                                            <rect key="frame" x="20" y="52" width="280" height="29"/>
+                                            <rect key="frame" x="20" y="49" width="280" height="29"/>
                                             <segments>
                                                 <segment title="" image="much-worse.png"/>
                                                 <segment title="" image="somewhat-worse.png"/>
@@ -569,7 +569,7 @@
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </segmentedControl>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How important was this?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zo-al-K2a">
-                                            <rect key="frame" x="20" y="0.0" width="280" height="59"/>
+                                            <rect key="frame" x="20" y="0.0" width="280" height="46"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -1745,7 +1745,7 @@
             </objects>
             <point key="canvasLocation" x="908" y="1716"/>
         </scene>
-        <!--Best PracticesWWID View Controller-->
+        <!--WWIDD-->
         <scene sceneID="aTr-rX-Mtq">
             <objects>
                 <viewController id="bT9-IB-NZy" customClass="NEGBestPracticesWWIDViewController" sceneMemberID="viewController">
@@ -1764,7 +1764,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yl4-Ke-gm4"/>
+                    <navigationItem key="navigationItem" title="WWIDD" id="yl4-Ke-gm4"/>
                     <connections>
                         <outlet property="webView" destination="BYM-W7-pc2" id="I2N-RW-YC3"/>
                     </connections>
@@ -1801,7 +1801,7 @@
             </objects>
             <point key="canvasLocation" x="-875" y="-1151"/>
         </scene>
-        <!--Skills View Controller-->
+        <!--Tips-->
         <scene sceneID="u8g-8Y-aH2">
             <objects>
                 <viewController id="rpL-Wq-mLA" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -1815,13 +1815,12 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-5t-kFg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ceM-TG-K7A"/>
+                    <navigationItem key="navigationItem" title="Tips" id="ceM-TG-K7A"/>
                     <connections>
                         <outlet property="webView" destination="PV8-5t-kFg" id="MAt-rW-mk7"/>
                     </connections>
@@ -1832,17 +1831,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="best-practices.png" width="32" height="32"/>
         <image name="briefcase-25.png" width="22" height="22"/>
         <image name="compass-32.png" width="32" height="32"/>
         <image name="menu-25.png" width="20" height="20"/>
-        <image name="much-better.png" width="56" height="32"/>
-        <image name="much-worse.png" width="56" height="32"/>
+        <image name="much-better.png" width="130" height="80"/>
+        <image name="much-worse.png" width="130" height="80"/>
         <image name="one-blue.png" width="25" height="25"/>
         <image name="one-green.png" width="25" height="25"/>
         <image name="paper44.png" width="20" height="20"/>
-        <image name="same-usual.png" width="56" height="32"/>
-        <image name="somewhat-better.png" width="56" height="32"/>
-        <image name="somewhat-worse.png" width="56" height="32"/>
+        <image name="purple-one.png" width="25" height="25"/>
+        <image name="same-usual.png" width="140" height="80"/>
+        <image name="somewhat-better.png" width="150" height="80"/>
+        <image name="somewhat-worse.png" width="150" height="80"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1851,10 +1852,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
-        <segue reference="UvR-e4-cJ3"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="Q57-xl-Lgr"/>
-        <segue reference="Jgv-33-AF9"/>
+        <segue reference="oA1-ch-634"/>
+        <segue reference="XrA-bw-hNd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

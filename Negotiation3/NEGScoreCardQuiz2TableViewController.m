@@ -162,10 +162,10 @@
     switch (indexPath.item) {
             
         case 0:
-            h = 130;
+            h = 115;
             break;
         default:
-            h = 105;
+            h = 95;
             break;
     }
     return h;

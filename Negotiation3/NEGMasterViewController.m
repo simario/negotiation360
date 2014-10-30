@@ -324,16 +324,16 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Your Profile";
+        return @"Negotiation Profile";
     } else if (section == 1) {
         if ([self hasBestPractices]) {
-            return @"My Best Practices";
+            return @"Best Practices";
         } else {
             return @"";
         }
         
     } else if (section == 2) {
-        return @"Your Scorecards";
+        return @"Negotiation Scorecards";
     }
     return @"";
 }
@@ -727,6 +727,9 @@
         cell.detailTextLabel.text = s;
     } else if(indexPath.section == 1) {
         if ([self hasBestPractices]) {
+            UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
+            
+            [imv setImage:[UIImage imageNamed:@"best-practices.png"]];
             cell.textLabel.text = @"My Best Practices";
             cell.detailTextLabel.text = @"";
             cell.hidden = NO;
