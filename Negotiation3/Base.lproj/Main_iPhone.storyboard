@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Notes Table View Controller-->
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GSm-5g-gtM">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSm-5g-gtM" id="4py-1Y-fmJ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -34,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-1782" y="-2058"/>
         </scene>
-        <!--My Best Practices-->
+        <!--Best Practices Summary Table View Controller - My Best Practices-->
         <scene sceneID="xOT-rE-YBg">
             <objects>
                 <tableViewController id="xik-SU-g5Q" customClass="NEGBestPracticesSummaryTableViewController" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="0en-45-CoT" detailTextLabel="c8f-G3-UjP" imageView="JX5-wr-TZA" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="ORD-ob-IKt">
-                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORD-ob-IKt" id="HKz-SM-qOh">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -73,7 +73,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsGraphCell" rowHeight="214" id="kT5-nn-4SD">
-                                <rect key="frame" x="0.0" y="78" width="320" height="214"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kT5-nn-4SD" id="XlD-OZ-XQi">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
@@ -87,7 +87,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultsCell" textLabel="n2h-Jz-qYi" imageView="2QA-ay-X0G" style="IBUITableViewCellStyleDefault" id="zCS-Fy-qgl">
-                                <rect key="frame" x="0.0" y="292" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="356" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zCS-Fy-qgl" id="Rbg-hE-SOW">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -127,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="-1318" y="-1696"/>
         </scene>
-        <!--WWW-->
+        <!--Best PracticesWWW View Controller - WWW-->
         <scene sceneID="gXS-0a-svG">
             <objects>
                 <viewController id="CIG-ox-MP6" customClass="NEGBestPracticesWWWViewController" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="-779" y="-2223"/>
         </scene>
-        <!--My Best Practices-->
+        <!--Best Practices Intro View Controller - My Best Practices-->
         <scene sceneID="Mp8-PO-AJg">
             <objects>
                 <viewController id="frs-fP-9VL" customClass="NEGBestPracticesIntroViewController" sceneMemberID="viewController">
@@ -208,7 +208,7 @@
             </objects>
             <point key="canvasLocation" x="-1597" y="106"/>
         </scene>
-        <!--Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="NEGMasterViewController" sceneMemberID="viewController">
@@ -218,7 +218,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" detailTextLabel="KhU-dj-hL3" imageView="k1c-EQ-5Y0" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="m0d-ak-lc9">
-                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="98H-wX-XqK">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="55"/>
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="-1001" y="106"/>
         </scene>
-        <!--Scorecard-->
+        <!--Scorecard Intro View Controller - Scorecard-->
         <scene sceneID="SIF-8X-QiC">
             <objects>
                 <viewController title="Scorecard" id="0QK-Xa-X2S" customClass="NEGScorecardIntroViewController" sceneMemberID="viewController">
@@ -311,7 +311,7 @@
             </objects>
             <point key="canvasLocation" x="-1772" y="1464"/>
         </scene>
-        <!--Negotiation Details-->
+        <!--Score Card Quiz1 Table View Controller - Negotiation Details-->
         <scene sceneID="Feu-Eb-7yB">
             <objects>
                 <tableViewController id="YGm-X1-Jse" customClass="NEGScoreCardQuiz1TableViewController" sceneMemberID="viewController">
@@ -321,7 +321,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell tag="555" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameInput" rowHeight="85" id="f6T-1D-10b">
-                                <rect key="frame" x="0.0" y="22" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f6T-1D-10b" id="7oj-gP-Dgp">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
@@ -349,7 +349,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="typeInput" textLabel="Hqy-d7-OgD" detailTextLabel="ugD-zQ-sNh" rowHeight="45" style="IBUITableViewCellStyleValue1" id="MqT-qk-x73">
-                                <rect key="frame" x="0.0" y="107" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="171" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MqT-qk-x73" id="HPZ-aP-RYE">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="45"/>
@@ -378,7 +378,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="typeValue" textLabel="fTy-mQ-tjK" rowHeight="40" style="IBUITableViewCellStyleDefault" id="xDJ-tZ-1jE">
-                                <rect key="frame" x="0.0" y="152" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="216" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xDJ-tZ-1jE" id="1It-Y6-tix">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
@@ -395,7 +395,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="importanceInput" rowHeight="110" id="Ehd-wm-SC5">
-                                <rect key="frame" x="0.0" y="192" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="256" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ehd-wm-SC5" id="yII-7I-FCE">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
@@ -421,7 +421,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agreementInput" rowHeight="85" id="zod-TD-PfW">
-                                <rect key="frame" x="0.0" y="302" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="366" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zod-TD-PfW" id="j1h-Vb-Uk7">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
@@ -447,7 +447,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="satisfiedInput" rowHeight="110" id="7eX-DY-fh5">
-                                <rect key="frame" x="0.0" y="387" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="451" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eX-DY-fh5" id="bZn-bM-jzm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
@@ -495,7 +495,7 @@
             </objects>
             <point key="canvasLocation" x="-1276" y="1472"/>
         </scene>
-        <!--Select Type-->
+        <!--Score Card Neg Types Table View Controller - Select Type-->
         <scene sceneID="K99-pJ-4Mf">
             <objects>
                 <tableViewController id="FHN-uI-2Ey" customClass="NEGScoreCardNegTypesTableViewController" sceneMemberID="viewController">
@@ -505,7 +505,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scorecardNegTypeCell" id="lNh-Vd-8aL">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lNh-Vd-8aL" id="uuv-vx-C5d">
                                     <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
@@ -524,7 +524,7 @@
             </objects>
             <point key="canvasLocation" x="-262" y="964"/>
         </scene>
-        <!--Comparison-->
+        <!--Score Card Quiz2 Table View Controller - Comparison-->
         <scene sceneID="g3T-3x-8Aw">
             <objects>
                 <tableViewController id="Ajj-6q-wQZ" customClass="NEGScoreCardQuiz2TableViewController" sceneMemberID="viewController">
@@ -534,14 +534,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructions" rowHeight="115" id="GUm-G4-bTa">
-                                <rect key="frame" x="0.0" y="22" width="320" height="130"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GUm-G4-bTa" id="kbZ-O4-X3X">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
-                                            <rect key="frame" x="15" y="3" width="290" height="123"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="123"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <string key="text">Now, put the result aside for the moment. Focus solely on how you managed the negotiation process, compared to usual. It’s possible that you did better on most of the dimensions below. If so, congratulations! If not, we’ll show you how to do better next time.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
@@ -551,14 +551,14 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sliderInput" rowHeight="95" id="bgE-zK-IIM">
-                                <rect key="frame" x="0.0" y="152" width="320" height="104"/>
+                                <rect key="frame" x="0.0" y="201" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bgE-zK-IIM" id="J6F-vw-ELZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-bD-FeX">
-                                            <rect key="frame" x="20" y="49" width="280" height="29"/>
+                                            <rect key="frame" x="20" y="43" width="280" height="29"/>
                                             <segments>
                                                 <segment title="" image="much-worse.png"/>
                                                 <segment title="" image="somewhat-worse.png"/>
@@ -569,7 +569,7 @@
                                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         </segmentedControl>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How important was this?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zo-al-K2a">
-                                            <rect key="frame" x="20" y="0.0" width="280" height="46"/>
+                                            <rect key="frame" x="20" y="49" width="280" height="46"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -598,7 +598,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="1716"/>
         </scene>
-        <!--Profile Comparison-->
+        <!--Score Card Profile Comparison View Controller - Profile Comparison-->
         <scene sceneID="xEG-Ra-E9J">
             <objects>
                 <viewController id="h1x-Km-8n1" customClass="NEGScoreCardProfileComparisonViewController" sceneMemberID="viewController">
@@ -628,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="1253" y="3600"/>
         </scene>
-        <!--Lessons Learned-->
+        <!--Score Card Lessons Learned View Controller - Lessons Learned-->
         <scene sceneID="Oq7-2d-xLB">
             <objects>
                 <viewController id="PQ4-K1-go6" customClass="NEGScoreCardLessonsLearnedViewController" sceneMemberID="viewController">
@@ -658,7 +658,7 @@
             </objects>
             <point key="canvasLocation" x="1196" y="2692"/>
         </scene>
-        <!--Scorecard Summary-->
+        <!--Score Card Summary View Controller - Scorecard Summary-->
         <scene sceneID="5g3-z8-hhD">
             <objects>
                 <viewController id="fzX-tZ-Zhe" customClass="NEGScoreCardSummaryViewController" sceneMemberID="viewController">
@@ -688,7 +688,7 @@
             </objects>
             <point key="canvasLocation" x="1676" y="3220"/>
         </scene>
-        <!--Lessons Learned-->
+        <!--Quiz3 Intro View Controller - Lessons Learned-->
         <scene sceneID="4Nd-tm-DAX">
             <objects>
                 <viewController id="PdC-Zi-iab" customClass="NEGQuiz3IntroViewController" sceneMemberID="viewController">
@@ -722,7 +722,7 @@
             </objects>
             <point key="canvasLocation" x="-276" y="1716"/>
         </scene>
-        <!--What Worked Well-->
+        <!--Score Card Quiz3 Table View Controller - What Worked Well-->
         <scene sceneID="kQu-pU-jxS">
             <objects>
                 <tableViewController id="f3C-Nl-nKK" customClass="NEGScoreCardQuiz3TableViewController" sceneMemberID="viewController">
@@ -732,7 +732,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionTextInput" rowHeight="233" id="NfG-am-Xzq">
-                                <rect key="frame" x="0.0" y="22" width="320" height="233"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NfG-am-Xzq" id="QKJ-dX-jPg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
@@ -777,7 +777,7 @@
             </objects>
             <point key="canvasLocation" x="136" y="1716"/>
         </scene>
-        <!--Scorecard Results-->
+        <!--Score Card Results Table View Controller - Scorecard Results-->
         <scene sceneID="r9z-sk-k9n">
             <objects>
                 <tableViewController id="vay-z4-l6d" customClass="NEGScoreCardResultsTableViewController" sceneMemberID="viewController">
@@ -787,7 +787,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="hNG-lR-OhB" detailTextLabel="bTE-Tu-4NO" imageView="RjT-ST-so6" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="mvL-lA-izS">
-                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvL-lA-izS" id="f5a-ID-pnE">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -816,7 +816,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsGraphCell" rowHeight="214" id="qcI-r0-f8i">
-                                <rect key="frame" x="0.0" y="78" width="320" height="214"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcI-r0-f8i" id="91l-1e-SRt">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
@@ -830,7 +830,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultsCell" textLabel="u3f-Ai-asp" imageView="9CI-XD-lXX" style="IBUITableViewCellStyleDefault" id="mDS-6Y-bnb">
-                                <rect key="frame" x="0.0" y="292" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="356" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDS-6Y-bnb" id="8eb-EC-mDQ">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -954,7 +954,7 @@
             </objects>
             <point key="canvasLocation" x="465" y="-1811"/>
         </scene>
-        <!--Negotiation Test-->
+        <!--Quiz View Controller - Negotiation Test-->
         <scene sceneID="KAe-er-OVd">
             <objects>
                 <tableViewController id="DIv-hS-jEW" customClass="NEGQuizViewController" sceneMemberID="viewController">
@@ -964,7 +964,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="quizHeader" rowHeight="385" id="i0K-RT-evz">
-                                <rect key="frame" x="0.0" y="22" width="320" height="385"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i0K-RT-evz" id="kR8-gS-Lvs">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
@@ -979,7 +979,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quizCell" rowHeight="80" id="mq3-lS-glC">
-                                <rect key="frame" x="0.0" y="407" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="471" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="989" contentMode="center" tableViewCell="mq3-lS-glC" id="mBw-cA-7uw">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -1036,7 +1036,7 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-778"/>
         </scene>
-        <!--Links-->
+        <!--Links Table View Controller - Links-->
         <scene sceneID="vkt-xd-6qa">
             <objects>
                 <tableViewController id="Xei-tS-bpb" customClass="NEGLinksTableViewController" sceneMemberID="viewController">
@@ -1046,7 +1046,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LinkCell" textLabel="sIf-1Q-kEC" imageView="ta4-JG-OmY" rowHeight="56" style="IBUITableViewCellStyleDefault" id="Wy8-G4-rYA">
-                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wy8-G4-rYA" id="pPj-g2-6sD">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="55"/>
@@ -1110,7 +1110,7 @@
             </objects>
             <point key="canvasLocation" x="450" y="622"/>
         </scene>
-        <!--Negotiation Profiles-->
+        <!--About Types View Controller - Negotiation Profiles-->
         <scene sceneID="LJS-X2-YKv">
             <objects>
                 <viewController id="TfM-Ts-HaH" customClass="NEGAboutTypesViewController" sceneMemberID="viewController">
@@ -1149,7 +1149,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="ResourcesCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResourcesCell" id="oZa-At-LTh">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oZa-At-LTh" id="uMD-yE-97m">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1172,7 +1172,7 @@
             </objects>
             <point key="canvasLocation" x="1732" y="1346"/>
         </scene>
-        <!--Detail-->
+        <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="NEGDetailViewController" sceneMemberID="viewController">
@@ -1208,7 +1208,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-778"/>
         </scene>
-        <!--Skill-Building Tips-->
+        <!--Skills View Controller - Skill-Building Tips-->
         <scene sceneID="UUd-kF-8zp">
             <objects>
                 <viewController id="taj-am-VY2" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -1239,7 +1239,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="1418"/>
         </scene>
-        <!--Negotiation Dilemmas-->
+        <!--Dilema View Controller - Negotiation Dilemmas-->
         <scene sceneID="UUF-5B-23C">
             <objects>
                 <viewController id="ucN-YR-o2j" customClass="NEGDilemaViewController" sceneMemberID="viewController">
@@ -1270,7 +1270,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-778"/>
         </scene>
-        <!--Your Personal Profile-->
+        <!--About View Controller - Your Personal Profile-->
         <scene sceneID="fHi-Uz-6Zi">
             <objects>
                 <viewController id="AUL-Xj-pHi" customClass="NEGAboutViewController" sceneMemberID="viewController">
@@ -1301,7 +1301,7 @@
             </objects>
             <point key="canvasLocation" x="3411" y="673"/>
         </scene>
-        <!--Negotiation Test-->
+        <!--Quiz2 View Controller - Negotiation Test-->
         <scene sceneID="mlP-HN-Y76">
             <objects>
                 <viewController id="iJA-sZ-MMX" customClass="NEGQuiz2ViewController" sceneMemberID="viewController">
@@ -1351,7 +1351,7 @@
             </objects>
             <point key="canvasLocation" x="2015" y="-778"/>
         </scene>
-        <!--Analysis & Feedback-->
+        <!--Results Overview View Controller - Analysis & Feedback-->
         <scene sceneID="Q03-j7-Wqs">
             <objects>
                 <tableViewController id="cgD-05-4mV" customClass="NEGResultsOverviewViewController" sceneMemberID="viewController">
@@ -1361,7 +1361,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="ERO-9w-u5B" detailTextLabel="07t-k4-H4y" imageView="sUI-4p-q2l" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="5Z7-QO-iZU">
-                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Z7-QO-iZU" id="VPO-bZ-9D3">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -1390,7 +1390,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsGraphCell" rowHeight="214" id="SCb-aB-Y2z">
-                                <rect key="frame" x="0.0" y="78" width="320" height="214"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCb-aB-Y2z" id="k8x-vK-1Tm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
@@ -1404,7 +1404,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultsCell" textLabel="EUK-Xx-6DC" imageView="RCx-oJ-JPZ" style="IBUITableViewCellStyleDefault" id="qt4-wm-Oud">
-                                <rect key="frame" x="0.0" y="292" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="356" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qt4-wm-Oud" id="2zA-Ck-1nj">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1456,7 +1456,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="242"/>
         </scene>
-        <!--Negotiation Resources-->
+        <!--Resources View Controller - Negotiation Resources-->
         <scene sceneID="zrd-mq-B9X">
             <objects>
                 <viewController id="JEJ-MM-Sbq" customClass="NEGResourcesViewController" sceneMemberID="viewController">
@@ -1485,7 +1485,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="630"/>
         </scene>
-        <!--About Michael Wheeler-->
+        <!--AboutMW View Controller - About Michael Wheeler-->
         <scene sceneID="AVu-J1-pfC">
             <objects>
                 <viewController id="pDf-tE-goB" customClass="NEGAboutMWViewController" sceneMemberID="viewController">
@@ -1514,7 +1514,7 @@
             </objects>
             <point key="canvasLocation" x="1748" y="2068"/>
         </scene>
-        <!--Bargaining Styles-->
+        <!--Profiles View Controller - Bargaining Styles-->
         <scene sceneID="j7e-ox-iKi">
             <objects>
                 <viewController id="LSl-pz-FDI" customClass="NEGProfilesViewController" sceneMemberID="viewController">
@@ -1545,7 +1545,7 @@
             </objects>
             <point key="canvasLocation" x="3404" y="-38"/>
         </scene>
-        <!--How You Compare-->
+        <!--Compare View Controller - How You Compare-->
         <scene sceneID="F66-SV-mim">
             <objects>
                 <viewController id="xl2-TN-KaX" customClass="NEGCompareViewController" sceneMemberID="viewController">
@@ -1580,7 +1580,7 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-778"/>
         </scene>
-        <!--What Worked Well-->
+        <!--Score Card Quiz4 Table View Controller - What Worked Well-->
         <scene sceneID="I66-vO-f43">
             <objects>
                 <tableViewController id="e7y-NS-vXX" customClass="NEGScoreCardQuiz4TableViewController" sceneMemberID="viewController">
@@ -1590,7 +1590,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionTextInput" rowHeight="233" id="Fc6-Ef-hBd">
-                                <rect key="frame" x="0.0" y="22" width="320" height="233"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fc6-Ef-hBd" id="oDK-FC-rZi">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
@@ -1635,7 +1635,7 @@
             </objects>
             <point key="canvasLocation" x="528" y="1716"/>
         </scene>
-        <!--What Do Different-->
+        <!--Score Card Quiz6 Table View Controller - What Do Different-->
         <scene sceneID="uw4-yb-mhi">
             <objects>
                 <tableViewController id="1OY-5x-WjL" customClass="NEGScoreCardQuiz6TableViewController" sceneMemberID="viewController">
@@ -1645,7 +1645,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionTextInput" rowHeight="233" id="KhA-oS-6yk">
-                                <rect key="frame" x="0.0" y="22" width="320" height="233"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KhA-oS-6yk" id="f0g-K4-ekb">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
@@ -1690,7 +1690,7 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1716"/>
         </scene>
-        <!--What Do Different-->
+        <!--Score Card Quiz5 Table View Controller - What Do Different-->
         <scene sceneID="5Ot-CR-M99">
             <objects>
                 <tableViewController id="kxc-Vk-ShX" customClass="NEGScoreCardQuiz5TableViewController" sceneMemberID="viewController">
@@ -1700,7 +1700,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionTextInput" rowHeight="233" id="xf6-7d-VqG">
-                                <rect key="frame" x="0.0" y="22" width="320" height="233"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xf6-7d-VqG" id="RH5-Js-eym">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
@@ -1745,7 +1745,7 @@
             </objects>
             <point key="canvasLocation" x="908" y="1716"/>
         </scene>
-        <!--WWIDD-->
+        <!--Best PracticesWWID View Controller - WWIDD-->
         <scene sceneID="aTr-rX-Mtq">
             <objects>
                 <viewController id="bT9-IB-NZy" customClass="NEGBestPracticesWWIDViewController" sceneMemberID="viewController">
@@ -1801,7 +1801,7 @@
             </objects>
             <point key="canvasLocation" x="-875" y="-1151"/>
         </scene>
-        <!--Tips-->
+        <!--Skills View Controller - Tips-->
         <scene sceneID="u8g-8Y-aH2">
             <objects>
                 <viewController id="rpL-Wq-mLA" customClass="NEGSkillsViewController" sceneMemberID="viewController">
@@ -1846,6 +1846,7 @@
         <image name="somewhat-worse.png" width="150" height="80"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1857,5 +1858,4 @@
         <segue reference="oA1-ch-634"/>
         <segue reference="XrA-bw-hNd"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
