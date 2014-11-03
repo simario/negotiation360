@@ -12,37 +12,82 @@
 
   <style type="text/css">
 
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-    }
 
-    body {
-	  background: #fff;
-      padding: 15px;
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+	canvas{
+	  width: 100% !important;
+      max-width: 280px;
+      height: 100% !important;
+	}
 
-    #demo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-      cursor: hand;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-      cursor: grab;
-    }
+	header {
+	  position:absolute;
+	  z-index:0;
+	  top:0; left:0; right:0;
+	  height:10rem;
+	  transition:transform .5s, opacity .3s;
+	  background-size:cover;
+	}
 
-    #demo p {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0 20px;
-      margin-bottom: 15px;
-    }
+	.card {
+	  padding:1rem 1rem;
+	  box-shadow:0 1px 2px #aaa;
+	  background:white;
+	  margin: 1.5rem 1rem;
+	  border-radius:3px;
+	  user-select:none;
+	  animation:fly-in-from-left .5s 1s ease both;
+	  transform-origin:top left;
+	}
+	.card:nth-child(even){
+	  animation-name:fly-in-from-right;
+	  animation-delay:1.1s;
+	 transform-origin:top right;
+	}
+
+	@keyframes fly-in-from-left {
+	  from {
+	    transform:translateY(15rem) rotate(15deg);
+	    opacity:0;
+	  }
+	}
+
+	@keyframes fly-in-from-right {
+	  from {
+	    transform:translateY(15rem) rotate(-15deg);
+	    opacity:0;
+	  }
+	}
+
+	.card:after {
+	  position:absolute;
+	  font-size:.9rem;
+	  top:1.5rem;
+	  right:1rem;
+	  border:thin solid gray;
+	  color:gray;
+	  width:1rem;
+	  line-height:1rem;
+	  text-align:center;
+	  border-radius:50%;
+	  pointer-events:none;
+	}
+
+	h1 {
+	  font-size:2rem;
+	  font-weight:200;
+	  margin-top:11px;
+	}
+	  strong {
+	    font-weight:500;
+	    color:#ff9f33;
+	  }
+
+	h2 {
+	  font-size:1.25rem;
+	  color:#ff9f33;
+	  font-weight:400;
+	  margin-top:0px;
+	}
 
   </style>
 
@@ -53,76 +98,400 @@
 	  <span class="ion-ios7-arrow-thin-left"></span>&nbsp;SWIPE TO VIEW MORE&nbsp;<span class="ion-ios7-arrow-thin-right"></span>
 	</div>	
 
-	<div class="owl-carousel" style="margin: -15px 0px 0px 0px;">
+	<div class="owl-carousel" style="margin: 10px 0px 0px 0px;">
     	<div class="owl-item">
-		    <div id="clusterGraph" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p>We used statistical tools to analyze responses from other negotiators who have taken this test.  In order to make group comparisons, we "normalized" the data. That is, we compared each person's response to the average that we received in our pre-launch survey.</p>
-        	<div class="alert alert-info" style="margin:20px">
+			<section class="card">
+				<p>We used statistical tools to analyze responses from other negotiators who have taken this test.  In order to make group comparisons, we "normalized" the data. That is, we compared each person's response to the average that we received in our pre-launch survey.</p>
+				<canvas id="canvas"></canvas>
+			</section>
+			<section class="card">
           		<div class="row">
             		<div class="col-xs-1" style="margin-right:10px">
-              			<span data-icon="&#xe571;" style="font-size: 30px"></span>
+              			<span data-icon="&#xe571;" style="font-size: 30px; color:#ff9f33"></span>
             		</div>
             		<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">To see what we discovered, swipe to the next page. 
             		</div>
           		</div>
-        	</div>
-		</div>
+			</section>
+       	</div>
  
    		<div class="owl-item">
-		    <div id="fiveProfiles" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p>We found five basic types, each one with a different balance of relative strengths. Some people were closely identified with a particular style, while others were near the boundary between one group and another. In your own dealings, you've likely encountered each one of these types.</p>
-        	<div class="alert alert-info" style="margin:20px">
+			<section class="card">
+				<p>We found five basic types, each one with a different balance of relative strengths. Some people were closely identified with a particular style, while others were near the boundary between one group and another. In your own dealings, you've likely encountered each one of these types.</p>
+				<canvas id="canvas2"></canvas>
+			</section>
+			<section class="card">
           		<div class="row">
             		<div class="col-xs-1" style="margin-right:10px">
-              			<span data-icon="&#xe571;" style="font-size: 30px"></span>
+              			<span data-icon="&#xe571;" style="font-size: 30px; color:#ff9f33"></span>
             		</div>
             		<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">To see the five profiles, swipe through to the pages that follow. 
             		</div>
           		</div>
-        	</div>
+        	</section>
       	</div>
 
     	<div class="owl-item">
-		    <div id="empatheticValueCreators" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p><strong>Empathetic Value-Creators</strong> <i>(30 percent of respondents)</i>. These people have above average confidence about understanding the true needs of their counterparts. They also believe they are good at spotting problem-solving opportunities.</p>
-      		<p>On the other hand, they have less confidence about asserting their own interests and maximizing their share of the resulting value.</p>
+			<section class="card">
+				<h1>Empathetic Value-Creators</h1> 
+				<h2>30 percent of respondents</h2>
+				<canvas id="canvas3"></canvas>
+				<p>These people have above average confidence about understanding the true needs of their counterparts. They also believe they are good at spotting problem-solving opportunities.</p>
+      			<p>On the other hand, they have less confidence about asserting their own interests and maximizing their share of the resulting value.</p>
+			</section>
       	</div>
       
   		<div class="owl-item">
-    		<div id="assertiveValueClaimers" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p><strong>Assertive Value-Claimers</strong> <i>(10 percent of respondents)</i>. These people are confident about their ability to advocate their own interests. As a result, they believe that they are able to capture a larger slice of the pie (though there may be less total value to win).</p>
-      		<p>This profile is the mirror image of the Empathetic Value-Creators, as confidence about self-advocacy is offset by less assurance about relating to others.</p>
+			<section class="card">
+				<h1>Assertive Value-Claimers</h1> 
+				<h2>10 percent of respondents</h2>
+				<canvas id="canvas4"></canvas>
+				<p>These people are confident about their ability to advocate their own interests. As a result, they believe that they are able to capture a larger slice of the pie (though there may be less total value to win).</p>
+      			<p>This profile is the mirror image of the Empathetic Value-Creators, as confidence about self-advocacy is offset by less assurance about relating to others.</p>
+			</section>
       	</div>
 
     	<div class="owl-item">
-		    <div id="assertiveValueCreators" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p><strong>Assertive Value-Creators</strong> <i>(15 percent of respondents)</i>. Like Assertive Value-Claimers, these people are just as confident about their ability to advocate for themselves, but are less certain about the value they obtain.</p>
-      		<p>In reality some of them may perform very well, but as psychological "maximizers," no matter how much they get, they tend worry that they should have claimed an even a bigger share of the pie.</p>
+			<section class="card">
+				<h1>Assertive Value-Creators</h1> 
+				<h2>15 percent of respondents</h2>
+				<canvas id="canvas5"></canvas>
+				<p>Like Assertive Value-Claimers, these people are just as confident about their ability to advocate for themselves, but are less certain about the value they obtain.</p>
+      			<p>In reality some of them may perform very well, but as psychological "maximizers," no matter how much they get, they tend worry that they should have claimed an even a bigger share of the pie.</p>
+			</section>
       	</div>
 
   		<div class="owl-item">
-    		<div id="relationalNegotiatiors" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p><strong>Relational Negotiators</strong> <i>(25 percent of respondents)</i>. These people rated themselves strongest at self-advocacy and empathy. Maybe that self-assessment is accurate, though it raises the question of why, given superior relational skills, they don't do better at either creating or claiming value.</p>
+			<section class="card">
+				<h1>Relational Negotiators</h1> 
+				<h2>25 percent of respondents</h2>
+				<canvas id="canvas6"></canvas>
+				<p>These people rated themselves strongest at self-advocacy and empathy. Maybe that self-assessment is accurate, though it raises the question of why, given superior relational skills, they don't do better at either creating or claiming value.</p>
+      			<p>In reality some of them may perform very well, but as psychological "maximizers," no matter how much they get, they tend worry that they should have claimed an even a bigger share of the pie.</p>
+			</section>
       	</div>
 
     	<div class="owl-item">
-		    <div id="outcomeFocusedNegotiatiors" style="margin: 25px auto 5px; width: 280px; height: 160px"></div>
-			<p><strong>Outcome-Focused Negotiators</strong> <i>(20 percent of respondents)</i>. These people rated themselves strongest on both ends of the outcome scale. They may be correct, though it raises a question of how it's possible to attain good results in spite of relational skills that are not as strong.</p>
-      		<div class="alert alert-info" style="margin:20px">
+			<section class="card">
+				<h1>Outcome-Focused Negotiators</h1> 
+				<h2>20 percent of respondents</h2>
+				<canvas id="canvas7"></canvas>
+				<p>These people rated themselves strongest on both ends of the outcome scale. They may be correct, though it raises a question of how it's possible to attain good results in spite of relational skills that are not as strong.</p>
+			</section>
+			<section class="card">
           		<div class="row">
             		<div class="col-xs-1" style="margin-right:10px">
-              			<span data-icon="&#xe587;" style="font-size: 30px"></span>
+              			<span data-icon="&#xe587;" style="font-size: 30px; color:#ff9f33"></span>
             		</div>
             		<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">Tap <strong>Back</strong> to see how your personal profile compares to these different groups.
             		</div>
           		</div>
-        	</div>
+			</section>
 		</div>
 
 	</div>
 
   <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script src="Chart.js"></script>
+
+	<script>
+	var radarChartData = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+		{
+			label: "My First dataset",
+			fillColor: "rgba(255,159,51,0.2)",
+			strokeColor: "rgba(255,159,51,1)",
+			pointColor: "rgba(255,159,51,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(255,159,51,1)",
+			data: [6,6,2,2]
+		},
+		{
+			label: "My Second dataset",
+			fillColor: "rgba(68,90,225,0.2)",
+			strokeColor: "rgba(68,90,225,1)",
+			pointColor: "rgba(68,90,225,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(68,90,225,1)",
+			data: [2,2,6,6]
+		},
+		{
+			label: "My Third dataset",
+			fillColor: "rgba(46,228,120,0.2)",
+			strokeColor: "rgba(46,228,120,1)",
+			pointColor: "rgba(46,228,120,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(46,228,120,1)",
+			data: [6,2,6,2]
+		}
+		]
+	};
+
+	var radarChartData2 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+		{
+			label: "My First dataset",
+			fillColor: "rgba(255,159,51,0.2)",
+			strokeColor: "rgba(255,159,51,1)",
+			pointColor: "rgba(255,159,51,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(255,159,51,1)",
+			data: [4.861538462, 5.528205128, 2.830769231, 2.77948718]
+		},
+		{
+			label: "My Second dataset",
+			fillColor: "rgba(68,90,225,0.2)",
+			strokeColor: "rgba(68,90,225,1)",
+			pointColor: "rgba(68,90,225,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(68,90,225,1)",
+			data: [2.542857143, 3.657142857, 4.542857143, 5.257142857]
+		},
+		{
+			label: "My Third dataset",
+			fillColor: "rgba(46,228,120,0.2)",
+			strokeColor: "rgba(46,228,120,1)",
+			pointColor: "rgba(46,228,120,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(46,228,120,1)",
+			data: [4.628571429, 3.085714286, 2.838095238, 5.447619048]
+		},
+		{
+			label: "My Fourth dataset",
+			fillColor: "rgba(223,83,83,0.2)",
+			strokeColor: "rgba(223,83,83,1)",
+			pointColor: "rgba(223,83,83,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(223,83,83,1)",
+			data: [3.222857143, 5.382857143, 2.754285714, 4.64]
+		},
+		{
+			label: "My Fifth dataset",
+			fillColor: "rgba(170,238,238,0.2)",
+			strokeColor: "rgba(170,238,238,1)",
+			pointColor: "rgba(170,238,238,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(170,238,238,1)",
+			data: [4.756363636, 3.636363636, 4.203636364, 3.403636364]
+		}
+		]
+	};
+
+	var radarChartData3 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(255,159,51,0.2)",
+				strokeColor: "rgba(255,159,51,1)",
+				pointColor: "rgba(255,159,51,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(255,159,51,1)",
+				data: [4.861538462, 5.528205128, 2.830769231, 2.77948718]
+			}
+		]
+	};
+	
+	var radarChartData4 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(68,90,225,0.2)",
+				strokeColor: "rgba(68,90,225,1)",
+				pointColor: "rgba(68,90,225,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(68,90,225,1)",
+				data: [2.542857143, 3.657142857, 4.542857143, 5.257142857]
+			}
+		]
+	};
+	
+	var radarChartData5 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(46,228,120,0.2)",
+				strokeColor: "rgba(46,228,120,1)",
+				pointColor: "rgba(46,228,120,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(46,228,120,1)",
+				data: [4.628571429, 3.085714286, 2.838095238, 5.447619048]
+			}
+		]
+	};
+	
+	var radarChartData6 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(223,83,83,0.2)",
+				strokeColor: "rgba(223,83,83,1)",
+				pointColor: "rgba(223,83,83,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(223,83,83,1)",
+				data: [3.222857143, 5.382857143, 2.754285714, 4.64]
+			}
+		]
+	};
+	
+	var radarChartData7 = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(170,238,238,0.2)",
+				strokeColor: "rgba(170,238,238,1)",
+				pointColor: "rgba(170,238,238,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(170,238,238,1)",
+				data: [4.756363636, 3.636363636, 4.203636364, 3.403636364]
+			}
+		]
+	};
+	
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
+			responsive: false,
+			maintainAspectRatio: true,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 600,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+		    showTooltips: false
+		});
+		var ctx2 = document.getElementById("canvas2").getContext("2d");
+		window.myRadarChart = new Chart(ctx2).Radar(radarChartData2, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 700,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+		var ctx3 = document.getElementById("canvas3").getContext("2d");
+		window.myRadarChart = new Chart(ctx3).Radar(radarChartData3, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 800,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+		var ctx4 = document.getElementById("canvas4").getContext("2d");
+		window.myRadarChart = new Chart(ctx4).Radar(radarChartData4, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 900,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+		var ctx5 = document.getElementById("canvas5").getContext("2d");
+		window.myRadarChart = new Chart(ctx5).Radar(radarChartData5, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 1000,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+		var ctx6 = document.getElementById("canvas6").getContext("2d");
+		window.myRadarChart = new Chart(ctx6).Radar(radarChartData6, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 1100,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+		var ctx7 = document.getElementById("canvas7").getContext("2d");
+		window.myRadarChart = new Chart(ctx7).Radar(radarChartData7, {
+			responsive: false,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 1200,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0,
+		    showTooltips: false
+		});
+	}
+
+	</script>
 
   <script>
 
@@ -135,11 +504,6 @@
 	
   </script>
 
-  <script src="highcharts.js"></script>
-  <script src="highcharts-more.js"></script>
-  <script src="charts-profiles.js"></script>
-  <script src="minimal.js"></script>
-  <script src="modules/exporting.js"></script>
 
 </body>
 </html>

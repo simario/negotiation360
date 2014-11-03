@@ -9,11 +9,88 @@
             margin: 10px;
         }
         body {
-            background-image:url("top-banner-8.png");
+            background-image:url("top-banner-7.png");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
+            position: relative; /* For scrollyspy */
+		    padding-top: 35px; /* Account for fixed navbar */
+
         }
+		.popover{
+		    width:200px;
+		}
+		canvas{
+		  width: 100% !important;
+	      max-width: 280px;
+	      height: 100% !important;
+		}
+
+		header {
+		  position:absolute;
+		  z-index:0;
+		  top:0; left:0; right:0;
+		  height:10rem;
+		  transition:transform .5s, opacity .3s;
+		  background-size:cover;
+		}
+
+		.card {
+		  padding:1rem 1rem;
+		  box-shadow:0 1px 2px #aaa;
+		  background:white;
+		  margin: 1.5rem 1rem;
+		  border-radius:3px;
+		  user-select:none;
+		  animation:fly-in-from-left .5s 1s ease both;
+		  transform-origin:top left;
+		}
+		.card:nth-child(even){
+		  animation-name:fly-in-from-right;
+		  animation-delay:1.1s;
+		 transform-origin:top right;
+		}
+
+		@keyframes fly-in-from-left {
+		  from {
+		    transform:translateY(15rem) rotate(15deg);
+		    opacity:0;
+		  }
+		}
+
+		@keyframes fly-in-from-right {
+		  from {
+		    transform:translateY(15rem) rotate(-15deg);
+		    opacity:0;
+		  }
+		}
+
+		.card:after {
+		  position:absolute;
+		  font-size:.9rem;
+		  top:1.5rem;
+		  right:1rem;
+		  border:thin solid gray;
+		  color:gray;
+		  width:1rem;
+		  line-height:1rem;
+		  text-align:center;
+		  border-radius:50%;
+		  pointer-events:none;
+		}
+
+		h1 {
+		  font-size:2rem;
+		  font-weight:200;
+		  margin-top:11px;
+		}
+		h2 {
+		  font-size:1.25rem;
+		  color:#ff9f33;
+		  font-weight:400;
+		  margin-top:0px;
+		}
+		
     </style>
 </head>
 <body>
@@ -25,13 +102,21 @@
 	</div>
 
 	<div>
-		<ul class="list-group" >
-		  <li class="list-group-item" style="font-size: 14px; text-align: left; border-top:0px">For free downloads of practice guides and research articles about the negotiation skills highlighted in this app (and about negotiation more generally), visit the <strong><a href="http://www.negotiation3-0.com/" class="alert-link" style="color: #ff9f33">Negotiation 3.0 Website</a></strong></li>
-		  <li class="list-group-item" style="font-size: 14px; text-align: left">Another excellent resource is <strong><a href="http://www.pon.harvard.edu/" class="alert-link" style="color: #ff9f33">The Program on Negotiation</a></strong> based at the Harvard Law School</li>
-		  <li class="list-group-item" style="font-size: 14px; text-align: left">Michael Wheeler's <a href="http://www.amazon.com/The-Art-Negotiation-Improvise-Agreement/dp/1451690428" class="alert-link" style="color: #ff9f33"><strong><i>The Art of Negotiation</i></strong></a> (especially the chapters on openings, critical moments, and closing)</li>
-		  <li class="list-group-item" style="font-size: 14px; text-align: left">David Lax and James Sebenius's <a href="https://itunes.apple.com/us/book/manager-as-negotiator/id381492420?mt=11" class="alert-link" style="color: #ff9f33"><strong><i>The Manager as Negotiator</i></strong></a> (in particular, the chapter on creating and claiming value)</li>
-		  <li class="list-group-item" style="font-size: 14px; text-align: left"><a href="http://www.amazon.com/Beyond-Winning-Negotiating-Create-Disputes/dp/0674012313" class="alert-link" style="color: #ff9f33"><strong><i>Beyond Winning</i></strong></a> (notably, the chapter on empathy and assertiveness), by Robert Mnookin, Scott Peppet, and Andrew Tulumello</li>
-		</ul>
+		<section class="card">
+		  <p>For free downloads of practice guides and research articles about the negotiation skills highlighted in this app (and about negotiation more generally), visit the <strong><a href="http://www.negotiation3-0.com/" class="alert-link" style="color: #ff9f33">Negotiation 3.0 Website</a></strong></p>
+		</section>
+		<section class="card">
+		  <p>Another excellent resource is <strong><a href="http://www.pon.harvard.edu/" class="alert-link" style="color: #ff9f33">The Program on Negotiation</a></strong> based at the Harvard Law School</p>
+		</section>
+		<section class="card">
+		  <p>Michael Wheeler's <a href="http://www.amazon.com/The-Art-Negotiation-Improvise-Agreement/dp/1451690428" class="alert-link" style="color: #ff9f33"><strong><i>The Art of Negotiation</i></strong></a> (especially the chapters on openings, critical moments, and closing)</p>
+		</section>
+		<section class="card">
+		  <p>David Lax and James Sebenius's <a href="https://itunes.apple.com/us/book/manager-as-negotiator/id381492420?mt=11" class="alert-link" style="color: #ff9f33"><strong><i>The Manager as Negotiator</i></strong></a> (in particular, the chapter on creating and claiming value)</p>
+		</section>
+		<section class="card">
+		  <p><a href="http://www.amazon.com/Beyond-Winning-Negotiating-Create-Disputes/dp/0674012313" class="alert-link" style="color: #ff9f33"><strong><i>Beyond Winning</i></strong></a> (notably, the chapter on empathy and assertiveness), by Robert Mnookin, Scott Peppet, and Andrew Tulumello</p>
+		</section>
 	</div>
 	<div style="height:100px">
 	</div>

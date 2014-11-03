@@ -7,127 +7,122 @@
 
   <style type="text/css">
 
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-    }
 
-    body {
-	  background: #fff;
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+	header {
+	  position:absolute;
+	  z-index:0;
+	  top:0; left:0; right:0;
+	  height:10rem;
+	  transition:transform .5s, opacity .3s;
+	  background-size:cover;
+	}
 
-    #demo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-      cursor: hand;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-      cursor: grab;
-    }
+	.card {
+	  padding:1rem 0rem;
+	  box-shadow:0 1px 2px #aaa;
+	  background:white;
+	  margin: 1.5rem 1rem;
+	  border-radius:3px;
+	  user-select:none;
+	  animation:fly-in-from-left .5s 1s ease both;
+	  transform-origin:top left;
+	}
+	.card:nth-child(even){
+	  animation-name:fly-in-from-right;
+	  animation-delay:1.1s;
+	 transform-origin:top right;
+	}
 
-    #demo p {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0 20px;
-      margin-bottom: 15px;
-    }
+	@keyframes fly-in-from-left {
+	  from {
+	    transform:translateY(15rem) rotate(15deg);
+	    opacity:0;
+	  }
+	}
+
+	@keyframes fly-in-from-right {
+	  from {
+	    transform:translateY(15rem) rotate(-15deg);
+	    opacity:0;
+	  }
+	}
+
+	.card:after {
+	  position:absolute;
+	  font-size:.9rem;
+	  top:1.5rem;
+	  right:1rem;
+	  border:thin solid gray;
+	  color:gray;
+	  width:1rem;
+	  line-height:1rem;
+	  text-align:center;
+	  border-radius:50%;
+	  pointer-events:none;
+	}
+
+	h1 {
+	  font-size:2rem;
+	  font-weight:200;
+	}
+	  strong {
+	    font-weight:300;
+	    color:#539D00;
+	  }
+
+	h2 {
+	  font-size:.9rem;
+	  line-height:2.5;
+	  color:gray;
+	  font-weight:400;
+	}
 
   </style>
 
     
 </head>
 <body>
-    <div id="container" style="margin: 10px auto 10px; width: 280px; height: 200px; max-height: 200px;"></div>
-    <script src="jquery.js"></script>
-    <script src="highcharts.js"></script>
-    <script src="highcharts-more.js"></script>
-    <script src="modules/exporting.js"></script>
-    <script src="minimal.js"></script>
+    <section class="card">
+		<canvas id="canvas"></canvas>
+	</section>
+    <script src="Chart.js"></script>
 
-    <script>
-        $(function () {
-          
-          $('#container').highcharts({
-                                     
-                                     chart: {
-                                     polar: true,
- 						             borderColor: '#34aadc',
-						             borderWidth: 2,
-						             type: 'line',
-                                     },
-                                     
-                                     legend: {
-                                     enabled: false
-                                     },
-                                     
-                                     
-                                     title: {
-                                     text: null
-                                     },
-                                     
-                                     pane: {
-                                     size: '80%%',
-							         startAngle: -45,
-                                     },
-                                     
-                                     xAxis: {
-                                     categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
-                                     tickmarkPlacement: 'on',
-						             lineWidth: 0,
-									 labels: {
-									 	 style: {
-											 whiteSpace: 'nowrap'
-										 }
-									 }
-                                     },
-                                     
-                                     yAxis: {
-							            lineWidth: 0,
-										tickInterval: 4,
-										step: 2,
-							            endOnTick: false,
-										endOnTick: true,
-							            showLastLabel: true,
-							            startOnTick: true
-                                     },
-                                     
-                                     tooltip: {
-                                     enabled: true,
-                                     },
-                                     
-									 credits: {
-                                        enabled: false
-                                     },
+	<script>
+	var radarChartData = {
+		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		datasets: [
+			{
+				label: "My Negotiation Profile",
+				fillColor: "rgba(255,159,51,0.2)",
+				strokeColor: "rgba(255,159,51,1)",
+				pointColor: "rgba(255,159,51,1)",
+				pointStrokeColor: "#fff",
+				pointHighlightFill: "#fff",
+				pointHighlightStroke: "rgba(255,159,51,1)",
+				data: [%@]
+			}
+		]
+	};
 
-							        plotOptions: {
-							            series: {
-							                fillOpacity: 0.33,
-							                marker: {
-							                    fillColor: '#fff',
-							                    lineWidth: 2,
-							                    lineColor: null // inherit from series
-							                }
-							            },
-							        },
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
+			responsive: true,
+			maintainAspectRatio: false,
+			showScale: true,
+			scaleShowLine : false,
+			scaleShowLabels : false,
+			pointLabelFontSize : 12,
+			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontColor : "gray",
+		    animationSteps: 600,
+		    scaleOverride: true,
+		    scaleSteps: 2,
+		    scaleStepWidth: 4,
+		    scaleStartValue: 0
+		});
+	}
 
-                                     series: [{
-                                              name: 'Rating',
-                                              type: 'area',
-                                              data: [%@],
-											  lineWidth: 5,
-								              animation: {
-								                  duration: 4000
-								              }
-                                              }]
-                                     
-                                     });
-          });
-    </script>
+	</script>
 </body>
 </html>

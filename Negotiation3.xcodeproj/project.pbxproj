@@ -33,6 +33,8 @@
 		693A91FF19A2AF0600A05DFD /* scorecard-intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 693A91FC19A2AF0600A05DFD /* scorecard-intro.html */; };
 		693A920019A2AF0600A05DFD /* scorecard-profile.html in Resources */ = {isa = PBXBuildFile; fileRef = 693A91FD19A2AF0600A05DFD /* scorecard-profile.html */; };
 		693A920119A2AF0600A05DFD /* scorecard-summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 693A91FE19A2AF0600A05DFD /* scorecard-summary.html */; };
+		693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 693FD52D1A06B55E00A7DFB6 /* Chart.js */; };
+		693FD52F1A06B57400A7DFB6 /* Chart.js in Sources */ = {isa = PBXBuildFile; fileRef = 693FD52D1A06B55E00A7DFB6 /* Chart.js */; };
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
@@ -251,6 +253,7 @@
 		693A91FC19A2AF0600A05DFD /* scorecard-intro.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "scorecard-intro.html"; sourceTree = "<group>"; };
 		693A91FD19A2AF0600A05DFD /* scorecard-profile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "scorecard-profile.html"; sourceTree = "<group>"; };
 		693A91FE19A2AF0600A05DFD /* scorecard-summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "scorecard-summary.html"; sourceTree = "<group>"; };
+		693FD52D1A06B55E00A7DFB6 /* Chart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
@@ -580,6 +583,7 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				693FD52D1A06B55E00A7DFB6 /* Chart.js */,
 				69ED154219EB49AF00BC301A /* practices-wwidd.html */,
 				69ED154319EB49AF00BC301A /* practices-www.html */,
 				6957C01319EAEA9300232AF4 /* practices-intro.html */,
@@ -935,6 +939,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,
 				69ED154519EB49AF00BC301A /* practices-www.html in Resources */,
 				6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */,
@@ -1071,6 +1076,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693FD52F1A06B57400A7DFB6 /* Chart.js in Sources */,
 				9130E82919FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m in Sources */,
 				69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */,
 				69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */,
