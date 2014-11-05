@@ -7,7 +7,12 @@
 
   <style type="text/css">
 
-
+	canvas{
+		width: 100% !important;
+        max-width: 320px;
+        height: auto !important;
+	}
+	
 	header {
 	  position:absolute;
 	  z-index:0;
@@ -89,7 +94,7 @@
 
 	<script>
 	var radarChartData = {
-		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+		labels: ['CREATING VALUE', 'EMPATHY', 'CLAIMING VALUE', 'ASSERT'],
 		datasets: [
 			{
 				label: "My Negotiation Profile",
@@ -107,13 +112,12 @@
 	window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
 		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
-			responsive: false,
+			responsive: true,
 			maintainAspectRatio: false,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 12,
-			pointLabelFontFamily : "'Helvetica Neue'",
+			pointLabelFontSize : 11,
 			pointLabelFontColor : "gray",
 		    animationSteps: 600,
 		    scaleOverride: true,

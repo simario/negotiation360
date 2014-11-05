@@ -9,12 +9,10 @@
             margin: 10px;
         }
         body {
-            background-image:url("top-banner-7.png");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
             position: relative; /* For scrollyspy */
-		    padding-top: 35px; /* Account for fixed navbar */
 
         }
 		.popover{
@@ -34,9 +32,21 @@
 		  transition:transform .5s, opacity .3s;
 		  background-size:cover;
 		}
+		.topcard {
+		  padding:1rem 1rem 0.5rem 1rem;
+		  box-shadow:0 1px 2px #aaa;
+		  background:white;
+		  margin: 1.5rem 1rem;
+		  border-radius:3px;
+		  background-image: url("top-banner-7.png");
+		  background-repeat: no-repeat;
+		  user-select:none;
+		  animation:fly-in-from-left .5s 1s ease both;
+		  transform-origin:top left;
+		}
 
 		.card {
-		  padding:1rem 1rem;
+		  padding:0.5rem 1rem;
 		  box-shadow:0 1px 2px #aaa;
 		  background:white;
 		  margin: 1.5rem 1rem;
@@ -95,7 +105,10 @@
 </head>
 <body>
 	<div>
-		<section class="card">
+		<section class="topcard">
+			<div align="center">
+		        <img src="image-7.png" width="100px" height="100px" class="img-circle">
+			</div>
 			<p style="font-size:14px">You rated yourself <strong style="color:#ff9f33">%@</strong> compared to people you typically negotiate with. The reality is that it is hard to rate your overall effectiveness. After all, you usually know only your half of the story: did you leave some value on the table; did you stress an important relationship? The other side may not tell you, so there's plenty of room for self-doubt and worry.</p> 
 		</section>
 		<section class="card">
