@@ -3,33 +3,118 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/docs.css" />
     <style>
         .photo {
             margin: 10px;
         }
         body {
-            background-image:url("top-banner-2.png");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
         }
+			canvas{
+			  width: 100% !important;
+		      max-width: 280px;
+		      height: 100% !important;
+			}
+
+			header {
+			  position:absolute;
+			  z-index:0;
+			  top:0; left:0; right:0;
+			  height:10rem;
+			  transition:transform .5s, opacity .3s;
+			  background-size:cover;
+			}
+
+			.topcard {
+			  padding:1rem 1rem;
+			  box-shadow:0 1px 2px #aaa;
+			  background:white;
+			  margin: 1.5rem 1rem;
+			  border-radius:3px;
+			  background-image: url("top-banner-2.png");
+			  background-repeat: no-repeat;
+			  user-select:none;
+			  animation:fly-in-from-left .5s 1s ease both;
+			  transform-origin:top left;
+			}
+			.card {
+			  padding:1rem 1rem;
+			  box-shadow:0 1px 2px #aaa;
+			  background:white;
+			  margin: 1.5rem 1rem;
+			  border-radius:3px;
+			  user-select:none;
+			  animation:fly-in-from-left .5s 1s ease both;
+			  transform-origin:top left;
+			}
+			.card:nth-child(even){
+			  animation-name:fly-in-from-right;
+			  animation-delay:1.1s;
+			 transform-origin:top right;
+			}
+
+			@keyframes fly-in-from-left {
+			  from {
+			    transform:translateY(15rem) rotate(15deg);
+			    opacity:0;
+			  }
+			}
+
+			@keyframes fly-in-from-right {
+			  from {
+			    transform:translateY(15rem) rotate(-15deg);
+			    opacity:0;
+			  }
+			}
+
+			.card:after {
+			  position:absolute;
+			  font-size:.9rem;
+			  top:1.5rem;
+			  right:1rem;
+			  border:thin solid gray;
+			  color:gray;
+			  width:1rem;
+			  line-height:1rem;
+			  text-align:center;
+			  border-radius:50%;
+			  pointer-events:none;
+			}
+
+			h1 {
+			  font-size:2rem;
+			  font-weight:200;
+			  margin-top:11px;
+			}
+			  strong {
+			    font-weight:500;
+			    color:#ff9f33;
+			  }
+			h2 {
+			  font-size:1.25rem;
+			  color:#ff9f33;
+			  font-weight:400;
+			  margin-top:0px;
+			}
     </style>
 </head>
 <body>
-	<div align="center">
-        <img src="image-2.png" width="115px" height="115px" class="img-circle">
-	</div>
-    <div style="margin:-40px 20px 20px 20px">
-		<h4 style="font-weight:400">Part B</h4>
+	<section class="topcard">
+		<div align="center">
+	        <img src="image-2.png" width="100px" height="100px" class="img-circle">
+		</div>
+    <div style="margin:-20px 0px 0px 0px">
+		<h4 style="font-weight:400; color:#ff9f33">Part B</h4>
 	</div>
 	
 	<div>
-		<p style="margin: 20px;">Now, compare your overall effectiveness relative to people you typically negotiate with. <i>[If you are no better and no worse, than most people, score yourself in the 50th percentile; if you are better (or worse), score yourself accordingly.]</i></p>
+		<p>Now, compare your overall effectiveness relative to people you typically negotiate with. <i>[If you are no better and no worse, than most people, score yourself in the 50th percentile; if you are better (or worse), score yourself accordingly.]</i></p>
 
-        <p style="margin: 20px;">Then tap <strong>Next</strong> above to see how your self-assessment compares to other negotiators.</p> 
+        <p>Then tap <strong>Next</strong> above to see how your self-assessment compares to other negotiators.</p> 
 			
-	</div>
+	</section>
 
     <script src="jquery.js"></script>
     <script src="highcharts.js"></script>
