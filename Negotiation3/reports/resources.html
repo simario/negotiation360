@@ -3,23 +3,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/docs.css" />
     <style>
-        .photo {
-            margin: 10px;
-        }
-        body {
-            background-image:url("top-banner-7.png");
-            background-position: top left;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            position: relative; /* For scrollyspy */
-		    padding-top: 35px; /* Account for fixed navbar */
+    .photo {
+        margin: 10px;
+    }
+    body {
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 
-        }
-		.popover{
-		    width:200px;
-		}
 		canvas{
 		  width: 100% !important;
 	      max-width: 280px;
@@ -33,6 +26,19 @@
 		  height:10rem;
 		  transition:transform .5s, opacity .3s;
 		  background-size:cover;
+		}
+
+		.topcard {
+		  padding:1rem 1rem;
+		  box-shadow:0 1px 2px #aaa;
+		  background:white;
+		  margin: 1.5rem 1rem;
+		  border-radius:3px;
+		  background-image: url("top-banner-8.png");
+		  background-repeat: no-repeat;
+		  user-select:none;
+		  animation:fly-in-from-left .5s 1s ease both;
+		  transform-origin:top left;
 		}
 
 		.card {
@@ -94,28 +100,24 @@
     </style>
 </head>
 <body>
-	<div align="center">
-        <img src="image-8.png" width="115px" height="115px" class="img-circle">
-	</div>
-
-	<div style="height:15px">
-	</div>
-
 	<div>
-		<section class="card">
-		  <p>For free downloads of practice guides and research articles about the negotiation skills highlighted in this app (and about negotiation more generally), visit the <strong><a href="http://www.negotiation3-0.com/" class="alert-link" style="color: #ff9f33">Negotiation 3.0 Website</a></strong></p>
+		<section class="topcard">
+			<div align="center">
+		        <img src="image-8.png" width="100px" height="100px" class="img-circle">
+			</div>
+		  <p style="font-size:14px">For free downloads of practice guides and research articles about the negotiation skills highlighted in this app (and about negotiation more generally), visit the <strong><a href="http://www.negotiation3-0.com/" class="alert-link" style="color: #ff9f33">Negotiation 3.0 Website</a></strong></p>
 		</section>
 		<section class="card">
-		  <p>Another excellent resource is <strong><a href="http://www.pon.harvard.edu/" class="alert-link" style="color: #ff9f33">The Program on Negotiation</a></strong> based at the Harvard Law School</p>
+		  <p style="font-size:14px">Another excellent resource is <strong><a href="http://www.pon.harvard.edu/" class="alert-link" style="color: #ff9f33">The Program on Negotiation</a></strong> based at the Harvard Law School</p>
 		</section>
 		<section class="card">
-		  <p>Michael Wheeler's <a href="http://www.amazon.com/The-Art-Negotiation-Improvise-Agreement/dp/1451690428" class="alert-link" style="color: #ff9f33"><strong><i>The Art of Negotiation</i></strong></a> (especially the chapters on openings, critical moments, and closing)</p>
+		  <p style="font-size:14px">Michael Wheeler's <a href="http://www.amazon.com/The-Art-Negotiation-Improvise-Agreement/dp/1451690428" class="alert-link" style="color: #ff9f33"><strong><i>The Art of Negotiation</i></strong></a> (especially the chapters on openings, critical moments, and closing)</p>
 		</section>
 		<section class="card">
-		  <p>David Lax and James Sebenius's <a href="https://itunes.apple.com/us/book/manager-as-negotiator/id381492420?mt=11" class="alert-link" style="color: #ff9f33"><strong><i>The Manager as Negotiator</i></strong></a> (in particular, the chapter on creating and claiming value)</p>
+		  <p style="font-size:14px">David Lax and James Sebenius's <a href="https://itunes.apple.com/us/book/manager-as-negotiator/id381492420?mt=11" class="alert-link" style="color: #ff9f33"><strong><i>The Manager as Negotiator</i></strong></a> (in particular, the chapter on creating and claiming value)</p>
 		</section>
 		<section class="card">
-		  <p><a href="http://www.amazon.com/Beyond-Winning-Negotiating-Create-Disputes/dp/0674012313" class="alert-link" style="color: #ff9f33"><strong><i>Beyond Winning</i></strong></a> (notably, the chapter on empathy and assertiveness), by Robert Mnookin, Scott Peppet, and Andrew Tulumello</p>
+		  <p style="font-size:14px"><a href="http://www.amazon.com/Beyond-Winning-Negotiating-Create-Disputes/dp/0674012313" class="alert-link" style="color: #ff9f33"><strong><i>Beyond Winning</i></strong></a> (notably, the chapter on empathy and assertiveness), by Robert Mnookin, Scott Peppet, and Andrew Tulumello</p>
 		</section>
 	</div>
 	<div style="height:100px">
@@ -123,8 +125,5 @@
 
 
     <script src="jquery.js"></script>
-    <script src="highcharts.js"></script>
-    <script src="highcharts-more.js"></script>
-    <script src="modules/exporting.js"></script>
 </body>
 </html>

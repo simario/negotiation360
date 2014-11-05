@@ -3,34 +3,123 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/docs.css" />
     <style>
         .photo {
             margin: 10px;
         }
         body {
-            background-image:url("top-banner-12.png");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
         }
+			canvas{
+			  width: 100% !important;
+		      max-width: 280px;
+		      height: 100% !important;
+			}
+
+			header {
+			  position:absolute;
+			  z-index:0;
+			  top:0; left:0; right:0;
+			  height:10rem;
+			  transition:transform .5s, opacity .3s;
+			  background-size:cover;
+			}
+
+			.topcard {
+			  padding:1rem 1rem;
+			  box-shadow:0 1px 2px #aaa;
+			  background:white;
+			  margin: 1.5rem 1rem;
+			  border-radius:3px;
+			  background-image: url("top-banner-12.png");
+			  background-repeat: no-repeat;
+			  user-select:none;
+			  animation:fly-in-from-left .5s 1s ease both;
+			  transform-origin:top left;
+			}
+			.card {
+			  padding:1rem 1rem;
+			  box-shadow:0 1px 2px #aaa;
+			  background:white;
+			  margin: 1.5rem 1rem;
+			  border-radius:3px;
+			  user-select:none;
+			  animation:fly-in-from-left .5s 1s ease both;
+			  transform-origin:top left;
+			}
+			.card:nth-child(even){
+			  animation-name:fly-in-from-right;
+			  animation-delay:1.1s;
+			 transform-origin:top right;
+			}
+
+			@keyframes fly-in-from-left {
+			  from {
+			    transform:translateY(15rem) rotate(15deg);
+			    opacity:0;
+			  }
+			}
+
+			@keyframes fly-in-from-right {
+			  from {
+			    transform:translateY(15rem) rotate(-15deg);
+			    opacity:0;
+			  }
+			}
+
+			.card:after {
+			  position:absolute;
+			  font-size:.9rem;
+			  top:1.5rem;
+			  right:1rem;
+			  border:thin solid gray;
+			  color:gray;
+			  width:1rem;
+			  line-height:1rem;
+			  text-align:center;
+			  border-radius:50%;
+			  pointer-events:none;
+			}
+
+			h1 {
+			  font-size:2rem;
+			  font-weight:200;
+			  margin-top:11px;
+			}
+			  strong {
+			    font-weight:500;
+			    color:#ff9f33;
+			  }
+			h2 {
+			  font-size:1.25rem;
+			  color:#ff9f33;
+			  font-weight:400;
+			  margin-top:0px;
+			}
     </style>
 </head>
 <body>
-	<div align="center">
-        <img src="image-12.png" width="115px" height="115px" class="img-circle">
-	</div>
-    
-	<div>
-		<p style="margin: 15px 20px 20px 20px; font-size: 14px;">To learn from experience you must identify those decisions and actions that worked well for you, or that were unsuccessful. My colleagues at the Program on Negotiation created the acronyms <b>WWW</b> (what-worked-well) and <b>WWYDD</b> (what-would-you-do-differently) to stimulate self-reflection. They're essential for any after-action review, especially so for negotiation.</p>
+	<section class="topcard">
+		<div align="center">
+	        <img src="image-12.png" width="100px" height="100px" class="img-circle">
+		</div>
+		<p style="font-size: 14px;">To learn from experience you must identify those decisions and actions that worked well for you, or that were unsuccessful. My colleagues at the Program on Negotiation created the acronyms <strong>WWW</strong> (what-worked-well) and <strong>WWYDD</strong> (what-would-you-do-differently) to stimulate self-reflection. They're essential for any after-action review, especially so for negotiation.</p>
+	</section>
+	
+	<section class="card">
+		<p style="font-size: 14px;">The more specific your answer, the more useful it will be in the future. Instead of merely saying, "I effectively asserted my interests," state how you did it. (For example, you could add ". . . by demonstrating my strong walk-away option."</p>
+	</section>
+	
+	<section class="card">
+		<p style="font-size: 14px;">For What-worked-well lessons, look first at those areas where you may have done better than usual. For what-would you differently, think about areas where you may have underperformed. Also review you your negotiation strategy and tactics broadly, not just the four skills you just evaluated. </p>
+	</section>
+	
+	<section class="card">
+		<p style="font-size: 14px;">Writing about what-worked-well, for example, you might note, "Meeting at their office gave me a better sense of his company than if I insisted on negotiating at my place." For what-you-would-do-differently, you might say, "I should have sought competing bids before renegotiating with our incumbent supplier."</p>
 
-		<p style="margin: 20px; font-size: 14px;">The more specific your answer, the more useful it will be in the future. Instead of merely saying, "I effectively asserted my interests," state how you did it. (For example, you could add ". . . by demonstrating my strong walk-away option."</p>
-
-		<p style="margin: 20px; font-size: 14px;">For What-worked-well lessons, look first at those areas where you may have done better than usual. For what-would you differently, think about areas where you may have underperformed. Also review you your negotiation strategy and tactics broadly, not just the four skills you just evaluated. </p>
-
-		<p style="margin: 20px; font-size: 14px;">Writing about what-worked-well, for example, you might note, "Meeting at their office gave me a better sense of his company than if I insisted on negotiating at my place." For what-you-would-do-differently, you might say, "I should have sought competing bids before renegotiating with our incumbent supplier."</p>
-
-	</div>
+	</section>
 		 
 <!--			
 	<div class="alert alert-info" style="margin:20px">
