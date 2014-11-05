@@ -128,8 +128,22 @@
 
 - (BOOL)hasBestPractices
 {
+    int completedCount = 0;
     int sc = [self scorecardCount];
-    BOOL result = (sc > 2);
+    BOOL result = NO;
+    
+    //if (result) {
+    for (int i = 0; i < sc; i++) {
+        NSManagedObject *scorecard = [self.scFetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        if ([[scorecard valueForKeyPath:@"complete"] boolValue]) {
+            completedCount++;
+        }
+    }
+    //}
+    if (completedCount > 2) {
+        result = YES;
+    }
+    
     return result;
 }
 
@@ -641,24 +655,29 @@
 {
     UITableView *tableView = self.tableView;
 
-    NSIndexPath *t = [NSIndexPath indexPathForRow:indexPath.row inSection:1];
+    NSIndexPath *t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
     
-    NSInteger rows = [self.tableView numberOfRowsInSection:0];
-    if (rows == 0) {
-        t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
-    }
-    
+    /*
     if ([tableView numberOfSections] == 3) {
         t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
     }
     
     t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
     
+    NSInteger rows = [self.tableView numberOfRowsInSection:0];
+    if (rows == 0) {
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+    }*/
+    
+    if ([controller isEqual:_fetchedResultsController]) {
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+    } else if ([controller isEqual:_scFetchedResultsController]) {
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
+    }
+    
     
     switch(type) {
         case NSFetchedResultsChangeInsert:
-            
-
             [tableView insertRowsAtIndexPaths:@[t] withRowAnimation:UITableViewRowAnimationFade];
             
             break;
