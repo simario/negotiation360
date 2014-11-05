@@ -128,8 +128,22 @@
 
 - (BOOL)hasBestPractices
 {
+    int completedCount = 0;
     int sc = [self scorecardCount];
-    BOOL result = (sc > 2);
+    BOOL result = NO;
+    
+    //if (result) {
+    for (int i = 0; i < sc; i++) {
+        NSManagedObject *scorecard = [self.scFetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        if ([[scorecard valueForKeyPath:@"complete"] boolValue]) {
+            completedCount++;
+        }
+    }
+    //}
+    if (completedCount > 2) {
+        result = YES;
+    }
+    
     return result;
 }
 
