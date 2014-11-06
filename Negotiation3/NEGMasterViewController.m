@@ -723,12 +723,12 @@
         NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
         NSDate *ts = [object valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d/yy"];
+        [format setDateFormat:@"M/d"];
         NSString *dateString = [format stringFromDate:ts];
         
         
-        NSString *t = [NSString stringWithFormat:@"My Self Profile, %@", dateString];
-        NSString *s = @"";
+        NSString *t = @"";
+        NSString *s = [NSString stringWithFormat:@"Self Profile created %@", dateString];
         
         bool isComplete = [[object valueForKey:@"complete"] boolValue];
         
@@ -736,10 +736,10 @@
             NSMutableDictionary *d = [_negType getType:object];
             NSMutableDictionary *n = [d objectForKey:@"nearest"];
             if (n) {
-                s = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
+                t = [NSString stringWithFormat:@"%@", [n objectForKey:@"label"], nil];
             }
         } else {
-            s = @"In Progress. Tap to Complete.";
+            t = @"Tap to Complete";
         }
         
         cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
@@ -768,7 +768,7 @@
     NSManagedObject *object = [self.scFetchedResultsController objectAtIndexPath:ip];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d/yy"];
+    [format setDateFormat:@"M/d"];
     NSString *dateString = [format stringFromDate:ts];
     
     UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];

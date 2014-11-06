@@ -140,12 +140,12 @@
     NSMutableDictionary *type = [t getType:self.detailItem];
     NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d/yy"];
+    [format setDateFormat:@"M/d"];
     NSString *dateString = [format stringFromDate:ts];
     NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"My Self Profile, %@", dateString];
-    cell.detailTextLabel.text = (NSString *)[nearest objectForKey:@"label"];
+    cell.textLabel.text = (NSString *)[nearest objectForKey:@"label"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Self Profile created %@", dateString];
 }
 
 #pragma mark - Table view data source
