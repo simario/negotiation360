@@ -86,6 +86,8 @@
 		69C585CA1901697A00EE6E27 /* dragend.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C71901697A00EE6E27 /* dragend.js */; };
 		69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C81901697A00EE6E27 /* hammer.min.js */; };
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
+		69C77EB61A0AE7ED007ADC8C /* legend.js in Sources */ = {isa = PBXBuildFile; fileRef = 69C77EB51A0AE7ED007ADC8C /* legend.js */; };
+		69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C77EB51A0AE7ED007ADC8C /* legend.js */; };
 		69C916461A01BCAA0082E552 /* purple-five.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916411A01BCAA0082E552 /* purple-five.png */; };
 		69C916471A01BCAA0082E552 /* purple-four.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916421A01BCAA0082E552 /* purple-four.png */; };
 		69C916481A01BCAA0082E552 /* purple-one.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916431A01BCAA0082E552 /* purple-one.png */; };
@@ -307,6 +309,7 @@
 		69C585C71901697A00EE6E27 /* dragend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dragend.js; sourceTree = "<group>"; };
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
+		69C77EB51A0AE7ED007ADC8C /* legend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = legend.js; sourceTree = "<group>"; };
 		69C916411A01BCAA0082E552 /* purple-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-five.png"; sourceTree = "<group>"; };
 		69C916421A01BCAA0082E552 /* purple-four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-four.png"; sourceTree = "<group>"; };
 		69C916431A01BCAA0082E552 /* purple-one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-one.png"; sourceTree = "<group>"; };
@@ -583,6 +586,7 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				69C77EB51A0AE7ED007ADC8C /* legend.js */,
 				693FD52D1A06B55E00A7DFB6 /* Chart.js */,
 				69ED154219EB49AF00BC301A /* practices-wwidd.html */,
 				69ED154319EB49AF00BC301A /* practices-www.html */,
@@ -939,6 +943,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */,
 				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,
 				69ED154519EB49AF00BC301A /* practices-www.html in Resources */,
@@ -1076,6 +1081,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C77EB61A0AE7ED007ADC8C /* legend.js in Sources */,
 				693FD52F1A06B57400A7DFB6 /* Chart.js in Sources */,
 				9130E82919FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m in Sources */,
 				69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */,

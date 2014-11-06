@@ -194,12 +194,12 @@
             break;
             
         case 2:
-            cell.textLabel.text = @"What Worked Well";
+            cell.textLabel.text = @"What Worked Well?";
             cell.imageView.image = [UIImage imageNamed:@"purple-one.png"];
             break;
             
         case 3:
-            cell.textLabel.text = @"What Would I Do Different";
+            cell.textLabel.text = @"What Would I Do Different?";
             cell.imageView.image = [UIImage imageNamed:@"purple-two.png"];
             break;
             

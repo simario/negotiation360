@@ -5,7 +5,23 @@
 	<link rel="stylesheet" href="css/style.css" />
   <style type="text/css">
 
+.legend {
+    width: 15em;
+	  border:thin solid gray;
+	  border-radius:3px;
+	  margin:0.5rem 4.5rem;
+	
+}
 
+.legend .title {
+    display: block;
+    margin: 0.5em;
+    border-width: 0 0 0 1em;
+    padding: 0 0.3em;
+font-size: 11px;
+font-weight: 300;
+color: gray;
+}
 	canvas{
 	  width: 100% !important;
       max-width: 280px;
@@ -91,6 +107,9 @@
 		<section class="card">
 			<p style="font-size:14px">The ratings you entered most closely match those of <strong style="color:#445ae1">%@</strong>. %@ (<i>The group you are the most unlike is that of the <strong style="color:#DF5353">%@</strong></i>.)</p>
 			<canvas id="canvas"></canvas>
+			<div id="radarLegend"></div>
+		</section>
+		<section class="card">
 			<p style="font-size:14px">%@</p>
 		</section>
 		
@@ -119,13 +138,22 @@
 	
     <script src="jquery.js"></script>
   <script src="Chart.js"></script>
+  <script src="legend.js"></script>
 
 	<script>
-	var radarChartData = {
+	if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
+	else window.attachEvent('onload', main);
+
+	function main() {
+	    radarChart();
+	}
+
+	function radarChart() {
+	    var radarChartData = {
 		labels: ['CREATING VALUE', 'EMPATHY', 'CLAIMING VALUE', 'ASSERT'],
 		datasets: [
 		{
-			label: "My First dataset",
+			label: "Your Responses",
 			fillColor: "rgba(255,159,51,0.2)",
 			strokeColor: "rgba(255,159,51,1)",
 			pointColor: "rgba(255,159,51,1)",
@@ -147,11 +175,8 @@
 		]
 	};
 
-
-
-	window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
-		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
+		new Chart(ctx).Radar(radarChartData, {
 			responsive: false,
 			maintainAspectRatio: true,
 			showScale: true,
@@ -167,7 +192,12 @@
 		    scaleStartValue: 0,
 		    showTooltips: false		
 		});
+
+	    legend(document.getElementById("radarLegend"), radarChartData);
+
 	}
+
+
 
 	</script>
 
