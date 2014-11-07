@@ -71,6 +71,9 @@
 		69A5AE2419E6123B004D68FD /* somewhat-worse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1F19E6123B004D68FD /* somewhat-worse.png */; };
 		69A70DF919677158008E4232 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF719677158008E4232 /* list.png */; };
 		69A70DFA19677158008E4232 /* untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF819677158008E4232 /* untitled.png */; };
+		69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596B1A0D58360001CE76 /* top-bestpractice.png */; };
+		69A8596F1A0D58360001CE76 /* top-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596C1A0D58360001CE76 /* top-profile.png */; };
+		69A859701A0D58360001CE76 /* top-scorecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596D1A0D58360001CE76 /* top-scorecard.png */; };
 		69AAEAC019A2D1C300A30164 /* four-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABC19A2D1C300A30164 /* four-green.png */; };
 		69AAEAC119A2D1C300A30164 /* one-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABD19A2D1C300A30164 /* one-green.png */; };
 		69AAEAC219A2D1C300A30164 /* three-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABE19A2D1C300A30164 /* three-green.png */; };
@@ -294,6 +297,9 @@
 		69A5AE1F19E6123B004D68FD /* somewhat-worse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "somewhat-worse.png"; sourceTree = "<group>"; };
 		69A70DF719677158008E4232 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		69A70DF819677158008E4232 /* untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = untitled.png; sourceTree = "<group>"; };
+		69A8596B1A0D58360001CE76 /* top-bestpractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bestpractice.png"; sourceTree = "<group>"; };
+		69A8596C1A0D58360001CE76 /* top-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-profile.png"; sourceTree = "<group>"; };
+		69A8596D1A0D58360001CE76 /* top-scorecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-scorecard.png"; sourceTree = "<group>"; };
 		69AAEABC19A2D1C300A30164 /* four-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "four-green.png"; sourceTree = "<group>"; };
 		69AAEABD19A2D1C300A30164 /* one-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one-green.png"; sourceTree = "<group>"; };
 		69AAEABE19A2D1C300A30164 /* three-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three-green.png"; sourceTree = "<group>"; };
@@ -586,6 +592,9 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				69A8596B1A0D58360001CE76 /* top-bestpractice.png */,
+				69A8596C1A0D58360001CE76 /* top-profile.png */,
+				69A8596D1A0D58360001CE76 /* top-scorecard.png */,
 				69C77EB51A0AE7ED007ADC8C /* legend.js */,
 				693FD52D1A06B55E00A7DFB6 /* Chart.js */,
 				69ED154219EB49AF00BC301A /* practices-wwidd.html */,
@@ -943,6 +952,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */,
+				69A8596F1A0D58360001CE76 /* top-profile.png in Resources */,
+				69A859701A0D58360001CE76 /* top-scorecard.png in Resources */,
 				69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */,
 				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,

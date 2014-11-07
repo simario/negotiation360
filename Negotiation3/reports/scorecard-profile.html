@@ -11,11 +11,30 @@
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
+		    background-color: #efeff4
         }
 			canvas{
 			  width: 100% !important;
 		      max-width: 280px;
 		      height: 100% !important;
+			}
+
+			.legend {
+			    width: 15em;
+				  border:thin solid gray;
+				  border-radius:3px;
+				  margin:0.5rem 4.5rem;
+
+			}
+
+			.legend .title {
+			    display: block;
+			    margin: 0.5em;
+			    border-width: 0 0 0 1em;
+			    padding: 0 0.3em;
+				font-size: 11px;
+				font-weight: 300;
+				color: gray;
 			}
 
 			header {
@@ -32,9 +51,10 @@
 			  box-shadow:0 1px 2px #aaa;
 			  background:white;
 			  margin: 1rem 1rem;
-			  border-radius:3px;
+			  border-radius:1px;
 			  background-image: url("top-banner-11.png");
 			  background-repeat: no-repeat;
+	   		  background-size: 100%;
 			  user-select:none;
 			  animation:fly-in-from-left .5s 1s ease both;
 			  transform-origin:top left;
@@ -44,7 +64,7 @@
 			  box-shadow:0 1px 2px #aaa;
 			  background:white;
 			  margin: 1rem 1rem;
-			  border-radius:3px;
+			  border-radius:1px;
 			  user-select:none;
 			  animation:fly-in-from-left .5s 1s ease both;
 			  transform-origin:top left;
@@ -104,6 +124,7 @@
 <body>
 	<section class="card">
 		<canvas id="canvas"></canvas>
+		<div id="radarLegend"></div>
 	</section>
 	
 	<section class="card">
@@ -120,10 +141,10 @@
 	<section class="card">
 		<div class="row">
 			<div class="col-xs-1" style="margin-right:10px">
-				<span data-icon="&#xe030;" style="font-size: 24px; color:#ff9f33"></span>
+				<span data-icon="&#xe030;" style="font-size: 32px; color:#ff9f33"></span>
 			</div>
 			<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">
-				Take a moment to review your answers, plus your scorecard profile, and reflect more broadly about how this negotiation unfolded. When you're done, continue on to the next section.
+				<p>Take a moment to review your answers, plus your scorecard profile, and reflect more broadly about how this negotiation unfolded. When you're done, continue on to the next section.</p>
 			</div>
 		</div>
 	</section>
@@ -133,13 +154,22 @@
 	
     <script src="jquery.js"></script>
   <script src="Chart.js"></script>
+  <script src="legend.js"></script>
 
 	<script>
-	var radarChartData = {
-		labels: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
+	if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
+	else window.attachEvent('onload', main);
+
+	function main() {
+	    radarChart();
+	}
+
+	function radarChart() {
+	    var radarChartData = {
+		labels: ['CREATING VALUE', 'EMPATHY', 'CLAIMING VALUE', 'ASSERT'],
 		datasets: [
 		{
-			label: "My First dataset",
+			label: "Your Profile",
 			fillColor: "rgba(255,159,51,0.2)",
 			strokeColor: "rgba(255,159,51,1)",
 			pointColor: "rgba(255,159,51,1)",
@@ -149,7 +179,7 @@
 			data: [%@, %@, %@, %@]
 		},
 		{
-			label: "My Second dataset",
+			label: "Your Scorecard Performance",
 			fillColor: "rgba(68,90,225,0.2)",
 			strokeColor: "rgba(68,90,225,1)",
 			pointColor: "rgba(68,90,225,1)",
@@ -161,17 +191,14 @@
 		]
 	};
 
-
-
-	window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
-		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
+		new Chart(ctx).Radar(radarChartData, {
 			responsive: false,
 			maintainAspectRatio: true,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 12,
+			pointLabelFontSize : 11,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 600,
@@ -181,10 +208,14 @@
 		    scaleStartValue: 0,
 		    showTooltips: false		
 		});
+
+	    legend(document.getElementById("radarLegend"), radarChartData);
+
 	}
 
-	</script>
 
+
+	</script>
 
 </body>
 </html>

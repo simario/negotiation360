@@ -338,7 +338,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Negotiation Profile";
+        return @"Self-Assessment";
     } else if (section == 1) {
         if ([self hasBestPractices]) {
             return @"Best Practices";
@@ -774,7 +774,7 @@
     UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
     
     [imv setImage:[UIImage imageNamed:@"compass-32.png"]];
-    NSString *title = @"My Negotiation";
+    NSString *title = @"My New Scorecard";
     NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
     if (storedTitle && ![storedTitle isEqualToString:@""]) {
         title = storedTitle;
