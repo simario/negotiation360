@@ -26,8 +26,6 @@
 - (IBAction)compose:(UIBarButtonItem *)sender {
     if ([MFMailComposeViewController canSendMail])
     {
-        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-        [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, nil]];
         
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         
@@ -96,8 +94,6 @@
     
     // Remove the mail view
     [self dismissViewControllerAnimated:YES completion:nil];
-    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x34aadc)];
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
     
 }
 

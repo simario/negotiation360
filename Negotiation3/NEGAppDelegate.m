@@ -49,10 +49,6 @@
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-45852047-4"];
     
-    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x34aadc)];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
     return YES;
 
 }
