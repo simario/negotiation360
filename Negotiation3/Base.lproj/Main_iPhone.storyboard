@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="HCL-za-HeV" id="SlZ-UO-bz3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notes" id="xGn-nf-LG0"/>
+                    <navigationItem key="navigationItem" title="My Notes" id="XI6-V0-wQ6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-Ok-GzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

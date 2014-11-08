@@ -113,8 +113,6 @@
     [format setDateFormat:@"M/d/yyyy"];
     NSString *dateString = [format stringFromDate:ts];
     NSString *label = [object valueForKey:@"note"];
-    
-    NSLog([NSString stringWithFormat:@":%@:", label]);
 
     if([label length] == 0) { //string is empty or nil
         label = @"Note...";
