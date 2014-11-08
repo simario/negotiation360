@@ -12,29 +12,77 @@
     }
 
     body {
-	  background: #fff;
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100%;
+	    background-color: #efeff4
     }
+	canvas{
+	  width: 100% !important;
+      max-width: 320px;
+      height: 100% !important;
+	}
+	.card {
+	  padding:0.5rem 1rem;
+	  box-shadow:0 1px 2px #aaa;
+	  background:white;
+	  margin: 1rem 1rem;
+	  border-radius:1px;
+	  user-select:none;
+	  animation:fly-in-from-left .5s 1s ease both;
+	  transform-origin:top left;
+	}
+	.card:nth-child(even){
+	  animation-name:fly-in-from-right;
+	  animation-delay:1.1s;
+	 transform-origin:top right;
+	}
 
-    #demo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-      cursor: hand;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-      cursor: grab;
-    }
+	@keyframes fly-in-from-left {
+	  from {
+	    transform:translateY(15rem) rotate(15deg);
+	    opacity:0;
+	  }
+	}
 
-    #demo p {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0 20px;
-      margin-bottom: 15px;
-    }
+	@keyframes fly-in-from-right {
+	  from {
+	    transform:translateY(15rem) rotate(-15deg);
+	    opacity:0;
+	  }
+	}
+
+	.card:after {
+	  position:absolute;
+	  font-size:.9rem;
+	  top:1.5rem;
+	  right:1rem;
+	  border:thin solid gray;
+	  color:gray;
+	  width:1rem;
+	  line-height:1rem;
+	  text-align:center;
+	  border-radius:50%;
+	  pointer-events:none;
+	}
+
+	h1 {
+	  font-size:2rem;
+	  font-weight:200;
+	  margin-top:11px;
+	}
+	  strong {
+	    font-weight:500;
+	    color:#ff9f33;
+	  }
+
+	h2 {
+	  font-size:1.25rem;
+	  color:#ff9f33;
+	  font-weight:400;
+	  margin-top:0px;
+	}
+
 
   </style>
 
@@ -51,11 +99,26 @@
 		</ol>
 		
 	</div> -->
+	<section class="card">
+		<h1>Agreement</h1>
+		<canvas id="canvas"></canvas>
+	</section>
 
-    <div id="agreement" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
-    <div id="type" style="margin: 25px auto 5px; width: 280px; height: 240px"></div>
-    <div id="importance" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
-    <div id="metrics" style="margin: 25px auto 5px; width: 280px; height: 220px"></div>
+	<section class="card">
+		<h1>Negotiation Type</h1>
+		<canvas id="canvas2"></canvas>
+	</section>
+
+	<section class="card">
+		<h1>Importance &amp; Satisfaction</h1>
+		<canvas id="canvas3"></canvas>
+	</section>
+
+	<section class="card">
+		<h1>Profile Metrics</h1>
+		<canvas id="canvas4"></canvas>
+	</section>
+
 
 <!--	<div class="alert alert-info" style="margin: 20px;">
 		<div class="row">
@@ -74,10 +137,8 @@
         
 	
   <script src="jquery.js"></script>
-  <script src="highcharts.js"></script>
-  <script src="highcharts-more.js"></script>
-  <script src="minimal.js"></script>
-  <script src="modules/exporting.js"></script>
+  <script src="Chart.js"></script>
+  <script src="legend.js"></script>
   <script>
 
 	$(function () {
@@ -133,177 +194,143 @@
                           
 
 	        // Build the chart
-	        $('#agreement').highcharts({
-	            title: {
-	                text: 'Agreement Rate'
-	            },
-	            tooltip: {
-	                pointFormat: '<b>{point.percentage:.1f}%</b>'
-	            },
-	            plotOptions: {
-	                pie: {
-	                    allowPointSelect: true,
-	                    cursor: 'pointer',
-	                    dataLabels: {
-	                        enabled: false
-	                    },
-	                    showInLegend: true
-	                }
-	            },
-				credits: {
-				      enabled: false
-				},
-				exporting: { 
-						enabled: false 
-				},
-	            series: [{
-	                type: 'pie',
-	                data: [
-	                    ['Yes', 4],
-	                    ['No', 2],
-	                    ['Not yet', 1]
-	                ]
-	            }]
-	        });
-	    });
+			if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
+			else window.attachEvent('onload', main);
 
-	});
+			function main() {
+			    agreementPie();
+			    typePie();
+			    importanceBar();
+			    metricBar();
+			}
 
-	$(function () {
+			function agreementPie() {
+			var agreementPieData = [
+					{
+						value: 3,
+						color:"#ff9f33",
+						highlight: "#FFB25C",
+						label: "Yes",
+					},
+					{
+						value: 3,
+						color: "#445ae1",
+						highlight: "#697BE7",
+						label: "No"
+					},
+					{
+						value: 3,
+						color: "#2ee478",
+						highlight: "#58E993",
+						label: "Not Yet"
+					}
 
-	    $(document).ready(function () {
+				];
 
-	        // Build the chart
-	        $('#type').highcharts({
-	            title: {
-	                text: 'Negotiation Types'
-	            },
-	            tooltip: {
-	                pointFormat: '<b>{point.percentage:.1f}%</b>'
-	            },
-	            plotOptions: {
-	                pie: {
-	                    allowPointSelect: true,
-	                    cursor: 'pointer',
-	                    dataLabels: {
-	                        enabled: false
-	                    },
-	                    showInLegend: true
-	                }
-	            },
-				credits: {
-				      enabled: false
-				},
-				exporting: { 
-						enabled: false 
-				},
-	            series: [{
-	                type: 'pie',
-	                data: [
-	                    ['Prof. (Outside)', 2],
-	                    ['Prof. (Inside)', 2],
-	                    ['Personal', 1],
-	                    ['Community', 2],
-	                    ['Family', 0]
-	                ]
-	            }]
-	        });
-	    });
+				    var ctx = document.getElementById("canvas").getContext("2d");
+				    new Chart(ctx).Pie(agreementPieData);
 
-	});
-	
-	$(function () {
-	    $('#importance').highcharts({
-	        chart: {
-	            type: 'column'
-	        },
-	        title: {
-	            text: 'Recent Scorecards'
-	        },
-	        yAxis: {
-	            title: null,
-				max: 100,
-				tickInterval: 25
-	        },
-	        xAxis: {
-	            categories: ['10/10','10/12','10/14','10/16','10/19']
-	        },
-	        tooltip: {
-	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-	            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-	                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-	            footerFormat: '</table>',
-	            shared: true,
-	            useHTML: true
-	        },
-	        plotOptions: {
-	            column: {
-	                pointPadding: 0,
-	                borderWidth: 0
-	            }
-	        },
-			credits: {
-			      enabled: false
-			},
-			exporting: { 
-					enabled: false 
-			},
-	        series: [{
-	            name: 'Importance',
-	            data: [49.9, 11.5, 16.4, 29.2, 44.0]
-	        }, {
-	            name: 'Satisfaction',
-	            data: [43.6, 38.8, 23.5, 23.4, 16.0]
+				    legend(document.getElementById("agreementPieLegend"), agreementPieData);
+				}
 
-	        }]
-	    });
-	});
-	
-	$(function () {
-	    $('#metrics').highcharts({
-	        chart: {
-	            type: 'bar'
-	        },
-	        title: {
-	            text: 'Recent Scorecards'
-	        },
-	        yAxis: {
-	            title: null,
-				max: 5,
-				tickInterval: 1
-	        },
-	        xAxis: {
-	            categories: ['Creating Value', 'Empathy', 'Claiming Value', 'Assert'],
-	        },
-	        legend: {
-	            enabled: false
-	        },
-	        tooltip: {
-	            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-	            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-	                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-	            footerFormat: '</table>',
-	            shared: true,
-	            useHTML: true
-	        },
-	        plotOptions: {
-	            column: {
-	                pointPadding: 0,
-	                borderWidth: 0
-	            }
-	        },
-			credits: {
-			      enabled: false
-			},
-			exporting: { 
-					enabled: false 
-			},
-	        series: [{
-	            name: 'Average',
-	            data: [2.1, 3.2, 1.8, 2.7]
+			function typePie() {
+			var typePieData = [
+					{
+						value: 3,
+						color:"#ff9f33",
+						highlight: "#FFB25C",
+						label: "Prof (Outside)",
+					},
+					{
+						value: 3,
+						color: "#445ae1",
+						highlight: "#697BE7",
+						label: "Prof (Inside)"
+					},
+					{
+						value: 3,
+						color: "#2ee478",
+						highlight: "#58E993",
+						label: "Personal"
+					},
+					{
+						value: 3,
+						color: "#DF5353",
+						highlight: "#e57575",
+						label: "Community"
+					},
+					{
+						value: 3,
+						color: "#aaeeee",
+						highlight: "#bbf1f1",
+						label: "Family"
+					}
 
-	        }]
-	    });
+				];
+
+				    var ctx = document.getElementById("canvas2").getContext("2d");
+				    new Chart(ctx).Pie(typePieData);
+
+				    legend(document.getElementById("typePieLegend"), typePieData);
+				}
+
+			function importanceBar() {
+
+				var importanceBarData = {
+					labels : ["10/10","10/12","10/14","10/16","10/18"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,0.8)",
+							highlightFill: "rgba(220,220,220,0.75)",
+							highlightStroke: "rgba(220,220,220,1)",
+							data : [2,4,2,4,2]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,0.8)",
+							highlightFill : "rgba(151,187,205,0.75)",
+							highlightStroke : "rgba(151,187,205,1)",
+							data : [4,2,4,2,4]
+						}
+					]
+
+				}
+				    var ctx = document.getElementById("canvas3").getContext("2d");
+				    new Chart(ctx).Bar(importanceBarData);
+
+				    legend(document.getElementById("importanceBarLegend"), importanceBarData);
+				}
+
+			function metricBar() {
+
+				var metricBarData = {
+					labels : ["10/10","10/12","10/14","10/16","10/18"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,0.8)",
+							highlightFill: "rgba(220,220,220,0.75)",
+							highlightStroke: "rgba(220,220,220,1)",
+							data : [2,4,2,4,2]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,0.8)",
+							highlightFill : "rgba(151,187,205,0.75)",
+							highlightStroke : "rgba(151,187,205,1)",
+							data : [4,2,4,2,4]
+						}
+					]
+
+				}
+				    var ctx = document.getElementById("canvas4").getContext("2d");
+				    new Chart(ctx).Bar(metricBarData);
+
+				    legend(document.getElementById("metricBarLegend"), metricBarData);
+				}
+		});
+
 	});
 
   </script>
