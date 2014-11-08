@@ -7,6 +7,34 @@
 
   <style type="text/css">
 
+  body {
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 100%;
+	    background-color: #efeff4
+  }
+.legend {
+    width: 12em;
+	  border:thin solid gray;
+	  border-radius:3px;
+	  margin:0.5rem auto;
+}
+.legend .title {
+    display: inline-block;
+    margin: 0.5em;
+    border-width: 0 0 0 1em;
+    padding: 0 0.3em;
+	font-size: 11px;
+	font-weight: 300;
+	color: gray;
+}
+canvas{
+	width: 100% !important;
+    max-width: 320px;
+    height: auto !important;
+
+}
+
 
 	header {
 	  position:absolute;
@@ -18,11 +46,11 @@
 	}
 
 	.card {
-	  padding:1rem 0rem;
+	  padding:0.5rem 0rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1.5rem 1rem;
-	  border-radius:3px;
+	  margin: 1rem 1.5rem;
+	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
 	  transform-origin:top left;
@@ -84,17 +112,27 @@
 <body>
 	<body>
 	    <section class="card">
-			<canvas id="canvas"></canvas>
+					<canvas id="canvas"></canvas>
+					<p id="pieLegend"></p>
 		</section>
 	    <script src="Chart.js"></script>
+	    <script src="legend.js"></script>
 
 		<script>
+		if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
+		else window.attachEvent('onload', main);
+
+		function main() {
+		    pieChart();
+		}
+
+		function pieChart() {
 		var pieData = [
 				{
 					value: %li,
 					color:"#ff9f33",
 					highlight: "#FFB25C",
-					label: "Yes"
+					label: "Yes",
 				},
 				{
 					value: %li,
@@ -111,24 +149,11 @@
 
 			];
 
-			window.onload = function(){
-				var ctx = document.getElementById("canvas").getContext("2d");
-				window.myPie = new Chart(ctx).Pie(pieData, {
-					responsive: true,
-					maintainAspectRatio: false,
-					showScale: true,
-					scaleShowLine : false,
-					scaleShowLabels : false,
-					pointLabelFontSize : 12,
-					pointLabelFontFamily : "'Helvetica Neue'",
-					pointLabelFontColor : "gray",
-				    animationSteps: 100,
-				    scaleOverride: true,
-				    scaleSteps: 2,
-				    scaleStepWidth: 4,
-				    scaleStartValue: 0
-				});
-			};
+			    var ctx = document.getElementById("canvas").getContext("2d");
+			    new Chart(ctx).Pie(pieData);
+
+			    legend(document.getElementById("pieLegend"), pieData);
+			}
 
 		</script>
 </body>
