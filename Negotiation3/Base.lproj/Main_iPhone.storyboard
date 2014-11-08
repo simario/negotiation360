@@ -79,11 +79,13 @@
                             <outlet property="delegate" destination="HCL-za-HeV" id="SlZ-UO-bz3"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Notes" id="XI6-V0-wQ6"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-Ok-GzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1761" y="-1070"/>
+            <point key="canvasLocation" x="-1846" y="-1284"/>
         </scene>
         <!--My Best Practices-->
         <scene sceneID="xOT-rE-YBg">

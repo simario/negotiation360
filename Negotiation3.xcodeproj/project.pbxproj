@@ -929,6 +929,7 @@
 						DevelopmentTeam = L74F3XHME3;
 					};
 					91D3E1B618B91BD400FC14F7 = {
+						DevelopmentTeam = L74F3XHME3;
 						TestTargetID = 91D3E18A18B91BD400FC14F7;
 					};
 				};
@@ -1353,6 +1354,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Negotiation3.app/Negotiation3";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1366,6 +1369,7 @@
 				);
 				INFOPLIST_FILE = "Negotiation3Tests/Negotiation3Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1375,6 +1379,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Negotiation3.app/Negotiation3";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1384,6 +1390,7 @@
 				GCC_PREFIX_HEADER = "Negotiation3/Negotiation3-Prefix.pch";
 				INFOPLIST_FILE = "Negotiation3Tests/Negotiation3Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
