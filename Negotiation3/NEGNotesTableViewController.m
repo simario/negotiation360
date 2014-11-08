@@ -113,13 +113,20 @@
     [format setDateFormat:@"M/d/yyyy"];
     NSString *dateString = [format stringFromDate:ts];
     NSString *label = [object valueForKey:@"note"];
-
     
-    if ([label isEqualToString:@""]) {
+    NSLog([NSString stringWithFormat:@":%@:", label]);
+
+    if([label length] == 0) { //string is empty or nil
         label = @"Note...";
     }
     
-    cell.textLabel.text = [object valueForKey:@"note"];
+    if(![[label stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]) {
+        //string is all whitespace
+        label = @"Note...";
+    }
+    
+
+    cell.textLabel.text = label;
     cell.detailTextLabel.text = dateString;
 }
 
