@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *composeButton;
 
 - (IBAction)compose:(UIBarButtonItem *)sender;
+- (IBAction)edit:(UIButton *)sender;
 
 @end

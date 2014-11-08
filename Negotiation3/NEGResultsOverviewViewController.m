@@ -21,6 +21,11 @@
 
 @implementation NEGResultsOverviewViewController
 
+- (IBAction)edit:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"delimas" sender:self];
+    
+}
+
 #pragma mark - Managing the detail item
 
 - (IBAction)compose:(UIBarButtonItem *)sender {
@@ -157,7 +162,7 @@
 {
     
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 
@@ -169,6 +174,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"resultsTypeCell" forIndexPath:indexPath];
     } else if (indexPath.item == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"resultsGraphCell" forIndexPath:indexPath];
+    } else if (indexPath.item == 6) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"editProfileCell" forIndexPath:indexPath];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"ResultsCell" forIndexPath:indexPath];
     }
@@ -204,6 +211,7 @@
             cell.textLabel.text = @"Skill-Building Tips";
             cell.imageView.image = [UIImage imageNamed:@"four-blue.png"];
             break;
+        
             
         default:
             break;
