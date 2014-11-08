@@ -14,7 +14,7 @@
 		<string>https://github.com/simario/negotiation360.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Negotiation3.xcodeproj/project.xcworkspace</string>
+	<string>Negotiation3.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B9ED0BB22136554C900DB65785F8ADC759701179</key>

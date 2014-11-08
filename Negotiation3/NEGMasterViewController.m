@@ -159,6 +159,7 @@
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithBool:NO] forKey:@"complete"];
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question1"];
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
@@ -191,6 +192,7 @@
         
 
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSNumber numberWithBool:NO] forKey:@"complete"];
         [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question1"];
         [newManagedObject setValue:[NSNumber numberWithInt:50] forKey:@"question2"];
         [newManagedObject setValue:[NSNumber numberWithInt:-1] forKey:@"question3"];
