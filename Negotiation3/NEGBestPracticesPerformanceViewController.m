@@ -61,10 +61,10 @@
             comma = @",";
         }
         
-        creatingValueTotal += [[detailItem valueForKey:@"question5"] intValue];
-        empathyTotal += [[detailItem valueForKey:@"question6"] intValue];
-        claimingValueTotal += [[detailItem valueForKey:@"question7"] intValue];
-        assertTotal += [[detailItem valueForKey:@"question8"] intValue];
+        creatingValueTotal += ([[detailItem valueForKey:@"question5"] intValue] + 1);
+        empathyTotal += ([[detailItem valueForKey:@"question6"] intValue] + 1);
+        claimingValueTotal += ([[detailItem valueForKey:@"question7"] intValue] + 1);
+        assertTotal += ([[detailItem valueForKey:@"question8"] intValue] + 1);
         
         NSDate *ts = [detailItem valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
