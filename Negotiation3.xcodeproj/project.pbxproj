@@ -219,6 +219,7 @@
 		91DDE23C18DF9E9F0018CBC4 /* NEGAboutTypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDE23B18DF9E9F0018CBC4 /* NEGAboutTypesViewController.m */; };
 		91DDE23F18DF9EB40018CBC4 /* NEGResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDE23E18DF9EB40018CBC4 /* NEGResourcesViewController.m */; };
 		91DDE24218DF9ECB0018CBC4 /* NEGAboutMWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDE24118DF9ECB0018CBC4 /* NEGAboutMWViewController.m */; };
+		D276FAD11A0E837700307BD4 /* NEGNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D276FAD01A0E837700307BD4 /* NEGNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -485,6 +486,8 @@
 		91DDE23E18DF9EB40018CBC4 /* NEGResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGResourcesViewController.m; sourceTree = "<group>"; };
 		91DDE24018DF9ECB0018CBC4 /* NEGAboutMWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGAboutMWViewController.h; sourceTree = "<group>"; };
 		91DDE24118DF9ECB0018CBC4 /* NEGAboutMWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGAboutMWViewController.m; sourceTree = "<group>"; };
+		D276FACF1A0E837700307BD4 /* NEGNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGNoteViewController.h; sourceTree = "<group>"; };
+		D276FAD01A0E837700307BD4 /* NEGNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGNoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +841,8 @@
 				9130E83119FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m */,
 				9130E83319FF3D9B0025F645 /* NEGNotesTableViewController.h */,
 				9130E83419FF3D9B0025F645 /* NEGNotesTableViewController.m */,
+				D276FACF1A0E837700307BD4 /* NEGNoteViewController.h */,
+				D276FAD01A0E837700307BD4 /* NEGNoteViewController.m */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -1167,6 +1172,7 @@
 				91B66A1918DE2BB500DBA430 /* no-data-to-display.js in Sources */,
 				91B66A0C18DE2BB500DBA430 /* highcharts.js in Sources */,
 				91DDE23C18DF9E9F0018CBC4 /* NEGAboutTypesViewController.m in Sources */,
+				D276FAD11A0E837700307BD4 /* NEGNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
