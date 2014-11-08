@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-2221" y="-1014"/>
         </scene>
-        <!--Notes-->
+        <!--My Notes-->
         <scene sceneID="Nhi-GG-r4Y">
             <objects>
                 <tableViewController id="HCL-za-HeV" customClass="NEGNotesTableViewController" sceneMemberID="viewController">
@@ -79,11 +79,13 @@
                             <outlet property="delegate" destination="HCL-za-HeV" id="SlZ-UO-bz3"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Notes" id="XI6-V0-wQ6"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-Ok-GzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1761" y="-1070"/>
+            <point key="canvasLocation" x="-1846" y="-1284"/>
         </scene>
         <!--My Best Practices-->
         <scene sceneID="xOT-rE-YBg">
@@ -1923,12 +1925,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="UvR-e4-cJ3"/>
         <segue reference="0E3-bz-98Y"/>
         <segue reference="9hR-Rc-zEg"/>
-        <segue reference="UvR-e4-cJ3"/>
         <segue reference="Jgv-33-AF9"/>
         <segue reference="TxM-el-1ZU"/>
-        <segue reference="0E3-bz-98Y"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>
