@@ -180,7 +180,7 @@
         case 0:
             //cell.textLabel.text = @"Type";
             cell.textLabel.text = @"My Best Practices";
-            cell.detailTextLabel.text = @"asdf asf asdf";
+            cell.detailTextLabel.text = @"Consult before your next negotiation";
             break;
         case 1:
             
@@ -191,26 +191,26 @@
             
         case 2:
             cell.textLabel.text = @"What Worked Well?";
-            cell.imageView.image = [UIImage imageNamed:@"purple-one.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"purple-one.png"];
             break;
             
         case 3:
             cell.textLabel.text = @"What Would I Do Different?";
-            cell.imageView.image = [UIImage imageNamed:@"purple-two.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"purple-two.png"];
             break;
             
         case 4:
             cell.textLabel.text = @"Negotiation Performance";
-            cell.imageView.image = [UIImage imageNamed:@"purple-three.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"purple-three.png"];
             break;
             
         case 5:
             cell.textLabel.text = @"Negotiation Notes";
-            cell.imageView.image = [UIImage imageNamed:@"purple-four.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"purple-four.png"];
             break;
         case 6:
             cell.textLabel.text = @"Skill-Building Tips";
-            cell.imageView.image = [UIImage imageNamed:@"purple-five.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"purple-five.png"];
             break;
             
         default:

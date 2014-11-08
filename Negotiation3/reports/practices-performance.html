@@ -14,7 +14,7 @@
 
 	canvas{
 	  width: 100% !important;
-      max-width: 320px;
+      max-width: 300px;
       height: 100% !important;
 	}
 	header {
@@ -84,7 +84,7 @@
 	  font-size:1.25rem;
 	  color:#ff9f33;
 	  font-weight:400;
-	  margin-top:0px;
+	  margin-top:-10px;
 	}
 
   </style>
@@ -94,21 +94,25 @@
 <body>	
 	<section class="card">
 		<h1>Agreement Rate</h1> 
+		<h2 id="subtitle"></h2>
 		<canvas id="canvas"></canvas>
 	</section>
 
 	<section class="card">
 		<h1>Negotiation Type</h1> 
+		<h2 id="subtitle2"></h2>
 		<canvas id="canvas2"></canvas>
 	</section>
 
 	<section class="card">
 		<h1>Importance &amp; Satisfaction</h1> 
+		<h2 id="subtitle3"></h2>
 		<canvas id="canvas3"></canvas>
 	</section>
 
 	<section class="card">
 		<h1>Profile Metrics</h1> 
+		<h2 id="subtitle4"></h2>
 		<canvas id="canvas4"></canvas>
 	</section>
 	
@@ -170,8 +174,13 @@
 
                           $('#debug').html(debug);
                           
-                          
-                          
+            
+           var subtitle ='Last ' + numScorecards + ' scorecards created'
+           $('#subtitle').html(subtitle);
+           $('#subtitle2').html(subtitle);
+           $('#subtitle3').html(subtitle);
+           $('#subtitle4').html(subtitle);
+
 
 	        // Build the chart
 			var agreementPieData = [
@@ -229,7 +238,7 @@
 				];
 
 			var importanceBarData = {
-					labels : ["10/8","10/8","10/8"],
+					labels : dates,
 					datasets : [
 						{
 							label : "Importance",
@@ -237,7 +246,7 @@
 							strokeColor : "#ff9f33",
 							highlightFill: "#FFB25C",
 							highlightStroke: "#FFB25C",
-							data : [importance]
+							data : importance
 						},
 						{
 							label : "Satisfaction",
@@ -245,38 +254,52 @@
 							strokeColor : "#445ae1",
 							highlightFill : "#697BE7",
 							highlightStroke : "#697BE7",
-							data : [satisfaction]
+							data : satisfaction
 						}
 					]
 
 				};
 
-			var radarChartData4 = {
-				labels: ['CREATING VALUE', 'EMPATHY', 'CLAIMING VALUE', 'ASSERT'],
-				datasets: [
-					{
-						label: "My Negotiation Profile",
-						fillColor: "rgba(68,90,225,0.2)",
-						strokeColor: "rgba(68,90,225,1)",
-						pointColor: "rgba(68,90,225,1)",
-						pointStrokeColor: "#fff",
-						pointHighlightFill: "#fff",
-						pointHighlightStroke: "rgba(68,90,225,1)",
-						data: [2.542857143, 3.657142857, 4.542857143, 5.257142857]
-					}
-				]
-			};
+			var metricBarData = {
+					labels : ["Create", "Assert", "Empathy", "Claim"],
+					datasets : [
+						{
+							fillColor : "#ff9f33",
+							strokeColor : "#ff9f33",
+							highlightFill: "#FFB25C",
+							highlightStroke: "#FFB25C",
+							data : [averageCreatingValue,averageEmpathy,averageClaimingValue,averageAssert]
+						}
+					]
+
+				};
 
 
-			window.onload = function(){
-				var ctx = document.getElementById("canvas").getContext("2d");
-				window.myPieChart = new Chart(ctx).Pie(agreementPieData);
-				var ctx2 = document.getElementById("canvas2").getContext("2d");
-				window.myPieChart = new Chart(ctx2).Pie(typePieData);
-				var ctx3 = document.getElementById("canvas3").getContext("2d");
-				window.myBarChart = new Chart(ctx3).Bar(importanceBarData);
-				var ctx4 = document.getElementById("canvas4").getContext("2d");
-				window.myRadarChart = new Chart(ctx4).Radar(radarChartData4);
+				window.onload = function(){
+					var ctx = document.getElementById("canvas").getContext("2d");
+					window.myPieChart = new Chart(ctx).Pie(agreementPieData);
+					var ctx2 = document.getElementById("canvas2").getContext("2d");
+					window.myPieChart = new Chart(ctx2).Pie(typePieData);
+					var ctx3 = document.getElementById("canvas3").getContext("2d");
+					window.myBarChart = new Chart(ctx3).Bar(importanceBarData,{
+						responsive: false,
+						maintainAspectRatio: true,
+					    showScale: true,
+					    scaleOverride: true,
+					    scaleSteps: 5,
+					    scaleStepWidth: 20,
+					    scaleStartValue: 0
+					});
+					var ctx4 = document.getElementById("canvas4").getContext("2d");
+					window.myBarChart = new Chart(ctx4).Bar(metricBarData,{
+						responsive: false,
+						maintainAspectRatio: true,
+					    showScale: true,
+					    scaleOverride: true,
+					    scaleSteps: 5,
+					    scaleStepWidth: 1,
+					    scaleStartValue: 0
+					});
 
 			}
 
