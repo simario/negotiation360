@@ -71,7 +71,7 @@
         [format setDateFormat:@"M/d"];
         NSString *dateString = [format stringFromDate:ts];
         
-        dates = [NSString stringWithFormat:@"%@ '%@'%@", dates, dateString, comma, nil];
+        dates = [NSString stringWithFormat:@"%@ \"%@\"%@", dates, dateString, comma, nil];
         importance = [NSString stringWithFormat:@"%@ %li%@", importance, (long)[[detailItem valueForKey:@"question2"] intValue], comma, nil];
         satisfaction = [NSString stringWithFormat:@"%@ %li%@", satisfaction, (long)[[detailItem valueForKey:@"question4"] intValue], comma, nil];
         names = [NSString stringWithFormat:@"%@ '%@'%@", names, [detailItem valueForKey:@"name"], comma, nil];
