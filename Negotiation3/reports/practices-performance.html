@@ -5,28 +5,32 @@
 	<link rel="stylesheet" href="css/style.css" />
   <style type="text/css">
 
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-    }
-
-    body {
-        background-position: top left;
-        background-repeat: no-repeat;
-        background-size: 100%;
+  body {
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 100%;
 	    background-color: #efeff4
-    }
+  }
+
 	canvas{
 	  width: 100% !important;
       max-width: 320px;
       height: 100% !important;
 	}
+	header {
+	  position:absolute;
+	  z-index:0;
+	  top:0; left:0; right:0;
+	  height:10rem;
+	  transition:transform .5s, opacity .3s;
+	  background-size:cover;
+	}
+
 	.card {
 	  padding:0.5rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1rem 1rem;
+	  margin: 1.5rem 1rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -83,53 +87,30 @@
 	  margin-top:0px;
 	}
 
-
   </style>
 
 
 </head>
 <body>	
-	<!--<div>
-		<p style="margin: 20px; font-size: 14px;">Sometimes your scorecard for a particular negotiation will closely match your self-assessment profile. That shouldn't be surprising, since your profile reflects your general tendencies. But other times it may look very different. Here's why:</p>
-
-		<ol style="margin: 20px 20px 20px 40px; font-size: 14px;">
-			<li>You may be more effective negotiating with certain types of people than with others.</li><br>
-			<li>Likewise, it may depend on the situation. Perhaps you're stronger negotiating on behalf of your organization than advocating for yourself.</li><br>
-			<li>Finally, these scorecard questions were somewhat different from those in the self-assessment. Here you were free to score yourself on each skill independently without making tradeoffs for the other items.</li>
-		</ol>
-		
-	</div> -->
 	<section class="card">
-		<h1>Agreement</h1>
+		<h1>Agreement Rate</h1> 
 		<canvas id="canvas"></canvas>
 	</section>
 
 	<section class="card">
-		<h1>Negotiation Type</h1>
+		<h1>Negotiation Type</h1> 
 		<canvas id="canvas2"></canvas>
 	</section>
 
 	<section class="card">
-		<h1>Importance &amp; Satisfaction</h1>
+		<h1>Importance &amp; Satisfaction</h1> 
 		<canvas id="canvas3"></canvas>
 	</section>
 
 	<section class="card">
-		<h1>Profile Metrics</h1>
+		<h1>Profile Metrics</h1> 
 		<canvas id="canvas4"></canvas>
 	</section>
-
-
-<!--	<div class="alert alert-info" style="margin: 20px;">
-		<div class="row">
-			<div class="col-xs-1" style="margin-right:10px">
-				<span data-icon="&#xe030;" style="font-size: 24px"></span>
-			</div>
-			<div class="col-xs-10" style="font-weight:400; font-size: 14px; line-height:1.14285714285714">
-				Take a moment to review your answers, plus your scorecard profile, and reflect more broadly about how this negotiation unfolded. When you’re done, continue on to the next section.
-			</div>
-		</div>
-	</div> -->
 	
 	<div style="height:100px">
 	</div>
@@ -138,7 +119,6 @@
 	
   <script src="jquery.js"></script>
   <script src="Chart.js"></script>
-  <script src="legend.js"></script>
   <script>
 
 	$(function () {
@@ -194,143 +174,113 @@
                           
 
 	        // Build the chart
-			if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
-			else window.attachEvent('onload', main);
-
-			function main() {
-			    agreementPie();
-			    typePie();
-			    importanceBar();
-			    metricBar();
-			}
-
-			function agreementPie() {
 			var agreementPieData = [
 					{
-						value: 3,
+						value: yesCount,
 						color:"#ff9f33",
 						highlight: "#FFB25C",
 						label: "Yes",
 					},
 					{
-						value: 3,
+						value: noCount,
 						color: "#445ae1",
 						highlight: "#697BE7",
 						label: "No"
 					},
 					{
-						value: 3,
+						value: notYetCount,
 						color: "#2ee478",
 						highlight: "#58E993",
 						label: "Not Yet"
 					}
-
 				];
 
-				    var ctx = document.getElementById("canvas").getContext("2d");
-				    new Chart(ctx).Pie(agreementPieData);
-
-				    legend(document.getElementById("agreementPieLegend"), agreementPieData);
-				}
-
-			function typePie() {
-			var typePieData = [
+			var typePieData = 	[
 					{
-						value: 3,
+						value: proOutsidePartiesCount,
 						color:"#ff9f33",
 						highlight: "#FFB25C",
 						label: "Prof (Outside)",
 					},
 					{
-						value: 3,
+						value: proColleaguesCount,
 						color: "#445ae1",
 						highlight: "#697BE7",
 						label: "Prof (Inside)"
 					},
 					{
-						value: 3,
+						value: personalCount,
 						color: "#2ee478",
 						highlight: "#58E993",
 						label: "Personal"
 					},
 					{
-						value: 3,
-						color: "#DF5353",
-						highlight: "#e57575",
-						label: "Community"
+						value: communityCount,
+						color:"#DF5353",
+						highlight: "#E57575",
+						label: "Community",
 					},
 					{
-						value: 3,
+						value: familyCount,
 						color: "#aaeeee",
-						highlight: "#bbf1f1",
+						highlight: "#BBF1F1",
 						label: "Family"
 					}
-
 				];
 
-				    var ctx = document.getElementById("canvas2").getContext("2d");
-				    new Chart(ctx).Pie(typePieData);
-
-				    legend(document.getElementById("typePieLegend"), typePieData);
-				}
-
-			function importanceBar() {
-
-				var importanceBarData = {
-					labels : ["10/10","10/12","10/14","10/16","10/18"],
+			var importanceBarData = {
+					labels : ["10/8","10/8","10/8"],
 					datasets : [
 						{
-							fillColor : "rgba(220,220,220,0.5)",
-							strokeColor : "rgba(220,220,220,0.8)",
-							highlightFill: "rgba(220,220,220,0.75)",
-							highlightStroke: "rgba(220,220,220,1)",
-							data : [2,4,2,4,2]
+							label : "Importance",
+							fillColor : "#ff9f33",
+							strokeColor : "#ff9f33",
+							highlightFill: "#FFB25C",
+							highlightStroke: "#FFB25C",
+							data : [importance]
 						},
 						{
-							fillColor : "rgba(151,187,205,0.5)",
-							strokeColor : "rgba(151,187,205,0.8)",
-							highlightFill : "rgba(151,187,205,0.75)",
-							highlightStroke : "rgba(151,187,205,1)",
-							data : [4,2,4,2,4]
+							label : "Satisfaction",
+							fillColor : "#445ae1",
+							strokeColor : "#445ae1",
+							highlightFill : "#697BE7",
+							highlightStroke : "#697BE7",
+							data : [satisfaction]
 						}
 					]
 
-				}
-				    var ctx = document.getElementById("canvas3").getContext("2d");
-				    new Chart(ctx).Bar(importanceBarData);
+				};
 
-				    legend(document.getElementById("importanceBarLegend"), importanceBarData);
-				}
+			var radarChartData4 = {
+				labels: ['CREATING VALUE', 'EMPATHY', 'CLAIMING VALUE', 'ASSERT'],
+				datasets: [
+					{
+						label: "My Negotiation Profile",
+						fillColor: "rgba(68,90,225,0.2)",
+						strokeColor: "rgba(68,90,225,1)",
+						pointColor: "rgba(68,90,225,1)",
+						pointStrokeColor: "#fff",
+						pointHighlightFill: "#fff",
+						pointHighlightStroke: "rgba(68,90,225,1)",
+						data: [2.542857143, 3.657142857, 4.542857143, 5.257142857]
+					}
+				]
+			};
 
-			function metricBar() {
 
-				var metricBarData = {
-					labels : ["10/10","10/12","10/14","10/16","10/18"],
-					datasets : [
-						{
-							fillColor : "rgba(220,220,220,0.5)",
-							strokeColor : "rgba(220,220,220,0.8)",
-							highlightFill: "rgba(220,220,220,0.75)",
-							highlightStroke: "rgba(220,220,220,1)",
-							data : [2,4,2,4,2]
-						},
-						{
-							fillColor : "rgba(151,187,205,0.5)",
-							strokeColor : "rgba(151,187,205,0.8)",
-							highlightFill : "rgba(151,187,205,0.75)",
-							highlightStroke : "rgba(151,187,205,1)",
-							data : [4,2,4,2,4]
-						}
-					]
+			window.onload = function(){
+				var ctx = document.getElementById("canvas").getContext("2d");
+				window.myPieChart = new Chart(ctx).Pie(agreementPieData);
+				var ctx2 = document.getElementById("canvas2").getContext("2d");
+				window.myPieChart = new Chart(ctx2).Pie(typePieData);
+				var ctx3 = document.getElementById("canvas3").getContext("2d");
+				window.myBarChart = new Chart(ctx3).Bar(importanceBarData);
+				var ctx4 = document.getElementById("canvas4").getContext("2d");
+				window.myRadarChart = new Chart(ctx4).Radar(radarChartData4);
 
-				}
-				    var ctx = document.getElementById("canvas4").getContext("2d");
-				    new Chart(ctx).Bar(metricBarData);
+			}
 
-				    legend(document.getElementById("metricBarLegend"), metricBarData);
-				}
-		});
-
+	    });
 	});
 
   </script>
