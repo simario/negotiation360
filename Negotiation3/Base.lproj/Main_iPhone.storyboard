@@ -1896,12 +1896,12 @@
         <image name="briefcase-25.png" width="22" height="22"/>
         <image name="compass-32.png" width="32" height="32"/>
         <image name="menu-25.png" width="20" height="20"/>
-        <image name="much-better.png" width="130" height="80"/>
-        <image name="much-worse.png" width="130" height="80"/>
+        <image name="much-better.png" width="140" height="80"/>
+        <image name="much-worse.png" width="140" height="80"/>
         <image name="paper44.png" width="20" height="20"/>
         <image name="same-usual.png" width="140" height="80"/>
-        <image name="somewhat-better.png" width="150" height="80"/>
-        <image name="somewhat-worse.png" width="150" height="80"/>
+        <image name="somewhat-better.png" width="140" height="80"/>
+        <image name="somewhat-worse.png" width="140" height="80"/>
         <image name="user_male4-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1910,10 +1910,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TxM-el-1ZU"/>
-        <segue reference="Jgv-33-AF9"/>
+        <segue reference="oA1-ch-634"/>
         <segue reference="UvR-e4-cJ3"/>
-        <segue reference="0E3-bz-98Y"/>
+        <segue reference="Q57-xl-Lgr"/>
+        <segue reference="XrA-bw-hNd"/>
         <segue reference="9hR-Rc-zEg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>

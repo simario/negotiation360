@@ -20,7 +20,7 @@
     
     _typeLabels = [NSArray arrayWithObjects:@"Professional, with outside parties (vendors, customers, stakeholders, etc.)",
                    @"Professional, with colleagues within your organization.",
-                   @"Personal (such as buying a car or renting an apartment).",
+                   @"Personal (such as buying a car or renting an apartment)",
                    @"Community (with neighborhood groups, not-for-profits, etc.)",
                    @"Family (with children, parents, partners, spouses, etc.)",
                    nil];
