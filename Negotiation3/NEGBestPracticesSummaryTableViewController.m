@@ -195,7 +195,7 @@
             break;
             
         case 3:
-            cell.textLabel.text = @"What Would I Do Different?";
+            cell.textLabel.text = @"What Would I Do Differently?";
             //cell.imageView.image = [UIImage imageNamed:@"purple-two.png"];
             break;
             
