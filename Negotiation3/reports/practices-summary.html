@@ -28,13 +28,12 @@
 	font-weight: 300;
 	color: gray;
 }
-canvas{
-	width: 100% !important;
-    max-width: 320px;
-    height: auto !important;
 
+canvas-holder{
+  padding:4px;
+  margin:20px;
+  position:relative;
 }
-
 
 	header {
 	  position:absolute;
@@ -92,6 +91,7 @@ canvas{
 	h1 {
 	  font-size:2rem;
 	  font-weight:200;
+	  margin-top:1px;
 	}
 	  strong {
 	    font-weight:300;
@@ -104,56 +104,65 @@ canvas{
 	  color:gray;
 	  font-weight:400;
 	}
-
+	.pie-legend li span {
+	    width: 1em;
+	    height: 1em;
+	    display: inline-block;
+	    margin-right: 5px;
+	}
+	.pie-legend {
+	    list-style: none;    
+	}
   </style>
 
     
 </head>
 <body>
-	    <section class="card">
-					<canvas id="canvas"></canvas>
-					<p id="pieLegend"></p>
+		<section class="card">
+			<div class="container">
+				<h1>Agreement Rate</h1> 
+				<div class="row">
+					<div class="col-xs-6" class="canvas-holder">
+						<canvas id="canvas" width="200" height="150"></canvas>
+					</div>
+					<div class="col-xs-6" id="legend">
+				</div>
+			</div>
 		</section>
+	  <script src="jquery.js"></script>
 	    <script src="Chart.js"></script>
-	    <script src="legend.js"></script>
 
 		<script>
-		if(!!(window.addEventListener)) window.addEventListener('DOMContentLoaded', main);
-		else window.attachEvent('onload', main);
-
-		function main() {
-		    pieChart();
-		}
-
-		function pieChart() {
 		var pieData = [
-				{
-					value: %li,
-					color:"#ff9f33",
-					highlight: "#FFB25C",
-					label: "Yes",
-				},
-				{
-					value: %li,
-					color: "#445ae1",
-					highlight: "#697BE7",
-					label: "No"
-				},
 				{
 					value: %li,
 					color: "#2ee478",
 					highlight: "#58E993",
+					label: "Yes",
+				},
+				{
+					value: %li,
+					color:"#DF5353",
+					highlight: "#E57575",
+					label: "No"
+				},
+				{
+					value: %li,
+					color:"#ff9f33",
+					highlight: "#FFB25C",
 					label: "Not Yet"
 				}
 
 			];
 
-			    var ctx = document.getElementById("canvas").getContext("2d");
-			    new Chart(ctx).Pie(pieData);
 
-			    legend(document.getElementById("pieLegend"), pieData);
-			}
+		var pie_ctx = document.getElementById("canvas").getContext("2d");
+		    window.myPie = new Chart(pie_ctx).Pie(pieData);
 
+		var legend = myPie.generateLegend();
+		$("#legend").html(legend);
+
+			
 		</script>
 </body>
 </html>
