@@ -3,6 +3,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.css" />
   <style type="text/css">
 
   body {
@@ -12,11 +14,6 @@
 	    background-color: #efeff4
   }
 
-	canvas{
-	  width: 100% !important;
-      max-width: 300px;
-      height: 100% !important;
-	}
 	header {
 	  position:absolute;
 	  z-index:0;
@@ -73,7 +70,7 @@
 	h1 {
 	  font-size:2rem;
 	  font-weight:200;
-	  margin-top:11px;
+	  margin-top:1px;
 	}
 	  strong {
 	    font-weight:500;
@@ -86,42 +83,129 @@
 	  font-weight:400;
 	  margin-top:-10px;
 	}
+	.pie-legend li {
+		font-size: 11px;
+		color: gray;
+	}
+	.pie-legend li span {
+	    width: 1em;
+	    height: 1em;
+	    display: inline-block;
+	    margin-right: 5px;
+		font-size: 12px;
+		color: gray;
+	}
+	.pie-legend {
+	    list-style: none;    
+	}
+	.bar-legend li {
+		font-size: 12px;
+		color: gray;
+	    display: inline;
+	    padding-left: 30px;
+	}
+	.bar-legend li span {
+	    width: 1em;
+	    height: 1em;
+	    margin-right: 5px;
+	    display: inline-block;
+		font-size: 12px;
+		color: gray;
+	}
+	.bar-legend {
+	    list-style: none;    
+	}
 
   </style>
 
 
 </head>
 <body>	
-	<section class="card">
-		<h1>Agreement Rate</h1> 
-		<h2 id="subtitle"></h2>
-		<canvas id="canvas"></canvas>
-	</section>
+	<div class="navbar navbar-default navbar-fixed-top" align="center" role="navigation" style="font-size: 12px; font-weight:400; color: #FF9F33">
+	  <span class="ion-ios7-arrow-thin-left"></span>&nbsp;SWIPE TO VIEW MORE&nbsp;<span class="ion-ios7-arrow-thin-right"></span>
+	</div>	
 
-	<section class="card">
-		<h1>Negotiation Type</h1> 
-		<h2 id="subtitle2"></h2>
-		<canvas id="canvas2"></canvas>
-	</section>
+	<div class="owl-carousel" style="margin: 10px 0px 0px 0px;">
 
-	<section class="card">
-		<h1>Importance &amp; Satisfaction</h1> 
-		<h2 id="subtitle3"></h2>
-		<canvas id="canvas3"></canvas>
-	</section>
+   		<div class="owl-item">
+			<section class="card">
+				<div class="container">
+					<h1>Agreement Rate</h1> 
+					<h2 id="subtitle"></h2>
+					<div class="row">
+						<div class="col-xs-6" class="canvas-holder">
+							<canvas id="canvas" width="200" height="150"></canvas>
+						</div>
+						<div class="col-xs-6" id="legend">
+					</div>
+				</div>
+			</section>
+		</div>
 
-	<section class="card">
-		<h1>Profile Metrics</h1> 
-		<h2 id="subtitle4"></h2>
-		<canvas id="canvas4"></canvas>
-	</section>
-	
-	<div style="height:100px">
+   		<div class="owl-item">
+			<section class="card">
+				<div class="container">
+					<h1>Negotiation Type</h1> 
+					<h2 id="subtitle2"></h2>
+					<div class="row">
+						<div class="col-xs-6" class="canvas-holder">
+							<canvas id="canvas2" width="200" height="150" style="text-align: left"></canvas>
+						</div>
+						<div class="col-xs-6" id="legend2">
+					</div>
+				</div>
+			</section>
+		</div>
+
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Importance &amp; Satisfaction</h1> 
+				<h2 id="subtitle3"></h2>
+				<canvas id="canvas3"></canvas>
+				<div id="legend3">
+			</section>
+		</div>
+
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Create</h1> 
+				<h2 id="subtitle4"></h2>
+				<canvas id="canvas4"></canvas>
+			</section>
+		</div>
+
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Assert</h1> 
+				<h2 id="subtitle5"></h2>
+				<canvas id="canvas5"></canvas>
+			</section>
+		</div>
+		
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Empathy</h1> 
+				<h2 id="subtitle6"></h2>
+				<canvas id="canvas6"></canvas>
+			</section>
+		</div>
+		
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Claim</h1> 
+				<h2 id="subtitle7"></h2>
+				<canvas id="canvas7"></canvas>
+			</section>
+		</div>		
 	</div>
+
+
+
 <!--    <div id="debug" style="color:#000;"></div>-->
         
 	
-  <script src="jquery.js"></script>
+  <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
   <script src="Chart.js"></script>
   <script>
 
@@ -147,6 +231,30 @@
                            var averageEmpathy = 1.000000;
                            var averageClaimingValue = 1.000000;
                            var averageAssert = 2.000000;
+
+						   var createMuchWorse = 2
+						   var createSomewhatWorse = 1
+						   var createSameUsual = 0
+						   var createSomewhatBetter = 0
+						   var createSomewhatWorse = 2
+						
+						   var assertMuchWorse = 0
+						   var assertSomewhatWorse = 0
+						   var assertSameUsual = 0
+						   var assertSomewhatBetter = 0
+						   var assertSomewhatWorse = 5
+
+						   var empathyMuchWorse = 1
+						   var empathySomewhatWorse = 3
+						   var empathySameUsual = 0
+						   var empathySomewhatBetter = 1
+						   var empathySomewhatWorse = 0
+                           
+						   var claimMuchWorse = 0
+						   var claimSomewhatWorse = 0
+						   var claimSameUsual = 2
+						   var claimSomewhatBetter = 2
+						   var claimSomewhatWorse = 1
                            */
                           
           %@
@@ -170,142 +278,257 @@
             'averageCreatingValue = ' + averageCreatingValue + '<br/>' +
             'averageEmpathy = ' + averageEmpathy + '<br/>' +
             'averageClaimingValue = ' + averageClaimingValue + '<br/>' +
-            'averageAssert = ' + averageAssert;
+            'averageAssert = ' + averageAssert + '<br/>' +
+
+			'createMuchWorse = ' + createMuchWorse + '<br/>' +
+   		  	'createSomewhatWorse = ' + createSomewhatWorse + '<br/>' +
+		  	'createSameUsual = ' + createSameUsual + '<br/>' +
+		  	'createSomewhatBetter = ' + createSomewhatBetter + '<br/>' +
+		  	'createSomewhatWorse = ' + createSomewhatWorse  + '<br/>' +
+
+		  	'assertMuchWorse = ' + assertMuchWorse + '<br/>' +
+		  	'assertSomewhatWorse = ' + assertSomewhatWorse + '<br/>' +
+		  	'assertSameUsual = ' + assertSameUsual + '<br/>' +
+		  	'assertSomewhatBetter = ' + assertSomewhatBetter + '<br/>' +
+		  	'assertSomewhatWorse = ' + assertSomewhatWorse + '<br/>' +
+
+		  	'empathyMuchWorse = ' + empathyMuchWorse + '<br/>' +
+		  	'empathySomewhatWorse = ' + empathySomewhatWorse + '<br/>' +
+		  	'empathySameUsual = ' + empathySameUsual + '<br/>' +
+		  	'empathySomewhatBetter = ' + empathySomewhatBetter + '<br/>' +
+		  	'empathySomewhatWorse = ' + empathySomewhatWorse + '<br/>' +
+
+		  	'claimMuchWorse = ' + claimMuchWorse + '<br/>' +
+		  	'claimSomewhatWorse = ' + claimSomewhatWorse + '<br/>' +
+		  	'claimSameUsual = ' + claimSameUsual + '<br/>' +
+		  	'claimSomewhatBetter = ' + claimSomewhatBetter + '<br/>' +
+		  	'claimSomewhatWorse = ' + claimSomewhatWorse;
+		  
 
                           $('#debug').html(debug);*/
                           
             
-           var subtitle ='Last ' + numScorecards + ' scorecards created'
-           $('#subtitle').html(subtitle);
-           $('#subtitle2').html(subtitle);
-           $('#subtitle3').html(subtitle);
-           $('#subtitle4').html(subtitle);
+						           var subtitle ='Last ' + numScorecards + ' scorecards created'
+						           $('#subtitle').html(subtitle);
+						           $('#subtitle2').html(subtitle);
+						           $('#subtitle3').html(subtitle);
+						           $('#subtitle4').html(subtitle);
+						           $('#subtitle5').html(subtitle);
+						           $('#subtitle6').html(subtitle);
+						           $('#subtitle7').html(subtitle);
+
+							        // Build the chart
+									var agreementPieData = [
+											{
+												value: yesCount,
+												color: "#2ee478",
+												highlight: "#58E993",
+												label: "Yes",
+											},
+											{
+												value: noCount,
+												color:"#DF5353",
+												highlight: "#E57575",
+												label: "No"
+											},
+											{
+												value: notYetCount,
+												color:"#ff9f33",
+												highlight: "#FFB25C",
+												label: "Not Yet"
+											}
+										];
+
+									var typePieData = 	[
+											{
+												value: proOutsidePartiesCount,
+												color:"#ff9f33",
+												highlight: "#FFB25C",
+												label: "Prof(Outside)",
+											},
+											{
+												value: proColleaguesCount,
+												color: "#445ae1",
+												highlight: "#697BE7",
+												label: "Prof(Inside)"
+											},
+											{
+												value: personalCount,
+												color: "#2ee478",
+												highlight: "#58E993",
+												label: "Personal"
+											},
+											{
+												value: communityCount,
+												color:"#DF5353",
+												highlight: "#E57575",
+												label: "Community",
+											},
+											{
+												value: familyCount,
+												color: "#aaeeee",
+												highlight: "#BBF1F1",
+												label: "Family"
+											}
+										];
+
+									var importanceBarData = {
+											labels : dates,
+											datasets : [
+												{
+													label : "Importance",
+													fillColor : "#ff9f33",
+													strokeColor : "#ff9f33",
+													highlightFill: "#FFB25C",
+													highlightStroke: "#FFB25C",
+													data : importance
+												},
+												{
+													label : "Satisfaction",
+													fillColor : "#445ae1",
+													strokeColor : "#445ae1",
+													highlightFill : "#697BE7",
+													highlightStroke : "#697BE7",
+													data : satisfaction
+												}
+											]
+
+										};
+
+									var createBarData = {
+											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											datasets : [
+												{
+													fillColor : "#ff9f33",
+													strokeColor : "#ff9f33",
+													highlightFill: "#FFB25C",
+													highlightStroke: "#FFB25C",
+													data : [createMuchWorse, createSomewhatWorse, createSameUsual, createSomewhatBetter, createSomewhatWorse]
+												}
+											]
+
+										};
+
+									var assertBarData = {
+											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											datasets : [
+												{
+													fillColor : "#ff9f33",
+													strokeColor : "#ff9f33",
+													highlightFill: "#FFB25C",
+													highlightStroke: "#FFB25C",
+													data : [assertMuchWorse, assertSomewhatWorse, assertSameUsual, assertSomewhatBetter, createSomewhatWorse]
+												}
+											]
+
+										};
+
+									var empathyBarData = {
+											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											datasets : [
+												{
+													fillColor : "#ff9f33",
+													strokeColor : "#ff9f33",
+													highlightFill: "#FFB25C",
+													highlightStroke: "#FFB25C",
+													data : [empathyMuchWorse, empathySomewhatWorse, empathySameUsual, empathySomewhatBetter, empathySomewhatWorse]
+												}
+											]
+
+										};
+
+									var claimBarData = {
+											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											datasets : [
+												{
+													fillColor : "#ff9f33",
+													strokeColor : "#ff9f33",
+													highlightFill: "#FFB25C",
+													highlightStroke: "#FFB25C",
+													data : [claimMuchWorse, claimSomewhatWorse, claimSameUsual, claimSomewhatBetter, claimSomewhatWorse]
+												}
+											]
+
+										};
+										var ctx = document.getElementById("canvas").getContext("2d");
+										window.myPieChart = new Chart(ctx).Pie(agreementPieData);
+										var ctx2 = document.getElementById("canvas2").getContext("2d");
+										window.myPieChart2 = new Chart(ctx2).Pie(typePieData);
+										var ctx3 = document.getElementById("canvas3").getContext("2d");
+										window.myBarChart = new Chart(ctx3).Bar(importanceBarData,{
+											responsive: false,
+											maintainAspectRatio: true,
+										    showScale: true,
+										    scaleOverride: true,
+										    scaleSteps: 5,
+										    scaleStepWidth: 20,
+										    scaleStartValue: 0
+										});
+										var ctx4 = document.getElementById("canvas4").getContext("2d");
+										window.myBarChart2 = new Chart(ctx4).Bar(createBarData,{
+											responsive: false,
+											maintainAspectRatio: true,
+										    showScale: true,
+										    scaleOverride: true,
+										    scaleSteps: 5,
+										    scaleStepWidth: 1,
+										    scaleStartValue: 0
+										});
+										var ctx5 = document.getElementById("canvas5").getContext("2d");
+										window.myBarChart3 = new Chart(ctx5).Bar(assertBarData,{
+											responsive: false,
+											maintainAspectRatio: true,
+										    showScale: true,
+										    scaleOverride: true,
+										    scaleSteps: 5,
+										    scaleStepWidth: 1,
+										    scaleStartValue: 0
+										});
+										var ctx6 = document.getElementById("canvas6").getContext("2d");
+										window.myBarChart4 = new Chart(ctx6).Bar(empathyBarData,{
+											responsive: false,
+											maintainAspectRatio: true,
+										    showScale: true,
+										    scaleOverride: true,
+										    scaleSteps: 5,
+										    scaleStepWidth: 1,
+										    scaleStartValue: 0
+										});
+										var ctx7 = document.getElementById("canvas7").getContext("2d");
+										window.myBarChart5 = new Chart(ctx7).Bar(claimBarData,{
+											responsive: false,
+											maintainAspectRatio: true,
+										    showScale: true,
+										    scaleOverride: true,
+										    scaleSteps: 5,
+										    scaleStepWidth: 1,
+										    scaleStartValue: 0
+										});				
+										var legend = myPieChart.generateLegend();
+										$("#legend").html(legend);
+
+										var legend2 = myPieChart2.generateLegend();
+										$("#legend2").html(legend2);
+
+										var legend3 = myBarChart.generateLegend();
+										$("#legend3").html(legend3);
 
 
-	        // Build the chart
-			var agreementPieData = [
-					{
-						value: yesCount,
-						color: "#2ee478",
-						highlight: "#58E993",
-						label: "Yes",
-					},
-					{
-						value: noCount,
-						color:"#DF5353",
-						highlight: "#E57575",
-						label: "No"
-					},
-					{
-						value: notYetCount,
-						color:"#ff9f33",
-						highlight: "#FFB25C",
-						label: "Not Yet"
-					}
-				];
+							    });
+							});
 
-			var typePieData = 	[
-					{
-						value: proOutsidePartiesCount,
-						color:"#ff9f33",
-						highlight: "#FFB25C",
-						label: "Prof (Outside)",
-					},
-					{
-						value: proColleaguesCount,
-						color: "#445ae1",
-						highlight: "#697BE7",
-						label: "Prof (Inside)"
-					},
-					{
-						value: personalCount,
-						color: "#2ee478",
-						highlight: "#58E993",
-						label: "Personal"
-					},
-					{
-						value: communityCount,
-						color:"#DF5353",
-						highlight: "#E57575",
-						label: "Community",
-					},
-					{
-						value: familyCount,
-						color: "#aaeeee",
-						highlight: "#BBF1F1",
-						label: "Family"
-					}
-				];
+						  </script>
 
-			var importanceBarData = {
-					labels : dates,
-					datasets : [
-						{
-							label : "Importance",
-							fillColor : "#ff9f33",
-							strokeColor : "#ff9f33",
-							highlightFill: "#FFB25C",
-							highlightStroke: "#FFB25C",
-							data : importance
-						},
-						{
-							label : "Satisfaction",
-							fillColor : "#445ae1",
-							strokeColor : "#445ae1",
-							highlightFill : "#697BE7",
-							highlightStroke : "#697BE7",
-							data : satisfaction
-						}
-					]
+						  <script>
 
-				};
+							$(document).ready(function(){
+							  $(".owl-carousel").owlCarousel({
+								items:1,
+								margin:30
+								});
+							});
 
-			var metricBarData = {
-					labels : ["Create", "Assert", "Empathy", "Claim"],
-					datasets : [
-						{
-							fillColor : "#ff9f33",
-							strokeColor : "#ff9f33",
-							highlightFill: "#FFB25C",
-							highlightStroke: "#FFB25C",
-							data : [averageCreatingValue,averageEmpathy,averageClaimingValue,averageAssert]
-						}
-					]
+						  </script>
 
-				};
-
-
-				window.onload = function(){
-					var ctx = document.getElementById("canvas").getContext("2d");
-					window.myPieChart = new Chart(ctx).Pie(agreementPieData);
-					var ctx2 = document.getElementById("canvas2").getContext("2d");
-					window.myPieChart = new Chart(ctx2).Pie(typePieData);
-					var ctx3 = document.getElementById("canvas3").getContext("2d");
-					window.myBarChart = new Chart(ctx3).Bar(importanceBarData,{
-						responsive: false,
-						maintainAspectRatio: true,
-					    showScale: true,
-					    scaleOverride: true,
-					    scaleSteps: 5,
-					    scaleStepWidth: 20,
-					    scaleStartValue: 0
-					});
-					var ctx4 = document.getElementById("canvas4").getContext("2d");
-					window.myBarChart = new Chart(ctx4).Bar(metricBarData,{
-						responsive: false,
-						maintainAspectRatio: true,
-					    showScale: true,
-					    scaleOverride: true,
-					    scaleSteps: 5,
-					    scaleStepWidth: 1,
-					    scaleStartValue: 0
-					});
-
-			}
-
-	    });
-	});
-
-  </script>
-</body>
-</html>
+						</body>
+						</html>
