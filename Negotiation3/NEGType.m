@@ -104,7 +104,7 @@
                                           empathy:[NSNumber numberWithFloat:5.528205128]
                                             claim:[NSNumber numberWithFloat:2.830769231]
                                           string1:@"Your relative confidence about understanding other parties’ motivations and feelings is coupled with confidence about finding value-creating solutions."
-                                          string2:@"Understanding other people’s interests is important to negotiation success. So is self-advocacy. It’s great to expand the pie, but you need to get your fair share of it, as well. When you review the skill-building tips in this app, start with the section on asserting your own interests."];
+                                          string2:@"Understanding other people’s interests is important to negotiation success. So is self-advocacy. Expanding the pie, but you you deserve a fair share of it, as well.  When you review the skill-building tips in this app, start with the section on asserting your own interests."];
 
     NSMutableDictionary *type3 = [self createType:@"type3"
                                             label:@"Outcome-Focused Negotiator"
@@ -112,7 +112,7 @@
                                            assert:[NSNumber numberWithFloat:3.403636364]
                                           empathy:[NSNumber numberWithFloat:3.636363636]
                                             claim:[NSNumber numberWithFloat:4.203636364]
-                                          string1:@"You have greater confidence than most people about your create value in negotiation and claiming your share of it. (Remember that these group comparisons are relative: on average respondents only give themselves a “3” on maximizing value.)<br><br>Correspondingly, you are less sure than most people about how doing well in regard to self-advocacy and empathy."
+                                          string1:@"You have greater confidence than most people about creating value in negotiation and claiming your share of it. (Remember that these group comparisons are relative: on average respondents only give themselves a “3” on maximizing value.)<br><br>Correspondingly, you are less sure than most people about how doing well in regard to self-advocacy and empathy."
                                           string2:@"Even if most of your negotiations are done by phone, email, or Skype, good relational skills can make the difference between a satisfactory agreement and impasse. When you review the skill-building tips in this app, start with the interpersonal factors to further enhance your effectiveness on this important dimension."];
     
     NSMutableDictionary *type4 = [self createType:@"type4"

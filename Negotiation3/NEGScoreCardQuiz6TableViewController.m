@@ -127,7 +127,7 @@
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
     titleLabel.numberOfLines = 4;
-    titleLabel.text = @"Now, name another specific decision or action—a different one—that you would do differently.";
+    titleLabel.text = @"Now, name another specific decision or action — a second one — that you would do differently.";
     textView.text = val;
     textView.delegate = self;
     

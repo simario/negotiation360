@@ -129,7 +129,7 @@
     titleLabel = (UILabel *)[cell viewWithTag:1];
     textView = (UITextView *)[cell viewWithTag:2];
     titleLabel.numberOfLines = 4;
-    titleLabel.text = @"Now, name another specific decision or action—a different one—that also worked reasonably well for you.";
+    titleLabel.text = @"Now, name another specific decision or action — a different one — that also worked reasonably well for you.";
     textView.text = val;
     textView.delegate = self;
     
