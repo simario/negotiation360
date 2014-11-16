@@ -49,6 +49,37 @@
     int claimingValueTotal = 0;
     int assertTotal = 0;
 
+    
+    
+     
+    int createMuchWorse = 0;
+    int createSomewhatWorse = 0;
+    int createSameUsual = 0;
+    int createSomewhatBetter = 0;
+    int createMuchBetter = 0;
+
+
+    int assertMuchWorse = 0;
+    int assertSomewhatWorse = 0;
+    int assertSameUsual = 0;
+    int assertSomewhatBetter = 0;
+    int assertMuchBetter = 0;
+
+    int empathyMuchWorse = 0;
+    int empathySomewhatWorse = 0;
+    int empathySameUsual = 0;
+    int empathySomewhatBetter = 0;
+    int empathyMuchBetter = 0;
+
+    int claimMuchWorse = 0;
+    int claimSomewhatWorse = 0;
+    int claimSameUsual = 0;
+    int claimSomewhatBetter = 0;
+    int claimMuchBetter = 0;
+     
+    
+    
+    
     if (len > 5) {
         len = 5;
     }
@@ -116,6 +147,82 @@
             default:
                 break;
         }
+        
+        
+        
+        for (int j = 0; j < 4; j++) {
+            
+            
+            int muchWorse = 0;
+            int somewhatWorse = 0;
+            int sameUsual = 0;
+            int somewhatBetter = 0;
+            int muchBetter = 0;
+            
+
+            NSString *key = [NSString stringWithFormat:@"question%i", (j + 5)];
+            int val = [[detailItem valueForKey:key] intValue];
+            switch (val) {
+                case 0:
+                    muchWorse = 1;
+                    break;
+                case 1:
+                    somewhatWorse = 1;
+                    break;
+                case 2:
+                    sameUsual = 1;
+                    break;
+                case 3:
+                    somewhatBetter = 1;
+                    break;
+                case 4:
+                    muchBetter = 1;
+                    break;
+                default:
+                    break;
+            }
+
+            
+            
+            
+            switch (j) {
+                case 0:
+                    createMuchWorse += muchWorse;
+                    createSomewhatWorse += somewhatWorse;
+                    createSameUsual += sameUsual;
+                    createSomewhatBetter += somewhatBetter;
+                    createMuchBetter += muchBetter;
+                    break;
+                case 1:
+                    assertMuchWorse += muchWorse;
+                    assertSomewhatWorse += somewhatWorse;
+                    assertSameUsual += sameUsual;
+                    assertSomewhatBetter += somewhatBetter;
+                    assertMuchBetter += muchBetter;
+                    break;
+                case 2:
+            
+                    empathyMuchWorse += muchWorse;
+                    empathySomewhatWorse += somewhatWorse;
+                    empathySameUsual += sameUsual;
+                    empathySomewhatBetter += somewhatBetter;
+                    empathyMuchBetter += muchBetter;
+                    
+                    break;
+                case 3:
+
+                    claimMuchWorse += muchWorse;
+                    claimSomewhatWorse += somewhatWorse;
+                    claimSameUsual += sameUsual;
+                    claimSomewhatBetter += somewhatBetter;
+                    claimMuchBetter += muchBetter;
+                    
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
     }
     
     averageCreatingValue = creatingValueTotal / len;
@@ -147,6 +254,47 @@
     NSString *averageEmpathyStr = [NSString stringWithFormat:@"var averageEmpathy = %f;", averageEmpathy, nil];
     NSString *averageClaimingValueStr = [NSString stringWithFormat:@"var averageClaimingValue = %f;", averageClaimingValue, nil];
     NSString *averageAssertStr = [NSString stringWithFormat:@"var averageAssert = %f;", averageAssert, nil];
+    
+    
+    
+    
+    
+    NSString *createMuchWorseStr = [NSString stringWithFormat:@"var createMuchWorse = %li;", (long)createMuchWorse, nil];;
+    NSString *createSomewhatWorseStr = [NSString stringWithFormat:@"var createSomewhatWorse = %li;", (long)createSomewhatWorse, nil];;
+    NSString *createSameUsualStr = [NSString stringWithFormat:@"var createSameUsual = %li;", (long)createSameUsual, nil];;
+    NSString *createSomewhatBetterStr = [NSString stringWithFormat:@"var createSomewhatBetter = %li;", (long)createSomewhatBetter, nil];;
+    NSString *createMuchBetterStr = [NSString stringWithFormat:@"var createMuchBetter = %li;", (long)createMuchBetter, nil];;
+    
+    
+    NSString *assertMuchWorseStr = [NSString stringWithFormat:@"var assertMuchWorse = %li;", (long)assertMuchWorse, nil];;
+    NSString *assertSomewhatWorseStr = [NSString stringWithFormat:@"var assertSomewhatWorse = %li;", (long)assertSomewhatWorse, nil];;
+    NSString *assertSameUsualStr = [NSString stringWithFormat:@"var assertSameUsual = %li;", (long)assertSameUsual, nil];;
+    NSString *assertSomewhatBetterStr = [NSString stringWithFormat:@"var assertSomewhatBetter = %li;", (long)assertSomewhatBetter, nil];;
+    NSString *assertMuchBetterStr = [NSString stringWithFormat:@"var assertMuchBetter = %li;", (long)assertMuchBetter, nil];;
+    
+    NSString *empathyMuchWorseStr = [NSString stringWithFormat:@"var empathyMuchWorse = %li;", (long)empathyMuchWorse, nil];;
+    NSString *empathySomewhatWorseStr = [NSString stringWithFormat:@"var empathySomewhatWorse = %li;", (long)empathySomewhatWorse, nil];;
+    NSString *empathySameUsualStr = [NSString stringWithFormat:@"var empathySameUsual = %li;", (long)empathySameUsual, nil];;
+    NSString *empathySomewhatBetterStr = [NSString stringWithFormat:@"var empathySomewhatBetter = %li;", (long)empathySomewhatBetter, nil];;
+    NSString *empathyMuchBetterStr = [NSString stringWithFormat:@"var empathyMuchBetter = %li;", (long)empathyMuchBetter, nil];;
+    
+    NSString *claimMuchWorseStr = [NSString stringWithFormat:@"var claimMuchWorse = %li;", (long)claimMuchWorse, nil];;
+    NSString *claimSomewhatWorseStr = [NSString stringWithFormat:@"var claimSomewhatWorse = %li;", (long)claimSomewhatWorse, nil];;
+    NSString *claimSameUsualStr = [NSString stringWithFormat:@"var claimSameUsual = %li;", (long)claimSameUsual, nil];;
+    NSString *claimSomewhatBetterStr = [NSString stringWithFormat:@"var claimSomewhatBetter = %li;", (long)claimSomewhatBetter, nil];;
+    NSString *claimMuchBetterStr = [NSString stringWithFormat:@"var claimMuchBetter = %li;", (long)claimMuchBetter, nil];;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     NSString *output = [NSString stringWithFormat:@"\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n",
                         numScorecardsStr,
