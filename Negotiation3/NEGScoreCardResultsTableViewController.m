@@ -16,7 +16,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (![[segue identifier] isEqualToString:@"to_main"]) {
+    if (![[segue identifier] isEqualToString:@"to_main"] && ![[segue identifier] isEqualToString:@"notes"]) {
+        
         [[segue destinationViewController] setDetailItem:_detailItem];
         [[segue destinationViewController] setContext:_context];
     }
@@ -142,7 +143,7 @@
 {
     
     // Return the number of rows in the section.
-    return 5;
+    return 6;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -207,6 +208,11 @@
             //cell.imageView.image = [UIImage imageNamed:@"three-green.png"];
             break;
             
+        case 5:
+            cell.textLabel.text = @"Notes";
+            //cell.imageView.image = [UIImage imageNamed:@"three-green.png"];
+            break;
+            
         default:
             break;
     }
@@ -238,6 +244,9 @@
             break;
         case 4:
             [self performSegueWithIdentifier:@"scorecard_summary" sender:self];
+            break;
+        case 5:
+            [self performSegueWithIdentifier:@"notes" sender:self];
             break;
         default:
             break;
