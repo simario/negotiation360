@@ -307,7 +307,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="TwK-FZ-Piv">
                             <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                             <connections>
-                                <segue destination="Z6F-xb-iA7" kind="modal" id="GJh-vU-epI"/>
+                                <segue destination="Z6F-xb-iA7" kind="modal" identifier="" id="GJh-vU-epI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -320,6 +320,7 @@
                         <segue destination="vay-z4-l6d" kind="push" identifier="scorecard_results_from_main" id="Q57-xl-Lgr"/>
                         <segue destination="YGm-X1-Jse" kind="push" identifier="scorecard_quiz_1" id="XrA-bw-hNd"/>
                         <segue destination="frs-fP-9VL" kind="push" identifier="best_practices_intro" id="pzy-Nl-e2r"/>
+                        <segue destination="JEJ-MM-Sbq" kind="push" identifier="resources" id="dcM-bi-1Rf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -1911,11 +1912,12 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Q57-xl-Lgr"/>
-        <segue reference="72D-xW-IWS"/>
-        <segue reference="oA1-ch-634"/>
         <segue reference="XrA-bw-hNd"/>
+        <segue reference="UvR-e4-cJ3"/>
+        <segue reference="oA1-ch-634"/>
         <segue reference="9hR-Rc-zEg"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="Q57-xl-Lgr"/>
         <segue reference="oFu-12-oe6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>

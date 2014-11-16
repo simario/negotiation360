@@ -140,7 +140,7 @@
         }
     }
     //}
-    if (completedCount > 0) {
+    if (completedCount >= 1) {
         result = YES;
     }
     
@@ -321,21 +321,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
-
-    return 3;
-   
-    if (_processingChange) {
-        return [tableView numberOfSections];
-    }
-    
-    int bestPractices = 0;
-    if ([self hasBestPractices]) {
-        bestPractices = 1;
-    }
-    return [[self.fetchedResultsController sections] count] + [[self.scFetchedResultsController sections] count] + bestPractices;
-    //return 2;
-
+    return 4;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -347,9 +333,17 @@
         } else {
             return @"";
         }
-        
+     
     } else if (section == 2) {
-        return @"Negotiation Scorecards";
+        return @"Resources";
+    } else if (section == 3) {
+        if ([self scorecardCount] > 0) {
+            return @"Negotiation Scorecards";
+        } else {
+            return @"";
+        }
+        
+        
     }
     return @"";
 }
@@ -363,7 +357,9 @@
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
     } else if (section == 1) {
-        return 2;
+        return 1;
+    } else if (section == 2) {
+        return 1;
     } else {
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
@@ -405,22 +401,34 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    if ([self hasBestPractices]) {
-        if (indexPath.section > 1) {
-            return YES;
-        }
-    } else {
-        if (indexPath.section > 0) {
-            return YES;
-        }
+    if (indexPath.section == 3) {
+        return YES;
     }
+
     
     return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 3) {
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            
+            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+            NSManagedObjectContext *context = [self.scFetchedResultsController managedObjectContext];
+            [context deleteObject:[self.scFetchedResultsController objectAtIndexPath:newIndexPath]];
+            
+            NSError *error = nil;
+            if (![context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
+        }
+    }
+    
+    /*
     if (indexPath.section == 0) {
         if (editingStyle == UITableViewCellEditingStyleDelete) {
             NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -466,7 +474,7 @@
                 abort();
             }
         }
-    }
+    }*/
     
 }
 
@@ -496,6 +504,8 @@
         }
     } else if (indexPath.section == 1) {
         [self performSegueWithIdentifier:@"best_practices_intro" sender:self];
+    } else if (indexPath.section == 2) {
+        [self performSegueWithIdentifier:@"resources" sender:self];
     } else {
         NSIndexPath *ip = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
         NSManagedObject *object = [[self scFetchedResultsController] objectAtIndexPath:ip];
@@ -674,7 +684,7 @@
     if ([controller isEqual:_fetchedResultsController]) {
         t = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
     } else if ([controller isEqual:_scFetchedResultsController]) {
-        t = [NSIndexPath indexPathForRow:indexPath.row inSection:2];
+        t = [NSIndexPath indexPathForRow:indexPath.row inSection:3];
     }
     
     
@@ -762,6 +772,14 @@
             //[self configureScorecardCell:cell atIndexPath:indexPath];
             cell.hidden = YES;
         }
+    } else if(indexPath.section == 2) {
+                
+        UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
+        
+        [imv setImage:[UIImage imageNamed:@"best-practices.png"]];
+        cell.textLabel.text = @"Resources";
+        cell.detailTextLabel.text = @"";
+
     } else {
         [self configureScorecardCell:cell atIndexPath:indexPath];
     }
