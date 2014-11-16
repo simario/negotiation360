@@ -363,7 +363,7 @@
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
     } else if (section == 1) {
-        return 1;
+        return 2;
     } else {
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.scFetchedResultsController sections][0];
         return [sectionInfo numberOfObjects];
@@ -750,6 +750,7 @@
         cell.textLabel.text = [NSString stringWithFormat:@"%@", t];
         cell.detailTextLabel.text = s;
     } else if(indexPath.section == 1) {
+        
         if ([self hasBestPractices]) {
             UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
             
