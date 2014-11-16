@@ -140,7 +140,7 @@
         }
     }
     //}
-    if (completedCount > 2) {
+    if (completedCount > 0) {
         result = YES;
     }
     
