@@ -284,6 +284,28 @@
     NSString *claimSomewhatBetterStr = [NSString stringWithFormat:@"var claimSomewhatBetter = %li;", (long)claimSomewhatBetter, nil];;
     NSString *claimMuchBetterStr = [NSString stringWithFormat:@"var claimMuchBetter = %li;", (long)claimMuchBetter, nil];;
     
+    NSString *q529str = [NSString stringWithFormat:@"\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@",
+                         createMuchWorseStr,
+                         createSomewhatWorseStr,
+                         createSameUsualStr,
+                         createSomewhatBetterStr,
+                         createMuchBetterStr,
+                         assertMuchWorseStr,
+                         assertSomewhatWorseStr,
+                         assertSameUsualStr,
+                         assertSomewhatBetterStr,
+                         assertMuchBetterStr,
+                         empathyMuchWorseStr,
+                         empathySomewhatWorseStr,
+                         empathySameUsualStr,
+                         empathySomewhatBetterStr,
+                         empathyMuchBetterStr,
+                         claimMuchWorseStr,
+                         claimSomewhatWorseStr,
+                         claimSameUsualStr,
+                         claimSomewhatBetterStr,
+                         claimMuchBetterStr
+                         ];
     
     
     
@@ -295,8 +317,7 @@
     
     
     
-    
-    NSString *output = [NSString stringWithFormat:@"\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n",
+    NSString *output = [NSString stringWithFormat:@"\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n",
                         numScorecardsStr,
                         yesCountStr,
                         noCountStr,
@@ -315,6 +336,7 @@
                         averageEmpathyStr,
                         averageClaimingValueStr,
                         averageAssertStr,
+                        q529str,
                         nil];
     NSLog(output);
 
