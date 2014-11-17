@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		690126AB19A1A29F00CACB48 /* plane-paper-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 690126AA19A1A29F00CACB48 /* plane-paper-1.png */; };
-		6902FCED193BB7DC00820A36 /* charts-profiles.js in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEC193BB7DC00820A36 /* charts-profiles.js */; };
 		6902FCF1193BB83500820A36 /* compare.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEE193BB83400820A36 /* compare.html */; };
 		6902FCF2193BB83500820A36 /* profiles.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEF193BB83500820A36 /* profiles.html */; };
 		6902FCF3193BB83500820A36 /* yourprofile.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCF0193BB83500820A36 /* yourprofile.html */; };
 		690422481A17AE2F0056EF71 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 690422471A17AE2F0056EF71 /* background.png */; };
-		69234B0E18FB2E5900E5B0AA /* minimal.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0D18FB2E5900E5B0AA /* minimal.js */; };
-		69234B1018FB2EB700E5B0AA /* charts-examples.js in Sources */ = {isa = PBXBuildFile; fileRef = 69234B0F18FB2EB700E5B0AA /* charts-examples.js */; };
+		69191DD31A1A429F00379D26 /* compass-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69191DD21A1A429F00379D26 /* compass-32.png */; };
 		6930F15419E0A2D200473A06 /* image-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14919E0A2D200473A06 /* image-10.png */; };
 		6930F15519E0A2D200473A06 /* image-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14A19E0A2D200473A06 /* image-11.png */; };
 		6930F15619E0A2D200473A06 /* image-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14B19E0A2D200473A06 /* image-12.png */; };
@@ -27,7 +25,6 @@
 		6930F15D19E0A2D200473A06 /* top-banner-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F15219E0A2D200473A06 /* top-banner-14.png */; };
 		6930F15E19E0A2D200473A06 /* scorecard-lessons.html in Resources */ = {isa = PBXBuildFile; fileRef = 6930F15319E0A2D200473A06 /* scorecard-lessons.html */; };
 		693A91E919A2776900A05DFD /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A91E819A2776900A05DFD /* 259-list.png */; };
-		693A91F119A288EB00A05DFD /* lifecycle-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A91EC19A288EB00A05DFD /* lifecycle-75.png */; };
 		693A91F219A288EB00A05DFD /* page-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A91ED19A288EB00A05DFD /* page-7.png */; };
 		693A91F319A288EB00A05DFD /* user_male4-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A91EE19A288EB00A05DFD /* user_male4-75.png */; };
 		693A91F519A2896D00A05DFD /* page-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 693A91F419A2896D00A05DFD /* page-8.png */; };
@@ -75,15 +72,6 @@
 		69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596B1A0D58360001CE76 /* top-bestpractice.png */; };
 		69A8596F1A0D58360001CE76 /* top-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596C1A0D58360001CE76 /* top-profile.png */; };
 		69A859701A0D58360001CE76 /* top-scorecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596D1A0D58360001CE76 /* top-scorecard.png */; };
-		69AAEAC019A2D1C300A30164 /* four-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABC19A2D1C300A30164 /* four-green.png */; };
-		69AAEAC119A2D1C300A30164 /* one-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABD19A2D1C300A30164 /* one-green.png */; };
-		69AAEAC219A2D1C300A30164 /* three-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABE19A2D1C300A30164 /* three-green.png */; };
-		69AAEAC319A2D1C300A30164 /* two-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AAEABF19A2D1C300A30164 /* two-green.png */; };
-		69BE8A24199D8E6400AC5F7A /* four-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 69BE8A1F199D8E6400AC5F7A /* four-blue.png */; };
-		69BE8A26199D8E6400AC5F7A /* one-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 69BE8A21199D8E6400AC5F7A /* one-blue.png */; };
-		69BE8A27199D8E6400AC5F7A /* three-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 69BE8A22199D8E6400AC5F7A /* three-blue.png */; };
-		69BE8A28199D8E6400AC5F7A /* two-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 69BE8A23199D8E6400AC5F7A /* two-blue.png */; };
-		69C217D2199DBBA3000CD5F4 /* lifecycle-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D0199DBBA3000CD5F4 /* lifecycle-32.png */; };
 		69C217D3199DBBA3000CD5F4 /* user_male4-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D1199DBBA3000CD5F4 /* user_male4-32.png */; };
 		69C217DD199E4786000CD5F4 /* briefcase-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D5199E4786000CD5F4 /* briefcase-25.png */; };
 		69C217DF199E4786000CD5F4 /* info-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D7199E4786000CD5F4 /* info-25.png */; };
@@ -92,11 +80,6 @@
 		69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */; };
 		69C77EB61A0AE7ED007ADC8C /* legend.js in Sources */ = {isa = PBXBuildFile; fileRef = 69C77EB51A0AE7ED007ADC8C /* legend.js */; };
 		69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C77EB51A0AE7ED007ADC8C /* legend.js */; };
-		69C916461A01BCAA0082E552 /* purple-five.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916411A01BCAA0082E552 /* purple-five.png */; };
-		69C916471A01BCAA0082E552 /* purple-four.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916421A01BCAA0082E552 /* purple-four.png */; };
-		69C916481A01BCAA0082E552 /* purple-one.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916431A01BCAA0082E552 /* purple-one.png */; };
-		69C916491A01BCAA0082E552 /* purple-three.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916441A01BCAA0082E552 /* purple-three.png */; };
-		69C9164A1A01BCAA0082E552 /* purple-two.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C916451A01BCAA0082E552 /* purple-two.png */; };
 		69C9164C1A01C4AC0082E552 /* best-practices.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C9164B1A01C4AC0082E552 /* best-practices.png */; };
 		69D1C22319E1BEB900B28FD4 /* jquery.circliful.js in Resources */ = {isa = PBXBuildFile; fileRef = 69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */; };
 		69D1C22419E1BEB900B28FD4 /* jquery.circliful.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */; };
@@ -140,7 +123,6 @@
 		9147FC2C19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2B19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m */; };
 		9147FC2F19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC2E19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m */; };
 		9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9147FC3119E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m */; };
-		9156623E19D873BC00745751 /* compass-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156623C19D873BC00745751 /* compass-32.png */; };
 		9156623F19D873BC00745751 /* compass-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156623D19D873BC00745751 /* compass-75.png */; };
 		9156624219D881C700745751 /* NEGScorecardIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156624119D881C700745751 /* NEGScorecardIntroViewController.m */; };
 		9156624519D89E1600745751 /* profileOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9156624319D89E1600745751 /* profileOverlay.png */; };
@@ -152,49 +134,14 @@
 		9163D27118D4D4180032F104 /* page-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9163D26D18D4D4180032F104 /* page-3.png */; };
 		9163D27218D4D4180032F104 /* page-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9163D26E18D4D4180032F104 /* page-4.png */; };
 		9163D27418D4DE630032F104 /* page-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9163D27318D4DE630032F104 /* page-5.png */; };
-		91659A8E18FB327B009F21F8 /* charts-examples.js in Resources */ = {isa = PBXBuildFile; fileRef = 69234B0F18FB2EB700E5B0AA /* charts-examples.js */; };
-		91659A8F18FB37C1009F21F8 /* minimal.js in Resources */ = {isa = PBXBuildFile; fileRef = 69234B0D18FB2E5900E5B0AA /* minimal.js */; };
 		91A2791618F02C32006B58A3 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 91A2791318F02C32006B58A3 /* css */; };
 		91A2791718F02C32006B58A3 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 91A2791418F02C32006B58A3 /* fonts */; };
 		91A2791818F02C32006B58A3 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 91A2791518F02C32006B58A3 /* js */; };
 		91A2791A18F02E82006B58A3 /* mw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91A2791918F02E82006B58A3 /* mw.jpg */; };
 		91B6691D18DE0CED00DBA430 /* NEGResultsOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B6691C18DE0CED00DBA430 /* NEGResultsOverviewViewController.m */; };
-		91B66A0318DE2BB500DBA430 /* mootools-adapter.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E318DE2BB500DBA430 /* mootools-adapter.js */; };
-		91B66A0418DE2BB500DBA430 /* mootools-adapter.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E418DE2BB500DBA430 /* mootools-adapter.src.js */; };
-		91B66A0518DE2BB500DBA430 /* prototype-adapter.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E518DE2BB500DBA430 /* prototype-adapter.js */; };
-		91B66A0618DE2BB500DBA430 /* prototype-adapter.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E618DE2BB500DBA430 /* prototype-adapter.src.js */; };
-		91B66A0718DE2BB500DBA430 /* standalone-framework.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E718DE2BB500DBA430 /* standalone-framework.js */; };
-		91B66A0818DE2BB500DBA430 /* standalone-framework.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E818DE2BB500DBA430 /* standalone-framework.src.js */; };
-		91B66A0918DE2BB500DBA430 /* highcharts-all.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669E918DE2BB500DBA430 /* highcharts-all.js */; };
-		91B66A0A18DE2BB500DBA430 /* highcharts-more.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669EA18DE2BB500DBA430 /* highcharts-more.js */; };
-		91B66A0B18DE2BB500DBA430 /* highcharts-more.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669EB18DE2BB500DBA430 /* highcharts-more.src.js */; };
-		91B66A0C18DE2BB500DBA430 /* highcharts.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669EC18DE2BB500DBA430 /* highcharts.js */; };
-		91B66A0D18DE2BB500DBA430 /* highcharts.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669ED18DE2BB500DBA430 /* highcharts.src.js */; };
 		91B66A0E18DE2BB500DBA430 /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669EE18DE2BB500DBA430 /* jquery.js */; };
-		91B66A0F18DE2BB500DBA430 /* canvas-tools.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F018DE2BB500DBA430 /* canvas-tools.js */; };
-		91B66A1018DE2BB500DBA430 /* canvas-tools.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F118DE2BB500DBA430 /* canvas-tools.src.js */; };
-		91B66A1118DE2BB500DBA430 /* data.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F218DE2BB500DBA430 /* data.js */; };
-		91B66A1218DE2BB500DBA430 /* data.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F318DE2BB500DBA430 /* data.src.js */; };
-		91B66A1318DE2BB500DBA430 /* drilldown.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F418DE2BB500DBA430 /* drilldown.js */; };
-		91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F518DE2BB500DBA430 /* drilldown.src.js */; };
-		91B66A1518DE2BB500DBA430 /* exporting.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F618DE2BB500DBA430 /* exporting.js */; };
-		91B66A1618DE2BB500DBA430 /* exporting.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F718DE2BB500DBA430 /* exporting.src.js */; };
-		91B66A1718DE2BB500DBA430 /* funnel.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F818DE2BB500DBA430 /* funnel.js */; };
-		91B66A1818DE2BB500DBA430 /* funnel.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669F918DE2BB500DBA430 /* funnel.src.js */; };
-		91B66A1918DE2BB500DBA430 /* no-data-to-display.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669FA18DE2BB500DBA430 /* no-data-to-display.js */; };
-		91B66A1A18DE2BB500DBA430 /* no-data-to-display.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669FB18DE2BB500DBA430 /* no-data-to-display.src.js */; };
 		91B66A1B18DE2BB500DBA430 /* overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 91B669FC18DE2BB500DBA430 /* overview.html */; };
-		91B66A1C18DE2BB500DBA430 /* dark-blue.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669FE18DE2BB500DBA430 /* dark-blue.js */; };
-		91B66A1D18DE2BB500DBA430 /* dark-green.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B669FF18DE2BB500DBA430 /* dark-green.js */; };
-		91B66A1E18DE2BB500DBA430 /* gray.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B66A0018DE2BB500DBA430 /* gray.js */; };
-		91B66A1F18DE2BB500DBA430 /* grid.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B66A0118DE2BB500DBA430 /* grid.js */; };
-		91B66A2018DE2BB500DBA430 /* skies.js in Sources */ = {isa = PBXBuildFile; fileRef = 91B66A0218DE2BB500DBA430 /* skies.js */; };
 		91B66A2218DE2CB500DBA430 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 91B66A2118DE2CB500DBA430 /* about.html */; };
-		91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669E918DE2BB500DBA430 /* highcharts-all.js */; };
-		91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669EA18DE2BB500DBA430 /* highcharts-more.js */; };
-		91B66A2618DE353800DBA430 /* highcharts-more.src.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669EB18DE2BB500DBA430 /* highcharts-more.src.js */; };
-		91B66A2718DE353800DBA430 /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669EC18DE2BB500DBA430 /* highcharts.js */; };
-		91B66A2818DE353800DBA430 /* highcharts.src.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669ED18DE2BB500DBA430 /* highcharts.src.js */; };
 		91B66A2918DE353800DBA430 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 91B669EE18DE2BB500DBA430 /* jquery.js */; };
 		91B66A2B18DE358000DBA430 /* reports in Resources */ = {isa = PBXBuildFile; fileRef = 91B66A2A18DE358000DBA430 /* reports */; };
 		91D3E18F18B91BD400FC14F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D3E18E18B91BD400FC14F7 /* Foundation.framework */; };
@@ -235,13 +182,11 @@
 
 /* Begin PBXFileReference section */
 		690126AA19A1A29F00CACB48 /* plane-paper-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane-paper-1.png"; sourceTree = "<group>"; };
-		6902FCEC193BB7DC00820A36 /* charts-profiles.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "charts-profiles.js"; sourceTree = "<group>"; };
 		6902FCEE193BB83400820A36 /* compare.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = compare.html; sourceTree = "<group>"; };
 		6902FCEF193BB83500820A36 /* profiles.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = profiles.html; sourceTree = "<group>"; };
 		6902FCF0193BB83500820A36 /* yourprofile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = yourprofile.html; sourceTree = "<group>"; };
 		690422471A17AE2F0056EF71 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		69234B0D18FB2E5900E5B0AA /* minimal.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = minimal.js; sourceTree = "<group>"; };
-		69234B0F18FB2EB700E5B0AA /* charts-examples.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "charts-examples.js"; sourceTree = "<group>"; };
+		69191DD21A1A429F00379D26 /* compass-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass-32.png"; sourceTree = "<group>"; };
 		6930F14919E0A2D200473A06 /* image-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-10.png"; sourceTree = "<group>"; };
 		6930F14A19E0A2D200473A06 /* image-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-11.png"; sourceTree = "<group>"; };
 		6930F14B19E0A2D200473A06 /* image-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-12.png"; sourceTree = "<group>"; };
@@ -254,7 +199,6 @@
 		6930F15219E0A2D200473A06 /* top-banner-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner-14.png"; sourceTree = "<group>"; };
 		6930F15319E0A2D200473A06 /* scorecard-lessons.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "scorecard-lessons.html"; sourceTree = "<group>"; };
 		693A91E819A2776900A05DFD /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
-		693A91EC19A288EB00A05DFD /* lifecycle-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lifecycle-75.png"; sourceTree = "<group>"; };
 		693A91ED19A288EB00A05DFD /* page-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-7.png"; sourceTree = "<group>"; };
 		693A91EE19A288EB00A05DFD /* user_male4-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_male4-75.png"; sourceTree = "<group>"; };
 		693A91F419A2896D00A05DFD /* page-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-8.png"; sourceTree = "<group>"; };
@@ -303,15 +247,6 @@
 		69A8596B1A0D58360001CE76 /* top-bestpractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bestpractice.png"; sourceTree = "<group>"; };
 		69A8596C1A0D58360001CE76 /* top-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-profile.png"; sourceTree = "<group>"; };
 		69A8596D1A0D58360001CE76 /* top-scorecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-scorecard.png"; sourceTree = "<group>"; };
-		69AAEABC19A2D1C300A30164 /* four-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "four-green.png"; sourceTree = "<group>"; };
-		69AAEABD19A2D1C300A30164 /* one-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one-green.png"; sourceTree = "<group>"; };
-		69AAEABE19A2D1C300A30164 /* three-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three-green.png"; sourceTree = "<group>"; };
-		69AAEABF19A2D1C300A30164 /* two-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two-green.png"; sourceTree = "<group>"; };
-		69BE8A1F199D8E6400AC5F7A /* four-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "four-blue.png"; sourceTree = "<group>"; };
-		69BE8A21199D8E6400AC5F7A /* one-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one-blue.png"; sourceTree = "<group>"; };
-		69BE8A22199D8E6400AC5F7A /* three-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three-blue.png"; sourceTree = "<group>"; };
-		69BE8A23199D8E6400AC5F7A /* two-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two-blue.png"; sourceTree = "<group>"; };
-		69C217D0199DBBA3000CD5F4 /* lifecycle-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lifecycle-32.png"; sourceTree = "<group>"; };
 		69C217D1199DBBA3000CD5F4 /* user_male4-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_male4-32.png"; sourceTree = "<group>"; };
 		69C217D5199E4786000CD5F4 /* briefcase-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "briefcase-25.png"; sourceTree = "<group>"; };
 		69C217D7199E4786000CD5F4 /* info-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-25.png"; sourceTree = "<group>"; };
@@ -319,11 +254,6 @@
 		69C585C81901697A00EE6E27 /* hammer.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = hammer.min.js; sourceTree = "<group>"; };
 		69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.0.min.js"; sourceTree = "<group>"; };
 		69C77EB51A0AE7ED007ADC8C /* legend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = legend.js; sourceTree = "<group>"; };
-		69C916411A01BCAA0082E552 /* purple-five.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-five.png"; sourceTree = "<group>"; };
-		69C916421A01BCAA0082E552 /* purple-four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-four.png"; sourceTree = "<group>"; };
-		69C916431A01BCAA0082E552 /* purple-one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-one.png"; sourceTree = "<group>"; };
-		69C916441A01BCAA0082E552 /* purple-three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-three.png"; sourceTree = "<group>"; };
-		69C916451A01BCAA0082E552 /* purple-two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-two.png"; sourceTree = "<group>"; };
 		69C9164B1A01C4AC0082E552 /* best-practices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "best-practices.png"; sourceTree = "<group>"; };
 		69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.js; sourceTree = "<group>"; };
 		69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.min.js; sourceTree = "<group>"; };
@@ -424,36 +354,8 @@
 		91B6691A18DDFDD200DBA430 /* Negotiation 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Negotiation 2.xcdatamodel"; sourceTree = "<group>"; };
 		91B6691B18DE0CED00DBA430 /* NEGResultsOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGResultsOverviewViewController.h; sourceTree = "<group>"; };
 		91B6691C18DE0CED00DBA430 /* NEGResultsOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGResultsOverviewViewController.m; sourceTree = "<group>"; };
-		91B669E318DE2BB500DBA430 /* mootools-adapter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mootools-adapter.js"; sourceTree = "<group>"; };
-		91B669E418DE2BB500DBA430 /* mootools-adapter.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mootools-adapter.src.js"; sourceTree = "<group>"; };
-		91B669E518DE2BB500DBA430 /* prototype-adapter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "prototype-adapter.js"; sourceTree = "<group>"; };
-		91B669E618DE2BB500DBA430 /* prototype-adapter.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "prototype-adapter.src.js"; sourceTree = "<group>"; };
-		91B669E718DE2BB500DBA430 /* standalone-framework.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "standalone-framework.js"; sourceTree = "<group>"; };
-		91B669E818DE2BB500DBA430 /* standalone-framework.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "standalone-framework.src.js"; sourceTree = "<group>"; };
-		91B669E918DE2BB500DBA430 /* highcharts-all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "highcharts-all.js"; sourceTree = "<group>"; };
-		91B669EA18DE2BB500DBA430 /* highcharts-more.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "highcharts-more.js"; sourceTree = "<group>"; };
-		91B669EB18DE2BB500DBA430 /* highcharts-more.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "highcharts-more.src.js"; sourceTree = "<group>"; };
-		91B669EC18DE2BB500DBA430 /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
-		91B669ED18DE2BB500DBA430 /* highcharts.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.src.js; sourceTree = "<group>"; };
 		91B669EE18DE2BB500DBA430 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		91B669F018DE2BB500DBA430 /* canvas-tools.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "canvas-tools.js"; sourceTree = "<group>"; };
-		91B669F118DE2BB500DBA430 /* canvas-tools.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "canvas-tools.src.js"; sourceTree = "<group>"; };
-		91B669F218DE2BB500DBA430 /* data.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = data.js; sourceTree = "<group>"; };
-		91B669F318DE2BB500DBA430 /* data.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = data.src.js; sourceTree = "<group>"; };
-		91B669F418DE2BB500DBA430 /* drilldown.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = drilldown.js; sourceTree = "<group>"; };
-		91B669F518DE2BB500DBA430 /* drilldown.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = drilldown.src.js; sourceTree = "<group>"; };
-		91B669F618DE2BB500DBA430 /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
-		91B669F718DE2BB500DBA430 /* exporting.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.src.js; sourceTree = "<group>"; };
-		91B669F818DE2BB500DBA430 /* funnel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = funnel.js; sourceTree = "<group>"; };
-		91B669F918DE2BB500DBA430 /* funnel.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = funnel.src.js; sourceTree = "<group>"; };
-		91B669FA18DE2BB500DBA430 /* no-data-to-display.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "no-data-to-display.js"; sourceTree = "<group>"; };
-		91B669FB18DE2BB500DBA430 /* no-data-to-display.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "no-data-to-display.src.js"; sourceTree = "<group>"; };
 		91B669FC18DE2BB500DBA430 /* overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = overview.html; sourceTree = "<group>"; };
-		91B669FE18DE2BB500DBA430 /* dark-blue.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "dark-blue.js"; sourceTree = "<group>"; };
-		91B669FF18DE2BB500DBA430 /* dark-green.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "dark-green.js"; sourceTree = "<group>"; };
-		91B66A0018DE2BB500DBA430 /* gray.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gray.js; sourceTree = "<group>"; };
-		91B66A0118DE2BB500DBA430 /* grid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = grid.js; sourceTree = "<group>"; };
-		91B66A0218DE2BB500DBA430 /* skies.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = skies.js; sourceTree = "<group>"; };
 		91B66A2118DE2CB500DBA430 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		91B66A2A18DE358000DBA430 /* reports */ = {isa = PBXFileReference; lastKnownFileType = folder; name = reports; path = Negotiation3/reports; sourceTree = "<group>"; };
 		91D3E18B18B91BD400FC14F7 /* Negotiation3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Negotiation3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,12 +448,8 @@
 		9163D26A18D4D4180032F104 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				69191DD21A1A429F00379D26 /* compass-32.png */,
 				690422471A17AE2F0056EF71 /* background.png */,
-				69C916411A01BCAA0082E552 /* purple-five.png */,
-				69C916421A01BCAA0082E552 /* purple-four.png */,
-				69C916431A01BCAA0082E552 /* purple-one.png */,
-				69C916441A01BCAA0082E552 /* purple-three.png */,
-				69C916451A01BCAA0082E552 /* purple-two.png */,
 				69A5AE1B19E6123B004D68FD /* much-better.png */,
 				69A5AE1C19E6123B004D68FD /* much-worse.png */,
 				69A5AE1D19E6123B004D68FD /* same-usual.png */,
@@ -564,23 +462,13 @@
 				693A91F419A2896D00A05DFD /* page-8.png */,
 				9156623C19D873BC00745751 /* compass-32.png */,
 				9156623D19D873BC00745751 /* compass-75.png */,
-				693A91EC19A288EB00A05DFD /* lifecycle-75.png */,
 				693A91ED19A288EB00A05DFD /* page-7.png */,
 				693A91EE19A288EB00A05DFD /* user_male4-75.png */,
 				693A91E819A2776900A05DFD /* 259-list.png */,
 				690126AA19A1A29F00CACB48 /* plane-paper-1.png */,
 				69C217D5199E4786000CD5F4 /* briefcase-25.png */,
 				69C217D7199E4786000CD5F4 /* info-25.png */,
-				69C217D0199DBBA3000CD5F4 /* lifecycle-32.png */,
 				69C217D1199DBBA3000CD5F4 /* user_male4-32.png */,
-				69AAEABC19A2D1C300A30164 /* four-green.png */,
-				69AAEABD19A2D1C300A30164 /* one-green.png */,
-				69AAEABE19A2D1C300A30164 /* three-green.png */,
-				69AAEABF19A2D1C300A30164 /* two-green.png */,
-				69BE8A1F199D8E6400AC5F7A /* four-blue.png */,
-				69BE8A21199D8E6400AC5F7A /* one-blue.png */,
-				69BE8A22199D8E6400AC5F7A /* three-blue.png */,
-				69BE8A23199D8E6400AC5F7A /* two-blue.png */,
 				69D3E60819797899005F5C14 /* overlayTextOnly.png */,
 				69A70DF719677158008E4232 /* list.png */,
 				69A70DF819677158008E4232 /* untitled.png */,
@@ -633,12 +521,9 @@
 				6960396C1968756300E3C227 /* test1.html */,
 				6960396D1968756300E3C227 /* test2.html */,
 				6902FCF0193BB83500820A36 /* yourprofile.html */,
-				6902FCEC193BB7DC00820A36 /* charts-profiles.js */,
 				69C585C71901697A00EE6E27 /* dragend.js */,
 				69C585C81901697A00EE6E27 /* hammer.min.js */,
 				69C585C91901697A00EE6E27 /* jquery-1.11.0.min.js */,
-				69234B0F18FB2EB700E5B0AA /* charts-examples.js */,
-				69234B0D18FB2E5900E5B0AA /* minimal.js */,
 				69409F7B18FB1EE80024E102 /* dilemmas.html */,
 				6944982E1967951B00E6D966 /* styles.css */,
 				69409F7D18FB1EE80024E102 /* top-banner.png */,
@@ -662,65 +547,13 @@
 				91A2791418F02C32006B58A3 /* fonts */,
 				91A2791518F02C32006B58A3 /* js */,
 				9141F3AF18E8423400D2A782 /* skills.html */,
-				91B669E218DE2BB500DBA430 /* adapters */,
-				91B669E918DE2BB500DBA430 /* highcharts-all.js */,
-				91B669EA18DE2BB500DBA430 /* highcharts-more.js */,
-				91B669EB18DE2BB500DBA430 /* highcharts-more.src.js */,
-				91B669EC18DE2BB500DBA430 /* highcharts.js */,
-				91B669ED18DE2BB500DBA430 /* highcharts.src.js */,
 				91B669EE18DE2BB500DBA430 /* jquery.js */,
-				91B669EF18DE2BB500DBA430 /* modules */,
 				91B669FC18DE2BB500DBA430 /* overview.html */,
-				91B669FD18DE2BB500DBA430 /* themes */,
 				91B66A2118DE2CB500DBA430 /* about.html */,
 				91143D9D18DFAAB800FFE277 /* resources.html */,
 				91143D9F18DFAAC700FFE277 /* michael_wheeler.html */,
 			);
 			path = reports;
-			sourceTree = "<group>";
-		};
-		91B669E218DE2BB500DBA430 /* adapters */ = {
-			isa = PBXGroup;
-			children = (
-				91B669E318DE2BB500DBA430 /* mootools-adapter.js */,
-				91B669E418DE2BB500DBA430 /* mootools-adapter.src.js */,
-				91B669E518DE2BB500DBA430 /* prototype-adapter.js */,
-				91B669E618DE2BB500DBA430 /* prototype-adapter.src.js */,
-				91B669E718DE2BB500DBA430 /* standalone-framework.js */,
-				91B669E818DE2BB500DBA430 /* standalone-framework.src.js */,
-			);
-			path = adapters;
-			sourceTree = "<group>";
-		};
-		91B669EF18DE2BB500DBA430 /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				91B669F018DE2BB500DBA430 /* canvas-tools.js */,
-				91B669F118DE2BB500DBA430 /* canvas-tools.src.js */,
-				91B669F218DE2BB500DBA430 /* data.js */,
-				91B669F318DE2BB500DBA430 /* data.src.js */,
-				91B669F418DE2BB500DBA430 /* drilldown.js */,
-				91B669F518DE2BB500DBA430 /* drilldown.src.js */,
-				91B669F618DE2BB500DBA430 /* exporting.js */,
-				91B669F718DE2BB500DBA430 /* exporting.src.js */,
-				91B669F818DE2BB500DBA430 /* funnel.js */,
-				91B669F918DE2BB500DBA430 /* funnel.src.js */,
-				91B669FA18DE2BB500DBA430 /* no-data-to-display.js */,
-				91B669FB18DE2BB500DBA430 /* no-data-to-display.src.js */,
-			);
-			path = modules;
-			sourceTree = "<group>";
-		};
-		91B669FD18DE2BB500DBA430 /* themes */ = {
-			isa = PBXGroup;
-			children = (
-				91B669FE18DE2BB500DBA430 /* dark-blue.js */,
-				91B669FF18DE2BB500DBA430 /* dark-green.js */,
-				91B66A0018DE2BB500DBA430 /* gray.js */,
-				91B66A0118DE2BB500DBA430 /* grid.js */,
-				91B66A0218DE2BB500DBA430 /* skies.js */,
-			);
-			path = themes;
 			sourceTree = "<group>";
 		};
 		91D3E18218B91BD400FC14F7 = {
@@ -961,6 +794,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69191DD31A1A429F00379D26 /* compass-32.png in Resources */,
 				690422481A17AE2F0056EF71 /* background.png in Resources */,
 				69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */,
 				69A8596F1A0D58360001CE76 /* top-profile.png in Resources */,
@@ -981,12 +815,9 @@
 				6902FCF2193BB83500820A36 /* profiles.html in Resources */,
 				6902FCF3193BB83500820A36 /* yourprofile.html in Resources */,
 				69C217DD199E4786000CD5F4 /* briefcase-25.png in Resources */,
-				69AAEAC219A2D1C300A30164 /* three-green.png in Resources */,
-				6902FCED193BB7DC00820A36 /* charts-profiles.js in Resources */,
 				6930F15C19E0A2D200473A06 /* top-banner-13.png in Resources */,
 				69A70DFA19677158008E4232 /* untitled.png in Resources */,
 				69A46A08190D557900E2C242 /* image-8.png in Resources */,
-				69AAEAC019A2D1C300A30164 /* four-green.png in Resources */,
 				69A46A09190D557900E2C242 /* top-banner-8.png in Resources */,
 				9156624519D89E1600745751 /* profileOverlay.png in Resources */,
 				6930F15519E0A2D200473A06 /* image-11.png in Resources */,
@@ -998,8 +829,6 @@
 				699A83F4190AC1470041EEC2 /* image-3.png in Resources */,
 				699A83F5190AC1470041EEC2 /* image-4.png in Resources */,
 				6960396B1968729900E3C227 /* help.html in Resources */,
-				69C916471A01BCAA0082E552 /* purple-four.png in Resources */,
-				69BE8A27199D8E6400AC5F7A /* three-blue.png in Resources */,
 				69A5AE2319E6123B004D68FD /* somewhat-better.png in Resources */,
 				693A91F219A288EB00A05DFD /* page-7.png in Resources */,
 				6930F15419E0A2D200473A06 /* image-10.png in Resources */,
@@ -1009,12 +838,9 @@
 				699A83F6190AC1470041EEC2 /* image-5.png in Resources */,
 				699A83F7190AC1470041EEC2 /* image-6.png in Resources */,
 				699A83F8190AC1470041EEC2 /* top-banner-1.png in Resources */,
-				69AAEAC119A2D1C300A30164 /* one-green.png in Resources */,
 				699A83F9190AC1470041EEC2 /* top-banner-2.png in Resources */,
-				69C916491A01BCAA0082E552 /* purple-three.png in Resources */,
 				699A83FA190AC1470041EEC2 /* top-banner-3.png in Resources */,
 				690126AB19A1A29F00CACB48 /* plane-paper-1.png in Resources */,
-				693A91F119A288EB00A05DFD /* lifecycle-75.png in Resources */,
 				699A83FB190AC1470041EEC2 /* top-banner-4.png in Resources */,
 				699A83FC190AC1470041EEC2 /* top-banner-5.png in Resources */,
 				699A83FD190AC1470041EEC2 /* top-banner-6.png in Resources */,
@@ -1025,9 +851,6 @@
 				69C585CA1901697A00EE6E27 /* dragend.js in Resources */,
 				69C585CB1901697A00EE6E27 /* hammer.min.js in Resources */,
 				69C585CC1901697A00EE6E27 /* jquery-1.11.0.min.js in Resources */,
-				91659A8F18FB37C1009F21F8 /* minimal.js in Resources */,
-				91659A8E18FB327B009F21F8 /* charts-examples.js in Resources */,
-				9156623E19D873BC00745751 /* compass-32.png in Resources */,
 				69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */,
 				69409F8118FB1EE80024E102 /* top-banner.png in Resources */,
 				69A5AE2019E6123B004D68FD /* much-better.png in Resources */,
@@ -1036,23 +859,15 @@
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
 				91143DA018DFAAC700FFE277 /* michael_wheeler.html in Resources */,
 				69C9164C1A01C4AC0082E552 /* best-practices.png in Resources */,
-				91B66A2418DE353800DBA430 /* highcharts-all.js in Resources */,
 				6960396F1968756300E3C227 /* test2.html in Resources */,
 				69D1C22419E1BEB900B28FD4 /* jquery.circliful.min.js in Resources */,
 				6983454C19E189290010AA67 /* scorecard-results.html in Resources */,
 				6930F15B19E0A2D200473A06 /* top-banner-12.png in Resources */,
-				69C9164A1A01BCAA0082E552 /* purple-two.png in Resources */,
-				91B66A2518DE353800DBA430 /* highcharts-more.js in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
-				69BE8A26199D8E6400AC5F7A /* one-blue.png in Resources */,
-				69BE8A28199D8E6400AC5F7A /* two-blue.png in Resources */,
 				69A70DF919677158008E4232 /* list.png in Resources */,
 				69A5AE2219E6123B004D68FD /* same-usual.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
-				91B66A2618DE353800DBA430 /* highcharts-more.src.js in Resources */,
 				6960396A1968729900E3C227 /* aboutapp.html in Resources */,
-				91B66A2718DE353800DBA430 /* highcharts.js in Resources */,
-				91B66A2818DE353800DBA430 /* highcharts.src.js in Resources */,
 				91A2791818F02C32006B58A3 /* js in Resources */,
 				91B66A2918DE353800DBA430 /* jquery.js in Resources */,
 				6930F15E19E0A2D200473A06 /* scorecard-lessons.html in Resources */,
@@ -1061,17 +876,13 @@
 				69C217DF199E4786000CD5F4 /* info-25.png in Resources */,
 				6983454B19E189290010AA67 /* scorecard-lessons2.html in Resources */,
 				69E1102D19A80E3A00F0B6DC /* paper44.png in Resources */,
-				69C217D2199DBBA3000CD5F4 /* lifecycle-32.png in Resources */,
 				91D3E1A718B91BD400FC14F7 /* Main_iPad.storyboard in Resources */,
-				69C916481A01BCAA0082E552 /* purple-one.png in Resources */,
 				6930F15619E0A2D200473A06 /* image-12.png in Resources */,
-				69BE8A24199D8E6400AC5F7A /* four-blue.png in Resources */,
 				9163D26F18D4D4180032F104 /* page-1.png in Resources */,
 				9156623F19D873BC00745751 /* compass-75.png in Resources */,
 				693A91F519A2896D00A05DFD /* page-8.png in Resources */,
 				91D3E1B218B91BD400FC14F7 /* Images.xcassets in Resources */,
 				69E1102B19A80B9F00F0B6DC /* menu-25.png in Resources */,
-				69C916461A01BCAA0082E552 /* purple-five.png in Resources */,
 				91D3E1A418B91BD400FC14F7 /* Main_iPhone.storyboard in Resources */,
 				91D3E19B18B91BD400FC14F7 /* InfoPlist.strings in Resources */,
 				9163D27418D4DE630032F104 /* page-5.png in Resources */,
@@ -1083,7 +894,6 @@
 				9163D27118D4D4180032F104 /* page-3.png in Resources */,
 				6930F15819E0A2D200473A06 /* image-14.png in Resources */,
 				91A2791718F02C32006B58A3 /* fonts in Resources */,
-				69AAEAC319A2D1C300A30164 /* two-green.png in Resources */,
 				91B66A1B18DE2BB500DBA430 /* overview.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1108,74 +918,44 @@
 				9130E82919FF3CEF0025F645 /* NEGBestPracticesWWWViewController.m in Sources */,
 				69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */,
 				69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */,
-				91B66A1418DE2BB500DBA430 /* drilldown.src.js in Sources */,
 				9147FC2319E193470040CC97 /* NEGScoreCardProfileComparisonViewController.m in Sources */,
 				910D66FA19641D7F00325586 /* NEGProfilesViewController.m in Sources */,
 				9147FC1919E1716F0040CC97 /* NEGScoreCardQuiz3TableViewController.m in Sources */,
 				91B66A0E18DE2BB500DBA430 /* jquery.js in Sources */,
-				91B66A1818DE2BB500DBA430 /* funnel.src.js in Sources */,
 				91DDE23F18DF9EB40018CBC4 /* NEGResourcesViewController.m in Sources */,
-				91B66A0418DE2BB500DBA430 /* mootools-adapter.src.js in Sources */,
 				91D3E19D18B91BD400FC14F7 /* main.m in Sources */,
 				9147FC1319E0F3C90040CC97 /* NEGScoreCardQuiz2TableViewController.m in Sources */,
-				91B66A0A18DE2BB500DBA430 /* highcharts-more.js in Sources */,
 				9147FC1619E16EE40040CC97 /* NEGQuiz3IntroViewController.m in Sources */,
-				91B66A0718DE2BB500DBA430 /* standalone-framework.js in Sources */,
-				91B66A0B18DE2BB500DBA430 /* highcharts-more.src.js in Sources */,
-				91B66A0918DE2BB500DBA430 /* highcharts-all.js in Sources */,
 				91DDE24218DF9ECB0018CBC4 /* NEGAboutMWViewController.m in Sources */,
-				69234B0E18FB2E5900E5B0AA /* minimal.js in Sources */,
-				91B66A1E18DE2BB500DBA430 /* gray.js in Sources */,
 				9163D26918D4B4100032F104 /* NEGWalkthroughViewController.m in Sources */,
 				9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */,
-				91B66A1C18DE2BB500DBA430 /* dark-blue.js in Sources */,
-				91B66A1F18DE2BB500DBA430 /* grid.js in Sources */,
 				9130E83219FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m in Sources */,
 				9130E83519FF3D9B0025F645 /* NEGNotesTableViewController.m in Sources */,
 				9147FC2619E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m in Sources */,
 				9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */,
-				91B66A1018DE2BB500DBA430 /* canvas-tools.src.js in Sources */,
 				91D3E1AD18B91BD400FC14F7 /* NEGMasterViewController.m in Sources */,
 				9121678718E50DED00DEEC00 /* NEGLinksTableViewController.m in Sources */,
 				9130E82319FF37370025F645 /* NEGBestPracticesIntroViewController.m in Sources */,
 				9130E82619FF38090025F645 /* NEGBestPracticesSummaryTableViewController.m in Sources */,
-				91B66A1718DE2BB500DBA430 /* funnel.js in Sources */,
-				91B66A0D18DE2BB500DBA430 /* highcharts.src.js in Sources */,
 				910D66FD19641DA300325586 /* NEGCompareViewController.m in Sources */,
 				91B6691D18DE0CED00DBA430 /* NEGResultsOverviewViewController.m in Sources */,
-				91B66A0818DE2BB500DBA430 /* standalone-framework.src.js in Sources */,
 				91D3E1D118B9333600FC14F7 /* NEGQuizViewController.m in Sources */,
-				91B66A1A18DE2BB500DBA430 /* no-data-to-display.src.js in Sources */,
-				91B66A0F18DE2BB500DBA430 /* canvas-tools.js in Sources */,
-				91B66A0318DE2BB500DBA430 /* mootools-adapter.js in Sources */,
 				9130E82F19FF3D4A0025F645 /* NEGBestPracticesWWIDViewController.m in Sources */,
 				9147FC2C19E1A5280040CC97 /* NEGScoreCardQuiz4TableViewController.m in Sources */,
-				91B66A1118DE2BB500DBA430 /* data.js in Sources */,
 				9115A79A18DF7D5300FBDB5C /* NEGSkillsViewController.m in Sources */,
-				91B66A1318DE2BB500DBA430 /* drilldown.js in Sources */,
 				9156624919D8D02C00745751 /* NEGScoreCardQuiz1TableViewController.m in Sources */,
 				91D3E1B018B91BD400FC14F7 /* NEGDetailViewController.m in Sources */,
 				9147FC1C19E180090040CC97 /* NEGScoreCardResultsTableViewController.m in Sources */,
 				91D3E1AA18B91BD400FC14F7 /* Negotiation3.xcdatamodeld in Sources */,
 				9147FC1019E0A36E0040CC97 /* NEGScoreCardNegTypesTableViewController.m in Sources */,
-				91B66A2018DE2BB500DBA430 /* skies.js in Sources */,
 				9115A78118DF4D4800FBDB5C /* NEGType.m in Sources */,
 				9115A79718DF7D4500FBDB5C /* NEGDilemaViewController.m in Sources */,
-				91B66A1618DE2BB500DBA430 /* exporting.src.js in Sources */,
 				9115A78618DF762400FBDB5C /* NEGAboutViewController.m in Sources */,
 				9147FC2F19E1A53D0040CC97 /* NEGScoreCardQuiz5TableViewController.m in Sources */,
-				91B66A1D18DE2BB500DBA430 /* dark-green.js in Sources */,
 				9156624219D881C700745751 /* NEGScorecardIntroViewController.m in Sources */,
 				9147FC2919E193840040CC97 /* NEGScoreCardSummaryViewController.m in Sources */,
 				9121678A18E5176400DEEC00 /* NEGProfilesTableViewController.m in Sources */,
-				91B66A1518DE2BB500DBA430 /* exporting.js in Sources */,
-				91B66A0618DE2BB500DBA430 /* prototype-adapter.src.js in Sources */,
-				91B66A0518DE2BB500DBA430 /* prototype-adapter.js in Sources */,
 				91D3E1A118B91BD400FC14F7 /* NEGAppDelegate.m in Sources */,
-				69234B1018FB2EB700E5B0AA /* charts-examples.js in Sources */,
-				91B66A1218DE2BB500DBA430 /* data.src.js in Sources */,
-				91B66A1918DE2BB500DBA430 /* no-data-to-display.js in Sources */,
-				91B66A0C18DE2BB500DBA430 /* highcharts.js in Sources */,
 				91DDE23C18DF9E9F0018CBC4 /* NEGAboutTypesViewController.m in Sources */,
 				D276FAD11A0E837700307BD4 /* NEGNoteViewController.m in Sources */,
 			);
