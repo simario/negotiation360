@@ -7,6 +7,10 @@
 //
 
 #import "NEGScoreCardNegTypesTableViewController.h"
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface NEGScoreCardNegTypesTableViewController ()
 
@@ -57,6 +61,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // May return nil if a tracker has not already been initialized with a
+    // property ID.
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // This screen name value will remain set on the tracker and sent with
+    // hits until it is set to a new value or to nil.
+    [tracker set:kGAIScreenName value:@"Negotiation Type Select"];
+    
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     /*
      .	Professional, with outside parties (vendors, customers, stakeholders, etc.)
