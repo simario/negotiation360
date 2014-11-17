@@ -13,6 +13,7 @@
 		6902FCF3193BB83500820A36 /* yourprofile.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCF0193BB83500820A36 /* yourprofile.html */; };
 		690422481A17AE2F0056EF71 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 690422471A17AE2F0056EF71 /* background.png */; };
 		69191DD31A1A429F00379D26 /* compass-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69191DD21A1A429F00379D26 /* compass-32.png */; };
+		69191DD51A1A622B00379D26 /* resources.png in Resources */ = {isa = PBXBuildFile; fileRef = 69191DD41A1A622B00379D26 /* resources.png */; };
 		6930F15419E0A2D200473A06 /* image-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14919E0A2D200473A06 /* image-10.png */; };
 		6930F15519E0A2D200473A06 /* image-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14A19E0A2D200473A06 /* image-11.png */; };
 		6930F15619E0A2D200473A06 /* image-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 6930F14B19E0A2D200473A06 /* image-12.png */; };
@@ -69,9 +70,6 @@
 		69A5AE2419E6123B004D68FD /* somewhat-worse.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A5AE1F19E6123B004D68FD /* somewhat-worse.png */; };
 		69A70DF919677158008E4232 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF719677158008E4232 /* list.png */; };
 		69A70DFA19677158008E4232 /* untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A70DF819677158008E4232 /* untitled.png */; };
-		69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596B1A0D58360001CE76 /* top-bestpractice.png */; };
-		69A8596F1A0D58360001CE76 /* top-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596C1A0D58360001CE76 /* top-profile.png */; };
-		69A859701A0D58360001CE76 /* top-scorecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A8596D1A0D58360001CE76 /* top-scorecard.png */; };
 		69C217D3199DBBA3000CD5F4 /* user_male4-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D1199DBBA3000CD5F4 /* user_male4-32.png */; };
 		69C217DD199E4786000CD5F4 /* briefcase-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D5199E4786000CD5F4 /* briefcase-25.png */; };
 		69C217DF199E4786000CD5F4 /* info-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C217D7199E4786000CD5F4 /* info-25.png */; };
@@ -187,6 +185,7 @@
 		6902FCF0193BB83500820A36 /* yourprofile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = yourprofile.html; sourceTree = "<group>"; };
 		690422471A17AE2F0056EF71 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		69191DD21A1A429F00379D26 /* compass-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass-32.png"; sourceTree = "<group>"; };
+		69191DD41A1A622B00379D26 /* resources.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resources.png; sourceTree = "<group>"; };
 		6930F14919E0A2D200473A06 /* image-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-10.png"; sourceTree = "<group>"; };
 		6930F14A19E0A2D200473A06 /* image-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-11.png"; sourceTree = "<group>"; };
 		6930F14B19E0A2D200473A06 /* image-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-12.png"; sourceTree = "<group>"; };
@@ -244,9 +243,6 @@
 		69A5AE1F19E6123B004D68FD /* somewhat-worse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "somewhat-worse.png"; sourceTree = "<group>"; };
 		69A70DF719677158008E4232 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		69A70DF819677158008E4232 /* untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = untitled.png; sourceTree = "<group>"; };
-		69A8596B1A0D58360001CE76 /* top-bestpractice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bestpractice.png"; sourceTree = "<group>"; };
-		69A8596C1A0D58360001CE76 /* top-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-profile.png"; sourceTree = "<group>"; };
-		69A8596D1A0D58360001CE76 /* top-scorecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-scorecard.png"; sourceTree = "<group>"; };
 		69C217D1199DBBA3000CD5F4 /* user_male4-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_male4-32.png"; sourceTree = "<group>"; };
 		69C217D5199E4786000CD5F4 /* briefcase-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "briefcase-25.png"; sourceTree = "<group>"; };
 		69C217D7199E4786000CD5F4 /* info-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-25.png"; sourceTree = "<group>"; };
@@ -448,6 +444,7 @@
 		9163D26A18D4D4180032F104 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				69191DD41A1A622B00379D26 /* resources.png */,
 				69191DD21A1A429F00379D26 /* compass-32.png */,
 				690422471A17AE2F0056EF71 /* background.png */,
 				69A5AE1B19E6123B004D68FD /* much-better.png */,
@@ -486,9 +483,6 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
-				69A8596B1A0D58360001CE76 /* top-bestpractice.png */,
-				69A8596C1A0D58360001CE76 /* top-profile.png */,
-				69A8596D1A0D58360001CE76 /* top-scorecard.png */,
 				69C77EB51A0AE7ED007ADC8C /* legend.js */,
 				693FD52D1A06B55E00A7DFB6 /* Chart.js */,
 				69ED154219EB49AF00BC301A /* practices-wwidd.html */,
@@ -794,11 +788,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69191DD51A1A622B00379D26 /* resources.png in Resources */,
 				69191DD31A1A429F00379D26 /* compass-32.png in Resources */,
 				690422481A17AE2F0056EF71 /* background.png in Resources */,
-				69A8596E1A0D58360001CE76 /* top-bestpractice.png in Resources */,
-				69A8596F1A0D58360001CE76 /* top-profile.png in Resources */,
-				69A859701A0D58360001CE76 /* top-scorecard.png in Resources */,
 				69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */,
 				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,

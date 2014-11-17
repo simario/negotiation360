@@ -209,7 +209,7 @@
             break;
             
         case 5:
-            cell.textLabel.text = @"Notes";
+            cell.textLabel.text = @"Negotiation Notes";
             //cell.imageView.image = [UIImage imageNamed:@"three-green.png"];
             break;
             

@@ -53,7 +53,7 @@
 
         NSString *q9 = (NSString *)[detailItem valueForKey:@"question9"];
         NSString *q10 = (NSString *)[detailItem valueForKey:@"question10"];
-        str = [NSString stringWithFormat:@"%@<section class='card'><p style='font-size: 14px; text-align: left'><strong>%@</strong><br>Scorecard created %@<br>Agreement Reached? %@</p>", str, name, dateString, reachAgreement, nil];
+        str = [NSString stringWithFormat:@"%@<section class='card'><p style='font-size: 16px; text-align: left'><strong>%@</strong></p><p style='font-size: 14px;'>Scorecard created %@<br>Agreement Reached? %@</p>", str, name, dateString, reachAgreement, nil];
         str = [NSString stringWithFormat:@"%@<ul class='list-group'><li class='list-group-item' style='font-size: 14px; text-align: left'>&ldquo; %@ &rdquo;</li>", str, q9, nil];
         str = [NSString stringWithFormat:@"%@<li class='list-group-item' style='font-size: 14px; text-align: left'>&ldquo; %@ &rdquo;</li></ul></section>", str, q10, nil];
         
