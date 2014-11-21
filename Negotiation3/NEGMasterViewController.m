@@ -164,6 +164,8 @@
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question2"];
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question3"];
         [newManagedObject setValue:[NSNumber numberWithInt:1] forKey:@"question4"];
+        [newManagedObject setValue:[NSNumber numberWithBool:NO] forKey:@"viewedBestPractices"];
+        
         
         // Save the context.
         NSError *error = nil;
@@ -503,7 +505,25 @@
             [self performSegueWithIdentifier:@"showDetail" sender:self];
         }
     } else if (indexPath.section == 1) {
-        [self performSegueWithIdentifier:@"best_practices_intro" sender:self];
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        
+        bool hasViewedBestPractices = [[object valueForKey:@"viewedBestPractices"] boolValue];
+        if (hasViewedBestPractices) {
+            [self performSegueWithIdentifier:@"best_practices_summary" sender:self];
+        } else {
+            NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+            [object setValue:[NSNumber numberWithBool:YES] forKey:@"viewedBestPractices"];
+            // Save the context.
+            NSError *error = nil;
+            if (![context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            }
+            [self performSegueWithIdentifier:@"best_practices_intro" sender:self];
+        }
+        
     } else if (indexPath.section == 2) {
         [self performSegueWithIdentifier:@"resources" sender:self];
     } else {
