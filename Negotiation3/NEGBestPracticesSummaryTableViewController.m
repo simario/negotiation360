@@ -332,7 +332,7 @@
     [super viewDidLoad];
     
     // Set screen name.
-    self.screenName = @"Feedback & Analysis";
+    self.screenName = @"Best Practices Main Screen";
     
     // Do any additional setup after loading the view.
     [self configureView];

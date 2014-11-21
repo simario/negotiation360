@@ -24,7 +24,7 @@
 	}
 
 	.card {
-	  padding:0.5rem 1rem;
+	  padding:1rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
 	  margin: 1.5rem 1rem;
@@ -129,16 +129,24 @@
 
    		<div class="owl-item">
 			<section class="card">
+				<p>Step back and review your performance in your last negotiations. <strong>Negotiation 360&deg;</strong> has analyzed your experience across several dimensions. It will automatically update this information as you enter more Scorecards.</p>
+			</section>
+		</div>
+
+   		<div class="owl-item">
+			<section class="card">
 				<div class="container">
 					<h1>Agreement Rate</h1> 
 					<h2 id="subtitle"></h2>
-					<div class="row">
-						<div class="col-xs-6" class="canvas-holder">
-							<canvas id="canvas" width="200" height="150"></canvas>
+						<div style="width: 150px; float: left">
+							<canvas id="canvas" width="160" height="150"></canvas>
 						</div>
-						<div class="col-xs-6" id="legend">
-					</div>
+						<div style="margin-left: 150px" id="legend">
+						</div>
 				</div>
+			</section>
+			<section class="card">
+				<p style="font-size: 12px">Take a look, for example, at the pie chart that shows your rate of agreement. Closing deals is important, of course. But if you agree 100&#37; of the time, maybe you sometimes say "yes," when you really should walk away. Don't agree just for the sake of agreeing. And maybe you should be bolder by seeking agreements that may not be easy to reach, but would pay off handsomely if you do succeed.</p>
 			</section>
 		</div>
 
@@ -147,13 +155,15 @@
 				<div class="container">
 					<h1>Negotiation Type</h1> 
 					<h2 id="subtitle2"></h2>
-					<div class="row">
-						<div class="col-xs-6" class="canvas-holder">
-							<canvas id="canvas2" width="200" height="150" style="text-align: left"></canvas>
+						<div style="width: 150px; float: left">
+							<canvas id="canvas2" width="150" height="150" style="text-align: left"></canvas>
 						</div>
-						<div class="col-xs-6" id="legend2">
+						<div style="margin-left: 125px"  id="legend2">
 					</div>
 				</div>
+			</section>
+			<section class="card">
+				<p style="font-size: 12px">Also, review the different kinds of negotiations that you engage in. What lessons should you take from one context and apply to another? What works in one case might not be appropriate in another. Are there situations where you need to be more agile so that you can adapt your strategy to the circumstance? (For example, value creation may be more or less important in a given case.)</p>
 			</section>
 		</div>
 
@@ -161,40 +171,96 @@
 			<section class="card">
 				<h1>Importance &amp; Satisfaction</h1> 
 				<h2 id="subtitle3"></h2>
-				<canvas id="canvas3"></canvas>
+				<canvas id="canvas3" width="280" height="140"></canvas>
 				<div id="legend3">
 			</section>
+			<section class="card">
+				<p style="font-size: 12px">Research shows that negotiators with higher aspirations tend to get better results. That advantage comes with a cost, however; two costs, in fact. People with high expectations can feel disappointed even when they get a good deal. They also have a higher rate of impasse, if their aspirations are unrealistic. The takeaway: be ambitious while you are negotiating; don't brood about the outcome when you're finished.</p>
+			</section>
 		</div>
 
    		<div class="owl-item">
 			<section class="card">
-				<h1>Create</h1> 
+				<p>Finally <strong>Negotiation 360&deg;</strong> complies your performance on both the relational scale (asserting your interests versus understanding others) and the outcome scale (creating and claiming value). The baseline is your most current self-assessment profile, so you can compare how you did in particular cases relative to your general performance. </p>
+			</section>
+			<section class="card">
+				<p>Build on those skills that you do well, and look for others where improvement will have the biggest payoff. Reviewing this information may show you that you should revise your general profile.</p>
+			</section>
+		</div>
+
+   		<div class="owl-item">
+			<section class="card">
+				<h1>Creating Value</h1> 
 				<h2 id="subtitle4"></h2>
-				<canvas id="canvas4"></canvas>
+				<canvas id="canvas4" width="280" height="140"></canvas>
+				<div class="row">
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">MW = Much Worse<br>
+						SW = Somewhat Worse<br>
+						SaU = Same as Usual</p>
+					</div>
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">SB = Somewhat Better<br>
+						MB = Much Better</p>
+					</div>
+				</div>
 			</section>
 		</div>
 
    		<div class="owl-item">
 			<section class="card">
-				<h1>Assert</h1> 
+				<h1>Asserting Your Interests</h1> 
 				<h2 id="subtitle5"></h2>
-				<canvas id="canvas5"></canvas>
+				<canvas id="canvas5" width="280" height="140"></canvas>
+				<div class="row">
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">MW = Much Worse<br>
+						SW = Somewhat Worse<br>
+						SaU = Same as Usual</p>
+					</div>
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">SB = Somewhat Better<br>
+						MB = Much Better</p>
+					</div>
+				</div>
 			</section>
 		</div>
 		
    		<div class="owl-item">
 			<section class="card">
-				<h1>Empathy</h1> 
+				<h1>Understanding Other Parties</h1> 
 				<h2 id="subtitle6"></h2>
-				<canvas id="canvas6"></canvas>
+				<canvas id="canvas6" width="280" height="140"></canvas>
+				<div class="row">
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">MW = Much Worse<br>
+						SW = Somewhat Worse<br>
+						SaU = Same as Usual</p>
+					</div>
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">SB = Somewhat Better<br>
+						MB = Much Better</p>
+					</div>
+				</div>
 			</section>
 		</div>
 		
    		<div class="owl-item">
 			<section class="card">
-				<h1>Claim</h1> 
+				<h1>Getting the Maximum</h1> 
 				<h2 id="subtitle7"></h2>
-				<canvas id="canvas7"></canvas>
+				<canvas id="canvas7" width="280" height="140"></canvas>
+				<div class="row">
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">MW = Much Worse<br>
+						SW = Somewhat Worse<br>
+						SaU = Same as Usual</p>
+					</div>
+					<div class="col-xs-6">
+						<p style="font-size:12px; color:gray">SB = Somewhat Better<br>
+						MB = Much Better</p>
+					</div>
+				</div>
 			</section>
 		</div>		
 	</div>
@@ -212,8 +278,8 @@
 	$(function () {
 
 	    $(document).ready(function () {
-                          /*
-                           var numScorecards = 5;
+                          
+                           /*var numScorecards = 5;
                            var yesCount = 2;
                            var noCount = 2;
                            var notYetCount = 1;
@@ -236,26 +302,26 @@
 						   var createSomewhatWorse = 1
 						   var createSameUsual = 0
 						   var createSomewhatBetter = 0
-						   var createSomewhatWorse = 2
+						   var createMuchBetter = 2
 						
 						   var assertMuchWorse = 0
 						   var assertSomewhatWorse = 0
 						   var assertSameUsual = 0
 						   var assertSomewhatBetter = 0
-						   var assertSomewhatWorse = 5
+						   var assertMuchBetter = 5
 
 						   var empathyMuchWorse = 1
 						   var empathySomewhatWorse = 3
 						   var empathySameUsual = 0
 						   var empathySomewhatBetter = 1
-						   var empathySomewhatWorse = 0
+						   var empathyMuchBetter = 0
                            
 						   var claimMuchWorse = 0
 						   var claimSomewhatWorse = 0
 						   var claimSameUsual = 2
 						   var claimSomewhatBetter = 2
-						   var claimSomewhatWorse = 1
-                           */
+						   var claimMuchBetter = 1*/
+                           
                           
           %@
           
@@ -396,56 +462,56 @@
 										};
 
 									var createBarData = {
-											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											labels : ["MW", "SW", "SaU", "SB", "MB"],
 											datasets : [
 												{
 													fillColor : "#ff9f33",
 													strokeColor : "#ff9f33",
 													highlightFill: "#FFB25C",
 													highlightStroke: "#FFB25C",
-													data : [createMuchWorse, createSomewhatWorse, createSameUsual, createSomewhatBetter, createSomewhatWorse]
+													data : [createMuchWorse, createSomewhatWorse, createSameUsual, createSomewhatBetter, createMuchBetter]
 												}
 											]
 
 										};
 
 									var assertBarData = {
-											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											labels : ["MW", "SW", "SaU", "SB", "MB"],
 											datasets : [
 												{
 													fillColor : "#ff9f33",
 													strokeColor : "#ff9f33",
 													highlightFill: "#FFB25C",
 													highlightStroke: "#FFB25C",
-													data : [assertMuchWorse, assertSomewhatWorse, assertSameUsual, assertSomewhatBetter, createSomewhatWorse]
+													data : [assertMuchWorse, assertSomewhatWorse, assertSameUsual, assertSomewhatBetter, assertMuchBetter]
 												}
 											]
 
 										};
 
 									var empathyBarData = {
-											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											labels : ["MW", "SW", "SaU", "SB", "MB"],
 											datasets : [
 												{
 													fillColor : "#ff9f33",
 													strokeColor : "#ff9f33",
 													highlightFill: "#FFB25C",
 													highlightStroke: "#FFB25C",
-													data : [empathyMuchWorse, empathySomewhatWorse, empathySameUsual, empathySomewhatBetter, empathySomewhatWorse]
+													data : [empathyMuchWorse, empathySomewhatWorse, empathySameUsual, empathySomewhatBetter, empathyMuchBetter]
 												}
 											]
 
 										};
 
 									var claimBarData = {
-											labels : ["Much Worse", "Somewhat Worse", "Same as Usual", "Somewhat Better", "Much Better"],
+											labels : ["MW", "SW", "SaU", "SB", "MB"],
 											datasets : [
 												{
 													fillColor : "#ff9f33",
 													strokeColor : "#ff9f33",
 													highlightFill: "#FFB25C",
 													highlightStroke: "#FFB25C",
-													data : [claimMuchWorse, claimSomewhatWorse, claimSameUsual, claimSomewhatBetter, claimSomewhatWorse]
+													data : [claimMuchWorse, claimSomewhatWorse, claimSameUsual, claimSomewhatBetter, claimMuchBetter]
 												}
 											]
 
@@ -456,9 +522,6 @@
 										window.myPieChart2 = new Chart(ctx2).Pie(typePieData);
 										var ctx3 = document.getElementById("canvas3").getContext("2d");
 										window.myBarChart = new Chart(ctx3).Bar(importanceBarData,{
-											responsive: false,
-											maintainAspectRatio: true,
-										    showScale: true,
 										    scaleOverride: true,
 										    scaleSteps: 5,
 										    scaleStepWidth: 20,
@@ -466,9 +529,6 @@
 										});
 										var ctx4 = document.getElementById("canvas4").getContext("2d");
 										window.myBarChart2 = new Chart(ctx4).Bar(createBarData,{
-											responsive: false,
-											maintainAspectRatio: true,
-										    showScale: true,
 										    scaleOverride: true,
 										    scaleSteps: 5,
 										    scaleStepWidth: 1,
@@ -476,9 +536,6 @@
 										});
 										var ctx5 = document.getElementById("canvas5").getContext("2d");
 										window.myBarChart3 = new Chart(ctx5).Bar(assertBarData,{
-											responsive: false,
-											maintainAspectRatio: true,
-										    showScale: true,
 										    scaleOverride: true,
 										    scaleSteps: 5,
 										    scaleStepWidth: 1,
@@ -486,9 +543,6 @@
 										});
 										var ctx6 = document.getElementById("canvas6").getContext("2d");
 										window.myBarChart4 = new Chart(ctx6).Bar(empathyBarData,{
-											responsive: false,
-											maintainAspectRatio: true,
-										    showScale: true,
 										    scaleOverride: true,
 										    scaleSteps: 5,
 										    scaleStepWidth: 1,
@@ -496,9 +550,6 @@
 										});
 										var ctx7 = document.getElementById("canvas7").getContext("2d");
 										window.myBarChart5 = new Chart(ctx7).Bar(claimBarData,{
-											responsive: false,
-											maintainAspectRatio: true,
-										    showScale: true,
 										    scaleOverride: true,
 										    scaleSteps: 5,
 										    scaleStepWidth: 1,

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface NEGScorecardIntroViewController : UIViewController
+@interface NEGScorecardIntroViewController : GAITrackedViewController
 
 @property (strong, nonatomic) id detailItem;
 @property (strong, nonatomic) id context;

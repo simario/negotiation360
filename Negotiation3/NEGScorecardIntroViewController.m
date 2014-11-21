@@ -82,6 +82,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set screen name.
+    self.screenName = @"Scorecard Intro";
+
     // Do any additional setup after loading the view.
     [self configureView];
 }
