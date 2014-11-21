@@ -321,6 +321,7 @@
                         <segue destination="YGm-X1-Jse" kind="push" identifier="scorecard_quiz_1" id="XrA-bw-hNd"/>
                         <segue destination="frs-fP-9VL" kind="push" identifier="best_practices_intro" id="pzy-Nl-e2r"/>
                         <segue destination="JEJ-MM-Sbq" kind="push" identifier="resources" id="dcM-bi-1Rf"/>
+                        <segue destination="xik-SU-g5Q" kind="push" identifier="best_practices_summary" id="CDr-fM-Uml"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -1912,13 +1913,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XrA-bw-hNd"/>
-        <segue reference="UvR-e4-cJ3"/>
         <segue reference="oA1-ch-634"/>
-        <segue reference="9hR-Rc-zEg"/>
-        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="UvR-e4-cJ3"/>
         <segue reference="Q57-xl-Lgr"/>
+        <segue reference="XrA-bw-hNd"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="CDr-fM-Uml"/>
         <segue reference="oFu-12-oe6"/>
+        <segue reference="9hR-Rc-zEg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>
