@@ -22,12 +22,21 @@
 	  transition:transform .5s, opacity .3s;
 	  background-size:cover;
 	}
-
-	.card {
-	  padding:1rem 1rem;
+	.topcard {
+	  padding:0.5rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1.5rem 1rem;
+	  margin: 1.5rem 1rem 1rem 1rem;
+	  border-radius:1px;
+	  user-select:none;
+	  animation:fly-in-from-left .5s 1s ease both;
+	  transform-origin:top left;
+	}
+	.card {
+	  padding:0.5rem 1rem;
+	  box-shadow:0 1px 2px #aaa;
+	  background:white;
+	  margin: 1rem 1rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -128,13 +137,13 @@
 	<div class="owl-carousel" style="margin: 10px 0px 0px 0px;">
 
    		<div class="owl-item">
-			<section class="card">
-				<p>Step back and review your performance in your last negotiations. <strong>Negotiation 360&deg;</strong> has analyzed your experience across several dimensions. It will automatically update this information as you enter more Scorecards.</p>
+			<section class="topcard">
+				<p style="font-size: 14px">Step back and review your performance in your last negotiations. <strong>Negotiation 360&deg;</strong> has analyzed your experience across several dimensions. It will automatically update this information as you enter more Scorecards.</p>
 			</section>
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<div class="container">
 					<h1>Agreement Rate</h1> 
 					<h2 id="subtitle"></h2>
@@ -146,12 +155,12 @@
 				</div>
 			</section>
 			<section class="card">
-				<p style="font-size: 12px">Take a look, for example, at the pie chart that shows your rate of agreement. Closing deals is important, of course. But if you agree 100&#37; of the time, maybe you sometimes say "yes," when you really should walk away. Don't agree just for the sake of agreeing. And maybe you should be bolder by seeking agreements that may not be easy to reach, but would pay off handsomely if you do succeed.</p>
+				<p style="font-size: 13px">Take a look at the pie chart that shows your rate of agreement. Closing deals is important; but if you agree 100&#37; of the time, maybe you sometimes say "yes," when you really should walk away. <strong>Don't agree just for the sake of agreeing.</strong> Maybe you should be bolder by seeking agreements that may not be easy to reach, but would pay off handsomely if you do succeed.</p>
 			</section>
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<div class="container">
 					<h1>Negotiation Type</h1> 
 					<h2 id="subtitle2"></h2>
@@ -163,36 +172,38 @@
 				</div>
 			</section>
 			<section class="card">
-				<p style="font-size: 12px">Also, review the different kinds of negotiations that you engage in. What lessons should you take from one context and apply to another? What works in one case might not be appropriate in another. Are there situations where you need to be more agile so that you can adapt your strategy to the circumstance? (For example, value creation may be more or less important in a given case.)</p>
+				<p style="font-size: 13px">Review the different kinds of negotiations that you engage in. What lessons should you take from one context and apply to another? <strong>What works in one case might not be appropriate in another.</strong> Are there situations where you need to be more agile so that you can adapt your strategy to the circumstance? (For example, value creation may be more or less important in a given case.)</p>
 			</section>
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Importance &amp; Satisfaction</h1> 
 				<h2 id="subtitle3"></h2>
 				<canvas id="canvas3" width="280" height="140"></canvas>
 				<div id="legend3">
 			</section>
 			<section class="card">
-				<p style="font-size: 12px">Research shows that negotiators with higher aspirations tend to get better results. That advantage comes with a cost, however; two costs, in fact. People with high expectations can feel disappointed even when they get a good deal. They also have a higher rate of impasse, if their aspirations are unrealistic. The takeaway: be ambitious while you are negotiating; don't brood about the outcome when you're finished.</p>
+				<p style="font-size: 13px">Research shows that negotiators with higher aspirations tend to get better results. That advantage comes with a cost, however; two costs, in fact. People with high expectations can feel disappointed even when they get a good deal. They also have a higher rate of impasse, if their aspirations are unrealistic. <strong>The takeaway: be ambitious while you are negotiating; don't brood about the outcome when you're finished.</strong></p>
 			</section>
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
-				<p>Finally <strong>Negotiation 360&deg;</strong> complies your performance on both the relational scale (asserting your interests versus understanding others) and the outcome scale (creating and claiming value). The baseline is your most current self-assessment profile, so you can compare how you did in particular cases relative to your general performance. </p>
+			<section class="topcard">
+				<p style="font-size: 14px">Finally <strong>Negotiation 360&deg;</strong> complies your performance on both the relational scale (asserting your interests versus understanding others) and the outcome scale (creating and claiming value). The baseline is your most current self-assessment profile, so you can compare how you did in particular cases relative to your general performance. </p>
 			</section>
 			<section class="card">
-				<p>Build on those skills that you do well, and look for others where improvement will have the biggest payoff. Reviewing this information may show you that you should revise your general profile.</p>
+				<p style="font-size: 14px">Build on those skills that you do well, and look for others where improvement will have the biggest payoff. Reviewing this information may show you that you should revise your general profile.</p>
 			</section>
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Creating Value</h1> 
 				<h2 id="subtitle4"></h2>
 				<canvas id="canvas4" width="280" height="140"></canvas>
+			</section>
+			<section class="card">
 				<div class="row">
 					<div class="col-xs-6">
 						<p style="font-size:12px; color:gray">MW = Much Worse<br>
@@ -208,10 +219,12 @@
 		</div>
 
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Asserting Your Interests</h1> 
 				<h2 id="subtitle5"></h2>
 				<canvas id="canvas5" width="280" height="140"></canvas>
+			</section>
+			<section class="card">
 				<div class="row">
 					<div class="col-xs-6">
 						<p style="font-size:12px; color:gray">MW = Much Worse<br>
@@ -227,10 +240,12 @@
 		</div>
 		
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Understanding Other Parties</h1> 
 				<h2 id="subtitle6"></h2>
 				<canvas id="canvas6" width="280" height="140"></canvas>
+			</section>
+			<section class="card">
 				<div class="row">
 					<div class="col-xs-6">
 						<p style="font-size:12px; color:gray">MW = Much Worse<br>
@@ -246,10 +261,12 @@
 		</div>
 		
    		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Getting the Maximum</h1> 
 				<h2 id="subtitle7"></h2>
 				<canvas id="canvas7" width="280" height="140"></canvas>
+			</section>
+			<section class="card">
 				<div class="row">
 					<div class="col-xs-6">
 						<p style="font-size:12px; color:gray">MW = Much Worse<br>

@@ -176,7 +176,7 @@
     switch (indexPath.item) {
             
         case 0:
-            h = 115;
+            h = 125;
             break;
         default:
             h = 95;

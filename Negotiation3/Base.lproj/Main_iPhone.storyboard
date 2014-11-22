@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-2221" y="-1014"/>
         </scene>
-        <!--My Notes-->
+        <!--Negotiation Notes-->
         <scene sceneID="Nhi-GG-r4Y">
             <objects>
                 <tableViewController id="HCL-za-HeV" customClass="NEGNotesTableViewController" sceneMemberID="viewController">
@@ -80,7 +80,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My Notes" id="XI6-V0-wQ6"/>
+                    <navigationItem key="navigationItem" title="Negotiation Notes" id="XI6-V0-wQ6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ZjD-P6-Hxy"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-Ok-GzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +207,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Worked Well" id="Am1-bG-CUV"/>
+                    <navigationItem key="navigationItem" title="Worked Well" id="Am1-bG-CUV">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="e6I-wy-Zxm"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="eqS-lt-FMl" id="BUa-vp-5a7"/>
                     </connections>
@@ -375,7 +379,7 @@
         <scene sceneID="Feu-Eb-7yB">
             <objects>
                 <tableViewController id="YGm-X1-Jse" customClass="NEGScoreCardQuiz1TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="dNP-ph-z0E">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="dNP-ph-z0E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -396,7 +400,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" tag="567" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a name for this negotiation" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-SH-ptP">
-                                            <rect key="frame" x="15" y="47" width="291" height="30"/>
+                                            <rect key="frame" x="15" y="42" width="291" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             <connections>
@@ -444,7 +448,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Type of Negotiation" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="fTy-mQ-tjK">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select Type of Negotiation Above" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="fTy-mQ-tjK">
                                             <rect key="frame" x="15" y="0.0" width="290" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
@@ -495,7 +499,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" tag="569" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-mC-4Qi">
-                                            <rect key="frame" x="15" y="49" width="293" height="29"/>
+                                            <rect key="frame" x="15" y="44" width="293" height="29"/>
                                             <segments>
                                                 <segment title="Yes"/>
                                                 <segment title="No"/>
@@ -594,7 +598,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructions" rowHeight="115" id="GUm-G4-bTa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructions" rowHeight="125" id="GUm-G4-bTa">
                                 <rect key="frame" x="0.0" y="86" width="320" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GUm-G4-bTa" id="kbZ-O4-X3X">
@@ -602,7 +606,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-Qf-Xer">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="123"/>
+                                            <rect key="frame" x="15" y="8" width="290" height="113"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <string key="text">Now, put the result aside for the moment. Focus solely on how well you managed the negotiation process, compared to your usual performance. It’s possible that you did better on most of the dimensions below. If so, congratulations! If not, we’ll show you how to do better next time.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
@@ -967,24 +971,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMb-gu-F3f">
-                                <rect key="frame" x="0.0" y="140" width="320" height="185"/>
+                                <rect key="frame" x="30" y="148" width="260" height="420"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odw-gP-Uor">
-                                <rect key="frame" x="20" y="60" width="280" height="43"/>
+                                <rect key="frame" x="20" y="30" width="280" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-Uw-iOb">
-                                <rect key="frame" x="40" y="318" width="240" height="135"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsA-EC-dur">
                                 <rect key="frame" x="10" y="0.0" width="300" height="450"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
@@ -996,6 +990,16 @@
                                     <action selector="goButtonPressed:" destination="VrW-WW-JCh" eventType="touchUpInside" id="LqO-uC-sCv"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-Uw-iOb">
+                                <rect key="frame" x="30" y="71" width="260" height="135"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.66666666669999997" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1837,7 +1841,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Do Differently" id="yl4-Ke-gm4"/>
+                    <navigationItem key="navigationItem" title="Do Differently" id="yl4-Ke-gm4">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="75L-dv-67w"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="BYM-W7-pc2" id="I2N-RW-YC3"/>
                     </connections>
@@ -1865,7 +1871,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Performance" id="0yj-Xz-KIF"/>
+                    <navigationItem key="navigationItem" title="Performance" id="0yj-Xz-KIF">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="h39-PS-oQ5"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="bSc-Zm-WDj" id="piK-Y5-BB9"/>
                     </connections>
@@ -1893,7 +1901,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tips" id="ceM-TG-K7A"/>
+                    <navigationItem key="navigationItem" title="Tips" id="ceM-TG-K7A">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Hwd-fB-xrM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="PV8-5t-kFg" id="MAt-rW-mk7"/>
                     </connections>
@@ -1922,14 +1932,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UvR-e4-cJ3"/>
-        <segue reference="oA1-ch-634"/>
-        <segue reference="9hR-Rc-zEg"/>
-        <segue reference="Q57-xl-Lgr"/>
-        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="XrA-bw-hNd"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="oA1-ch-634"/>
+        <segue reference="Q57-xl-Lgr"/>
         <segue reference="CDr-fM-Uml"/>
-        <segue reference="GHC-Fh-jPE"/>
+        <segue reference="9hR-Rc-zEg"/>
+        <segue reference="oFu-12-oe6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>

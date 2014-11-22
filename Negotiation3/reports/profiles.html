@@ -32,12 +32,21 @@
 	  transition:transform .5s, opacity .3s;
 	  background-size:cover;
 	}
-
+	.topcard {
+	  padding:0.5rem 1rem;
+	  box-shadow:0 1px 2px #aaa;
+	  background:white;
+	  margin: 1.5rem 1rem 1rem 1rem;
+	  border-radius:1px;
+	  user-select:none;
+	  animation:fly-in-from-left .5s 1s ease both;
+	  transform-origin:top left;
+	}
 	.card {
 	  padding:0.5rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1.5rem 1rem;
+	  margin: 1rem 1rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -105,8 +114,8 @@
 
 	<div class="owl-carousel" style="margin: 10px 0px 0px 0px;">
     	<div class="owl-item">
-			<section class="card">
-				<p>We used statistical tools to analyze responses from other negotiators who have taken this test.  In order to make group comparisons, we "normalized" the data. That is, we compared each person's response to the average that we received in our pre-launch survey.</p><br>
+			<section class="topcard">
+				<p style="font-size: 14px;">We used statistical tools to analyze responses from other negotiators who have taken this test.  In order to make group comparisons, we "normalized" the data. That is, we compared each person's response to the average that we received in our pre-launch survey.</p><br>
 				<canvas id="canvas"></canvas>
 			</section>
 			<section class="card">
@@ -121,8 +130,8 @@
        	</div>
  
    		<div class="owl-item">
-			<section class="card">
-				<p>We found five basic types, each one with a different balance of relative strengths. Some people were closely identified with a particular style, while others were near the boundary between one group and another. In your own dealings, you've likely encountered each one of these types.</p>
+			<section class="topcard">
+				<p style="font-size: 14px;">We found five basic types, each one with a different balance of relative strengths. Some people were closely identified with a particular style, while others were near the boundary between one group and another. In your own dealings, you've likely encountered each one of these types.</p>
 				<canvas id="canvas2"></canvas>
 			</section>
 			<section class="card">
@@ -137,7 +146,7 @@
       	</div>
 
     	<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Empathetic Value-Creators</h1> 
 				<h2>30 percent of respondents</h2>
 				<canvas id="canvas3"></canvas>
@@ -147,7 +156,7 @@
       	</div>
       
   		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Assertive Value-Claimers</h1> 
 				<h2>10 percent of respondents</h2>
 				<canvas id="canvas4"></canvas>
@@ -157,7 +166,7 @@
       	</div>
 
     	<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Assertive Value-Creators</h1> 
 				<h2>15 percent of respondents</h2>
 				<canvas id="canvas5"></canvas>
@@ -167,7 +176,7 @@
       	</div>
 
   		<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Relational Negotiators</h1> 
 				<h2>25 percent of respondents</h2>
 				<canvas id="canvas6"></canvas>
@@ -177,7 +186,7 @@
       	</div>
 
     	<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
 				<h1>Outcome-Focused Negotiators</h1> 
 				<h2>20 percent of respondents</h2>
 				<canvas id="canvas7"></canvas>
@@ -186,7 +195,7 @@
 		</div>
 
     	<div class="owl-item">
-			<section class="card">
+			<section class="topcard">
           		<div class="row">
             		<div class="col-xs-1" style="margin-right:10px">
               			<span data-icon="&#xe587;" style="font-size: 36px; color:#ff9f33"></span>
