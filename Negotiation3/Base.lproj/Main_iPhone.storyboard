@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -164,7 +164,16 @@
                             <outlet property="delegate" destination="xik-SU-g5Q" id="867-ho-eos"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Best Practices" id="CGA-Db-MMq"/>
+                    <navigationItem key="navigationItem" title="My Best Practices" id="CGA-Db-MMq">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="b29-UN-1T7">
+                            <connections>
+                                <segue destination="pGg-6v-bdr" kind="push" id="MdK-0d-a4k"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="b29-UN-1T7" id="ULD-Fo-1mC"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <segue destination="CIG-ox-MP6" kind="push" identifier="best_practices_www" id="2I6-NU-qqr"/>
                         <segue destination="bT9-IB-NZy" kind="push" identifier="best_practices_wwid" id="XiK-Ex-mwY"/>
@@ -1913,14 +1922,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
         <segue reference="UvR-e4-cJ3"/>
-        <segue reference="Q57-xl-Lgr"/>
-        <segue reference="XrA-bw-hNd"/>
-        <segue reference="dcM-bi-1Rf"/>
-        <segue reference="CDr-fM-Uml"/>
-        <segue reference="oFu-12-oe6"/>
+        <segue reference="oA1-ch-634"/>
         <segue reference="9hR-Rc-zEg"/>
+        <segue reference="Q57-xl-Lgr"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="XrA-bw-hNd"/>
+        <segue reference="CDr-fM-Uml"/>
+        <segue reference="GHC-Fh-jPE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>
