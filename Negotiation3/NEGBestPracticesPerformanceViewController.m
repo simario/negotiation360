@@ -103,7 +103,7 @@
         
         NSDate *ts = [detailItem valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d"];
+        [format setDateFormat:@"M/d/yy"];
         NSString *dateString = [format stringFromDate:ts];
         
         dates = [NSString stringWithFormat:@"%@ \"%@\"%@", dates, dateString, comma, nil];

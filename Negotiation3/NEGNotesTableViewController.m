@@ -72,7 +72,7 @@
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    [newManagedObject setValue:@"Tap here to learn about notes.\n\nHere is space for adding notes on negotiation lessons you’ve learned elsewhere—from a book or a newspaper item, for example, or from watching someone else negotiate. To maximize the usefulness of your notes:\n\n  • Give each note a name so you can find it easily. We will add the date you created the note.\n\n  • Also, start with key words or a headline, so that topics and lessons are clear.\n\n  • Be specific about the prescription: a note should tell you how to prepare for and conduct future negotiations more effectively.\n\nMake it a habit to review your notes regularly. Look especially for broader strategic and stylistic themes. And use this feature, of course, to record your insights." forKey:@"note"];
+    [newManagedObject setValue:@"Here is space for adding notes on negotiation lessons you’ve learned elsewhere—from a book or a newspaper item, for example, or from watching someone else negotiate. To maximize the usefulness of your notes:\n\n  • Give each note a name so you can find it easily. We will add the date you created the note.\n\n  • Also, start with key words or a headline, so that topics and lessons are clear.\n\n  • Be specific about the prescription: a note should tell you how to prepare for and conduct future negotiations more effectively.\n\nMake it a habit to review your notes regularly. Look especially for broader strategic and stylistic themes. And use this feature, of course, to record your insights." forKey:@"note"];
 
     // Save the context.
     NSError *error = nil;
@@ -157,7 +157,7 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d/yyyy"];
+    [format setDateFormat:@"M/d/yy"];
     NSString *dateString = [format stringFromDate:ts];
     NSString *label = [object valueForKey:@"note"];
 

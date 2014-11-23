@@ -166,8 +166,9 @@
 	</div>
 
   <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="jquery.appear.js"></script>
   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <script src="Chart.js"></script>
+  <script src="ChartNew.js"></script>
 
 	<script>
 	var radarChartData = {
@@ -229,12 +230,13 @@
 			pointLabelFontSize : 11,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 100,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
 		    scaleStartValue: 0,
-		    showTooltips: false		
+		    showTooltips: false,
+		    animationCount: 0	
 		});
 		var ctx2 = document.getElementById("canvas2").getContext("2d");
 		window.myRadarChart = new Chart(ctx2).Radar(radarChartData2, {
@@ -246,12 +248,13 @@
 			pointLabelFontSize : 11,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 100,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
 		    scaleStartValue: 0,
-		    showTooltips: false
+		    showTooltips: false,
+		    animationCount: 0		
 		});
 		var ctx3 = document.getElementById("canvas3").getContext("2d");
 		window.myRadarChart = new Chart(ctx3).Radar(radarChartData3, {
@@ -263,12 +266,13 @@
 			pointLabelFontSize : 11,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 100,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
 		    scaleStartValue: 0,
-		    showTooltips: true
+		    showTooltips: true,
+		    animationCount: 0
 		});
 	}
 
@@ -283,6 +287,7 @@
 		});
 	});
 	
+
   </script>
 
 </body>

@@ -181,7 +181,7 @@
     NSDate *ts = [self.detailItem valueForKey:@"timeStamp"];
     
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d"];
+    [format setDateFormat:@"M/d/yy"];
     NSString *dateString = [format stringFromDate:ts];
     
     if (indexPath.item == 0) {

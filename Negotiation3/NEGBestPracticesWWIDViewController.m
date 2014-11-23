@@ -49,7 +49,7 @@
         
         NSDate *ts = [detailItem valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d"];
+        [format setDateFormat:@"M/d/yy"];
         NSString *dateString = [format stringFromDate:ts];
         
         NSString *reachAgreement = (NSString *)[_agreementLabels objectAtIndex:[[detailItem valueForKey:@"question3"]intValue]];

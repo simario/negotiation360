@@ -58,7 +58,7 @@
         NSString * val6 = (NSString *)[self.detailItem valueForKey:@"question12"];
 
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d"];
+        [format setDateFormat:@"M/d/yy"];
         NSString *val2 = [format stringFromDate:ts];
         
         NSString *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scorecard-lessons2" ofType:@"html" ]];

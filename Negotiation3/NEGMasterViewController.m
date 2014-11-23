@@ -755,7 +755,7 @@
         NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
         NSDate *ts = [object valueForKey:@"timeStamp"];
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d"];
+        [format setDateFormat:@"M/d/yy"];
         NSString *dateString = [format stringFromDate:ts];
         UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
         
@@ -812,7 +812,7 @@
     NSManagedObject *object = [self.scFetchedResultsController objectAtIndexPath:ip];
     NSDate *ts = [object valueForKey:@"timeStamp"];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"M/d"];
+    [format setDateFormat:@"M/d/yy"];
     NSString *dateString = [format stringFromDate:ts];
     
     UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
