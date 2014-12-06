@@ -44,10 +44,10 @@
 	}
 
 	.card {
-	  padding:0.5rem 1rem;
+	  padding:1rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1rem 1rem;
+	  margin: 1.5rem 1.5rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -112,6 +112,8 @@
 	<div>
 		<section class="card">
 			<p style="font-size:14px">The ratings you entered most closely match those of <strong style="color:#445ae1">%@</strong>. %@ (<i>The group you are the most unlike is that of the <strong style="color:#DF5353">%@</strong></i>.)</p>
+		</section>
+		<section class="card">	
 			<canvas id="canvas"></canvas>
 			<div id="radarLegend"></div>
 		</section>
@@ -143,7 +145,7 @@
 	</div>
 	
     <script src="jquery.js"></script>
-  <script src="Chart.js"></script>
+  <script src="ChartNew.js"></script>
   <script src="legend.js"></script>
 
 	<script>
@@ -184,15 +186,17 @@
 		var ctx = document.getElementById("canvas").getContext("2d");
 		new Chart(ctx).Radar(radarChartData, {
 			responsive: false,
-			maintainAspectRatio: true,
+			maintainAspectRatio: false,
+			legend:true,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 100,
 		    scaleOverride: true,
+		    animationByDataset: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
 		    scaleStartValue: 0,

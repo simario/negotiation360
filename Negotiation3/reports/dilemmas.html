@@ -36,20 +36,20 @@
 	}
 
 	.topcard {
-	  padding:0.5rem 1rem;
+	  padding:1rem 1rem; 
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1.5rem 1rem 1rem 1rem;
+	  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
 	  transform-origin:top left;
 	}
 	.card {
-	  padding:0.5rem 1rem;
+	  padding:1rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1rem 1rem;
+	  margin: 1rem 1.5rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -92,7 +92,7 @@
 	h1 {
 	  font-size:2rem;
 	  font-weight:200;
-	  margin-top:11px;
+	  margin-top:1rem;
 	}
 	  strong {
 	    font-weight:500;
@@ -222,12 +222,12 @@
 	window.onload = function(){
 		var ctx = document.getElementById("canvas").getContext("2d");
 		window.myRadarChart = new Chart(ctx).Radar(radarChartData, {
-			responsive: false,
+			responsive: true,
 			maintainAspectRatio: true,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 60,
@@ -240,12 +240,12 @@
 		});
 		var ctx2 = document.getElementById("canvas2").getContext("2d");
 		window.myRadarChart = new Chart(ctx2).Radar(radarChartData2, {
-			responsive: false,
-			maintainAspectRatio: false,
+			responsive: true,
+			maintainAspectRatio: true,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 60,
@@ -258,12 +258,12 @@
 		});
 		var ctx3 = document.getElementById("canvas3").getContext("2d");
 		window.myRadarChart = new Chart(ctx3).Radar(radarChartData3, {
-			responsive: false,
-			maintainAspectRatio: false,
+			responsive: true,
+			maintainAspectRatio: true,
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 60,

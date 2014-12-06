@@ -36,17 +36,17 @@
 	  padding:0.5rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1.5rem 1rem 1rem 1rem;
+	  margin: 1.5rem 1.5rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
 	  transform-origin:top left;
 	}
 	.card {
-	  padding:0.5rem 1rem;
+	  padding:1rem 1rem;
 	  box-shadow:0 1px 2px #aaa;
 	  background:white;
-	  margin: 1rem 1rem;
+	  margin: 1.5rem 1.5rem;
 	  border-radius:1px;
 	  user-select:none;
 	  animation:fly-in-from-left .5s 1s ease both;
@@ -208,7 +208,7 @@
 
   <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <script src="Chart.js"></script>
+  <script src="ChartNew.js"></script>
 
 	<script>
 	var radarChartData = {
@@ -391,15 +391,15 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 120,
+		    animationByDataset: true,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
 		    scaleStartValue: 0,
-		    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
 		    showTooltips: false
 		});
 		var ctx2 = document.getElementById("canvas2").getContext("2d");
@@ -409,9 +409,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 120,
+		    animationByDataset: true,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
@@ -425,10 +426,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
@@ -442,10 +443,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
@@ -459,10 +460,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
@@ -476,10 +477,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,
@@ -493,10 +494,10 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
-		    animationSteps: 300,
+		    animationSteps: 60,
 		    scaleOverride: true,
 		    scaleSteps: 2,
 		    scaleStepWidth: 4,

@@ -1930,14 +1930,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9hR-Rc-zEg"/>
         <segue reference="oA1-ch-634"/>
-        <segue reference="RY0-vk-xlv"/>
-        <segue reference="CDr-fM-Uml"/>
-        <segue reference="GHC-Fh-jPE"/>
-        <segue reference="Q57-xl-Lgr"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="XrA-bw-hNd"/>
-        <segue reference="JhG-7d-thQ"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="CDr-fM-Uml"/>
+        <segue reference="Q57-xl-Lgr"/>
+        <segue reference="GHC-Fh-jPE"/>
+        <segue reference="9hR-Rc-zEg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cyan="0.0" magenta="0.44" yellow="0.88" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>

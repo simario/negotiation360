@@ -50,7 +50,7 @@
 			  padding:1rem 1rem 0.5rem 1rem;
 			  box-shadow:0 1px 2px #aaa;
 			  background:white;
-			  margin: 1rem 1rem;
+			  margin: 1.5rem 1.5rem;
 			  border-radius:1px;
 			  background-image: url("top-banner-11.png");
 			  background-repeat: no-repeat;
@@ -60,10 +60,10 @@
 			  transform-origin:top left;
 			}
 			.card {
-			  padding:0.5rem 1rem;
+			  padding:1rem 1rem;
 			  box-shadow:0 1px 2px #aaa;
 			  background:white;
-			  margin: 1rem 1rem;
+			  margin: 1.5rem 1.5rem;
 			  border-radius:1px;
 			  user-select:none;
 			  animation:fly-in-from-left .5s 1s ease both;
@@ -123,7 +123,7 @@
 </head>
 <body>
 	<section class="card">
-		<canvas id="canvas"></canvas>
+		<canvas id="canvas" height="200" width="280"></canvas>
 		<div id="radarLegend"></div>
 	</section>
 	
@@ -153,7 +153,7 @@
 	</div>
 	
     <script src="jquery.js"></script>
-  <script src="Chart.js"></script>
+  <script src="ChartNew.js"></script>
   <script src="legend.js"></script>
 
 	<script>
@@ -198,7 +198,7 @@
 			showScale: true,
 			scaleShowLine : false,
 			scaleShowLabels : false,
-			pointLabelFontSize : 11,
+			pointLabelFontSize : 12,
 			pointLabelFontFamily : "'Helvetica Neue'",
 			pointLabelFontColor : "gray",
 		    animationSteps: 100,
