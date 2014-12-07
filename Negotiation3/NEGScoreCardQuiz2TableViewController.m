@@ -112,7 +112,7 @@
         int val = [[self.detailItem valueForKey:key] intValue];
         if (val == -1) {
             NSString *message = [NSString stringWithFormat:@"You must select a reponse for the question '%@'", (NSString *)[_questionTitles objectAtIndex:i]];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
                                                             message:message
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"

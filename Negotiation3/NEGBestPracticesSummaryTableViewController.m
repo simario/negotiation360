@@ -63,7 +63,7 @@
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                        message:@"Your device doesn't support the sending mail"
+                                                        message:@"Your device doesn't support the sending of mail"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];

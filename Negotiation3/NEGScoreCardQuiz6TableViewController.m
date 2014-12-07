@@ -85,7 +85,7 @@
     NSString *str = (NSString *)[self.detailItem valueForKey:@"question12"];
     str = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([str isEqualToString:@""] || str == nil) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
                                                         message:@"Please enter a response to the question before continuing."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -123,6 +123,11 @@
 {
     // Return the number of rows in the section.
     return 1;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    return @"What Do Different (2 of 2)";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

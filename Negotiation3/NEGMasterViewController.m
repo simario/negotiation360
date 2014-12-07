@@ -227,7 +227,7 @@
         
         
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
                                                         message:@"You must finish your profile before creating a Scorecard"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
