@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91D3E18A18B91BD400FC14F7"
-               BuildableName = "Negotiation3.app"
-               BlueprintName = "Negotiation3"
-               ReferencedContainer = "container:Negotiation3.xcodeproj">
+               BuildableName = "negotiation360.app"
+               BlueprintName = "negotiation360"
+               ReferencedContainer = "container:negotiation360.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91D3E1B618B91BD400FC14F7"
-               BuildableName = "Negotiation3Tests.xctest"
-               BlueprintName = "Negotiation3Tests"
-               ReferencedContainer = "container:Negotiation3.xcodeproj">
+               BuildableName = "negotiation360Tests.xctest"
+               BlueprintName = "negotiation360Tests"
+               ReferencedContainer = "container:negotiation360.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91D3E18A18B91BD400FC14F7"
-            BuildableName = "Negotiation3.app"
-            BlueprintName = "Negotiation3"
-            ReferencedContainer = "container:Negotiation3.xcodeproj">
+            BuildableName = "negotiation360.app"
+            BlueprintName = "negotiation360"
+            ReferencedContainer = "container:negotiation360.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91D3E18A18B91BD400FC14F7"
-            BuildableName = "Negotiation3.app"
-            BlueprintName = "Negotiation3"
-            ReferencedContainer = "container:Negotiation3.xcodeproj">
+            BuildableName = "negotiation360.app"
+            BlueprintName = "negotiation360"
+            ReferencedContainer = "container:negotiation360.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91D3E18A18B91BD400FC14F7"
-            BuildableName = "Negotiation3.app"
-            BlueprintName = "Negotiation3"
-            ReferencedContainer = "container:Negotiation3.xcodeproj">
+            BuildableName = "negotiation360.app"
+            BlueprintName = "negotiation360"
+            ReferencedContainer = "container:negotiation360.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

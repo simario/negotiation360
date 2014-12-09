@@ -361,15 +361,15 @@
 		91B669FC18DE2BB500DBA430 /* overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = overview.html; sourceTree = "<group>"; };
 		91B66A2118DE2CB500DBA430 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		91B66A2A18DE358000DBA430 /* reports */ = {isa = PBXFileReference; lastKnownFileType = folder; name = reports; path = Negotiation3/reports; sourceTree = "<group>"; };
-		91D3E18B18B91BD400FC14F7 /* Negotiation3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Negotiation3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D3E18B18B91BD400FC14F7 /* negotiation360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = negotiation360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D3E18E18B91BD400FC14F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91D3E19018B91BD400FC14F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		91D3E19218B91BD400FC14F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		91D3E19418B91BD400FC14F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		91D3E19818B91BD400FC14F7 /* Negotiation3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Negotiation3-Info.plist"; sourceTree = "<group>"; };
+		91D3E19818B91BD400FC14F7 /* negotiation360-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "negotiation360-Info.plist"; sourceTree = "<group>"; };
 		91D3E19A18B91BD400FC14F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91D3E19C18B91BD400FC14F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		91D3E19E18B91BD400FC14F7 /* Negotiation3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Negotiation3-Prefix.pch"; sourceTree = "<group>"; };
+		91D3E19E18B91BD400FC14F7 /* negotiation360-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "negotiation360-Prefix.pch"; sourceTree = "<group>"; };
 		91D3E19F18B91BD400FC14F7 /* NEGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEGAppDelegate.h; sourceTree = "<group>"; };
 		91D3E1A018B91BD400FC14F7 /* NEGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEGAppDelegate.m; sourceTree = "<group>"; };
 		91D3E1A318B91BD400FC14F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -380,9 +380,9 @@
 		91D3E1AE18B91BD400FC14F7 /* NEGDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEGDetailViewController.h; sourceTree = "<group>"; };
 		91D3E1AF18B91BD400FC14F7 /* NEGDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEGDetailViewController.m; sourceTree = "<group>"; };
 		91D3E1B118B91BD400FC14F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		91D3E1B718B91BD400FC14F7 /* Negotiation3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Negotiation3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D3E1B718B91BD400FC14F7 /* negotiation360Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = negotiation360Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D3E1B818B91BD400FC14F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		91D3E1C118B91BD400FC14F7 /* Negotiation3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Negotiation3Tests-Info.plist"; sourceTree = "<group>"; };
+		91D3E1C118B91BD400FC14F7 /* negotiation360Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "negotiation360Tests-Info.plist"; sourceTree = "<group>"; };
 		91D3E1C318B91BD400FC14F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91D3E1C518B91BD400FC14F7 /* Negotiation3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Negotiation3Tests.m; sourceTree = "<group>"; };
 		91D3E1CF18B9333600FC14F7 /* NEGQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGQuizViewController.h; sourceTree = "<group>"; };
@@ -574,8 +574,8 @@
 		91D3E18C18B91BD400FC14F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91D3E18B18B91BD400FC14F7 /* Negotiation3.app */,
-				91D3E1B718B91BD400FC14F7 /* Negotiation3Tests.xctest */,
+				91D3E18B18B91BD400FC14F7 /* negotiation360.app */,
+				91D3E1B718B91BD400FC14F7 /* negotiation360Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -691,10 +691,10 @@
 			isa = PBXGroup;
 			children = (
 				91B669E118DE2BB500DBA430 /* reports */,
-				91D3E19818B91BD400FC14F7 /* Negotiation3-Info.plist */,
+				91D3E19818B91BD400FC14F7 /* negotiation360-Info.plist */,
 				91D3E19918B91BD400FC14F7 /* InfoPlist.strings */,
 				91D3E19C18B91BD400FC14F7 /* main.m */,
-				91D3E19E18B91BD400FC14F7 /* Negotiation3-Prefix.pch */,
+				91D3E19E18B91BD400FC14F7 /* negotiation360-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -711,7 +711,7 @@
 		91D3E1C018B91BD400FC14F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				91D3E1C118B91BD400FC14F7 /* Negotiation3Tests-Info.plist */,
+				91D3E1C118B91BD400FC14F7 /* negotiation360Tests-Info.plist */,
 				91D3E1C218B91BD400FC14F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -720,9 +720,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91D3E18A18B91BD400FC14F7 /* Negotiation3 */ = {
+		91D3E18A18B91BD400FC14F7 /* negotiation360 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91D3E1C918B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "Negotiation3" */;
+			buildConfigurationList = 91D3E1C918B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "negotiation360" */;
 			buildPhases = (
 				91D3E18718B91BD400FC14F7 /* Sources */,
 				91D3E18818B91BD400FC14F7 /* Frameworks */,
@@ -732,14 +732,14 @@
 			);
 			dependencies = (
 			);
-			name = Negotiation3;
+			name = negotiation360;
 			productName = Negotiation3;
-			productReference = 91D3E18B18B91BD400FC14F7 /* Negotiation3.app */;
+			productReference = 91D3E18B18B91BD400FC14F7 /* negotiation360.app */;
 			productType = "com.apple.product-type.application";
 		};
-		91D3E1B618B91BD400FC14F7 /* Negotiation3Tests */ = {
+		91D3E1B618B91BD400FC14F7 /* negotiation360Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91D3E1CC18B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "Negotiation3Tests" */;
+			buildConfigurationList = 91D3E1CC18B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "negotiation360Tests" */;
 			buildPhases = (
 				91D3E1B318B91BD400FC14F7 /* Sources */,
 				91D3E1B418B91BD400FC14F7 /* Frameworks */,
@@ -750,9 +750,9 @@
 			dependencies = (
 				91D3E1BE18B91BD400FC14F7 /* PBXTargetDependency */,
 			);
-			name = Negotiation3Tests;
+			name = negotiation360Tests;
 			productName = Negotiation3Tests;
-			productReference = 91D3E1B718B91BD400FC14F7 /* Negotiation3Tests.xctest */;
+			productReference = 91D3E1B718B91BD400FC14F7 /* negotiation360Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -774,7 +774,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91D3E18618B91BD400FC14F7 /* Build configuration list for PBXProject "Negotiation3" */;
+			buildConfigurationList = 91D3E18618B91BD400FC14F7 /* Build configuration list for PBXProject "negotiation360" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -787,8 +787,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91D3E18A18B91BD400FC14F7 /* Negotiation3 */,
-				91D3E1B618B91BD400FC14F7 /* Negotiation3Tests */,
+				91D3E18A18B91BD400FC14F7 /* negotiation360 */,
+				91D3E1B618B91BD400FC14F7 /* negotiation360Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -980,7 +980,7 @@
 /* Begin PBXTargetDependency section */
 		91D3E1BE18B91BD400FC14F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91D3E18A18B91BD400FC14F7 /* Negotiation3 */;
+			target = 91D3E18A18B91BD400FC14F7 /* negotiation360 */;
 			targetProxy = 91D3E1BD18B91BD400FC14F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1101,15 +1101,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Michael WHEELER (L74F3XHME3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Negotiation3/Negotiation3-Prefix.pch";
-				INFOPLIST_FILE = "Negotiation3/Negotiation3-Info.plist";
+				GCC_PREFIX_HEADER = "Negotiation3/negotiation360-Prefix.pch";
+				INFOPLIST_FILE = "Negotiation3/negotiation360-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/trenholm/Downloads/GoogleAnalyticsServicesiOS_3.08,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Negotiation3/GoogleAnalytics",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = negotiation360;
 				PROVISIONING_PROFILE = "b5a9a7ee-24b2-49e4-afa6-9cfbf2131097";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1122,17 +1122,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Michael WHEELER (L74F3XHME3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael WHEELER (BNV5WN6258)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Negotiation3/Negotiation3-Prefix.pch";
-				INFOPLIST_FILE = "Negotiation3/Negotiation3-Info.plist";
+				GCC_PREFIX_HEADER = "Negotiation3/negotiation360-Prefix.pch";
+				INFOPLIST_FILE = "Negotiation3/negotiation360-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/trenholm/Downloads/GoogleAnalyticsServicesiOS_3.08,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Negotiation3/GoogleAnalytics",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = negotiation360;
 				PROVISIONING_PROFILE = "b5a9a7ee-24b2-49e4-afa6-9cfbf2131097";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b5a9a7ee-24b2-49e4-afa6-9cfbf2131097";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1157,8 +1157,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Negotiation3Tests/Negotiation3Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Negotiation3Tests/negotiation360Tests-Info.plist";
+				PRODUCT_NAME = negotiation360Tests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1178,8 +1178,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Negotiation3/Negotiation3-Prefix.pch";
-				INFOPLIST_FILE = "Negotiation3Tests/Negotiation3Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Negotiation3Tests/negotiation360Tests-Info.plist";
+				PRODUCT_NAME = negotiation360Tests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1189,7 +1189,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91D3E18618B91BD400FC14F7 /* Build configuration list for PBXProject "Negotiation3" */ = {
+		91D3E18618B91BD400FC14F7 /* Build configuration list for PBXProject "negotiation360" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91D3E1C718B91BD400FC14F7 /* Debug */,
@@ -1198,7 +1198,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91D3E1C918B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "Negotiation3" */ = {
+		91D3E1C918B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "negotiation360" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91D3E1CA18B91BD400FC14F7 /* Debug */,
@@ -1207,7 +1207,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91D3E1CC18B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "Negotiation3Tests" */ = {
+		91D3E1CC18B91BD400FC14F7 /* Build configuration list for PBXNativeTarget "negotiation360Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91D3E1CD18B91BD400FC14F7 /* Debug */,
