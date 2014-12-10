@@ -759,7 +759,7 @@
         NSString *dateString = [format stringFromDate:ts];
         UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
         
-        [imv setImage:[UIImage imageNamed:@"user_male4-32.png"]];
+        [imv setImage:[UIImage imageNamed:@"change_user-32.png"]];
 
         
         NSString *t = @"";
@@ -784,7 +784,7 @@
         if ([self hasBestPractices]) {
             UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
             
-            [imv setImage:[UIImage imageNamed:@"best-practices.png"]];
+            [imv setImage:[UIImage imageNamed:@"star-32.png"]];
             cell.textLabel.text = @"My Best Practices";
             cell.detailTextLabel.text = @"";
             cell.hidden = NO;
@@ -796,7 +796,7 @@
                 
         UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
         
-        [imv setImage:[UIImage imageNamed:@"resources.png"]];
+        [imv setImage:[UIImage imageNamed:@"idea-32.png"]];
         cell.textLabel.text = @"Negotiation Resources";
         cell.detailTextLabel.text = @"";
 
@@ -817,7 +817,7 @@
     
     UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
     
-    [imv setImage:[UIImage imageNamed:@"compass-32.png"]];
+    [imv setImage:[UIImage imageNamed:@"adventures-32.png"]];
     NSString *title = @"My New Scorecard";
     NSString *storedTitle = (NSString *)[object valueForKey:@"name"];
     if (storedTitle && ![storedTitle isEqualToString:@""]) {
