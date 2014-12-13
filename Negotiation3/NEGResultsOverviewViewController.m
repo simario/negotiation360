@@ -56,22 +56,22 @@
                                                                label:@"Email Results" // Event label
                                                                value:nil] build]];    // Event value
         
-        NSString *create = [NSString stringWithFormat:@"Creating Value: %@\n", [self.detailItem valueForKey:@"question1"]];
-        NSString *assert = [NSString stringWithFormat:@"Assertiveness: %@\n", [self.detailItem valueForKey:@"question2"]];
-        NSString *empathy = [NSString stringWithFormat:@"Empathy: %@\n", [self.detailItem valueForKey:@"question3"]];
-        NSString *claim = [NSString stringWithFormat:@"Claiming Value: %@\n", [self.detailItem valueForKey:@"question4"]];
-        NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness: %@\n", [self.detailItem valueForKey:@"question5"]];
+        NSString *create = [NSString stringWithFormat:@"Creating Value: %@<br>", [self.detailItem valueForKey:@"question1"]];
+        NSString *assert = [NSString stringWithFormat:@"Assertiveness: %@<br>", [self.detailItem valueForKey:@"question2"]];
+        NSString *empathy = [NSString stringWithFormat:@"Empathy: %@<br>", [self.detailItem valueForKey:@"question3"]];
+        NSString *claim = [NSString stringWithFormat:@"Claiming Value: %@<br>", [self.detailItem valueForKey:@"question4"]];
+        NSString *comparedEffect = [NSString stringWithFormat:@"Compared Effectiveness: %@<br><br>", [self.detailItem valueForKey:@"question5"]];
         
         NEGType *t = [[NEGType alloc] init];
         NSMutableDictionary *type = [t getType:self.detailItem];
         NSMutableDictionary *nearest = [type objectForKey:@"nearest"];
         
-        NSString *resultType = [NSString stringWithFormat:@"My Type: %@\n", [nearest objectForKey:@"label"]];
+        NSString *resultType = [NSString stringWithFormat:@"My Type: %@<br><br>", [nearest objectForKey:@"label"]];
         
+        NSString *signature = @"<html>Sent using <a href=\"https://itunes.apple.com/us/app/negotiation-360o/id949271941?ls=1&mt=8\">Negotiation 360°</a>";
         
-        
-        NSString *emailBody = [NSString stringWithFormat:@"%@%@%@%@%@%@", create, assert, empathy, claim, comparedEffect, resultType];
-        [mailer setMessageBody:emailBody isHTML:NO];
+        NSString *emailBody = [NSString stringWithFormat:@"%@%@%@%@%@%@%@", create, assert, empathy, claim, comparedEffect, resultType, signature];
+        [mailer setMessageBody:emailBody isHTML:YES];
 
         [self presentViewController:mailer animated:YES completion:nil];
         
