@@ -44,6 +44,12 @@
     }
 }
 
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    CGRect textViewFrame = CGRectInset(self.view.bounds, 20.0, 20.0);
+    textViewFrame.size.height -= 216;
+    textView.frame = textViewFrame;
+}
+
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
