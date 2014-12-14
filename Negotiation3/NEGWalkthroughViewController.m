@@ -31,6 +31,10 @@
 
 - (void)viewDidLoad
 {
+    
+    UIColor *colour = [[UIColor alloc]initWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0];
+    self.view.backgroundColor = colour;
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 

@@ -116,6 +116,10 @@
     return [_typeLabels count];
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    return @"Select a type below then tap back";
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -127,6 +131,13 @@
     if (indexPath.row == index) {
         [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     }
+    
+    UIView *customColorView = [[UIView alloc] init];
+    customColorView.backgroundColor = [UIColor colorWithRed:223/255.0
+                                                      green:114/255.0
+                                                       blue:39/255.0
+                                                      alpha:0.33];
+    cell.selectedBackgroundView =  customColorView;
     
     return cell;
 }

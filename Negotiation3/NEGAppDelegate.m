@@ -37,6 +37,11 @@
         controller.managedObjectContext = self.managedObjectContext;
     }
 
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [[UIColor alloc]initWithRed:223.0/255.0 green:114.0/255.0 blue:39.0/255.0 alpha:1.0];
+    pageControl.backgroundColor = [[UIColor alloc]initWithRed:52.0/255.0 green:170.0/255.0 blue:220.0/255.0 alpha:1.0];
+
     // Optional: automatically send uncaught exceptions to Google Analytics.
     [GAI sharedInstance].trackUncaughtExceptions = YES;
     
