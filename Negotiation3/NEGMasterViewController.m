@@ -238,7 +238,7 @@
         
         
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360°"
                                                         message:@"You must finish your profile before creating a Scorecard"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -340,7 +340,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     /*
     if (section == 0) {
-        return @"Self-Assessment";
+        return @"Prep for your next negotiation";
     } else if (section == 1) {
         if ([self hasBestPractices]) {
             return @"Best Practices";
@@ -352,7 +352,7 @@
         return @"Resources";
     } else if (section == 3) {
         if ([self scorecardCount] > 0) {
-            return @"Negotiation Scorecards";
+            return @"Review your scorecards";
         } else {
             return @"";
         }
@@ -363,9 +363,9 @@
     
     
     if (section == 0) {
-        return @"Self-Assessment";
+        return @"Prep for your next negotiation";
     } else {
-        return @"Negotiation Scorecards";
+        return @"Review your scorecards";
     }
     
     return @"";
@@ -844,16 +844,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        NSDate *ts = [object valueForKey:@"timeStamp"];
-        NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"M/d/yy"];
-        NSString *dateString = [format stringFromDate:ts];
-        UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
-        
-        [imv setImage:[UIImage imageNamed:@"change_user-32.png"]];
-
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        NSString *t = @"Tap to Complete";
+        NSString *s = [NSString stringWithFormat:@"Self Profile created"];
         
         
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][0];
@@ -865,7 +858,7 @@
             NSString *dateString = [format stringFromDate:ts];
             UIImageView *imv = (UIImageView *)[cell viewWithTag:1972];
             
-            [imv setImage:[UIImage imageNamed:@"user_male4-32.png"]];
+            [imv setImage:[UIImage imageNamed:@"change_user-32.png"]];
 
             
             

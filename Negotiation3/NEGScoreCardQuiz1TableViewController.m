@@ -212,7 +212,7 @@
     NSString *name = (NSString *)[self.detailItem valueForKey:@"name"];
     name = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([name isEqualToString:@""] || name == nil) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360°"
                                                         message:@"You must enter a name for your negotiation scorecard."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -225,7 +225,7 @@
     
     int typeNeg = [[self.detailItem valueForKey:@"question1"] intValue];
     if (typeNeg == -1) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360°"
                                                         message:@"You must pick a negotiation type for your scorecard."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -237,7 +237,7 @@
     
     int agreement = [[self.detailItem valueForKey:@"question3"] intValue];
     if (agreement == -1) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360°"
                                                         message:@"You must select a reponse for whether or not you reached an agreement."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"

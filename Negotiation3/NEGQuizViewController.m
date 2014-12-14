@@ -50,7 +50,7 @@
     if (self.total == 16) {
         [self performSegueWithIdentifier:@"toQuestion5" sender:self];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360˚"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Negotiation 360°"
                                                         message:@"Error! Please ensure your numbers sum to equal 16."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"

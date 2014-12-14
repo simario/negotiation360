@@ -1937,7 +1937,7 @@
         <image name="menu-25.png" width="24" height="24"/>
         <image name="much-better.png" width="199" height="120"/>
         <image name="much-worse.png" width="194" height="120"/>
-        <image name="paper_plane-26.png" width="26" height="26"/>
+        <image name="paper_plane-26.png" width="24" height="24"/>
         <image name="same-usual.png" width="224" height="120"/>
         <image name="somewhat-better.png" width="284" height="120"/>
         <image name="somewhat-worse.png" width="283" height="120"/>
@@ -1949,14 +1949,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RY0-vk-xlv"/>
-        <segue reference="CDr-fM-Uml"/>
-        <segue reference="GHC-Fh-jPE"/>
-        <segue reference="XrA-bw-hNd"/>
-        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="oA1-ch-634"/>
         <segue reference="Q57-xl-Lgr"/>
+        <segue reference="dcM-bi-1Rf"/>
+        <segue reference="CDr-fM-Uml"/>
+        <segue reference="XrA-bw-hNd"/>
         <segue reference="9hR-Rc-zEg"/>
+        <segue reference="GHC-Fh-jPE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90588235294117647" green="0.52549019607843139" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
