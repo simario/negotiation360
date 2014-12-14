@@ -79,7 +79,7 @@
         //    cell.textLabel.text = @"Negotiation Profiles";
         //    break;
         case 0:
-            cell.textLabel.text = @"About Negotiaiton 360˚";
+            cell.textLabel.text = @"Negotiation Resources";
             cell.imageView.image = [UIImage imageNamed:@"briefcase-32.png"];
             break;
         case 1:
