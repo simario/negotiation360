@@ -79,12 +79,12 @@
         //    cell.textLabel.text = @"Negotiation Profiles";
         //    break;
         case 0:
-            cell.textLabel.text = @"Negotiation Resources";
-            cell.imageView.image = [UIImage imageNamed:@"briefcase-32.png"];
+            cell.textLabel.text = @"About Negotiation 360°";
+            cell.imageView.image = [UIImage imageNamed:@"info-32.png"];
             break;
         case 1:
             cell.textLabel.text = @"About Michael Wheeler";
-            cell.imageView.image = [UIImage imageNamed:@"info-32.png"];
+            cell.imageView.image = [UIImage imageNamed:@"briefcase-32.png"];
             break;
             
         default:
@@ -101,7 +101,7 @@
         //    [self performSegueWithIdentifier:@"about_negotiation_profiles" sender:self];
         //    break;
         case 0:
-            [self performSegueWithIdentifier:@"about_negotiation_resources" sender:self];
+            [self performSegueWithIdentifier:@"about_negotiation_app" sender:self];
             break;
         case 1:
             [self performSegueWithIdentifier:@"about_mw" sender:self];

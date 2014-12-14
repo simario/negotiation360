@@ -34,6 +34,7 @@
 		69409F7F18FB1EE80024E102 /* dilemmas.html in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7B18FB1EE80024E102 /* dilemmas.html */; };
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
+		695329001A3E1B64007BBA1B /* NEGAboutAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695328FF1A3E1B64007BBA1B /* NEGAboutAppController.m */; };
 		6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01319EAEA9300232AF4 /* practices-intro.html */; };
 		6957C01719EAEA9300232AF4 /* practices-performance.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01419EAEA9300232AF4 /* practices-performance.html */; };
 		6957C01819EAEA9300232AF4 /* practices-summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01519EAEA9300232AF4 /* practices-summary.html */; };
@@ -213,6 +214,8 @@
 		69409F7B18FB1EE80024E102 /* dilemmas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dilemmas.html; sourceTree = "<group>"; };
 		69409F7D18FB1EE80024E102 /* top-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-banner.png"; sourceTree = "<group>"; };
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		695328FE1A3E1B64007BBA1B /* NEGAboutAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGAboutAppController.h; sourceTree = "<group>"; };
+		695328FF1A3E1B64007BBA1B /* NEGAboutAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGAboutAppController.m; sourceTree = "<group>"; };
 		6957C01319EAEA9300232AF4 /* practices-intro.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-intro.html"; sourceTree = "<group>"; };
 		6957C01419EAEA9300232AF4 /* practices-performance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-performance.html"; sourceTree = "<group>"; };
 		6957C01519EAEA9300232AF4 /* practices-summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-summary.html"; sourceTree = "<group>"; };
@@ -640,6 +643,8 @@
 				9115A78018DF4D4800FBDB5C /* NEGType.m */,
 				9115A78418DF762400FBDB5C /* NEGAboutViewController.h */,
 				9115A78518DF762400FBDB5C /* NEGAboutViewController.m */,
+				695328FE1A3E1B64007BBA1B /* NEGAboutAppController.h */,
+				695328FF1A3E1B64007BBA1B /* NEGAboutAppController.m */,
 				9115A79518DF7D4500FBDB5C /* NEGDilemaViewController.h */,
 				9115A79618DF7D4500FBDB5C /* NEGDilemaViewController.m */,
 				9115A79818DF7D5300FBDB5C /* NEGSkillsViewController.h */,
@@ -949,6 +954,7 @@
 				9147FC1919E1716F0040CC97 /* NEGScoreCardQuiz3TableViewController.m in Sources */,
 				91B66A0E18DE2BB500DBA430 /* jquery.js in Sources */,
 				91DDE23F18DF9EB40018CBC4 /* NEGResourcesViewController.m in Sources */,
+				695329001A3E1B64007BBA1B /* NEGAboutAppController.m in Sources */,
 				91D3E19D18B91BD400FC14F7 /* main.m in Sources */,
 				9147FC1319E0F3C90040CC97 /* NEGScoreCardQuiz2TableViewController.m in Sources */,
 				9147FC1619E16EE40040CC97 /* NEGQuiz3IntroViewController.m in Sources */,

@@ -3,36 +3,138 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/docs.css" />
     <style>
         .photo {
             margin: 10px;
         }
         body {
-            background-image:url("top-banner-2.png");
             background-position: top left;
             background-repeat: no-repeat;
             background-size: 100%;
+		    background-color: #efeff4
         }
+		canvas{
+		  width: 100% !important;
+	      max-width: 280px;
+	      height: 100% !important;
+		}
+
+		header {
+		  position:absolute;
+		  z-index:0;
+		  top:0; left:0; right:0;
+		  height:10rem;
+		  transition:transform .5s, opacity .3s;
+		  background-size:cover;
+		}
+
+		.topcard {
+		  padding:1rem 1rem 0.5rem 1rem;
+		  box-shadow:0 1px 2px #aaa;
+		  background:white;
+		  margin: 1.5rem 1.5rem;
+		  border-radius:1px;
+		  background-image: url("top-banner-6.png");
+   		  background-size: 100%;
+		  background-repeat: no-repeat;
+		  user-select:none;
+		  animation:fly-in-from-left .5s 1s ease both;
+		  transform-origin:top left;
+		}
+
+		.card {
+		  padding:1rem 1rem;
+		  box-shadow:0 1px 2px #aaa;
+		  background:white;
+		  margin: 1.5rem 1.5rem;
+		  border-radius:1px;
+		  user-select:none;
+		  animation:fly-in-from-left .5s 1s ease both;
+		  transform-origin:top left;
+		}
+		.card:nth-child(even){
+		  animation-name:fly-in-from-right;
+		  animation-delay:1.1s;
+		 transform-origin:top right;
+		}
+
+		@keyframes fly-in-from-left {
+		  from {
+		    transform:translateY(15rem) rotate(15deg);
+		    opacity:0;
+		  }
+		}
+
+		@keyframes fly-in-from-right {
+		  from {
+		    transform:translateY(15rem) rotate(-15deg);
+		    opacity:0;
+		  }
+		}
+
+		.card:after {
+		  position:absolute;
+		  font-size:.9rem;
+		  top:1.5rem;
+		  right:1rem;
+		  border:thin solid gray;
+		  color:gray;
+		  width:1rem;
+		  line-height:1rem;
+		  text-align:center;
+		  border-radius:50%;
+		  pointer-events:none;
+		}
+
+		h1 {
+		  font-size:2rem;
+		  font-weight:200;
+		  margin-top:11px;
+		}
+		  strong {
+		    font-weight:500;
+		    color:#ff9f33;
+		  }
+
+		h2 {
+		  font-size:1.25rem;
+		  color:#ff9f33;
+		  font-weight:400;
+		  margin-top:0px;
+		}
+
     </style>
 </head>
 <body>
-	<div align="center">
-        <img src="image-2.png" width="125px" height="125px" class="img-circle">
-	</div>
     
 	<div>
-		<p style="margin: 20px;">Everyone negotiates. At work. In their communities. And even at home with their families. Negotiating well means:</p>
+		<section class="topcard">
+			<div align="center">
+		        <img src="image-6.png" width="100px" height="100px" class="img-circle">
+			</div>
+			<p style="font-size: 14px;"><strong>Negotiation 360&deg;</strong> was developed by Harvard Business School professor and author Michael Wheeler to help you identify current skills you can build on, and other areas where you can improve. It highlights key negotiation concepts and techniques for creating value, engaging other parties, and learning from experience.</p>
+		</section>
 
-		<ul style="margin: 20px 20px 20px 0px;">
-			<li>reaching agreements that might slip through most people's fingers</li>
-			<li>crafting value-creating solutions</li>
-			<li>resolving small differences before they become costly disputes</li>
-		</ul>
+		<section class="card">
+			<div align="center">
+		        <img src="change_user-32@2x.png" width="44px" height="44px" class="img-circle">
+			</div>
+			<p style="font-size: 14px;"><strong>Negotiation 360&deg;</strong> has three closely linked features. The <strong>Self-assessment</strong> feature prompts you to create a personalized profile reflecting your basic negotiation style. It also explains fundamental tensions in negotiation that you must address in formulating strategy.</p>
+		</section>
 
-		<p style="margin: 20px;">Successful negotiators are well-rounded. They rely on complementary interpersonal, analytic, and problem-solving skills. They also are agile. They adjust their approach to the situation at hand and can deal effectively with different bargaining styles.</p>
+		<section class="card">
+			<div align="center">
+		        <img src="adventures-32@2x.png" width="44px" height="44px" class="img-circle">
+			</div>
+			<p style="font-size: 14px;">The <strong>Scorecard</strong> feature enables you to do an after-action-review of every negotiation you undertake, large or small. It enables you to draw the right lessons from your own on-going experience.</p>
+		</section>
 
-		<p style="margin: 20px;"><strong>Negotiation 360&deg;</strong> provides you with a personalized profile of your relational and problem-solving skills. It identifies skills that you can build on and other areas where you can improve. It also highlights key negotiation concepts about creating value and engaging other parties.</p>
+		<section class="card">
+			<div align="center">
+		        <img src="star-32@2x.png" width="44px" height="44px" class="img-circle">
+			</div>
+			<p style="font-size: 14px;">And then, preparing for your next negotiation, always consult the third feature, <strong>My best practices</strong>. It compiles what you've learned from prior experience so that you can continually enhance your strategic and interpersonal skills. Be sure to consult the <strong>Resources</strong> section, as well, that points you to other sources of valuable negotiation advice.</p>
+		</section>
 
 	</div>
 		 
