@@ -35,6 +35,13 @@
 		69409F8118FB1EE80024E102 /* top-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 69409F7D18FB1EE80024E102 /* top-banner.png */; };
 		6944982F1967951B00E6D966 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6944982E1967951B00E6D966 /* styles.css */; };
 		695329001A3E1B64007BBA1B /* NEGAboutAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695328FF1A3E1B64007BBA1B /* NEGAboutAppController.m */; };
+		695329081A3E2E3E007BBA1B /* page-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329011A3E2E3E007BBA1B /* page-1@2x.png */; };
+		695329091A3E2E3E007BBA1B /* page-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329021A3E2E3E007BBA1B /* page-2@2x.png */; };
+		6953290A1A3E2E3E007BBA1B /* page-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329031A3E2E3E007BBA1B /* page-3@2x.png */; };
+		6953290B1A3E2E3E007BBA1B /* page-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329041A3E2E3E007BBA1B /* page-4@2x.png */; };
+		6953290C1A3E2E3E007BBA1B /* page-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329051A3E2E3E007BBA1B /* page-5@2x.png */; };
+		6953290D1A3E2E3E007BBA1B /* page-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329061A3E2E3E007BBA1B /* page-6@2x.png */; };
+		6953290E1A3E2E3E007BBA1B /* page-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 695329071A3E2E3E007BBA1B /* page-7@2x.png */; };
 		6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01319EAEA9300232AF4 /* practices-intro.html */; };
 		6957C01719EAEA9300232AF4 /* practices-performance.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01419EAEA9300232AF4 /* practices-performance.html */; };
 		6957C01819EAEA9300232AF4 /* practices-summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 6957C01519EAEA9300232AF4 /* practices-summary.html */; };
@@ -216,6 +223,13 @@
 		6944982E1967951B00E6D966 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		695328FE1A3E1B64007BBA1B /* NEGAboutAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEGAboutAppController.h; sourceTree = "<group>"; };
 		695328FF1A3E1B64007BBA1B /* NEGAboutAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGAboutAppController.m; sourceTree = "<group>"; };
+		695329011A3E2E3E007BBA1B /* page-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-1@2x.png"; sourceTree = "<group>"; };
+		695329021A3E2E3E007BBA1B /* page-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-2@2x.png"; sourceTree = "<group>"; };
+		695329031A3E2E3E007BBA1B /* page-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-3@2x.png"; sourceTree = "<group>"; };
+		695329041A3E2E3E007BBA1B /* page-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-4@2x.png"; sourceTree = "<group>"; };
+		695329051A3E2E3E007BBA1B /* page-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-5@2x.png"; sourceTree = "<group>"; };
+		695329061A3E2E3E007BBA1B /* page-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-6@2x.png"; sourceTree = "<group>"; };
+		695329071A3E2E3E007BBA1B /* page-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page-7@2x.png"; sourceTree = "<group>"; };
 		6957C01319EAEA9300232AF4 /* practices-intro.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-intro.html"; sourceTree = "<group>"; };
 		6957C01419EAEA9300232AF4 /* practices-performance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-performance.html"; sourceTree = "<group>"; };
 		6957C01519EAEA9300232AF4 /* practices-summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-summary.html"; sourceTree = "<group>"; };
@@ -464,6 +478,13 @@
 		9163D26A18D4D4180032F104 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				695329011A3E2E3E007BBA1B /* page-1@2x.png */,
+				695329021A3E2E3E007BBA1B /* page-2@2x.png */,
+				695329031A3E2E3E007BBA1B /* page-3@2x.png */,
+				695329041A3E2E3E007BBA1B /* page-4@2x.png */,
+				695329051A3E2E3E007BBA1B /* page-5@2x.png */,
+				695329061A3E2E3E007BBA1B /* page-6@2x.png */,
+				695329071A3E2E3E007BBA1B /* page-7@2x.png */,
 				696F44001A37303C0075B436 /* idea-32.png */,
 				696F44011A37303C0075B436 /* idea-32@2x.png */,
 				696F43FC1A372FE30075B436 /* star-32.png */,
@@ -826,6 +847,7 @@
 				696F43DF1A372B740075B436 /* briefcase-32@2x.png in Resources */,
 				69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */,
 				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
+				6953290B1A3E2E3E007BBA1B /* page-4@2x.png in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,
 				69ED154519EB49AF00BC301A /* practices-www.html in Resources */,
 				6957C01619EAEA9300232AF4 /* practices-intro.html in Resources */,
@@ -843,6 +865,7 @@
 				696F43F21A372F1B0075B436 /* adventures-32.png in Resources */,
 				6902FCF3193BB83500820A36 /* yourprofile.html in Resources */,
 				696F440A1A3734D50075B436 /* change_user-32@2x.png in Resources */,
+				6953290D1A3E2E3E007BBA1B /* page-6@2x.png in Resources */,
 				6930F15C19E0A2D200473A06 /* top-banner-13.png in Resources */,
 				69A46A08190D557900E2C242 /* image-8.png in Resources */,
 				69A46A09190D557900E2C242 /* top-banner-8.png in Resources */,
@@ -896,6 +919,7 @@
 				6983454C19E189290010AA67 /* scorecard-results.html in Resources */,
 				6930F15B19E0A2D200473A06 /* top-banner-12.png in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
+				695329091A3E2E3E007BBA1B /* page-2@2x.png in Resources */,
 				69A5AE2219E6123B004D68FD /* same-usual.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
 				6960396A1968729900E3C227 /* aboutapp.html in Resources */,
@@ -906,6 +930,7 @@
 				6983454B19E189290010AA67 /* scorecard-lessons2.html in Resources */,
 				91D3E1A718B91BD400FC14F7 /* Main_iPad.storyboard in Resources */,
 				6930F15619E0A2D200473A06 /* image-12.png in Resources */,
+				6953290E1A3E2E3E007BBA1B /* page-7@2x.png in Resources */,
 				9163D26F18D4D4180032F104 /* page-1.png in Resources */,
 				9156623F19D873BC00745751 /* compass-32@2x.png in Resources */,
 				91D3E1B218B91BD400FC14F7 /* Images.xcassets in Resources */,
@@ -913,6 +938,7 @@
 				91D3E19B18B91BD400FC14F7 /* InfoPlist.strings in Resources */,
 				9163D27418D4DE630032F104 /* page-5.png in Resources */,
 				6930F15919E0A2D200473A06 /* top-banner-10.png in Resources */,
+				6953290A1A3E2E3E007BBA1B /* page-3@2x.png in Resources */,
 				9163D27218D4D4180032F104 /* page-4.png in Resources */,
 				9163D27018D4D4180032F104 /* page-2.png in Resources */,
 				91143D9E18DFAAB800FFE277 /* resources.html in Resources */,
@@ -921,6 +947,8 @@
 				9163D27118D4D4180032F104 /* page-3.png in Resources */,
 				696F44021A37303C0075B436 /* idea-32.png in Resources */,
 				6930F15819E0A2D200473A06 /* image-14.png in Resources */,
+				6953290C1A3E2E3E007BBA1B /* page-5@2x.png in Resources */,
+				695329081A3E2E3E007BBA1B /* page-1@2x.png in Resources */,
 				91A2791718F02C32006B58A3 /* fonts in Resources */,
 				696F440C1A3734D50075B436 /* image-15.png in Resources */,
 				91B66A1B18DE2BB500DBA430 /* overview.html in Resources */,
