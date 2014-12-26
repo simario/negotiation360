@@ -66,7 +66,7 @@
 {
 
     // Return the number of rows in the section.
-    return 2;
+    return 4;
 }
 
 
@@ -83,6 +83,14 @@
             cell.imageView.image = [UIImage imageNamed:@"info-32.png"];
             break;
         case 1:
+            cell.textLabel.text = @"About Scorecards";
+            cell.imageView.image = [UIImage imageNamed:@"info-32.png"];
+            break;
+        case 2:
+            cell.textLabel.text = @"About Best Practices";
+            cell.imageView.image = [UIImage imageNamed:@"info-32.png"];
+            break;
+        case 3:
             cell.textLabel.text = @"About Michael Wheeler";
             cell.imageView.image = [UIImage imageNamed:@"briefcase-32.png"];
             break;
@@ -104,6 +112,12 @@
             [self performSegueWithIdentifier:@"about_negotiation_app" sender:self];
             break;
         case 1:
+            [self performSegueWithIdentifier:@"about_scorecard" sender:self];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"about_best_practices" sender:self];
+            break;
+        case 3:
             [self performSegueWithIdentifier:@"about_mw" sender:self];
             break;
             

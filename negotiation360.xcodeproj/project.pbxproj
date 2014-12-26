@@ -103,6 +103,10 @@
 		69D1C22419E1BEB900B28FD4 /* jquery.circliful.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */; };
 		69D1C22519E1BEE400B28FD4 /* jquery.circliful.js in Sources */ = {isa = PBXBuildFile; fileRef = 69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */; };
 		69D1C22619E1BEE400B28FD4 /* jquery.circliful.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */; };
+		69D62B121A4E1C9600B81A90 /* practices-about.html in Resources */ = {isa = PBXBuildFile; fileRef = 69D62B101A4E1C9600B81A90 /* practices-about.html */; };
+		69D62B131A4E1C9600B81A90 /* scorecard-about.html in Resources */ = {isa = PBXBuildFile; fileRef = 69D62B111A4E1C9600B81A90 /* scorecard-about.html */; };
+		69D62B171A4E215E00B81A90 /* NEGAboutScorecardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D62B161A4E215E00B81A90 /* NEGAboutScorecardViewController.m */; };
+		69D62B1A1A4E283000B81A90 /* NEGAboutBestPracticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D62B191A4E283000B81A90 /* NEGAboutBestPracticesViewController.m */; };
 		69E362AB1972B9DC00C9F60C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */; };
 		69E362B21972BC1300C9F60C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B01972BC1300C9F60C /* AdSupport.framework */; };
 		69E362B31972BC1300C9F60C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E362B11972BC1300C9F60C /* libz.dylib */; };
@@ -290,6 +294,12 @@
 		69C77EB51A0AE7ED007ADC8C /* legend.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = legend.js; sourceTree = "<group>"; };
 		69D1C22119E1BEB900B28FD4 /* jquery.circliful.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.js; sourceTree = "<group>"; };
 		69D1C22219E1BEB900B28FD4 /* jquery.circliful.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.circliful.min.js; sourceTree = "<group>"; };
+		69D62B101A4E1C9600B81A90 /* practices-about.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "practices-about.html"; sourceTree = "<group>"; };
+		69D62B111A4E1C9600B81A90 /* scorecard-about.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "scorecard-about.html"; sourceTree = "<group>"; };
+		69D62B161A4E215E00B81A90 /* NEGAboutScorecardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGAboutScorecardViewController.m; sourceTree = "<group>"; };
+		69D62B181A4E217E00B81A90 /* NEGAboutScorecardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEGAboutScorecardViewController.h; sourceTree = "<group>"; };
+		69D62B191A4E283000B81A90 /* NEGAboutBestPracticesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEGAboutBestPracticesViewController.m; sourceTree = "<group>"; };
+		69D62B1B1A4E287200B81A90 /* NEGAboutBestPracticesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEGAboutBestPracticesViewController.h; sourceTree = "<group>"; };
 		69E362AA1972B9DC00C9F60C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		69E362B01972BC1300C9F60C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		69E362B11972BC1300C9F60C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -524,6 +534,8 @@
 		91B669E118DE2BB500DBA430 /* reports */ = {
 			isa = PBXGroup;
 			children = (
+				69D62B101A4E1C9600B81A90 /* practices-about.html */,
+				69D62B111A4E1C9600B81A90 /* scorecard-about.html */,
 				696F44041A3734D50075B436 /* adventures-32@2x.png */,
 				696F44051A3734D50075B436 /* change_user-32@2x.png */,
 				696F44061A3734D50075B436 /* idea-32@2x.png */,
@@ -724,6 +736,10 @@
 				9130E83419FF3D9B0025F645 /* NEGNotesTableViewController.m */,
 				D276FACF1A0E837700307BD4 /* NEGNoteViewController.h */,
 				D276FAD01A0E837700307BD4 /* NEGNoteViewController.m */,
+				69D62B161A4E215E00B81A90 /* NEGAboutScorecardViewController.m */,
+				69D62B181A4E217E00B81A90 /* NEGAboutScorecardViewController.h */,
+				69D62B191A4E283000B81A90 /* NEGAboutBestPracticesViewController.m */,
+				69D62B1B1A4E287200B81A90 /* NEGAboutBestPracticesViewController.h */,
 			);
 			path = Negotiation3;
 			sourceTree = "<group>";
@@ -839,6 +855,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D62B121A4E1C9600B81A90 /* practices-about.html in Resources */,
+				69D62B131A4E1C9600B81A90 /* scorecard-about.html in Resources */,
 				690FEDBE1A22838A00B4469A /* ChartNew.js in Resources */,
 				696F43EE1A372C140075B436 /* paper_plane-26.png in Resources */,
 				690FEDBA1A227F8200B4469A /* mw.png in Resources */,
@@ -987,9 +1005,11 @@
 				9147FC1319E0F3C90040CC97 /* NEGScoreCardQuiz2TableViewController.m in Sources */,
 				9147FC1619E16EE40040CC97 /* NEGQuiz3IntroViewController.m in Sources */,
 				91DDE24218DF9ECB0018CBC4 /* NEGAboutMWViewController.m in Sources */,
+				69D62B171A4E215E00B81A90 /* NEGAboutScorecardViewController.m in Sources */,
 				9163D26918D4B4100032F104 /* NEGWalkthroughViewController.m in Sources */,
 				9115A77D18DF338300FBDB5C /* NEGQuiz2ViewController.m in Sources */,
 				9130E83219FF3D640025F645 /* NEGBestPracticesPerformanceViewController.m in Sources */,
+				69D62B1A1A4E283000B81A90 /* NEGAboutBestPracticesViewController.m in Sources */,
 				9130E83519FF3D9B0025F645 /* NEGNotesTableViewController.m in Sources */,
 				9147FC2619E193650040CC97 /* NEGScoreCardLessonsLearnedViewController.m in Sources */,
 				9147FC3219E1A54E0040CC97 /* NEGScoreCardQuiz6TableViewController.m in Sources */,
