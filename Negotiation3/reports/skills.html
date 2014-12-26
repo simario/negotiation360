@@ -305,24 +305,6 @@
     <script src="jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/collapse.js"></script>
-    <script src="js/popover.js"></script>
     <script src="js/modal.js"></script>
-	<script>
-		$(function () {
-		    $('#example1').popover();
-		    $('#example2').popover();
-		    $('#example3').popover();
-		});
-
-		$('body').on('click', function (e) {
-	    $('[data-toggle="popover"]').each(function () {
-        //the 'is' for buttons that trigger popups
-        //the 'has' for icons within a button that triggers a popup
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-        }
-    });
-});
-	</script>
 </body>
 </html>
