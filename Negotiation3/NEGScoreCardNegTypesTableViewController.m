@@ -131,6 +131,8 @@
     if (indexPath.row == index) {
         [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     }
+    cell.textLabel.font =[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f];
+
     
     UIView *customColorView = [[UIView alloc] init];
     customColorView.backgroundColor = [UIColor colorWithRed:223/255.0
