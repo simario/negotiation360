@@ -158,7 +158,7 @@
 {
     
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -188,6 +188,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"resultsTypeCell" forIndexPath:indexPath];
     } else if (indexPath.item == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"resultsGraphCell" forIndexPath:indexPath];
+    } else if (indexPath.item == 6) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"editScorecardCell" forIndexPath:indexPath];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"ResultsCell" forIndexPath:indexPath];
     }

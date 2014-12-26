@@ -10,103 +10,132 @@
   <link rel="stylesheet" href="css/owl.theme.default.css" />
   <link rel="stylesheet" href="styles.css" />
 
-  <style type="text/css">
-	  body {
-	      background-position: top left;
-	      background-repeat: no-repeat;
-	      background-size: 100%;
-		    background-color: #efeff4
+    <style>
+        .photo {
+			margin: 10px;
+        }
+        body {
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-color: #efeff4
+        }
+		canvas{
+			width: 100% !important;
+			max-width: 320px;
+			height: 100% !important;
+		}
 
-	  }
+		header {
+			position:absolute;
+			z-index:0;
+			top:0; left:0; right:0;
+			height:10rem;
+			transition:transform .5s, opacity .3s;
+			-webkit-transition:transform .5s, opacity .3s;
+			background-size:cover;
+		}
 
+		.topcard {
+			padding:1rem 1rem 0.5rem 1rem;
+			box-shadow:0 1px 2px #aaa;
+			background:white;
+			margin: 1.5rem 1.5rem;
+			border-radius:1px;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			user-select:none;
+			animation:fly-in-from-left .5s 1s ease both;
+			transform-origin:top left;
+			-webkit-user-select:none;
+			-webkit-animation:fly-in-from-left .5s 1s ease both;
+			-webkit-transform-origin:top left;
+		}
 
-	canvas{
-	  width: 100% !important;
-      max-width: 280px;
-      height: 100% !important;
-	}
+		.card {
+			padding:1rem 1rem;
+			box-shadow:0 1px 2px #aaa;
+			background:white;
+			margin: 1.5rem 1.5rem;
+			border-radius:1px;
+			user-select:none;
+			animation:fly-in-from-left .5s 1s ease both;
+			transform-origin:top left;
+			-webkit-user-select:none;
+			-webkit-animation:fly-in-from-left .5s 1s ease both;
+			-webkit-transform-origin:top left;
+		}
 
-	header {
-	  position:absolute;
-	  z-index:0;
-	  top:0; left:0; right:0;
-	  height:10rem;
-	  transition:transform .5s, opacity .3s;
-	  background-size:cover;
-	}
+		.card:nth-child(even){
+			animation-name:fly-in-from-right;
+			animation-delay:1.1s;
+			transform-origin:top right;
+			-webkit-animation-name:fly-in-from-right;
+			-webkit-animation-delay:1.1s;
+			-webkit-transform-origin:top right;
+		}
 
-	.topcard {
-	  padding:1rem 1rem; 
-	  box-shadow:0 1px 2px #aaa;
-	  background:white;
-	  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
-	  border-radius:1px;
-	  user-select:none;
-	  animation:fly-in-from-left .5s 1s ease both;
-	  transform-origin:top left;
-	}
-	.card {
-	  padding:1rem 1rem;
-	  box-shadow:0 1px 2px #aaa;
-	  background:white;
-	  margin: 1rem 1.5rem;
-	  border-radius:1px;
-	  user-select:none;
-	  animation:fly-in-from-left .5s 1s ease both;
-	  transform-origin:top left;
-	}
-	.card:nth-child(even){
-	  animation-name:fly-in-from-right;
-	  animation-delay:1.1s;
-	 transform-origin:top right;
-	}
+		@keyframes fly-in-from-left {
+			from {
+				transform:translateY(15rem) rotate(15deg);
+				opacity:0;
+			}
+		}
 
-	@keyframes fly-in-from-left {
-	  from {
-	    transform:translateY(15rem) rotate(15deg);
-	    opacity:0;
-	  }
-	}
+		@keyframes fly-in-from-right {
+			from {
+				transform:translateY(15rem) rotate(-15deg);
+				opacity:0;
+			}
+		}
 
-	@keyframes fly-in-from-right {
-	  from {
-	    transform:translateY(15rem) rotate(-15deg);
-	    opacity:0;
-	  }
-	}
+		@-webkit-keyframes fly-in-from-left {
+			from {
+				-webkit-transform:translateY(15rem) rotate(15deg);
+				opacity:0;
+			}
+		}
 
-	.card:after {
-	  position:absolute;
-	  font-size:.9rem;
-	  top:1.5rem;
-	  right:1rem;
-	  border:thin solid gray;
-	  color:gray;
-	  width:1rem;
-	  line-height:1rem;
-	  text-align:center;
-	  border-radius:50%;
-	  pointer-events:none;
-	}
+		@-webkit-keyframes fly-in-from-right {
+			from {
+				-webkit-transform:translateY(15rem) rotate(-15deg);
+				opacity:0;
+			}
+		}
 
-	h1 {
-	  font-size:2rem;
-	  font-weight:200;
-	  margin-top:1rem;
-	}
-	  strong {
-	    font-weight:500;
-	    color:#ff9f33;
-	  }
+		.card:after {
+			position:absolute;
+			font-size:.9rem;
+			top:1.5rem;
+			right:1rem;
+			border:thin solid gray;
+			color:gray;
+			width:1rem;
+			line-height:1rem;
+			text-align:center;
+			border-radius:50%;
+			pointer-events:none;
+		}
 
-	h2 {
-	  font-size:.9rem;
-	  line-height:2.5;
-	  color:gray;
-	  font-weight:400;
-	}
+		h1 {
+			font-size:2rem;
+			font-weight:200;
+			margin-top:1rem;
+			margin-bottom:0rem;
+		}
+		strong {
+			font-weight:500;
+			color:#ff9f33;
+		  }
 
-  </style>
+		h2 {
+			font-size:1.25rem;
+			color:#ff9f33;
+			font-weight:400;
+			margin-top:0px;
+		}
+
+    </style>
 
 </head>
 <body>
@@ -120,7 +149,7 @@
    		<div class="owl-item">
 			<section class="topcard">
 				<h1>Relational Dimension</h1>
-				<canvas id="canvas"></canvas>
+				<canvas id="canvas" width="400" height="210"></canvas>
 			</section>
 			<section class="card">
 				<p>Two questions you answered deal with the <strong>interpersonal</strong> dimension of negotiation: asserting yourself and understanding others.</p> 
@@ -131,7 +160,7 @@
 		<div class="owl-item">	
 			<section class="topcard">
 				<h1>Outcome Dimension</h1>
-				<canvas id="canvas2"></canvas>
+				<canvas id="canvas2" width="400" height="210"></canvas>
 			</section>
 			<section class="card">
 				<p>Two other questions address <strong>outcomes</strong>, specifically the ability to create value and to capture your share of it.</p>
@@ -142,7 +171,7 @@
       	<div class="owl-item">
 			<section class="topcard">			
 				<h1>Linking Means and Ends</h1>
-				<canvas id="canvas3"></canvas>
+				<canvas id="canvas3" width="400" height="210"></canvas>
 			</section>
 			<section class="card">			
 				<p>Your negotiation results are linked to how you relate to other parties. Think of the interpersonal scale as representing the <strong>means</strong> of negotiation and the outcome scale as the <strong>ends</strong>.</p>
@@ -283,7 +312,7 @@
 	$(document).ready(function(){
 	  $(".owl-carousel").owlCarousel({
 		items:1,
-		margin:30
+		margin:40
 		});
 	});
 	
