@@ -154,7 +154,9 @@ canvas-holder{
 
 
 		var pie_ctx = document.getElementById("canvas").getContext("2d");
-		    window.myPie = new Chart(pie_ctx).Pie(pieData);
+		    window.myPie = new Chart(pie_ctx).Pie(pieData,{
+		    	animateScale : true
+		    });
 
 		var legend = myPie.generateLegend();
 		$("#legend").html(legend);

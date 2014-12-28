@@ -103,6 +103,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.90588235289999997" green="0.52549019610000003" blue="0.20000000000000001" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="hbe-6Q-h4y">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="0en-45-CoT" detailTextLabel="c8f-G3-UjP" imageView="JX5-wr-TZA" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="ORD-ob-IKt">
                                 <rect key="frame" x="0.0" y="86" width="320" height="56"/>
@@ -859,6 +863,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.90588235289999997" green="0.52549019610000003" blue="0.20000000000000001" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="121-zS-50r">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="hNG-lR-OhB" detailTextLabel="bTE-Tu-4NO" imageView="RjT-ST-so6" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="mvL-lA-izS">
                                 <rect key="frame" x="0.0" y="86" width="320" height="56"/>
@@ -932,6 +940,7 @@
                                             <rect key="frame" x="8" y="7" width="304" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                             <state key="normal" title="Tap Here to Revise Your Scorecard">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -940,7 +949,7 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.52549019610000003" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1453,6 +1462,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.90588235289999997" green="0.52549019610000003" blue="0.20000000000000001" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="ZWN-sA-3fT">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultsTypeCell" textLabel="ERO-9w-u5B" detailTextLabel="07t-k4-H4y" imageView="sUI-4p-q2l" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="5Z7-QO-iZU">
                                 <rect key="frame" x="0.0" y="86" width="320" height="56"/>
@@ -1527,6 +1540,7 @@
                                             <rect key="frame" x="8" y="7" width="304" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                             <state key="normal" title="Tap Here to Revise Your Profile">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -1535,7 +1549,7 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.52549019610000003" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -2056,14 +2070,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="oFu-12-oe6"/>
+        <segue reference="TxM-el-1ZU"/>
+        <segue reference="rig-AL-udf"/>
+        <segue reference="72D-xW-IWS"/>
         <segue reference="oA1-ch-634"/>
-        <segue reference="RxB-wf-QIq"/>
         <segue reference="CDr-fM-Uml"/>
         <segue reference="JhG-7d-thQ"/>
         <segue reference="9hR-Rc-zEg"/>
-        <segue reference="rig-AL-udf"/>
-        <segue reference="TxM-el-1ZU"/>
-        <segue reference="oFu-12-oe6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90588235294117647" green="0.52549019607843139" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
