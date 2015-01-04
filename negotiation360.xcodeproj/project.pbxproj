@@ -10,6 +10,14 @@
 		6902FCF1193BB83500820A36 /* compare.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEE193BB83400820A36 /* compare.html */; };
 		6902FCF2193BB83500820A36 /* profiles.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCEF193BB83500820A36 /* profiles.html */; };
 		6902FCF3193BB83500820A36 /* yourprofile.html in Resources */ = {isa = PBXBuildFile; fileRef = 6902FCF0193BB83500820A36 /* yourprofile.html */; };
+		690924FB1A56091D009085EC /* chat-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F31A56091D009085EC /* chat-32.png */; };
+		690924FC1A56091D009085EC /* chat-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F41A56091D009085EC /* chat-32@2x.png */; };
+		690924FD1A56091D009085EC /* combo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F51A56091D009085EC /* combo-32.png */; };
+		690924FE1A56091D009085EC /* combo-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F61A56091D009085EC /* combo-32@2x.png */; };
+		690924FF1A56091D009085EC /* handshake-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F71A56091D009085EC /* handshake-32.png */; };
+		690925001A56091D009085EC /* handshake-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F81A56091D009085EC /* handshake-32@2x.png */; };
+		690925011A56091D009085EC /* map_editing-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924F91A56091D009085EC /* map_editing-32.png */; };
+		690925021A56091D009085EC /* map_editing-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 690924FA1A56091D009085EC /* map_editing-32@2x.png */; };
 		690FEDB81A227F4000B4469A /* jquery.appear.js in Sources */ = {isa = PBXBuildFile; fileRef = 690FEDB61A227F3F00B4469A /* jquery.appear.js */; };
 		690FEDBA1A227F8200B4469A /* mw.png in Resources */ = {isa = PBXBuildFile; fileRef = 690FEDB91A227F8200B4469A /* mw.png */; };
 		690FEDBE1A22838A00B4469A /* ChartNew.js in Resources */ = {isa = PBXBuildFile; fileRef = 690FEDBD1A22838A00B4469A /* ChartNew.js */; };
@@ -49,6 +57,8 @@
 		6960396B1968729900E3C227 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 696039691968729900E3C227 /* help.html */; };
 		6960396E1968756300E3C227 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396C1968756300E3C227 /* test1.html */; };
 		6960396F1968756300E3C227 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 6960396D1968756300E3C227 /* test2.html */; };
+		6968FA071A55F144009C15CB /* edit_file-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 6968FA051A55F144009C15CB /* edit_file-32.png */; };
+		6968FA081A55F144009C15CB /* edit_file-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6968FA061A55F144009C15CB /* edit_file-32@2x.png */; };
 		696F43DE1A372B740075B436 /* briefcase-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 696F43DC1A372B740075B436 /* briefcase-32.png */; };
 		696F43DF1A372B740075B436 /* briefcase-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 696F43DD1A372B740075B436 /* briefcase-32@2x.png */; };
 		696F43E21A372BB70075B436 /* info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 696F43E01A372BB70075B436 /* info-32.png */; };
@@ -203,6 +213,14 @@
 		6902FCEE193BB83400820A36 /* compare.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = compare.html; sourceTree = "<group>"; };
 		6902FCEF193BB83500820A36 /* profiles.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = profiles.html; sourceTree = "<group>"; };
 		6902FCF0193BB83500820A36 /* yourprofile.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = yourprofile.html; sourceTree = "<group>"; };
+		690924F31A56091D009085EC /* chat-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat-32.png"; sourceTree = "<group>"; };
+		690924F41A56091D009085EC /* chat-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat-32@2x.png"; sourceTree = "<group>"; };
+		690924F51A56091D009085EC /* combo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "combo-32.png"; sourceTree = "<group>"; };
+		690924F61A56091D009085EC /* combo-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "combo-32@2x.png"; sourceTree = "<group>"; };
+		690924F71A56091D009085EC /* handshake-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handshake-32.png"; sourceTree = "<group>"; };
+		690924F81A56091D009085EC /* handshake-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handshake-32@2x.png"; sourceTree = "<group>"; };
+		690924F91A56091D009085EC /* map_editing-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_editing-32.png"; sourceTree = "<group>"; };
+		690924FA1A56091D009085EC /* map_editing-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_editing-32@2x.png"; sourceTree = "<group>"; };
 		690FEDB61A227F3F00B4469A /* jquery.appear.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.appear.js; sourceTree = "<group>"; };
 		690FEDB91A227F8200B4469A /* mw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mw.png; sourceTree = "<group>"; };
 		690FEDBD1A22838A00B4469A /* ChartNew.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ChartNew.js; sourceTree = "<group>"; };
@@ -241,6 +259,8 @@
 		696039691968729900E3C227 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		6960396C1968756300E3C227 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
 		6960396D1968756300E3C227 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
+		6968FA051A55F144009C15CB /* edit_file-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit_file-32.png"; sourceTree = "<group>"; };
+		6968FA061A55F144009C15CB /* edit_file-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit_file-32@2x.png"; sourceTree = "<group>"; };
 		696F43DC1A372B740075B436 /* briefcase-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "briefcase-32.png"; sourceTree = "<group>"; };
 		696F43DD1A372B740075B436 /* briefcase-32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "briefcase-32@2x.png"; sourceTree = "<group>"; };
 		696F43E01A372BB70075B436 /* info-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-32.png"; sourceTree = "<group>"; };
@@ -488,6 +508,16 @@
 		9163D26A18D4D4180032F104 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				690924F31A56091D009085EC /* chat-32.png */,
+				690924F41A56091D009085EC /* chat-32@2x.png */,
+				690924F51A56091D009085EC /* combo-32.png */,
+				690924F61A56091D009085EC /* combo-32@2x.png */,
+				690924F71A56091D009085EC /* handshake-32.png */,
+				690924F81A56091D009085EC /* handshake-32@2x.png */,
+				690924F91A56091D009085EC /* map_editing-32.png */,
+				690924FA1A56091D009085EC /* map_editing-32@2x.png */,
+				6968FA051A55F144009C15CB /* edit_file-32.png */,
+				6968FA061A55F144009C15CB /* edit_file-32@2x.png */,
 				695329011A3E2E3E007BBA1B /* page-1@2x.png */,
 				695329021A3E2E3E007BBA1B /* page-2@2x.png */,
 				695329031A3E2E3E007BBA1B /* page-3@2x.png */,
@@ -855,6 +885,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690925011A56091D009085EC /* map_editing-32.png in Resources */,
 				69D62B121A4E1C9600B81A90 /* practices-about.html in Resources */,
 				69D62B131A4E1C9600B81A90 /* scorecard-about.html in Resources */,
 				690FEDBE1A22838A00B4469A /* ChartNew.js in Resources */,
@@ -865,6 +896,7 @@
 				696F43DF1A372B740075B436 /* briefcase-32@2x.png in Resources */,
 				69C77EB71A0AE8CA007ADC8C /* legend.js in Resources */,
 				693FD52E1A06B55E00A7DFB6 /* Chart.js in Resources */,
+				690925021A56091D009085EC /* map_editing-32@2x.png in Resources */,
 				6953290B1A3E2E3E007BBA1B /* page-4@2x.png in Resources */,
 				69ED154419EB49AF00BC301A /* practices-wwidd.html in Resources */,
 				69ED154519EB49AF00BC301A /* practices-www.html in Resources */,
@@ -875,6 +907,7 @@
 				696F43F61A372F2B0075B436 /* change_user-32.png in Resources */,
 				696F43F71A372F2B0075B436 /* change_user-32@2x.png in Resources */,
 				6944982F1967951B00E6D966 /* styles.css in Resources */,
+				6968FA081A55F144009C15CB /* edit_file-32@2x.png in Resources */,
 				693A91FF19A2AF0600A05DFD /* scorecard-intro.html in Resources */,
 				693A920019A2AF0600A05DFD /* scorecard-profile.html in Resources */,
 				693A920119A2AF0600A05DFD /* scorecard-summary.html in Resources */,
@@ -902,6 +935,7 @@
 				696F43E31A372BB70075B436 /* info-32@2x.png in Resources */,
 				693A91F219A288EB00A05DFD /* page-7.png in Resources */,
 				6930F15419E0A2D200473A06 /* image-10.png in Resources */,
+				690925001A56091D009085EC /* handshake-32@2x.png in Resources */,
 				69D1C22319E1BEB900B28FD4 /* jquery.circliful.js in Resources */,
 				699A83F6190AC1470041EEC2 /* image-5.png in Resources */,
 				699A83F7190AC1470041EEC2 /* image-6.png in Resources */,
@@ -924,6 +958,7 @@
 				696F440D1A3734D50075B436 /* star-32@2x.png in Resources */,
 				69409F8118FB1EE80024E102 /* top-banner.png in Resources */,
 				69A5AE2019E6123B004D68FD /* much-better.png in Resources */,
+				690924FE1A56091D009085EC /* combo-32@2x.png in Resources */,
 				91A2791618F02C32006B58A3 /* css in Resources */,
 				69A5AE2419E6123B004D68FD /* somewhat-worse.png in Resources */,
 				91B66A2B18DE358000DBA430 /* reports in Resources */,
@@ -937,18 +972,23 @@
 				6983454C19E189290010AA67 /* scorecard-results.html in Resources */,
 				6930F15B19E0A2D200473A06 /* top-banner-12.png in Resources */,
 				91A2791A18F02E82006B58A3 /* mw.jpg in Resources */,
+				690924FC1A56091D009085EC /* chat-32@2x.png in Resources */,
 				695329091A3E2E3E007BBA1B /* page-2@2x.png in Resources */,
 				69A5AE2219E6123B004D68FD /* same-usual.png in Resources */,
 				9141F3B018E8423400D2A782 /* skills.html in Resources */,
 				6960396A1968729900E3C227 /* aboutapp.html in Resources */,
 				91A2791818F02C32006B58A3 /* js in Resources */,
+				690924FF1A56091D009085EC /* handshake-32.png in Resources */,
+				690924FD1A56091D009085EC /* combo-32.png in Resources */,
 				91B66A2918DE353800DBA430 /* jquery.js in Resources */,
 				6930F15E19E0A2D200473A06 /* scorecard-lessons.html in Resources */,
 				6960396E1968756300E3C227 /* test1.html in Resources */,
+				6968FA071A55F144009C15CB /* edit_file-32.png in Resources */,
 				6983454B19E189290010AA67 /* scorecard-lessons2.html in Resources */,
 				91D3E1A718B91BD400FC14F7 /* Main_iPad.storyboard in Resources */,
 				6930F15619E0A2D200473A06 /* image-12.png in Resources */,
 				6953290E1A3E2E3E007BBA1B /* page-7@2x.png in Resources */,
+				690924FB1A56091D009085EC /* chat-32.png in Resources */,
 				9163D26F18D4D4180032F104 /* page-1.png in Resources */,
 				9156623F19D873BC00745751 /* compass-32@2x.png in Resources */,
 				91D3E1B218B91BD400FC14F7 /* Images.xcassets in Resources */,

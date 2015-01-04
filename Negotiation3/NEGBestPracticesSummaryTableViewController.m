@@ -191,26 +191,26 @@
             
         case 2:
             cell.textLabel.text = @"What Worked Well?";
-            //cell.imageView.image = [UIImage imageNamed:@"purple-one.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"combo-32.png"];
             break;
             
         case 3:
             cell.textLabel.text = @"What Would I Do Differently?";
-            //cell.imageView.image = [UIImage imageNamed:@"purple-two.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"combo-32.png"];
             break;
             
         case 4:
             cell.textLabel.text = @"Negotiation Performance";
-            //cell.imageView.image = [UIImage imageNamed:@"purple-three.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"combo-32.png"];
             break;
             
         case 5:
             cell.textLabel.text = @"Negotiation Notes";
-            //cell.imageView.image = [UIImage imageNamed:@"purple-four.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"combo-32.png"];
             break;
         case 6:
             cell.textLabel.text = @"Skill-Building Tips";
-            //cell.imageView.image = [UIImage imageNamed:@"purple-five.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"combo-32.png"];
             break;
             
         default:

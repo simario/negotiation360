@@ -212,22 +212,22 @@
             
         case 2:
             cell.textLabel.text = @"Profile Comparison";
-            //cell.imageView.image = [UIImage imageNamed:@"one-green.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"map_editing-32.png"];
             break;
             
         case 3:
             cell.textLabel.text = @"Lessons Learned";
-            //cell.imageView.image = [UIImage imageNamed:@"two-green.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"map_editing-32.png"];
             break;
             
         case 4:
             cell.textLabel.text = @"Scorecard Summary";
-            //cell.imageView.image = [UIImage imageNamed:@"three-green.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"map_editing-32.png"];
             break;
             
         case 5:
             cell.textLabel.text = @"Negotiation Notes";
-            //cell.imageView.image = [UIImage imageNamed:@"three-green.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"map_editing-32.png"];
             break;
             
         default:

@@ -194,22 +194,22 @@
         
         case 2:
             cell.textLabel.text = @"Negotiation Dilemmas";
-            //cell.imageView.image = [UIImage imageNamed:@"one-blue.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"chat-32.png"];
             break;
         
         case 3:
             cell.textLabel.text = @"Bargaining Styles";
-            //cell.imageView.image = [UIImage imageNamed:@"two-blue.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"chat-32.png"];
             break;
         
         case 4:
             cell.textLabel.text = @"Your Personal Profile";
-            //cell.imageView.image = [UIImage imageNamed:@"three-blue.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"chat-32.png"];
             break;
             
         case 5:
             cell.textLabel.text = @"Skill-Building Tips";
-            //cell.imageView.image = [UIImage imageNamed:@"four-blue.png"];
+            //cell.imageView.image = [UIImage imageNamed:@"chat-32.png"];
             break;
         
             
