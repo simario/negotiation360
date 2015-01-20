@@ -2078,11 +2078,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oA1-ch-634"/>
-        <segue reference="72D-xW-IWS"/>
-        <segue reference="TxM-el-1ZU"/>
         <segue reference="rig-AL-udf"/>
+        <segue reference="TxM-el-1ZU"/>
         <segue reference="oFu-12-oe6"/>
+        <segue reference="oA1-ch-634"/>
+        <segue reference="RxB-wf-QIq"/>
         <segue reference="CDr-fM-Uml"/>
         <segue reference="JhG-7d-thQ"/>
         <segue reference="9hR-Rc-zEg"/>
